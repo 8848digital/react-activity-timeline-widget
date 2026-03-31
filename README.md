@@ -23,6 +23,14 @@
 npm install https://github.com/8848digital/react-activity-timeline-widget.git
 ```
 
+### Peer Dependencies
+
+The widget requires following peer dependencies to be installed in your project:
+
+```bash
+npm install react react-dom @phosphor-icons/react react-h5-audio-player
+```
+
 ## 📋 Usage
 
 ### 1. Optimized Integration (Recommended)
