@@ -5,6 +5,7 @@ import { sanitizeHtmlLight } from "../utils/htmlSanitizer";
 import type { ReminderActivityType } from "../types/activity";
 import Tooltip from "./common/Tooltip";
 import StatusBadge from "./common/StatusBadge";
+import ActivityBooleanBadges from "./common/ActivityBooleanBadges";
 
 interface ReminderActivityProps {
   activity: ReminderActivityType;
@@ -27,8 +28,9 @@ const ReminderActivity: React.FC<ReminderActivityProps> = ({ activity }) => {
             <BellIcon size={20} color="#FF3434" />
           </div>
         </Tooltip>
-        <div className="activity-date-time">
-          {creationDateTime.date} - {creationDateTime.time}
+        <div className="activity-date-time" style={{ display: "flex", alignItems: "center", gap: "6px" }}>
+          <span>{creationDateTime.date} - {creationDateTime.time}</span>
+          <ActivityBooleanBadges activity={activity} />
         </div>
       </div>
       <div className="activity-content">

@@ -1040,6 +1040,102 @@
   color: #2b2b2b;
 }
 
+/* === Brief Activity === */
+.activity-item.brief-activity {
+  width: 490px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.brief-activity-card {
+  background-color: #ffffff;
+  border: 1px solid #dfe9ed;
+  border-left-width: 3px;
+  border-left-color: #7C3AED;
+  border-radius: 0 8px 8px 0;
+  padding: 10px 12px;
+  box-sizing: border-box;
+}
+
+.brief-activity-card-header {
+  margin: -10px -12px 0 -12px;
+  padding: 8px 12px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.brief-activity-card-content {
+  padding: 12px 0 6px 0;
+}
+
+.brief-activity-title {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 100%;
+  color: #2b2b2b;
+  margin: 0;
+}
+
+.brief-activity-title a {
+  color: #7C3AED;
+  text-decoration: none;
+}
+
+.brief-activity-title a:hover {
+  text-decoration: underline;
+}
+
+.brief-activity-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.brief-activity-meta-row {
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+}
+
+.brief-activity-label-cell {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-shrink: 0;
+  min-width: 100px;
+  gap: 4px;
+}
+
+.brief-activity-colon {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #000000;
+}
+
+.brief-activity-label {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  color: #575e60d6;
+}
+
+.brief-activity-value {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 16px;
+  color: #2b2b2b;
+  word-break: break-word;
+}
+
+.brief-activity-link {
+  color: #0066cc !important;
+  text-decoration: underline !important;
+}
+
 /* === Package Common Styles === */
 
 /* Tooltip */

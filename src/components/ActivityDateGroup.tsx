@@ -20,6 +20,7 @@ function getActivityTypeLabel(activity: ActivityItem): string {
     outgoing_call: "Calls",
     incoming_call: "Calls",
     lead: "Leads",
+    brief: "Briefs",
   };
   return map[type] ?? "Items";
 }

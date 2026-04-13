@@ -36,6 +36,8 @@ const ACTIVITY_CONFIG: Record<string, string[]> = {
   Reminders: ["reminder"],
   Calls: ["call"],
   Leads: ["lead"],
+  PDA: ["pd"],
+  DC: ["dc"],
 };
 
 const REVERSE_ACTIVITY_TYPE_MAP = ACTIVITY_CONFIG;

@@ -158,10 +158,17 @@ export function useActivities(contactName: string | null, filters?: Record<strin
     if (filters && filters.activity_type && Array.isArray(filters.activity_type) && filters.activity_type.length > 0) {
       const allowedTypes = new Set(filters.activity_type);
       filteredSocketActivities = socketActivities.filter(a => {
-        const type = (a as { activity_type?: string }).activity_type;
+        const item = a as any;
+        const type = item.activity_type;
+
+        // Map PDA/DC internal flags
+        if (allowedTypes.has("pd") && item.is_pd) return true;
+        if (allowedTypes.has("dc") && item.is_dc) return true;
+
         if (!type) return false;
         if (allowedTypes.has(type)) return true;
         if (allowedTypes.has("call") && (type === "outgoing_call" || type === "incoming_call")) return true;
+        if (allowedTypes.has("brief") && type === "brief") return true;
         return false;
       });
     }

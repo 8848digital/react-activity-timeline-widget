@@ -3,6 +3,7 @@ import { WhatsAppIcon } from "./icons";
 import type { WhatsAppActivity } from "../types/activity";
 import { parseDateTime } from "../utils/dateMapper";
 import Tooltip from "./common/Tooltip";
+import ActivityBooleanBadges from "./common/ActivityBooleanBadges";
 import { useActivityConfig } from "../context/ActivityContext";
 
 interface ChatActivityProps {
@@ -26,8 +27,9 @@ const ChatActivity: React.FC<ChatActivityProps> = ({ activity }) => {
     <div className={`activity-item chat-activity mt-3 ${isOutbound ? "chat-outbound" : "chat-incoming"}`}>
       <div className={`activity-header chat-activity-header ${isOutbound ? "chat-header-outbound" : "chat-header-incoming"}`}>
         {!isOutbound && chatIcon}
-        <div className="activity-date-time">
-          {date} - {time}
+        <div className="activity-date-time" style={{ display: "flex", alignItems: "center", gap: "6px" }}>
+          <span>{date} - {time}</span>
+          <ActivityBooleanBadges activity={activity} />
         </div>
         {isOutbound && chatIcon}
       </div>

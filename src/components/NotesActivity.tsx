@@ -4,6 +4,7 @@ import Tooltip from "./common/Tooltip";
 import { parseDateTime } from "../utils/dateMapper";
 import { sanitizeHtmlLight } from "../utils/htmlSanitizer";
 import type { NotesActivityType, CreationActivity } from "../types/activity";
+import ActivityBooleanBadges from "./common/ActivityBooleanBadges";
 import { useExpandableContent } from "../hooks/useExpandableContent";
 import { ViewMoreButton } from "./common/ViewMoreButton";
 
@@ -44,8 +45,9 @@ const NotesActivity: React.FC<NotesActivityProps> = ({ activity }) => {
             <NoteIcon size={20} color={NOTES_ICON_COLOR} />
           </div>
         </Tooltip>
-        <div className="activity-date-time">
-          {date} - {time}
+        <div className="activity-date-time" style={{ display: "flex", alignItems: "center", gap: "6px" }}>
+          <span>{date} - {time}</span>
+          <ActivityBooleanBadges activity={activity} />
         </div>
       </div>
       <div className="activity-content">

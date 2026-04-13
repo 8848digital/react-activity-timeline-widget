@@ -4,6 +4,7 @@ import Tooltip from "./common/Tooltip";
 import { parseDateTime } from "../utils/dateMapper";
 import type { LeadActivityType } from "../types/activity";
 import StatusBadge from "./common/StatusBadge";
+import ActivityBooleanBadges from "./common/ActivityBooleanBadges";
 import { sanitizeHtmlLight } from "../utils/htmlSanitizer";
 
 interface LeadActivityProps {
@@ -21,8 +22,9 @@ const LeadActivity: React.FC<LeadActivityProps> = ({ activity }) => {
             <UserIcon size={20} color="darkgreen" />
           </div>
         </Tooltip>
-        <div className="activity-date-time">
-          {date} - {time}
+        <div className="activity-date-time" style={{ display: "flex", alignItems: "center", gap: "6px" }}>
+          <span>{date} - {time}</span>
+          <ActivityBooleanBadges activity={activity} />
         </div>
       </div>
       <div className="activity-content">

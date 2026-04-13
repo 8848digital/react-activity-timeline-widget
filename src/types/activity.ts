@@ -192,6 +192,19 @@ export type ActivityItem =
     lead_owner?: string;
     owner?: string;
     [key: string]: unknown;
+  }
+  | {
+    activity_type: "brief";
+    name: string;
+    title: string;
+    customer_code: string;
+    status: string;
+    assigned_to: string;
+    creation: string;
+    modified: string;
+    href: string;
+    is_pd: boolean;
+    [key: string]: unknown;
   };
 
 /**
@@ -242,6 +255,7 @@ export type CallActivityType = Extract<
 >;
 export type TaskActivityType = Extract<ActivityItem, { activity_type: "Task" }>;
 export type LeadActivityType = Extract<ActivityItem, { activity_type: "lead" }>;
+export type BriefActivityType = Extract<ActivityItem, { activity_type: "brief" }>;
 
 /** Node types for activity grouping display */
 export type ActivityNode =

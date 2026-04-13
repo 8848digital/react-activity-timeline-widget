@@ -7,6 +7,7 @@ import { parseDateTime } from "../utils/dateMapper";
 import { formatDuration } from "../utils/durationUtilities";
 import { getBadgeColor } from "../utils/badgeColorUtilities";
 import Tooltip from "./common/Tooltip";
+import ActivityBooleanBadges from "./common/ActivityBooleanBadges";
 import StatusBadge from "./common/StatusBadge";
 
 const CALL_ICON_COLOR = "#175353";
@@ -49,8 +50,9 @@ const CallActivity: React.FC<CallActivityProps> = ({ activity }) => {
             <PhoneIcon size={20} color={CALL_ICON_COLOR} />
           </div>
         </Tooltip>
-        <div className="activity-date-time">
-          {date} - {time}
+        <div className="activity-date-time" style={{ display: "flex", alignItems: "center", gap: "6px" }}>
+          <span>{date} - {time}</span>
+          <ActivityBooleanBadges activity={activity} />
         </div>
       </div>
       <div className="activity-content">

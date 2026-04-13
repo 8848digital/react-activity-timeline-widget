@@ -8,6 +8,7 @@ import ReminderActivity from "./ReminderActivity";
 import ChatActivity from "./ChatActivity";
 import CallActivity from "./CallActivity";
 import LeadActivity from "./LeadActivity";
+import BriefActivity from "./BriefActivity";
 
 export type { ActivityItem };
 
@@ -45,6 +46,9 @@ export const Activity: React.FC<ActivityProps> = ({ activity }) => {
   }
   if (activity.activity_type === "lead") {
     return <LeadActivity activity={activity} />;
+  }
+  if (activity.activity_type === "brief") {
+    return <BriefActivity activity={activity} />;
   }
   return null;
 };

@@ -9,6 +9,7 @@ import Tooltip from "./common/Tooltip";
 import StatusBadge from "./common/StatusBadge";
 import { useActivityConfig } from "../context/ActivityContext";
 import { parseDateTime } from "../utils/dateMapper";
+import ActivityBooleanBadges from "./common/ActivityBooleanBadges";
 
 const EMAIL_ICON_COLOR = "#FB2828";
 
@@ -100,6 +101,7 @@ const EmailActivity: React.FC<EmailActivityProps> = ({ activity }) => {
             showIcon={false}
             style={{ fontSize: "11px", padding: "1px 8px", lineHeight: "16px" }}
           />
+          <ActivityBooleanBadges activity={activity} />
         </div>
       </div>
       <div className="activity-content">
