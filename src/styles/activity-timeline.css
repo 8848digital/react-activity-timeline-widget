@@ -54,6 +54,46 @@
   gap: 8px;
 }
 
+.atw-special-filter-btn {
+  padding: 6px 14px;
+  border-radius: 6px;
+  background-color: #ffffff;
+  border: 1px solid #dfe9ed;
+  color: #45464E;
+  font-family: 'Manrope', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.atw-special-filter-btn:hover {
+  background-color: #f2f7f7;
+  border-color: #003D32;
+  color: #003D32;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.atw-special-filter-btn:active {
+  transform: translateY(1px);
+}
+
+.atw-special-filter-btn.active {
+  background-color: #003D32;
+  border-color: #003D32;
+  color: #ffffff;
+}
+
+.atw-special-filter-btn.active:hover {
+  background-color: #002b23;
+  border-color: #002b23;
+  color: #ffffff;
+}
+
 .atw-activity-count-badge {
   background-color: #003D32;
   color: white;
@@ -1145,20 +1185,18 @@
 }
 
 .atw-tooltip-content {
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  transform: translateX(-50%);
+  position: fixed;
   background-color: #333;
   color: #fff;
   padding: 4px 8px;
   border-radius: 4px;
   font-size: 12px;
   white-space: nowrap;
-  z-index: 100;
-  margin-bottom: 4px;
+  z-index: 99999;
   font-family: 'Manrope', sans-serif;
+  pointer-events: none;
 }
+
 
 /* View More Button */
 .atw-view-more-btn {
@@ -1195,7 +1233,9 @@
 }
 
 @keyframes atw-spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* Status Badge */

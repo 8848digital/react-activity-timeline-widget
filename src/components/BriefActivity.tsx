@@ -20,7 +20,7 @@ const BriefActivity: React.FC<BriefActivityProps> = ({ activity }) => {
   return (
     <div className="activity-item brief-activity">
       <div className="activity-header">
-        <Tooltip content="Brief">
+        <Tooltip content="Brief" align="left">
           <div className="activity-icon-wrapper">
             <FileText size={20} color="#7C3AED" />
           </div>

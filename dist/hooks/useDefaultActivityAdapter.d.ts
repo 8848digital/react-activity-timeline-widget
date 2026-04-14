@@ -28,6 +28,8 @@ export interface DefaultActivityAdapterParams {
             name: string;
         }>;
     };
+    /** Logged in user email for identifying outbound messages (e.g. Raven chat) */
+    currentUserEmail?: string | null;
 }
 /**
  * A standalone hook to create the default Frappe-compatible adapter and config.
@@ -46,4 +48,4 @@ export interface DefaultActivityAdapterParams {
  * </ActivityProvider>
  * ```
  */
-export declare function useDefaultActivityAdapter({ baseURL, token, contactName, apiBaseUrl, type, title, onSocketMessage, searchParams, renderChatMessageList, onEmailReply, onEmailReplyAll, fetchLeads, }: DefaultActivityAdapterParams): ActivityWidgetConfig;
+export declare function useDefaultActivityAdapter({ baseURL, token, contactName, apiBaseUrl, type, title, onSocketMessage, searchParams, renderChatMessageList, onEmailReply, onEmailReplyAll, fetchLeads, currentUserEmail, }: DefaultActivityAdapterParams): ActivityWidgetConfig;

@@ -23,13 +23,15 @@ const ReminderActivity: React.FC<ReminderActivityProps> = ({ activity }) => {
   return (
     <div className="activity-item reminder-activity">
       <div className="activity-header">
-        <Tooltip content="Reminder">
+        <Tooltip content="Reminder" align="left">
           <div className="activity-icon-wrapper">
             <BellIcon size={20} color="#FF3434" />
           </div>
         </Tooltip>
         <div className="activity-date-time" style={{ display: "flex", alignItems: "center", gap: "6px" }}>
-          <span>{creationDateTime.date} - {creationDateTime.time}</span>
+          <span>
+            {creationDateTime.date} - {creationDateTime.time}
+          </span>
           <ActivityBooleanBadges activity={activity} />
         </div>
       </div>
@@ -82,7 +84,10 @@ const ReminderActivity: React.FC<ReminderActivityProps> = ({ activity }) => {
                     <span className="reminder-activity-label">Description</span>
                     <span className="reminder-activity-colon">:</span>
                   </div>
-                  <div className="reminder-activity-description rich-html-content" dangerouslySetInnerHTML={{ __html: sanitizeHtmlLight(description) }} />
+                  <div
+                    className="reminder-activity-description rich-html-content"
+                    dangerouslySetInnerHTML={{ __html: sanitizeHtmlLight(description) }}
+                  />
                 </div>
               </div>
             )}

@@ -18,6 +18,8 @@ export interface UseActivityTabLogicReturn {
   handleClearFilters: () => void;
   getActivityElementId: (activity: ActivityItem, index: number) => string;
   loadMoreRef: RefObject<HTMLDivElement | null>;
+  includes_pd: boolean;
+  includes_dc: boolean;
 }
 
 /**
@@ -43,7 +45,7 @@ export function useActivityTabLogic(): UseActivityTabLogicReturn {
   });
 
   // Data Fetching
-  const { activities, isLoading, error, fetchNextPage, hasNextPage, isFetchingNextPage, refetch } = useActivities(contactName, filtersPayload);
+  const { activities, isLoading, error, fetchNextPage, hasNextPage, isFetchingNextPage, refetch, includes_pd, includes_dc } = useActivities(contactName, filtersPayload);
 
   // Data Processing
   const visibleActivities = activities.filter((a) => (a as { activity_type?: string }).activity_type !== "attachment_log");
@@ -90,5 +92,7 @@ export function useActivityTabLogic(): UseActivityTabLogicReturn {
     handleClearFilters,
     getActivityElementId,
     loadMoreRef,
+    includes_pd,
+    includes_dc,
   };
 }

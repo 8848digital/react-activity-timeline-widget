@@ -40,7 +40,7 @@ export const ActivityWidget: React.FC<ActivityWidgetProps> = (props) => {
     ));
 
   return (
-    <ActivityProvider {...adapterConfig} renderChatMessageList={renderChatMessageList}>
+    <ActivityProvider {...adapterConfig} renderChatMessageList={renderChatMessageList} currentUserEmail={props.currentUserEmail}>
       <ActivityTab />
     </ActivityProvider>
   );

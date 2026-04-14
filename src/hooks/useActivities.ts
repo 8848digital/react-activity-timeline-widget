@@ -30,6 +30,10 @@ const transformSocketEventToActivity = (event: string, data: unknown): ActivityI
       const isIncoming = eventData.type === "Incoming";
       return { ...eventData, activity_type: isIncoming ? "incoming_call" : "outgoing_call" } as ActivityItem;
     }
+    case "raven_message":
+      return { ...eventData, activity_type: "raven" } as unknown as ActivityItem;
+    case "activity":
+      return { ...eventData, activity_type: "brief" } as unknown as ActivityItem;
     default:
       return null;
   }
@@ -43,6 +47,8 @@ interface UseActivitiesResult {
   hasNextPage: boolean;
   fetchNextPage: () => void;
   refetch: () => void;
+  includes_pd: boolean;
+  includes_dc: boolean;
 }
 
 /**
@@ -57,6 +63,8 @@ export function useActivities(contactName: string | null, filters?: Record<strin
   const [error, setError] = useState<Error | null>(null);
   const [isFetchingNextPage, setIsFetchingNextPage] = useState(false);
   const [hasNextPage, setHasNextPage] = useState(false);
+  const [includesPd, setIncludesPd] = useState(false);
+  const [includesDc, setIncludesDc] = useState(false);
   const prevContactNameRef = useRef<string | null>(null);
   const currentPageRef = useRef(0);
 
@@ -88,6 +96,10 @@ export function useActivities(contactName: string | null, filters?: Record<strin
       setPages((prev) => isFirstPage ? [result] : [...prev, result]);
 
       const msg = result.message;
+      if (isFirstPage) {
+        setIncludesPd(!!msg.includes_pd);
+        setIncludesDc(!!msg.includes_dc);
+      }
       const nextPageIndex = msg.page + 1;
       setHasNextPage(nextPageIndex * msg.page_size < msg.total_count);
       currentPageRef.current = nextPageIndex;
@@ -128,7 +140,7 @@ export function useActivities(contactName: string | null, filters?: Record<strin
     if (!onSocketMessage) return;
     const unsubscribe = onSocketMessage((data: SocketMessage) => {
       const eventName = data.event;
-      if (["whatsapp_message", "communication", "fcrm_note", "crm_task", "crm_lead", "crm_call_log"].includes(eventName)) {
+      if (["whatsapp_message", "communication", "fcrm_note", "crm_task", "crm_lead", "crm_call_log", "raven_message", "activity"].includes(eventName)) {
         const transformedActivity = transformSocketEventToActivity(eventName, data.message);
         if (transformedActivity) {
           setSocketActivities((prev) => {
@@ -155,22 +167,39 @@ export function useActivities(contactName: string | null, filters?: Record<strin
     const fetched = pages.flatMap((p) => p.message.activities);
 
     let filteredSocketActivities = socketActivities;
-    if (filters && filters.activity_type && Array.isArray(filters.activity_type) && filters.activity_type.length > 0) {
-      const allowedTypes = new Set(filters.activity_type);
-      filteredSocketActivities = socketActivities.filter(a => {
-        const item = a as any;
-        const type = item.activity_type;
+    if (filters) {
+      const allowedTypes = filters.activity_type && Array.isArray(filters.activity_type) ? filters.activity_type : [];
+      const allowedSources = filters.sources && Array.isArray(filters.sources) ? filters.sources : [];
 
-        // Map PDA/DC internal flags
-        if (allowedTypes.has("pd") && item.is_pd) return true;
-        if (allowedTypes.has("dc") && item.is_dc) return true;
+      if (allowedTypes.length > 0 || allowedSources.length > 0) {
+        const typesSet = new Set(allowedTypes);
+        const sourcesSet = new Set(allowedSources);
 
-        if (!type) return false;
-        if (allowedTypes.has(type)) return true;
-        if (allowedTypes.has("call") && (type === "outgoing_call" || type === "incoming_call")) return true;
-        if (allowedTypes.has("brief") && type === "brief") return true;
-        return false;
-      });
+        filteredSocketActivities = socketActivities.filter((a) => {
+          const item = a as any;
+          const type = item.activity_type;
+
+          // Map PDA/DC internal flags
+          if (sourcesSet.has("pd") && item.is_pd) return true;
+          if (sourcesSet.has("dc") && item.is_dc) return true;
+
+          if (!type) {
+            // Some old items might not have activity_type, but have is_pd/is_dc
+            if (typesSet.has("pd") && item.is_pd) return true;
+            if (typesSet.has("dc") && item.is_dc) return true;
+            return false;
+          }
+
+          if (typesSet.has(type)) return true;
+          if (typesSet.has("call") && (type === "outgoing_call" || type === "incoming_call")) return true;
+          if (typesSet.has("brief") && type === "brief") return true;
+          if (typesSet.has("raven") && type === "raven") return true;
+          if (typesSet.has("pd") && item.is_pd) return true;
+          if (typesSet.has("dc") && item.is_dc) return true;
+
+          return false;
+        });
+      }
     }
 
     const socketNames = new Set(
@@ -196,6 +225,8 @@ export function useActivities(contactName: string | null, filters?: Record<strin
     hasNextPage,
     fetchNextPage,
     refetch,
+    includes_pd: includesPd,
+    includes_dc: includesDc,
   };
 }
 

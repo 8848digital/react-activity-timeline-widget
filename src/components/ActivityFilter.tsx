@@ -48,11 +48,16 @@ const ActivityFilter: React.FC<ActivityFilterProps> = ({
   };
 
   const handleApply = () => {
-    const filters = selectedTypes.map((type) => ({
+    // Preserve filters that are not "activity_type" (like "sources" or "lead_id")
+    const otherFilters = initialFilters.filter((f) => f.field !== "activity_type");
+    
+    const newActivityFilters = selectedTypes.map((type) => ({
       field: "activity_type",
       value: type,
     }));
-    onApply(filters);
+
+    const finalFilters = [...otherFilters, ...newActivityFilters];
+    onApply(finalFilters);
     setIsOpen(false);
   };
 

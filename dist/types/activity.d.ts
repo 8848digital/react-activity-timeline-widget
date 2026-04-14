@@ -206,6 +206,21 @@ export type ActivityItem = {
     href: string;
     is_pd: boolean;
     [key: string]: unknown;
+} | {
+    activity_type: "raven";
+    name: string;
+    owner: string;
+    creation: string;
+    modified: string;
+    text: string;
+    file: string | null;
+    message_type: string;
+    from: string;
+    to: string;
+    is_pd: boolean;
+    is_dc: boolean;
+    content?: string;
+    [key: string]: unknown;
 };
 /**
  * Paginated message wrapper from API
@@ -215,6 +230,8 @@ export interface ActivityMessage {
     total_count: number;
     page: number;
     page_size: number;
+    includes_pd?: boolean;
+    includes_dc?: boolean;
 }
 /**
  * Activity response from API
@@ -270,6 +287,9 @@ export type LeadActivityType = Extract<ActivityItem, {
 }>;
 export type BriefActivityType = Extract<ActivityItem, {
     activity_type: "brief";
+}>;
+export type RavenActivityType = Extract<ActivityItem, {
+    activity_type: "raven";
 }>;
 /** Node types for activity grouping display */
 export type ActivityNode = {
@@ -342,4 +362,6 @@ export interface ActivityWidgetConfig {
             name: string;
         }>;
     };
+    /** Logged in user email for identifying outbound messages (e.g. Raven chat) */
+    currentUserEmail?: string | null;
 }

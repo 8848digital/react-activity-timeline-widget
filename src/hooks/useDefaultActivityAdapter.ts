@@ -33,6 +33,8 @@ export interface DefaultActivityAdapterParams {
   onEmailReplyAll?: (data: EmailReplyData) => void;
   /** Lead fetcher for filter options */
   fetchLeads?: () => { leads: Array<{ name: string }> };
+  /** Logged in user email for identifying outbound messages (e.g. Raven chat) */
+  currentUserEmail?: string | null;
 }
 
 /**
@@ -65,6 +67,7 @@ export function useDefaultActivityAdapter({
   onEmailReply,
   onEmailReplyAll,
   fetchLeads,
+  currentUserEmail,
 }: DefaultActivityAdapterParams): ActivityWidgetConfig {
   // Initialize API methods
   const apiInstance = useMemo(() => createDefaultApiClient(baseURL, token), [baseURL, token]);
@@ -83,6 +86,7 @@ export function useDefaultActivityAdapter({
       onEmailReply,
       onEmailReplyAll,
       fetchLeads,
+      currentUserEmail,
 
       // API adapters (wired to Frappe backend)
       fetchActivities: async (params: FetchActivitiesParams): Promise<ActivityResponse> => {
@@ -109,6 +113,7 @@ export function useDefaultActivityAdapter({
       onEmailReply,
       onEmailReplyAll,
       fetchLeads,
+      currentUserEmail,
       methods,
     ]
   );

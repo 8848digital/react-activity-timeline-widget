@@ -24,9 +24,11 @@ const CallActivity: React.FC<CallActivityProps> = ({ activity }) => {
   const callerLabel = (activity as { _caller?: { label?: string } })._caller?.label ?? activity.caller ?? "Unknown";
   const toContact = (activity as { _receiver?: { label?: string } })._receiver?.label ?? null;
 
-  const { audioUrl, isLoading: isLoadingRecording, error: recordingError } = useCallRecording(
-    activity.recording_url ? (activity.name as string) : undefined
-  );
+  const {
+    audioUrl,
+    isLoading: isLoadingRecording,
+    error: recordingError,
+  } = useCallRecording(activity.recording_url ? (activity.name as string) : undefined);
   const [playbackError, setPlaybackError] = useState(false);
 
   const duration = activity._duration;
@@ -45,13 +47,15 @@ const CallActivity: React.FC<CallActivityProps> = ({ activity }) => {
   return (
     <div className="activity-item call-activity">
       <div className="activity-header">
-        <Tooltip content="Call">
+        <Tooltip content="Call" align="left">
           <div className="activity-icon-wrapper">
             <PhoneIcon size={20} color={CALL_ICON_COLOR} />
           </div>
         </Tooltip>
         <div className="activity-date-time" style={{ display: "flex", alignItems: "center", gap: "6px" }}>
-          <span>{date} - {time}</span>
+          <span>
+            {date} - {time}
+          </span>
           <ActivityBooleanBadges activity={activity} />
         </div>
       </div>
@@ -96,7 +100,9 @@ const CallActivity: React.FC<CallActivityProps> = ({ activity }) => {
                 <span className="call-activity-loading">Loading recording…</span>
               ) : recordingError || playbackError ? (
                 <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                  <span className="call-activity-loading" style={{ color: "#f44336" }}>Recording unavailable</span>
+                  <span className="call-activity-loading" style={{ color: "#f44336" }}>
+                    Recording unavailable
+                  </span>
                   {formattedDuration && !isZeroDuration && <span className="call-activity-duration">Duration {formattedDuration}</span>}
                 </div>
               ) : audioUrl ? (
@@ -115,7 +121,12 @@ const CallActivity: React.FC<CallActivityProps> = ({ activity }) => {
                   {formattedDuration && !isZeroDuration && <span className="call-activity-duration">Duration {formattedDuration}</span>}
                 </div>
               ) : (
-                formattedDuration && !isZeroDuration && <span className="call-activity-duration" style={{ marginLeft: 0 }}>Duration {formattedDuration}</span>
+                formattedDuration &&
+                !isZeroDuration && (
+                  <span className="call-activity-duration" style={{ marginLeft: 0 }}>
+                    Duration {formattedDuration}
+                  </span>
+                )
               )}
             </div>
           </div>

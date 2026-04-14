@@ -6,7 +6,8 @@
 
 - **Decoupled Architecture**: Logic is separated from UI using an adapter pattern.
 - **Unified Widget**: High-level `ActivityWidget` that handles Provider and Adapter internally for zero-boilerplate integration.
-- **Live Updates**: Built-in support for Socket.io/WebSocket via the `onSocketMessage` bridge.
+- **Live Updates**: Built-in support for Socket.io/WebSocket via the `onSocketMessage` bridge (now supports `raven_message` and `activity` events).
+- **Raven Chat Integration**: Support for the new Raven chat type with inbound/outbound styling and image previews.
 - **Infinite Scroll**: Automated lazy loading and "fetch more" logic as you scroll.
 - **Filtering**: Built-in filter state for communication types and related leads.
 
@@ -169,6 +170,7 @@ The `ActivityWidget` supports the following props:
 | `title`                   | `string`                         | `"Activity"` | Header title of the widget.                                                               |
 | `className`               | `string`                         | -            | Additional CSS class for the container.                                                   |
 | `searchParams`            | `Record<string, string \| null>` | -            | UI state for deep-linking (e.g., `{ activityId: '...', comm_type: '...' }`).              |
+| `currentUserEmail`       | `string \| null`                 | -            | **Required**. Used to identify sent (outbound) messages in Chat and Raven.                 |
 | **Integration Callbacks** |                                  |              |                                                                                           |
 | `onSocketMessage`         | `(handler) => () => void`        | -            | Bridge to your socket system. Receives a handler and must return an unsubscribe function. |
 | `onEmailReply`            | `(data: EmailReplyData) => void` | -            | Triggered when a user clicks the reply icon on an email activity.                         |

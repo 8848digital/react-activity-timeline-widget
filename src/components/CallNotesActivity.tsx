@@ -22,7 +22,7 @@ const CallNotesActivity: React.FC<CallNotesActivityProps> = ({ activity }) => {
   return (
     <div className="activity-item call-notes-activity">
       <div className="activity-header">
-        <Tooltip content="Call Notes">
+        <Tooltip content="Call Notes" align="left">
           <div className="activity-icon-wrapper">
             <NoteIcon size={20} color="#175353" />
           </div>

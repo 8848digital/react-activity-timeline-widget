@@ -29,15 +29,15 @@ function toFilterRecord<T extends string>(filters: TableFilterItem<T>[]): Partia
 
 // Consolidated configuration for Activity Types
 const ACTIVITY_CONFIG: Record<string, string[]> = {
-  Chats: ["whatsapp"],
+  "WhatsApp Chat": ["whatsapp"],
   Emails: ["communication"],
   Notes: ["notes"],
   Schedules: ["schedule"],
   Reminders: ["reminder"],
   Calls: ["call"],
   Leads: ["lead"],
-  PDA: ["pd"],
-  DC: ["dc"],
+  Brief: ["brief"],
+  "Raven Message": ["raven"],
 };
 
 const REVERSE_ACTIVITY_TYPE_MAP = ACTIVITY_CONFIG;
@@ -84,6 +84,10 @@ export function useFilterState<T extends string = string>({
       if (allMapped.length > 0) {
         filters.activity_type = Array.from(new Set(allMapped));
       }
+    }
+
+    if (params.sources) {
+      filters.sources = Array.isArray(params.sources) ? params.sources : [params.sources];
     }
 
     if (params.lead_id) {

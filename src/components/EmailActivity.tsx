@@ -86,7 +86,7 @@ const EmailActivity: React.FC<EmailActivityProps> = ({ activity }) => {
   return (
     <div className="activity-item email-activity">
       <div className="activity-header">
-        <Tooltip content="Email">
+        <Tooltip content="Email" align="left">
           <div className="activity-icon-wrapper">
             <EnvelopeIcon size={20} color={EMAIL_ICON_COLOR} />
           </div>
@@ -118,10 +118,14 @@ const EmailActivity: React.FC<EmailActivityProps> = ({ activity }) => {
             {(onEmailReply || onEmailReplyAll) && (
               <div style={{ display: "flex", gap: "8px" }}>
                 {onEmailReply && (
-                  <button type="button" onClick={handleReply} className="atw-email-reply-btn">Reply</button>
+                  <button type="button" onClick={handleReply} className="atw-email-reply-btn">
+                    Reply
+                  </button>
                 )}
                 {onEmailReplyAll && (
-                  <button type="button" onClick={handleReplyAll} className="atw-email-reply-btn">Reply All</button>
+                  <button type="button" onClick={handleReplyAll} className="atw-email-reply-btn">
+                    Reply All
+                  </button>
                 )}
               </div>
             )}

@@ -21,6 +21,8 @@ const ActivityTab: React.FC = () => {
     handleClearFilters,
     getActivityElementId,
     loadMoreRef,
+    includes_pd,
+    includes_dc,
   } = useActivityTabLogic();
 
   if (isLoading) {
@@ -40,7 +42,9 @@ const ActivityTab: React.FC = () => {
         <h2 className="activity-tab-title">{title}</h2>
         <div className="atw-error-fallback">
           <p>Failed to load {title}.</p>
-          <button type="button" onClick={refetch} className="atw-retry-btn">Retry</button>
+          <button type="button" onClick={refetch} className="atw-retry-btn">
+            Retry
+          </button>
         </div>
       </div>
     );
@@ -56,6 +60,32 @@ const ActivityTab: React.FC = () => {
           </span>
         </div>
         <div className="atw-header-right">
+          {includes_pd && (
+            <button
+              type="button"
+              className={`atw-special-filter-btn ${initialFilters.some((f) => f.field === "sources" && f.value === "pd") ? "active" : ""}`}
+              onClick={() => {
+                const isPd = initialFilters.some((f) => f.field === "sources" && f.value === "pd");
+                const others = initialFilters.filter((f) => !(f.field === "sources" && f.value === "pd"));
+                handleApplyFilters(isPd ? others : [...others, { field: "sources", value: "pd" }]);
+              }}
+            >
+              PDA
+            </button>
+          )}
+          {includes_dc && (
+            <button
+              type="button"
+              className={`atw-special-filter-btn ${initialFilters.some((f) => f.field === "sources" && f.value === "dc") ? "active" : ""}`}
+              onClick={() => {
+                const isDc = initialFilters.some((f) => f.field === "sources" && f.value === "dc");
+                const others = initialFilters.filter((f) => !(f.field === "sources" && f.value === "dc"));
+                handleApplyFilters(isDc ? others : [...others, { field: "sources", value: "dc" }]);
+              }}
+            >
+              DC
+            </button>
+          )}
           <ActivityFilter
             key={JSON.stringify(initialFilters)}
             initialFilters={initialFilters}

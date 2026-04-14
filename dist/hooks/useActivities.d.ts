@@ -7,6 +7,8 @@ interface UseActivitiesResult {
     hasNextPage: boolean;
     fetchNextPage: () => void;
     refetch: () => void;
+    includes_pd: boolean;
+    includes_dc: boolean;
 }
 /**
  * Custom hook to fetch activities with infinite scroll and socket updates.

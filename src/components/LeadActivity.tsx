@@ -17,13 +17,15 @@ const LeadActivity: React.FC<LeadActivityProps> = ({ activity }) => {
   return (
     <div className="activity-item lead-activity">
       <div className="activity-header">
-        <Tooltip content="Lead Created">
+        <Tooltip content="Lead Created" align="left">
           <div className="activity-icon-wrapper">
             <UserIcon size={20} color="darkgreen" />
           </div>
         </Tooltip>
         <div className="activity-date-time" style={{ display: "flex", alignItems: "center", gap: "6px" }}>
-          <span>{date} - {time}</span>
+          <span>
+            {date} - {time}
+          </span>
           <ActivityBooleanBadges activity={activity} />
         </div>
       </div>
@@ -79,7 +81,10 @@ const LeadActivity: React.FC<LeadActivityProps> = ({ activity }) => {
                     <span className="lead-activity-label">Description</span>
                     <span className="lead-activity-colon">:</span>
                   </div>
-                  <div className="lead-activity-description rich-html-content" dangerouslySetInnerHTML={{ __html: sanitizeHtmlLight(activity.description) }} />
+                  <div
+                    className="lead-activity-description rich-html-content"
+                    dangerouslySetInnerHTML={{ __html: sanitizeHtmlLight(activity.description) }}
+                  />
                 </div>
               </div>
             )}

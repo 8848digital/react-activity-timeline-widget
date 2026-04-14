@@ -40,13 +40,15 @@ const NotesActivity: React.FC<NotesActivityProps> = ({ activity }) => {
   return (
     <div className="activity-item notes-activity">
       <div className="activity-header">
-        <Tooltip content={`${activity.activity_type === "notes" ? "Note" : "Creation"}`}>
+        <Tooltip content={`${activity.activity_type === "notes" ? "Note" : "Creation"}`} align="left">
           <div className="activity-icon-wrapper">
             <NoteIcon size={20} color={NOTES_ICON_COLOR} />
           </div>
         </Tooltip>
         <div className="activity-date-time" style={{ display: "flex", alignItems: "center", gap: "6px" }}>
-          <span>{date} - {time}</span>
+          <span>
+            {date} - {time}
+          </span>
           <ActivityBooleanBadges activity={activity} />
         </div>
       </div>

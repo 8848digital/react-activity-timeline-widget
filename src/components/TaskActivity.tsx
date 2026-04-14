@@ -25,13 +25,15 @@ const TaskActivity: React.FC<TaskActivityProps> = ({ activity }) => {
   return (
     <div className="activity-item schedule-activity">
       <div className="activity-header">
-        <Tooltip content="Task">
+        <Tooltip content="Task" align="left">
           <div className="activity-icon-wrapper">
             <CalendarIcon size={20} color="#0DBFFF" />
           </div>
         </Tooltip>
         <div className="activity-date-time" style={{ display: "flex", alignItems: "center", gap: "6px" }}>
-          <span>{creationDateTime.date} - {creationDateTime.time}</span>
+          <span>
+            {creationDateTime.date} - {creationDateTime.time}
+          </span>
           <ActivityBooleanBadges activity={activity} />
         </div>
       </div>
@@ -95,7 +97,10 @@ const TaskActivity: React.FC<TaskActivityProps> = ({ activity }) => {
                     <span className="schedule-activity-label">Skip Reason</span>
                     <span className="schedule-activity-colon">:</span>
                   </div>
-                  <div className="schedule-activity-description rich-html-content" dangerouslySetInnerHTML={{ __html: sanitizeHtmlLight(skipReason) }} />
+                  <div
+                    className="schedule-activity-description rich-html-content"
+                    dangerouslySetInnerHTML={{ __html: sanitizeHtmlLight(skipReason) }}
+                  />
                 </div>
               </div>
             )}
@@ -106,7 +111,10 @@ const TaskActivity: React.FC<TaskActivityProps> = ({ activity }) => {
                     <span className="schedule-activity-label">Description</span>
                     <span className="schedule-activity-colon">:</span>
                   </div>
-                  <div className="schedule-activity-description rich-html-content" dangerouslySetInnerHTML={{ __html: sanitizeHtmlLight(description) }} />
+                  <div
+                    className="schedule-activity-description rich-html-content"
+                    dangerouslySetInnerHTML={{ __html: sanitizeHtmlLight(description) }}
+                  />
                 </div>
               </div>
             )}

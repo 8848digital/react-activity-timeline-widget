@@ -16,7 +16,7 @@ const ChatActivity: React.FC<ChatActivityProps> = ({ activity }) => {
   const isOutbound = activity.type === "Outgoing" || activity.is_outbound === 1;
 
   const chatIcon = (
-    <Tooltip content="Chat">
+    <Tooltip content="Chat" align={isOutbound ? "right" : "left"}>
       <div className="activity-icon-wrapper">
         <WhatsAppIcon size={20} color={isOutbound ? "#175353" : "#666"} />
       </div>
@@ -28,7 +28,9 @@ const ChatActivity: React.FC<ChatActivityProps> = ({ activity }) => {
       <div className={`activity-header chat-activity-header ${isOutbound ? "chat-header-outbound" : "chat-header-incoming"}`}>
         {!isOutbound && chatIcon}
         <div className="activity-date-time" style={{ display: "flex", alignItems: "center", gap: "6px" }}>
-          <span>{date} - {time}</span>
+          <span>
+            {date} - {time}
+          </span>
           <ActivityBooleanBadges activity={activity} />
         </div>
         {isOutbound && chatIcon}

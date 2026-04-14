@@ -21,6 +21,8 @@ export interface UseActivityTabLogicReturn {
     handleClearFilters: () => void;
     getActivityElementId: (activity: ActivityItem, index: number) => string;
     loadMoreRef: RefObject<HTMLDivElement | null>;
+    includes_pd: boolean;
+    includes_dc: boolean;
 }
 /**
  * Main hook for the Activity tab — handles filters, API data, infinite scroll, and activity grouping.
