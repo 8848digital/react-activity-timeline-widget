@@ -19,7 +19,7 @@ export { useActivityTabLogic } from './hooks/useActivityTabLogic';
 export type { UseActivityTabLogicReturn } from './hooks/useActivityTabLogic';
 export { useActivities } from './hooks/useActivities';
 export { useExpandableContent } from './hooks/useExpandableContent';
-export { useScrollToActivity, getActivityElementId } from './hooks/useScrollToActivity';
+export { getActivityElementId } from './hooks/useScrollToActivity';
 export { useFilterState, ACTIVITY_TYPE_LABELS } from './hooks/useFilterState';
 export { useCallRecording } from './hooks/useCallRecording';
 export { useDefaultActivityAdapter } from './hooks/useDefaultActivityAdapter';

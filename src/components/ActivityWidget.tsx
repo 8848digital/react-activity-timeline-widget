@@ -29,12 +29,11 @@ export const ActivityWidget: React.FC<ActivityWidgetProps> = (props) => {
   // Default chat message renderer if none provided
   const renderChatMessageList =
     props.renderChatMessageList ||
-    (({ activity, icon, showIcon, enableScroll }) => (
+    (({ activity, icon, showIcon }) => (
       <MessageList
         activity={activity as any}
         icon={icon}
         showIcon={showIcon}
-        enableScroll={enableScroll}
         apiBaseUrl={props.apiBaseUrl || props.baseURL}
       />
     ));

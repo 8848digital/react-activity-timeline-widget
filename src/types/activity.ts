@@ -333,7 +333,7 @@ export interface ActivityWidgetConfig {
   /** Search params (abstracted from Next.js router) */
   searchParams?: Record<string, string | null>;
   /** Chat message list renderer for WhatsApp activities */
-  renderChatMessageList?: (props: { activity: WhatsAppActivity; icon: React.ReactNode; showIcon: boolean; enableScroll: boolean }) => React.ReactNode;
+  renderChatMessageList?: (props: { activity: WhatsAppActivity; icon: React.ReactNode; showIcon: boolean }) => React.ReactNode;
   /** Lead fetcher for filter options */
   fetchLeads?: () => { leads: Array<{ name: string }> };
   /** Logged in user email for identifying outbound messages (e.g. Raven chat) */

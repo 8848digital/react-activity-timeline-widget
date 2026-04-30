@@ -1,6 +1,6 @@
 import { useMemo, useRef, useEffect, type RefObject } from "react";
 import { useActivities } from "./useActivities";
-import { useScrollToActivity, getActivityElementId } from "./useScrollToActivity";
+import { getActivityElementId } from "./useScrollToActivity";
 import { buildActivityNodes } from "../utils/activityGroupDisplay";
 import { useFilterState, ACTIVITY_TYPE_LABELS } from "./useFilterState";
 import { useActivityConfig } from "../context/ActivityContext";
@@ -50,9 +50,6 @@ export function useActivityTabLogic(): UseActivityTabLogicReturn {
   // Data Processing
   const visibleActivities = activities.filter((a) => (a as { activity_type?: string }).activity_type !== "attachment_log");
   const activityNodes = useMemo(() => buildActivityNodes(visibleActivities), [visibleActivities]);
-
-  // Scroll
-  const { getActivityElementId } = useScrollToActivity(activityId, visibleActivities);
 
   // Infinite Scroll
   const loadMoreRef = useRef<HTMLDivElement>(null);

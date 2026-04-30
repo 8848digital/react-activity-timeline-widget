@@ -354,7 +354,6 @@ export interface ActivityWidgetConfig {
         activity: WhatsAppActivity;
         icon: React.ReactNode;
         showIcon: boolean;
-        enableScroll: boolean;
     }) => React.ReactNode;
     /** Lead fetcher for filter options */
     fetchLeads?: () => {

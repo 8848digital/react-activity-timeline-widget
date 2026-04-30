@@ -37,7 +37,7 @@ const ChatActivity: React.FC<ChatActivityProps> = ({ activity }) => {
       </div>
       <div className={`activity-content ${isOutbound ? "chat-content-outbound" : "chat-content-incoming"}`}>
         {renderChatMessageList ? (
-          renderChatMessageList({ activity, icon: chatIcon, showIcon: false, enableScroll: false })
+          renderChatMessageList({ activity, icon: chatIcon, showIcon: false })
         ) : (
           <div className="chat-activity-bubble">
             <span className="chat-message-text">{activity.message || ""}</span>

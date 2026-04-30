@@ -1,5 +1,5 @@
 import * as a from "react";
-import Ge, { createContext as Ce, useState as C, useRef as q, useEffect as U, useCallback as te, useContext as Je, useMemo as O } from "react";
+import Ge, { createContext as Ce, useState as H, useRef as ee, useEffect as te, useCallback as Q, useContext as Je, useMemo as I } from "react";
 import Ke from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css";
 import './index.css';var re = { exports: {} }, ae = {};
@@ -12,23 +12,23 @@ import './index.css';var re = { exports: {} }, ae = {};
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-var fe;
+var xe;
 function Xe() {
-  if (fe) return ae;
-  fe = 1;
+  if (xe) return ae;
+  xe = 1;
   var t = Symbol.for("react.transitional.element"), l = Symbol.for("react.fragment");
-  function s(r, c, n) {
+  function s(i, r, n) {
     var d = null;
-    if (n !== void 0 && (d = "" + n), c.key !== void 0 && (d = "" + c.key), "key" in c) {
+    if (n !== void 0 && (d = "" + n), r.key !== void 0 && (d = "" + r.key), "key" in r) {
       n = {};
-      for (var i in c)
-        i !== "key" && (n[i] = c[i]);
-    } else n = c;
-    return c = n.ref, {
+      for (var o in r)
+        o !== "key" && (n[o] = r[o]);
+    } else n = r;
+    return r = n.ref, {
       $$typeof: t,
-      type: r,
+      type: i,
       key: d,
-      ref: c !== void 0 ? c : null,
+      ref: r !== void 0 ? r : null,
       props: n
     };
   }
@@ -44,233 +44,233 @@ var le = {};
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-var xe;
+var fe;
 function Qe() {
-  return xe || (xe = 1, process.env.NODE_ENV !== "production" && (function() {
-    function t(o) {
-      if (o == null) return null;
-      if (typeof o == "function")
-        return o.$$typeof === F ? null : o.displayName || o.name || null;
-      if (typeof o == "string") return o;
-      switch (o) {
-        case f:
+  return fe || (fe = 1, process.env.NODE_ENV !== "production" && (function() {
+    function t(c) {
+      if (c == null) return null;
+      if (typeof c == "function")
+        return c.$$typeof === T ? null : c.displayName || c.name || null;
+      if (typeof c == "string") return c;
+      switch (c) {
+        case x:
           return "Fragment";
-        case R:
+        case U:
           return "Profiler";
-        case E:
+        case _:
           return "StrictMode";
-        case I:
+        case E:
           return "Suspense";
-        case K:
+        case W:
           return "SuspenseList";
-        case D:
+        case z:
           return "Activity";
       }
-      if (typeof o == "object")
-        switch (typeof o.tag == "number" && console.error(
+      if (typeof c == "object")
+        switch (typeof c.tag == "number" && console.error(
           "Received an unexpected object in getComponentNameFromType(). This is likely a bug in React. Please file an issue."
-        ), o.$$typeof) {
-          case y:
+        ), c.$$typeof) {
+          case j:
             return "Portal";
-          case W:
-            return o.displayName || "Context";
-          case J:
-            return (o._context.displayName || "Context") + ".Consumer";
-          case $:
-            var j = o.render;
-            return o = o.displayName, o || (o = j.displayName || j.name || "", o = o !== "" ? "ForwardRef(" + o + ")" : "ForwardRef"), o;
-          case H:
-            return j = o.displayName || null, j !== null ? j : t(o.type) || "Memo";
+          case P:
+            return c.displayName || "Context";
           case Y:
-            j = o._payload, o = o._init;
+            return (c._context.displayName || "Context") + ".Consumer";
+          case $:
+            var f = c.render;
+            return c = c.displayName, c || (c = f.displayName || f.name || "", c = c !== "" ? "ForwardRef(" + c + ")" : "ForwardRef"), c;
+          case G:
+            return f = c.displayName || null, f !== null ? f : t(c.type) || "Memo";
+          case B:
+            f = c._payload, c = c._init;
             try {
-              return t(o(j));
+              return t(c(f));
             } catch {
             }
         }
       return null;
     }
-    function l(o) {
-      return "" + o;
+    function l(c) {
+      return "" + c;
     }
-    function s(o) {
+    function s(c) {
       try {
-        l(o);
-        var j = !1;
+        l(c);
+        var f = !1;
       } catch {
-        j = !0;
+        f = !0;
       }
-      if (j) {
-        j = console;
-        var w = j.error, Z = typeof Symbol == "function" && Symbol.toStringTag && o[Symbol.toStringTag] || o.constructor.name || "Object";
+      if (f) {
+        f = console;
+        var w = f.error, M = typeof Symbol == "function" && Symbol.toStringTag && c[Symbol.toStringTag] || c.constructor.name || "Object";
         return w.call(
-          j,
+          f,
           "The provided key is an unsupported type %s. This value must be coerced to a string before using it here.",
-          Z
-        ), l(o);
+          M
+        ), l(c);
       }
     }
-    function r(o) {
-      if (o === f) return "<>";
-      if (typeof o == "object" && o !== null && o.$$typeof === Y)
+    function i(c) {
+      if (c === x) return "<>";
+      if (typeof c == "object" && c !== null && c.$$typeof === B)
         return "<...>";
       try {
-        var j = t(o);
-        return j ? "<" + j + ">" : "<...>";
+        var f = t(c);
+        return f ? "<" + f + ">" : "<...>";
       } catch {
         return "<...>";
       }
     }
-    function c() {
-      var o = _.A;
-      return o === null ? null : o.getOwner();
+    function r() {
+      var c = Z.A;
+      return c === null ? null : c.getOwner();
     }
     function n() {
       return Error("react-stack-top-frame");
     }
-    function d(o) {
-      if (A.call(o, "key")) {
-        var j = Object.getOwnPropertyDescriptor(o, "key").get;
-        if (j && j.isReactWarning) return !1;
+    function d(c) {
+      if (A.call(c, "key")) {
+        var f = Object.getOwnPropertyDescriptor(c, "key").get;
+        if (f && f.isReactWarning) return !1;
       }
-      return o.key !== void 0;
+      return c.key !== void 0;
     }
-    function i(o, j) {
+    function o(c, f) {
       function w() {
-        V || (V = !0, console.error(
+        F || (F = !0, console.error(
           "%s: `key` is not a prop. Trying to access it will result in `undefined` being returned. If you need to access the same value within the child component, you should pass it as a different prop. (https://react.dev/link/special-props)",
-          j
+          f
         ));
       }
-      w.isReactWarning = !0, Object.defineProperty(o, "key", {
+      w.isReactWarning = !0, Object.defineProperty(c, "key", {
         get: w,
         configurable: !0
       });
     }
     function m() {
-      var o = t(this.type);
-      return N[o] || (N[o] = !0, console.error(
+      var c = t(this.type);
+      return N[c] || (N[c] = !0, console.error(
         "Accessing element.ref was removed in React 19. ref is now a regular prop. It will be removed from the JSX Element type in a future release."
-      )), o = this.props.ref, o !== void 0 ? o : null;
+      )), c = this.props.ref, c !== void 0 ? c : null;
     }
-    function h(o, j, w, Z, ne, de) {
-      var M = w.ref;
-      return o = {
+    function h(c, f, w, M, ne, de) {
+      var C = w.ref;
+      return c = {
         $$typeof: u,
-        type: o,
-        key: j,
+        type: c,
+        key: f,
         props: w,
-        _owner: Z
-      }, (M !== void 0 ? M : null) !== null ? Object.defineProperty(o, "ref", {
+        _owner: M
+      }, (C !== void 0 ? C : null) !== null ? Object.defineProperty(c, "ref", {
         enumerable: !1,
         get: m
-      }) : Object.defineProperty(o, "ref", { enumerable: !1, value: null }), o._store = {}, Object.defineProperty(o._store, "validated", {
+      }) : Object.defineProperty(c, "ref", { enumerable: !1, value: null }), c._store = {}, Object.defineProperty(c._store, "validated", {
         configurable: !1,
         enumerable: !1,
         writable: !0,
         value: 0
-      }), Object.defineProperty(o, "_debugInfo", {
+      }), Object.defineProperty(c, "_debugInfo", {
         configurable: !1,
         enumerable: !1,
         writable: !0,
         value: null
-      }), Object.defineProperty(o, "_debugStack", {
+      }), Object.defineProperty(c, "_debugStack", {
         configurable: !1,
         enumerable: !1,
         writable: !0,
         value: ne
-      }), Object.defineProperty(o, "_debugTask", {
+      }), Object.defineProperty(c, "_debugTask", {
         configurable: !1,
         enumerable: !1,
         writable: !0,
         value: de
-      }), Object.freeze && (Object.freeze(o.props), Object.freeze(o)), o;
+      }), Object.freeze && (Object.freeze(c.props), Object.freeze(c)), c;
     }
-    function p(o, j, w, Z, ne, de) {
-      var M = j.children;
-      if (M !== void 0)
-        if (Z)
-          if (S(M)) {
-            for (Z = 0; Z < M.length; Z++)
-              x(M[Z]);
-            Object.freeze && Object.freeze(M);
+    function p(c, f, w, M, ne, de) {
+      var C = f.children;
+      if (C !== void 0)
+        if (M)
+          if (R(C)) {
+            for (M = 0; M < C.length; M++)
+              g(C[M]);
+            Object.freeze && Object.freeze(C);
           } else
             console.error(
               "React.jsx: Static children should always be an array. You are likely explicitly calling React.jsxs or React.jsxDEV. Use the Babel transform instead."
             );
-        else x(M);
-      if (A.call(j, "key")) {
-        M = t(o);
-        var ee = Object.keys(j).filter(function(qe) {
+        else g(C);
+      if (A.call(f, "key")) {
+        C = t(c);
+        var X = Object.keys(f).filter(function(qe) {
           return qe !== "key";
         });
-        Z = 0 < ee.length ? "{key: someKey, " + ee.join(": ..., ") + ": ...}" : "{key: someKey}", B[M + Z] || (ee = 0 < ee.length ? "{" + ee.join(": ..., ") + ": ...}" : "{}", console.error(
+        M = 0 < X.length ? "{key: someKey, " + X.join(": ..., ") + ": ...}" : "{key: someKey}", D[C + M] || (X = 0 < X.length ? "{" + X.join(": ..., ") + ": ...}" : "{}", console.error(
           `A props object containing a "key" prop is being spread into JSX:
   let props = %s;
   <%s {...props} />
 React keys must be passed directly to JSX without using spread:
   let props = %s;
   <%s key={someKey} {...props} />`,
-          Z,
           M,
-          ee,
-          M
-        ), B[M + Z] = !0);
+          C,
+          X,
+          C
+        ), D[C + M] = !0);
       }
-      if (M = null, w !== void 0 && (s(w), M = "" + w), d(j) && (s(j.key), M = "" + j.key), "key" in j) {
+      if (C = null, w !== void 0 && (s(w), C = "" + w), d(f) && (s(f.key), C = "" + f.key), "key" in f) {
         w = {};
-        for (var me in j)
-          me !== "key" && (w[me] = j[me]);
-      } else w = j;
-      return M && i(
+        for (var me in f)
+          me !== "key" && (w[me] = f[me]);
+      } else w = f;
+      return C && o(
         w,
-        typeof o == "function" ? o.displayName || o.name || "Unknown" : o
+        typeof c == "function" ? c.displayName || c.name || "Unknown" : c
       ), h(
-        o,
-        M,
+        c,
+        C,
         w,
-        c(),
+        r(),
         ne,
         de
       );
     }
-    function x(o) {
-      v(o) ? o._store && (o._store.validated = 1) : typeof o == "object" && o !== null && o.$$typeof === Y && (o._payload.status === "fulfilled" ? v(o._payload.value) && o._payload.value._store && (o._payload.value._store.validated = 1) : o._store && (o._store.validated = 1));
+    function g(c) {
+      v(c) ? c._store && (c._store.validated = 1) : typeof c == "object" && c !== null && c.$$typeof === B && (c._payload.status === "fulfilled" ? v(c._payload.value) && c._payload.value._store && (c._payload.value._store.validated = 1) : c._store && (c._store.validated = 1));
     }
-    function v(o) {
-      return typeof o == "object" && o !== null && o.$$typeof === u;
+    function v(c) {
+      return typeof c == "object" && c !== null && c.$$typeof === u;
     }
-    var g = Ge, u = Symbol.for("react.transitional.element"), y = Symbol.for("react.portal"), f = Symbol.for("react.fragment"), E = Symbol.for("react.strict_mode"), R = Symbol.for("react.profiler"), J = Symbol.for("react.consumer"), W = Symbol.for("react.context"), $ = Symbol.for("react.forward_ref"), I = Symbol.for("react.suspense"), K = Symbol.for("react.suspense_list"), H = Symbol.for("react.memo"), Y = Symbol.for("react.lazy"), D = Symbol.for("react.activity"), F = Symbol.for("react.client.reference"), _ = g.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, A = Object.prototype.hasOwnProperty, S = Array.isArray, b = console.createTask ? console.createTask : function() {
+    var y = Ge, u = Symbol.for("react.transitional.element"), j = Symbol.for("react.portal"), x = Symbol.for("react.fragment"), _ = Symbol.for("react.strict_mode"), U = Symbol.for("react.profiler"), Y = Symbol.for("react.consumer"), P = Symbol.for("react.context"), $ = Symbol.for("react.forward_ref"), E = Symbol.for("react.suspense"), W = Symbol.for("react.suspense_list"), G = Symbol.for("react.memo"), B = Symbol.for("react.lazy"), z = Symbol.for("react.activity"), T = Symbol.for("react.client.reference"), Z = y.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, A = Object.prototype.hasOwnProperty, R = Array.isArray, b = console.createTask ? console.createTask : function() {
       return null;
     };
-    g = {
-      react_stack_bottom_frame: function(o) {
-        return o();
+    y = {
+      react_stack_bottom_frame: function(c) {
+        return c();
       }
     };
-    var V, N = {}, Q = g.react_stack_bottom_frame.bind(
-      g,
+    var F, N = {}, K = y.react_stack_bottom_frame.bind(
+      y,
       n
-    )(), se = b(r(n)), B = {};
-    le.Fragment = f, le.jsx = function(o, j, w) {
-      var Z = 1e4 > _.recentlyCreatedOwnerStacks++;
+    )(), se = b(i(n)), D = {};
+    le.Fragment = x, le.jsx = function(c, f, w) {
+      var M = 1e4 > Z.recentlyCreatedOwnerStacks++;
       return p(
-        o,
-        j,
+        c,
+        f,
         w,
         !1,
-        Z ? Error("react-stack-top-frame") : Q,
-        Z ? b(r(o)) : se
+        M ? Error("react-stack-top-frame") : K,
+        M ? b(i(c)) : se
       );
-    }, le.jsxs = function(o, j, w) {
-      var Z = 1e4 > _.recentlyCreatedOwnerStacks++;
+    }, le.jsxs = function(c, f, w) {
+      var M = 1e4 > Z.recentlyCreatedOwnerStacks++;
       return p(
-        o,
-        j,
+        c,
+        f,
         w,
         !0,
-        Z ? Error("react-stack-top-frame") : Q,
-        Z ? b(r(o)) : se
+        M ? Error("react-stack-top-frame") : K,
+        M ? b(i(c)) : se
       );
     };
   })()), le;
@@ -695,22 +695,22 @@ const tt = /* @__PURE__ */ new Map([
   size: "1em",
   weight: "regular",
   mirrored: !1
-}), T = a.forwardRef(
+}), L = a.forwardRef(
   (t, l) => {
     const {
       alt: s,
-      color: r,
-      size: c,
+      color: i,
+      size: r,
       weight: n,
       mirrored: d,
-      children: i,
+      children: o,
       weights: m,
       ...h
     } = t, {
       color: p = "currentColor",
-      size: x,
+      size: g,
       weight: v = "regular",
-      mirrored: g = !1,
+      mirrored: y = !1,
       ...u
     } = a.useContext(vt);
     return /* @__PURE__ */ a.createElement(
@@ -718,121 +718,78 @@ const tt = /* @__PURE__ */ new Map([
       {
         ref: l,
         xmlns: "http://www.w3.org/2000/svg",
-        width: c ?? x,
-        height: c ?? x,
-        fill: r ?? p,
+        width: r ?? g,
+        height: r ?? g,
+        fill: i ?? p,
         viewBox: "0 0 256 256",
-        transform: d || g ? "scale(-1, 1)" : void 0,
+        transform: d || y ? "scale(-1, 1)" : void 0,
         ...u,
         ...h
       },
       !!s && /* @__PURE__ */ a.createElement("title", null, s),
-      i,
+      o,
       m.get(n ?? v)
     );
   }
 );
-T.displayName = "IconBase";
-const He = a.forwardRef((t, l) => /* @__PURE__ */ a.createElement(T, { ref: l, ...t, weights: tt }));
+L.displayName = "IconBase";
+const He = a.forwardRef((t, l) => /* @__PURE__ */ a.createElement(L, { ref: l, ...t, weights: tt }));
 He.displayName = "BellIcon";
-const ft = He, Fe = a.forwardRef((t, l) => /* @__PURE__ */ a.createElement(T, { ref: l, ...t, weights: at }));
+const xt = He, Fe = a.forwardRef((t, l) => /* @__PURE__ */ a.createElement(L, { ref: l, ...t, weights: at }));
 Fe.displayName = "CalendarIcon";
-const xt = Fe, Ve = a.forwardRef((t, l) => /* @__PURE__ */ a.createElement(T, { ref: l, ...t, weights: lt }));
+const ft = Fe, Ve = a.forwardRef((t, l) => /* @__PURE__ */ a.createElement(L, { ref: l, ...t, weights: lt }));
 Ve.displayName = "ChatIcon";
-const gt = Ve, Le = a.forwardRef((t, l) => /* @__PURE__ */ a.createElement(T, { ref: l, ...t, weights: st }));
+const gt = Ve, Le = a.forwardRef((t, l) => /* @__PURE__ */ a.createElement(L, { ref: l, ...t, weights: st }));
 Le.displayName = "CheckIcon";
-const yt = Le, Te = a.forwardRef((t, l) => /* @__PURE__ */ a.createElement(T, { ref: l, ...t, weights: nt }));
+const yt = Le, Te = a.forwardRef((t, l) => /* @__PURE__ */ a.createElement(L, { ref: l, ...t, weights: nt }));
 Te.displayName = "ChecksIcon";
-const jt = Te, Re = a.forwardRef((t, l) => /* @__PURE__ */ a.createElement(T, { ref: l, ...t, weights: rt }));
+const jt = Te, Re = a.forwardRef((t, l) => /* @__PURE__ */ a.createElement(L, { ref: l, ...t, weights: rt }));
 Re.displayName = "EnvelopeIcon";
-const At = Re, Se = a.forwardRef((t, l) => /* @__PURE__ */ a.createElement(T, { ref: l, ...t, weights: ct }));
+const At = Re, Se = a.forwardRef((t, l) => /* @__PURE__ */ a.createElement(L, { ref: l, ...t, weights: ct }));
 Se.displayName = "FileTextIcon";
-const bt = Se, Ie = a.forwardRef((t, l) => /* @__PURE__ */ a.createElement(T, { ref: l, ...t, weights: it }));
+const bt = Se, Ie = a.forwardRef((t, l) => /* @__PURE__ */ a.createElement(L, { ref: l, ...t, weights: it }));
 Ie.displayName = "FunnelIcon";
-const Et = Ie, ke = a.forwardRef((t, l) => /* @__PURE__ */ a.createElement(T, { ref: l, ...t, weights: ot }));
+const Nt = Ie, ke = a.forwardRef((t, l) => /* @__PURE__ */ a.createElement(L, { ref: l, ...t, weights: ot }));
 ke.displayName = "NoteIcon";
-const Nt = ke, $e = a.forwardRef((t, l) => /* @__PURE__ */ a.createElement(T, { ref: l, ...t, weights: dt }));
+const Et = ke, $e = a.forwardRef((t, l) => /* @__PURE__ */ a.createElement(L, { ref: l, ...t, weights: dt }));
 $e.displayName = "PaperclipIcon";
-const wt = $e, De = a.forwardRef((t, l) => /* @__PURE__ */ a.createElement(T, { ref: l, ...t, weights: mt }));
+const wt = $e, De = a.forwardRef((t, l) => /* @__PURE__ */ a.createElement(L, { ref: l, ...t, weights: mt }));
 De.displayName = "PhoneIcon";
-const _t = De, Oe = a.forwardRef((t, l) => /* @__PURE__ */ a.createElement(T, { ref: l, ...t, weights: ht }));
+const _t = De, Oe = a.forwardRef((t, l) => /* @__PURE__ */ a.createElement(L, { ref: l, ...t, weights: ht }));
 Oe.displayName = "UserIcon";
-const Zt = Oe, Pe = a.forwardRef((t, l) => /* @__PURE__ */ a.createElement(T, { ref: l, ...t, weights: ut }));
+const Zt = Oe, Pe = a.forwardRef((t, l) => /* @__PURE__ */ a.createElement(L, { ref: l, ...t, weights: ut }));
 Pe.displayName = "WarningIcon";
-const Mt = Pe, Be = a.forwardRef((t, l) => /* @__PURE__ */ a.createElement(T, { ref: l, ...t, weights: pt }));
+const Mt = Pe, Be = a.forwardRef((t, l) => /* @__PURE__ */ a.createElement(L, { ref: l, ...t, weights: pt }));
 Be.displayName = "WhatsappLogoIcon";
-const Ct = Be, Ht = (t) => /* @__PURE__ */ e.jsx(_t, { ...t }), Ft = (t) => /* @__PURE__ */ e.jsx(At, { ...t }), ze = (t) => /* @__PURE__ */ e.jsx(Nt, { ...t }), Ye = (t) => /* @__PURE__ */ e.jsx(xt, { ...t }), Vt = (t) => /* @__PURE__ */ e.jsx(ft, { ...t }), Lt = (t) => /* @__PURE__ */ e.jsx(gt, { ...t }), Tt = (t) => /* @__PURE__ */ e.jsx(Ct, { ...t }), pe = (t) => /* @__PURE__ */ e.jsx(Zt, { ...t }), ye = (t) => /* @__PURE__ */ e.jsx(wt, { ...t }), Rt = (t) => /* @__PURE__ */ e.jsx(Et, { ...t }), je = (t) => /* @__PURE__ */ e.jsx(yt, { ...t }), Ae = (t) => /* @__PURE__ */ e.jsx(jt, { ...t }), St = (t) => /* @__PURE__ */ e.jsx(Mt, { ...t }), It = (t) => /* @__PURE__ */ e.jsx(bt, { ...t });
-function G(t) {
+const Ct = Be, Ht = (t) => /* @__PURE__ */ e.jsx(_t, { ...t }), Ft = (t) => /* @__PURE__ */ e.jsx(At, { ...t }), ze = (t) => /* @__PURE__ */ e.jsx(Et, { ...t }), Ue = (t) => /* @__PURE__ */ e.jsx(ft, { ...t }), Vt = (t) => /* @__PURE__ */ e.jsx(xt, { ...t }), Lt = (t) => /* @__PURE__ */ e.jsx(gt, { ...t }), Tt = (t) => /* @__PURE__ */ e.jsx(Ct, { ...t }), pe = (t) => /* @__PURE__ */ e.jsx(Zt, { ...t }), ye = (t) => /* @__PURE__ */ e.jsx(wt, { ...t }), Rt = (t) => /* @__PURE__ */ e.jsx(Nt, { ...t }), je = (t) => /* @__PURE__ */ e.jsx(yt, { ...t }), Ae = (t) => /* @__PURE__ */ e.jsx(jt, { ...t }), St = (t) => /* @__PURE__ */ e.jsx(Mt, { ...t }), It = (t) => /* @__PURE__ */ e.jsx(bt, { ...t });
+function q(t) {
   if (!t || typeof t != "string") return "";
   if (typeof document > "u") return t;
   const l = document.createElement("div");
-  return l.innerHTML = t, ["style", "script", "link", "iframe"].forEach((r) => {
-    l.querySelectorAll(r).forEach((n) => n.remove());
+  return l.innerHTML = t, ["style", "script", "link", "iframe"].forEach((i) => {
+    l.querySelectorAll(i).forEach((n) => n.remove());
   }), l.innerHTML;
 }
-const kt = 164, $t = 400;
-function Dt(t) {
-  let l = t.parentElement;
-  for (; l; ) {
-    const { overflowY: s } = getComputedStyle(l);
-    if (/(auto|scroll|overlay)/.test(s)) return l;
-    l = l.parentElement;
-  }
-  return null;
-}
+const kt = 164;
 function ie(t, l = kt) {
-  const [s, r] = C(!1), [c, n] = C(null), d = q(null), i = q(null);
-  U(() => {
-    const x = d.current;
-    if (!x) return;
-    const v = () => n(x.scrollHeight > l), g = requestAnimationFrame(() => {
-      requestAnimationFrame(v);
+  const [s, i] = H(!1), [r, n] = H(null), d = ee(null);
+  te(() => {
+    const p = d.current;
+    if (!p) return;
+    const g = () => n(p.scrollHeight > l), v = requestAnimationFrame(() => {
+      requestAnimationFrame(g);
     });
-    return () => cancelAnimationFrame(g);
+    return () => cancelAnimationFrame(v);
   }, [l, ...t]);
-  const m = c === !0, h = c !== null && (s || !c);
-  U(() => {
-    if (s) {
-      i.current = null;
-      return;
-    }
-    const x = i.current;
-    if (!x || !d.current) return;
-    i.current = null;
-    const v = d.current, g = () => {
-      const f = v.offsetHeight, E = x.height - f;
-      if (E <= 0) return;
-      const R = x.scrollParent;
-      R ? R.scrollTop = Math.max(0, R.scrollTop - E) : window.scrollTo({ top: Math.max(0, window.scrollY - E), behavior: "auto" });
-    }, u = (f) => {
-      f.target !== v || f.propertyName !== "max-height" || (v.removeEventListener("transitionend", u), clearTimeout(y), g());
-    };
-    v.addEventListener("transitionend", u);
-    const y = setTimeout(() => {
-      v.removeEventListener("transitionend", u), g();
-    }, $t + 50);
-    return () => {
-      v.removeEventListener("transitionend", u), clearTimeout(y);
-    };
-  }, [s]);
-  const p = te(() => {
-    r((x) => {
-      if (x) {
-        const v = d.current;
-        v && (i.current = {
-          height: v.offsetHeight,
-          scrollParent: Dt(v)
-        });
-      }
-      return !x;
-    });
+  const o = r === !0, m = r !== null && (s || !r), h = Q(() => {
+    i((p) => !p);
   }, []);
   return {
     isExpanded: s,
-    toggleExpanded: p,
-    hasOverflow: c,
-    showOverflow: m,
-    shouldShowExpanded: h,
+    toggleExpanded: h,
+    hasOverflow: r,
+    showOverflow: o,
+    shouldShowExpanded: m,
     wrapperRef: d
   };
 }
@@ -840,30 +797,30 @@ const oe = ({
   isExpanded: t,
   onToggle: l,
   label: s = "View More",
-  expandedLabel: r,
-  className: c = ""
+  expandedLabel: i,
+  className: r = ""
 }) => {
-  const n = t ? r || "View Less" : s;
+  const n = t ? i || "View Less" : s;
   return /* @__PURE__ */ e.jsx(
     "button",
     {
       type: "button",
-      className: `atw-view-more-btn ${c}`,
+      className: `atw-view-more-btn ${r}`,
       onClick: l,
       children: n
     }
   );
-}, Ot = 20, he = ({ label: t, value: l }) => {
-  const { isExpanded: s, toggleExpanded: r, shouldShowExpanded: c, showOverflow: n, wrapperRef: d } = ie(
+}, $t = 20, he = ({ label: t, value: l }) => {
+  const { isExpanded: s, toggleExpanded: i, shouldShowExpanded: r, showOverflow: n, wrapperRef: d } = ie(
     [l],
-    Ot
+    $t
   );
   return l ? /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
     /* @__PURE__ */ e.jsx(
       "div",
       {
         ref: d,
-        className: `email-activity-recipients-wrapper ${c ? "email-activity-recipients-wrapper--expanded" : ""}`,
+        className: `email-activity-recipients-wrapper ${r ? "email-activity-recipients-wrapper--expanded" : ""}`,
         children: /* @__PURE__ */ e.jsxs("h5", { className: "atw-email-from-label", children: [
           t,
           ": ",
@@ -875,28 +832,28 @@ const oe = ({
       oe,
       {
         isExpanded: s,
-        onToggle: r,
+        onToggle: i,
         label: `View more (${t})`,
         expandedLabel: `View less (${t})`
       }
     )
   ] }) : null;
-}, P = ({ content: t, children: l, align: s = "center" }) => {
-  const [r, c] = C(!1), [n, d] = C({ top: 0, left: 0 }), i = q(null), m = () => {
-    if (i.current) {
-      const p = i.current.getBoundingClientRect();
+}, k = ({ content: t, children: l, align: s = "center" }) => {
+  const [i, r] = H(!1), [n, d] = H({ top: 0, left: 0 }), o = ee(null), m = () => {
+    if (o.current) {
+      const p = o.current.getBoundingClientRect();
       d({
         top: p.top - 6,
         left: s === "left" ? p.left : s === "right" ? p.right : p.left + p.width / 2
       });
     }
-    c(!0);
+    r(!0);
   }, h = () => s === "left" ? "translateY(-100%)" : s === "right" ? "translate(-100%, -100%)" : "translate(-50%, -100%)";
-  return /* @__PURE__ */ e.jsxs("div", { ref: i, className: "atw-tooltip-wrapper", onMouseEnter: m, onMouseLeave: () => c(!1), children: [
+  return /* @__PURE__ */ e.jsxs("div", { ref: o, className: "atw-tooltip-wrapper", onMouseEnter: m, onMouseLeave: () => r(!1), children: [
     l,
-    r && /* @__PURE__ */ e.jsx("div", { className: "atw-tooltip-content", style: { top: n.top, left: n.left, transform: h() }, children: t })
+    i && /* @__PURE__ */ e.jsx("div", { className: "atw-tooltip-content", style: { top: n.top, left: n.left, transform: h() }, children: t })
   ] });
-}, Pt = {
+}, Dt = {
   // Priority
   Low: { label: "Low", bgColor: "#E8F5E9", textColor: "#2E7D32", borderColor: "#A5D6A7" },
   Medium: { label: "Medium", bgColor: "#FFF3E0", textColor: "#E65100", borderColor: "#FFCC80" },
@@ -914,63 +871,63 @@ const oe = ({
   email_received: { label: "Received", bgColor: "#E3F2FD", textColor: "#1565C0", borderColor: "#90CAF9" },
   // Lead
   active_lead: { label: "Active", bgColor: "#E8F5E9", textColor: "#2E7D32", borderColor: "#A5D6A7" }
-}, k = ({
+}, S = ({
   statusKey: t,
   label: l,
   bgColor: s,
-  textColor: r,
-  borderColor: c,
+  textColor: i,
+  borderColor: r,
   shape: n = "pill",
   style: d = {},
-  className: i = ""
+  className: o = ""
 }) => {
-  const m = t ? Pt[t] : void 0, h = l || (m == null ? void 0 : m.label) || t || "", p = s || (m == null ? void 0 : m.bgColor) || "#F3F4F6", x = r || (m == null ? void 0 : m.textColor) || "#374151", v = c || (m == null ? void 0 : m.borderColor) || "#D1D5DB";
+  const m = t ? Dt[t] : void 0, h = l || (m == null ? void 0 : m.label) || t || "", p = s || (m == null ? void 0 : m.bgColor) || "#F3F4F6", g = i || (m == null ? void 0 : m.textColor) || "#374151", v = r || (m == null ? void 0 : m.borderColor) || "#D1D5DB";
   return h ? /* @__PURE__ */ e.jsx(
     "span",
     {
-      className: `atw-status-badge ${n === "pill" ? "atw-status-badge--pill" : "atw-status-badge--square"} ${i}`,
+      className: `atw-status-badge ${n === "pill" ? "atw-status-badge--pill" : "atw-status-badge--square"} ${o}`,
       style: {
         backgroundColor: p,
-        color: x,
+        color: g,
         border: `1px solid ${v}`,
         ...d
       },
       children: h
     }
   ) : null;
-}, Ue = Ce(null);
-function X() {
-  const t = Je(Ue);
+}, Ye = Ce(null);
+function J() {
+  const t = Je(Ye);
   if (!t)
     throw new Error("useActivityConfig must be used within an <ActivityProvider>");
   return t;
 }
-const Bt = ({ children: t, ...l }) => /* @__PURE__ */ e.jsx(Ue.Provider, { value: l, children: t });
-function L(t) {
-  const l = new Date(t), s = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"], r = l.getDate().toString().padStart(2, "0"), c = s[l.getMonth()], n = l.getFullYear(), d = `${r} ${c} ${n}`;
-  let i = l.getHours();
-  const m = l.getMinutes().toString().padStart(2, "0"), h = i >= 12 ? "PM" : "AM";
-  i = i % 12, i = i || 12;
-  const p = `${i.toString().padStart(2, "0")}:${m} ${h}`;
+const Ot = ({ children: t, ...l }) => /* @__PURE__ */ e.jsx(Ye.Provider, { value: l, children: t });
+function V(t) {
+  const l = new Date(t), s = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"], i = l.getDate().toString().padStart(2, "0"), r = s[l.getMonth()], n = l.getFullYear(), d = `${i} ${r} ${n}`;
+  let o = l.getHours();
+  const m = l.getMinutes().toString().padStart(2, "0"), h = o >= 12 ? "PM" : "AM";
+  o = o % 12, o = o || 12;
+  const p = `${o.toString().padStart(2, "0")}:${m} ${h}`;
   return { date: d, time: p };
 }
-function zt(t) {
+function Pt(t) {
   try {
     const l = new Date(t);
     if (Number.isNaN(l.getTime())) return "";
-    const s = l.getFullYear(), r = String(l.getMonth() + 1).padStart(2, "0"), c = String(l.getDate()).padStart(2, "0");
-    return `${s}-${r}-${c}`;
+    const s = l.getFullYear(), i = String(l.getMonth() + 1).padStart(2, "0"), r = String(l.getDate()).padStart(2, "0");
+    return `${s}-${i}-${r}`;
   } catch {
     return "";
   }
 }
 function be(t) {
   const l = t.creation ?? "";
-  return zt(l);
+  return Pt(l);
 }
-const z = ({ activity: t }) => /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
+const O = ({ activity: t }) => /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
   t.is_lead && /* @__PURE__ */ e.jsx(
-    k,
+    S,
     {
       label: "Lead",
       bgColor: "#F0F9FF",
@@ -981,7 +938,7 @@ const z = ({ activity: t }) => /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
     }
   ),
   t.is_pd && /* @__PURE__ */ e.jsx(
-    k,
+    S,
     {
       label: "PDA",
       bgColor: "#FDF2F8",
@@ -992,7 +949,7 @@ const z = ({ activity: t }) => /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
     }
   ),
   t.is_dc && /* @__PURE__ */ e.jsx(
-    k,
+    S,
     {
       label: "DC",
       bgColor: "#FFF7ED",
@@ -1002,37 +959,37 @@ const z = ({ activity: t }) => /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
       style: { fontSize: "10px", padding: "0 8px", height: "18px", lineHeight: "16px", fontWeight: "600" }
     }
   )
-] }), Ee = "#FB2828", Yt = ({ activity: t }) => {
-  const { apiBaseUrl: l, onEmailReply: s, onEmailReplyAll: r } = X(), n = t.data && typeof t.data == "object" ? t.data : t, d = t.communication_date || "", i = t.creation || "", m = d || i, { date: h, time: p } = L(m), x = n.sender_full_name || n.sender || "", v = n.recipients || "", g = n.cc || null, u = n.bcc || null, y = n.subject || "", f = n.content || "", E = n.attachments || [], R = (n.sent_or_received || "").toLowerCase(), J = R === "received" ? "email_received" : "email_sent", W = 110, { isExpanded: $, toggleExpanded: I, shouldShowExpanded: K, showOverflow: H, wrapperRef: Y } = ie(
-    [f, E],
-    W
-  ), D = (A) => A.startsWith("http://") || A.startsWith("https://") ? A : `${l || ""}${A}`, F = () => {
+] }), Ne = "#FB2828", Bt = ({ activity: t }) => {
+  const { apiBaseUrl: l, onEmailReply: s, onEmailReplyAll: i } = J(), n = t.data && typeof t.data == "object" ? t.data : t, d = t.communication_date || "", o = t.creation || "", m = d || o, { date: h, time: p } = V(m), g = n.sender_full_name || n.sender || "", v = n.recipients || "", y = n.cc || null, u = n.bcc || null, j = n.subject || "", x = n.content || "", _ = n.attachments || [], U = (n.sent_or_received || "").toLowerCase(), Y = U === "received" ? "email_received" : "email_sent", P = 110, { isExpanded: $, toggleExpanded: E, shouldShowExpanded: W, showOverflow: G, wrapperRef: B } = ie(
+    [x, _],
+    P
+  ), z = (A) => A.startsWith("http://") || A.startsWith("https://") ? A : `${l || ""}${A}`, T = () => {
     s == null || s({
       name: t.name,
-      subject: y,
-      content: f,
+      subject: j,
+      content: x,
       recipients: n.sender || "",
       cc: null,
       bcc: null,
       sender: n.sender || "",
-      senderFullName: x
+      senderFullName: g
     });
-  }, _ = () => {
-    r == null || r({
+  }, Z = () => {
+    i == null || i({
       name: t.name,
-      subject: y,
-      content: f,
+      subject: j,
+      content: x,
       recipients: v,
-      cc: g,
+      cc: y,
       bcc: u,
       sender: n.sender || "",
-      senderFullName: x,
+      senderFullName: g,
       isReplyAll: !0
     });
   };
   return /* @__PURE__ */ e.jsxs("div", { className: "activity-item email-activity", children: [
     /* @__PURE__ */ e.jsxs("div", { className: "activity-header", children: [
-      /* @__PURE__ */ e.jsx(P, { content: "Email", align: "left", children: /* @__PURE__ */ e.jsx("div", { className: "activity-icon-wrapper", children: /* @__PURE__ */ e.jsx(Ft, { size: 20, color: Ee }) }) }),
+      /* @__PURE__ */ e.jsx(k, { content: "Email", align: "left", children: /* @__PURE__ */ e.jsx("div", { className: "activity-icon-wrapper", children: /* @__PURE__ */ e.jsx(Ft, { size: 20, color: Ne }) }) }),
       /* @__PURE__ */ e.jsxs("div", { className: "activity-date-time", style: { display: "flex", alignItems: "center", gap: "6px" }, children: [
         /* @__PURE__ */ e.jsxs("span", { children: [
           h,
@@ -1040,69 +997,69 @@ const z = ({ activity: t }) => /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
           p
         ] }),
         /* @__PURE__ */ e.jsx(
-          k,
+          S,
           {
-            statusKey: J,
+            statusKey: Y,
             shape: "pill",
             showIcon: !1,
             style: { fontSize: "11px", padding: "1px 8px", lineHeight: "16px" }
           }
         ),
-        /* @__PURE__ */ e.jsx(z, { activity: t })
+        /* @__PURE__ */ e.jsx(O, { activity: t })
       ] })
     ] }),
     /* @__PURE__ */ e.jsx("div", { className: "activity-content", children: /* @__PURE__ */ e.jsxs(
       "div",
       {
         className: "email-activity-card",
-        style: R === "received" ? { borderLeft: "3px solid #1565C0" } : void 0,
+        style: U === "received" ? { borderLeft: "3px solid #1565C0" } : void 0,
         children: [
           /* @__PURE__ */ e.jsxs("div", { style: { display: "flex", justifyContent: "space-between", alignItems: "flex-start" }, children: [
             /* @__PURE__ */ e.jsxs("div", { children: [
               /* @__PURE__ */ e.jsxs("h5", { className: "atw-email-from-label", children: [
                 "From: ",
-                /* @__PURE__ */ e.jsx("span", { className: "atw-email-from-value", children: x && `${x}` })
+                /* @__PURE__ */ e.jsx("span", { className: "atw-email-from-value", children: g && `${g}` })
               ] }),
               /* @__PURE__ */ e.jsx(he, { label: "To", value: v }),
-              /* @__PURE__ */ e.jsx(he, { label: "Cc", value: g }),
+              /* @__PURE__ */ e.jsx(he, { label: "Cc", value: y }),
               /* @__PURE__ */ e.jsx(he, { label: "Bcc", value: u })
             ] }),
-            (s || r) && /* @__PURE__ */ e.jsxs("div", { style: { display: "flex", gap: "8px" }, children: [
-              s && /* @__PURE__ */ e.jsx("button", { type: "button", onClick: F, className: "atw-email-reply-btn", children: "Reply" }),
-              r && /* @__PURE__ */ e.jsx("button", { type: "button", onClick: _, className: "atw-email-reply-btn", children: "Reply All" })
+            (s || i) && /* @__PURE__ */ e.jsxs("div", { style: { display: "flex", gap: "8px" }, children: [
+              s && /* @__PURE__ */ e.jsx("button", { type: "button", onClick: T, className: "atw-email-reply-btn", children: "Reply" }),
+              i && /* @__PURE__ */ e.jsx("button", { type: "button", onClick: Z, className: "atw-email-reply-btn", children: "Reply All" })
             ] })
           ] }),
           /* @__PURE__ */ e.jsx("hr", { className: "atw-email-divider" }),
           /* @__PURE__ */ e.jsxs("h4", { children: [
             "Subject: ",
-            y && /* @__PURE__ */ e.jsx("span", { className: "email-activity-subject", children: y })
+            j && /* @__PURE__ */ e.jsx("span", { className: "email-activity-subject", children: j })
           ] }),
-          (f || E.length > 0) && /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
+          (x || _.length > 0) && /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
             /* @__PURE__ */ e.jsxs(
               "div",
               {
-                ref: Y,
-                className: `email-activity-body-wrapper ${K ? "email-activity-body-wrapper--expanded" : ""}`,
+                ref: B,
+                className: `email-activity-body-wrapper ${W ? "email-activity-body-wrapper--expanded" : ""}`,
                 children: [
-                  f && /* @__PURE__ */ e.jsx("div", { className: "email-activity-body rich-html-content", dangerouslySetInnerHTML: { __html: G(f) } }),
-                  E.length > 0 && /* @__PURE__ */ e.jsxs("div", { className: "email-activity-attachments", children: [
+                  x && /* @__PURE__ */ e.jsx("div", { className: "email-activity-body rich-html-content", dangerouslySetInnerHTML: { __html: q(x) } }),
+                  _.length > 0 && /* @__PURE__ */ e.jsxs("div", { className: "email-activity-attachments", children: [
                     /* @__PURE__ */ e.jsxs("div", { className: "email-activity-attachments-header", children: [
                       /* @__PURE__ */ e.jsx(ye, { size: 16, color: "#666" }),
                       /* @__PURE__ */ e.jsxs("span", { children: [
                         "Attachments (",
-                        E.length,
+                        _.length,
                         ")"
                       ] })
                     ] }),
-                    /* @__PURE__ */ e.jsx("div", { className: "email-activity-attachments-list", children: E.map((A, S) => /* @__PURE__ */ e.jsxs(
+                    /* @__PURE__ */ e.jsx("div", { className: "email-activity-attachments-list", children: _.map((A, R) => /* @__PURE__ */ e.jsxs(
                       "a",
                       {
-                        href: D(A.file_url),
+                        href: z(A.file_url),
                         target: "_blank",
                         rel: "noopener noreferrer",
                         className: "email-activity-attachment-item",
                         children: [
-                          /* @__PURE__ */ e.jsx(ye, { size: 14, color: Ee }),
+                          /* @__PURE__ */ e.jsx(ye, { size: 14, color: Ne }),
                           /* @__PURE__ */ e.jsx("span", { children: A.file_name || A.file_url.split("/").pop() || "Attachment" }),
                           A.file_size && /* @__PURE__ */ e.jsxs("span", { className: "email-activity-attachment-size", children: [
                             "(",
@@ -1111,79 +1068,79 @@ const z = ({ activity: t }) => /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
                           ] })
                         ]
                       },
-                      A.name || S
+                      A.name || R
                     )) })
                   ] })
                 ]
               }
             ),
-            H && /* @__PURE__ */ e.jsx("div", { style: { textAlign: "right", marginTop: "4px" }, children: /* @__PURE__ */ e.jsx(oe, { isExpanded: $, onToggle: I, label: "View More" }) })
+            G && /* @__PURE__ */ e.jsx("div", { style: { textAlign: "right", marginTop: "4px" }, children: /* @__PURE__ */ e.jsx(oe, { isExpanded: $, onToggle: E, label: "View More" }) })
           ] })
         ]
       }
     ) })
   ] });
-}, Ut = "#1C73E7", Ne = ({ activity: t }) => {
-  let l, s, r, c;
+}, zt = "#1C73E7", Ee = ({ activity: t }) => {
+  let l, s, i, r;
   if (t.activity_type === "notes") {
-    const p = t.creation ?? "", x = L(p);
-    l = x.date, s = x.time, r = t.content, c = t.title || "Note";
+    const p = t.creation ?? "", g = V(p);
+    l = g.date, s = g.time, i = t.content, r = t.title || "Note";
   } else {
-    const p = L(t.creation || "");
-    l = p.date, s = p.time, r = typeof t.data == "string" ? t.data : void 0, c = "Creation";
+    const p = V(t.creation || "");
+    l = p.date, s = p.time, i = typeof t.data == "string" ? t.data : void 0, r = "Creation";
   }
-  const { isExpanded: n, toggleExpanded: d, shouldShowExpanded: i, showOverflow: m, wrapperRef: h } = ie([r]);
+  const { isExpanded: n, toggleExpanded: d, shouldShowExpanded: o, showOverflow: m, wrapperRef: h } = ie([i]);
   return /* @__PURE__ */ e.jsxs("div", { className: "activity-item notes-activity", children: [
     /* @__PURE__ */ e.jsxs("div", { className: "activity-header", children: [
-      /* @__PURE__ */ e.jsx(P, { content: `${t.activity_type === "notes" ? "Note" : "Creation"}`, align: "left", children: /* @__PURE__ */ e.jsx("div", { className: "activity-icon-wrapper", children: /* @__PURE__ */ e.jsx(ze, { size: 20, color: Ut }) }) }),
+      /* @__PURE__ */ e.jsx(k, { content: `${t.activity_type === "notes" ? "Note" : "Creation"}`, align: "left", children: /* @__PURE__ */ e.jsx("div", { className: "activity-icon-wrapper", children: /* @__PURE__ */ e.jsx(ze, { size: 20, color: zt }) }) }),
       /* @__PURE__ */ e.jsxs("div", { className: "activity-date-time", style: { display: "flex", alignItems: "center", gap: "6px" }, children: [
         /* @__PURE__ */ e.jsxs("span", { children: [
           l,
           " - ",
           s
         ] }),
-        /* @__PURE__ */ e.jsx(z, { activity: t })
+        /* @__PURE__ */ e.jsx(O, { activity: t })
       ] })
     ] }),
     /* @__PURE__ */ e.jsx("div", { className: "activity-content", children: /* @__PURE__ */ e.jsxs("div", { className: "notes-activity-card", children: [
-      /* @__PURE__ */ e.jsx("div", { className: "notes-activity-card-header", children: /* @__PURE__ */ e.jsx("h3", { className: "notes-activity-title", children: c }) }),
-      r && /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
+      /* @__PURE__ */ e.jsx("div", { className: "notes-activity-card-header", children: /* @__PURE__ */ e.jsx("h3", { className: "notes-activity-title", children: r }) }),
+      i && /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
         /* @__PURE__ */ e.jsx(
           "div",
           {
             ref: h,
-            className: `notes-activity-body-wrapper ${i ? "notes-activity-body-wrapper--expanded" : ""}`,
-            children: /* @__PURE__ */ e.jsx("div", { className: "notes-item rich-html-content", dangerouslySetInnerHTML: { __html: G(r) } })
+            className: `notes-activity-body-wrapper ${o ? "notes-activity-body-wrapper--expanded" : ""}`,
+            children: /* @__PURE__ */ e.jsx("div", { className: "notes-item rich-html-content", dangerouslySetInnerHTML: { __html: q(i) } })
           }
         ),
         m && /* @__PURE__ */ e.jsx("div", { style: { textAlign: "right", marginTop: "4px" }, children: /* @__PURE__ */ e.jsx(oe, { isExpanded: n, onToggle: d, label: "View More" }) })
       ] })
     ] }) })
   ] });
-}, Wt = ({ activity: t }) => {
-  const l = L(t.creation), s = t.due_date ? L(t.due_date) : null, r = t.title || "Schedule", c = t.description || "", n = t.priority || "", d = t.task_type || t.activity_type || "", i = t.type || "";
+}, Ut = ({ activity: t }) => {
+  const l = V(t.creation), s = t.due_date ? V(t.due_date) : null, i = t.title || "Schedule", r = t.description || "", n = t.priority || "", d = t.task_type || t.activity_type || "", o = t.type || "";
   return /* @__PURE__ */ e.jsxs("div", { className: "activity-item schedule-activity", children: [
     /* @__PURE__ */ e.jsxs("div", { className: "activity-header", children: [
-      /* @__PURE__ */ e.jsx(P, { content: "Schedule", align: "left", children: /* @__PURE__ */ e.jsx("div", { className: "activity-icon-wrapper", children: /* @__PURE__ */ e.jsx(Ye, { size: 20, color: "#0DBFFF" }) }) }),
+      /* @__PURE__ */ e.jsx(k, { content: "Schedule", align: "left", children: /* @__PURE__ */ e.jsx("div", { className: "activity-icon-wrapper", children: /* @__PURE__ */ e.jsx(Ue, { size: 20, color: "#0DBFFF" }) }) }),
       /* @__PURE__ */ e.jsxs("div", { className: "activity-date-time", style: { display: "flex", alignItems: "center", gap: "6px" }, children: [
         /* @__PURE__ */ e.jsxs("span", { children: [
           l.date,
           " - ",
           l.time
         ] }),
-        /* @__PURE__ */ e.jsx(z, { activity: t })
+        /* @__PURE__ */ e.jsx(O, { activity: t })
       ] })
     ] }),
     /* @__PURE__ */ e.jsx("div", { className: "activity-content", children: /* @__PURE__ */ e.jsxs("div", { className: "schedule-activity-card", children: [
-      /* @__PURE__ */ e.jsx("div", { className: "schedule-activity-card-header", children: /* @__PURE__ */ e.jsx("h4", { className: "schedule-activity-title", children: r }) }),
+      /* @__PURE__ */ e.jsx("div", { className: "schedule-activity-card-header", children: /* @__PURE__ */ e.jsx("h4", { className: "schedule-activity-title", children: i }) }),
       /* @__PURE__ */ e.jsxs("div", { className: "schedule-activity-card-content", children: [
         /* @__PURE__ */ e.jsxs("div", { className: "schedule-activity-meta", children: [
-          i && /* @__PURE__ */ e.jsxs("div", { className: "schedule-activity-meta-row", children: [
+          o && /* @__PURE__ */ e.jsxs("div", { className: "schedule-activity-meta-row", children: [
             /* @__PURE__ */ e.jsxs("div", { className: "schedule-activity-label-cell", children: [
               /* @__PURE__ */ e.jsx("span", { className: "schedule-activity-label", children: "Type" }),
               /* @__PURE__ */ e.jsx("span", { className: "schedule-activity-colon", children: ":" })
             ] }),
-            /* @__PURE__ */ e.jsx("span", { className: "schedule-activity-value", children: i })
+            /* @__PURE__ */ e.jsx("span", { className: "schedule-activity-value", children: o })
           ] }),
           /* @__PURE__ */ e.jsxs("div", { className: "schedule-activity-meta-row", children: [
             /* @__PURE__ */ e.jsxs("div", { className: "schedule-activity-label-cell", children: [
@@ -1197,7 +1154,7 @@ const z = ({ activity: t }) => /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
               /* @__PURE__ */ e.jsx("span", { className: "schedule-activity-label", children: "Priority" }),
               /* @__PURE__ */ e.jsx("span", { className: "schedule-activity-colon", children: ":" })
             ] }),
-            /* @__PURE__ */ e.jsx(k, { statusKey: n, showIcon: !1, shape: "square" })
+            /* @__PURE__ */ e.jsx(S, { statusKey: n, showIcon: !1, shape: "square" })
           ] }),
           d && /* @__PURE__ */ e.jsxs("div", { className: "schedule-activity-meta-row", children: [
             /* @__PURE__ */ e.jsxs("div", { className: "schedule-activity-label-cell", children: [
@@ -1207,7 +1164,7 @@ const z = ({ activity: t }) => /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
             /* @__PURE__ */ e.jsx("span", { className: "schedule-activity-value", children: d })
           ] })
         ] }),
-        c && /* @__PURE__ */ e.jsx("div", { className: "schedule-activity-description-wrapper", children: /* @__PURE__ */ e.jsxs("div", { className: "schedule-activity-meta-row", children: [
+        r && /* @__PURE__ */ e.jsx("div", { className: "schedule-activity-description-wrapper", children: /* @__PURE__ */ e.jsxs("div", { className: "schedule-activity-meta-row", children: [
           /* @__PURE__ */ e.jsxs("div", { className: "schedule-activity-label-cell", children: [
             /* @__PURE__ */ e.jsx("span", { className: "schedule-activity-label", children: "Description" }),
             /* @__PURE__ */ e.jsx("span", { className: "schedule-activity-colon", children: ":" })
@@ -1216,37 +1173,37 @@ const z = ({ activity: t }) => /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
             "div",
             {
               className: "schedule-activity-description rich-html-content",
-              dangerouslySetInnerHTML: { __html: G(c) }
+              dangerouslySetInnerHTML: { __html: q(r) }
             }
           )
         ] }) })
       ] })
     ] }) })
   ] });
-}, qt = ({ activity: t }) => {
-  const l = L(t.creation), s = t.due_date ? L(t.due_date) : null, r = t.title || "Task", c = t.description || "", n = t.priority || "", d = t.task_type || t.activity_type || "", i = t.type || "", m = t.status || "", h = t.skip_reason || "";
+}, Yt = ({ activity: t }) => {
+  const l = V(t.creation), s = t.due_date ? V(t.due_date) : null, i = t.title || "Task", r = t.description || "", n = t.priority || "", d = t.task_type || t.activity_type || "", o = t.type || "", m = t.status || "", h = t.skip_reason || "";
   return /* @__PURE__ */ e.jsxs("div", { className: "activity-item schedule-activity", children: [
     /* @__PURE__ */ e.jsxs("div", { className: "activity-header", children: [
-      /* @__PURE__ */ e.jsx(P, { content: "Task", align: "left", children: /* @__PURE__ */ e.jsx("div", { className: "activity-icon-wrapper", children: /* @__PURE__ */ e.jsx(Ye, { size: 20, color: "#0DBFFF" }) }) }),
+      /* @__PURE__ */ e.jsx(k, { content: "Task", align: "left", children: /* @__PURE__ */ e.jsx("div", { className: "activity-icon-wrapper", children: /* @__PURE__ */ e.jsx(Ue, { size: 20, color: "#0DBFFF" }) }) }),
       /* @__PURE__ */ e.jsxs("div", { className: "activity-date-time", style: { display: "flex", alignItems: "center", gap: "6px" }, children: [
         /* @__PURE__ */ e.jsxs("span", { children: [
           l.date,
           " - ",
           l.time
         ] }),
-        /* @__PURE__ */ e.jsx(z, { activity: t })
+        /* @__PURE__ */ e.jsx(O, { activity: t })
       ] })
     ] }),
     /* @__PURE__ */ e.jsx("div", { className: "activity-content", children: /* @__PURE__ */ e.jsxs("div", { className: "schedule-activity-card", children: [
-      /* @__PURE__ */ e.jsx("div", { className: "schedule-activity-card-header", children: /* @__PURE__ */ e.jsx("h4", { className: "schedule-activity-title", children: r }) }),
+      /* @__PURE__ */ e.jsx("div", { className: "schedule-activity-card-header", children: /* @__PURE__ */ e.jsx("h4", { className: "schedule-activity-title", children: i }) }),
       /* @__PURE__ */ e.jsxs("div", { className: "schedule-activity-card-content", children: [
         /* @__PURE__ */ e.jsxs("div", { className: "schedule-activity-meta", children: [
-          i && /* @__PURE__ */ e.jsxs("div", { className: "schedule-activity-meta-row", children: [
+          o && /* @__PURE__ */ e.jsxs("div", { className: "schedule-activity-meta-row", children: [
             /* @__PURE__ */ e.jsxs("div", { className: "schedule-activity-label-cell", children: [
               /* @__PURE__ */ e.jsx("span", { className: "schedule-activity-label", children: "Type" }),
               /* @__PURE__ */ e.jsx("span", { className: "schedule-activity-colon", children: ":" })
             ] }),
-            /* @__PURE__ */ e.jsx("span", { className: "schedule-activity-value", children: i })
+            /* @__PURE__ */ e.jsx("span", { className: "schedule-activity-value", children: o })
           ] }),
           s && /* @__PURE__ */ e.jsxs("div", { className: "schedule-activity-meta-row", children: [
             /* @__PURE__ */ e.jsxs("div", { className: "schedule-activity-label-cell", children: [
@@ -1260,7 +1217,7 @@ const z = ({ activity: t }) => /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
               /* @__PURE__ */ e.jsx("span", { className: "schedule-activity-label", children: "Priority" }),
               /* @__PURE__ */ e.jsx("span", { className: "schedule-activity-colon", children: ":" })
             ] }),
-            /* @__PURE__ */ e.jsx(k, { statusKey: n, showIcon: !1, shape: "square" })
+            /* @__PURE__ */ e.jsx(S, { statusKey: n, showIcon: !1, shape: "square" })
           ] }),
           d && /* @__PURE__ */ e.jsxs("div", { className: "schedule-activity-meta-row", children: [
             /* @__PURE__ */ e.jsxs("div", { className: "schedule-activity-label-cell", children: [
@@ -1274,7 +1231,7 @@ const z = ({ activity: t }) => /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
               /* @__PURE__ */ e.jsx("span", { className: "schedule-activity-label", children: "Status" }),
               /* @__PURE__ */ e.jsx("span", { className: "schedule-activity-colon", children: ":" })
             ] }),
-            /* @__PURE__ */ e.jsx(k, { statusKey: m, showIcon: !1, shape: "square" })
+            /* @__PURE__ */ e.jsx(S, { statusKey: m, showIcon: !1, shape: "square" })
           ] })
         ] }),
         m === "Skipped" && h && /* @__PURE__ */ e.jsx("div", { className: "schedule-activity-description-wrapper", children: /* @__PURE__ */ e.jsxs("div", { className: "schedule-activity-meta-row", children: [
@@ -1286,11 +1243,11 @@ const z = ({ activity: t }) => /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
             "div",
             {
               className: "schedule-activity-description rich-html-content",
-              dangerouslySetInnerHTML: { __html: G(h) }
+              dangerouslySetInnerHTML: { __html: q(h) }
             }
           )
         ] }) }),
-        c && /* @__PURE__ */ e.jsx("div", { className: "schedule-activity-description-wrapper", children: /* @__PURE__ */ e.jsxs("div", { className: "schedule-activity-meta-row", children: [
+        r && /* @__PURE__ */ e.jsx("div", { className: "schedule-activity-description-wrapper", children: /* @__PURE__ */ e.jsxs("div", { className: "schedule-activity-meta-row", children: [
           /* @__PURE__ */ e.jsxs("div", { className: "schedule-activity-label-cell", children: [
             /* @__PURE__ */ e.jsx("span", { className: "schedule-activity-label", children: "Description" }),
             /* @__PURE__ */ e.jsx("span", { className: "schedule-activity-colon", children: ":" })
@@ -1299,37 +1256,37 @@ const z = ({ activity: t }) => /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
             "div",
             {
               className: "schedule-activity-description rich-html-content",
-              dangerouslySetInnerHTML: { __html: G(c) }
+              dangerouslySetInnerHTML: { __html: q(r) }
             }
           )
         ] }) })
       ] })
     ] }) })
   ] });
-}, Gt = ({ activity: t }) => {
-  const l = L(t.creation), s = t.due_date ? L(t.due_date) : null, r = t.title || "Reminder", c = t.description || "", n = t.priority || "", d = t.task_type || t.activity_type || "", i = t.type || "";
+}, Wt = ({ activity: t }) => {
+  const l = V(t.creation), s = t.due_date ? V(t.due_date) : null, i = t.title || "Reminder", r = t.description || "", n = t.priority || "", d = t.task_type || t.activity_type || "", o = t.type || "";
   return /* @__PURE__ */ e.jsxs("div", { className: "activity-item reminder-activity", children: [
     /* @__PURE__ */ e.jsxs("div", { className: "activity-header", children: [
-      /* @__PURE__ */ e.jsx(P, { content: "Reminder", align: "left", children: /* @__PURE__ */ e.jsx("div", { className: "activity-icon-wrapper", children: /* @__PURE__ */ e.jsx(Vt, { size: 20, color: "#FF3434" }) }) }),
+      /* @__PURE__ */ e.jsx(k, { content: "Reminder", align: "left", children: /* @__PURE__ */ e.jsx("div", { className: "activity-icon-wrapper", children: /* @__PURE__ */ e.jsx(Vt, { size: 20, color: "#FF3434" }) }) }),
       /* @__PURE__ */ e.jsxs("div", { className: "activity-date-time", style: { display: "flex", alignItems: "center", gap: "6px" }, children: [
         /* @__PURE__ */ e.jsxs("span", { children: [
           l.date,
           " - ",
           l.time
         ] }),
-        /* @__PURE__ */ e.jsx(z, { activity: t })
+        /* @__PURE__ */ e.jsx(O, { activity: t })
       ] })
     ] }),
     /* @__PURE__ */ e.jsx("div", { className: "activity-content", children: /* @__PURE__ */ e.jsxs("div", { className: "reminder-activity-card", children: [
-      /* @__PURE__ */ e.jsx("div", { className: "reminder-activity-card-header", children: /* @__PURE__ */ e.jsx("h4", { className: "reminder-activity-title", children: r }) }),
+      /* @__PURE__ */ e.jsx("div", { className: "reminder-activity-card-header", children: /* @__PURE__ */ e.jsx("h4", { className: "reminder-activity-title", children: i }) }),
       /* @__PURE__ */ e.jsxs("div", { className: "reminder-activity-card-content", children: [
         /* @__PURE__ */ e.jsxs("div", { className: "reminder-activity-meta", children: [
-          i && /* @__PURE__ */ e.jsxs("div", { className: "reminder-activity-meta-row", children: [
+          o && /* @__PURE__ */ e.jsxs("div", { className: "reminder-activity-meta-row", children: [
             /* @__PURE__ */ e.jsxs("div", { className: "reminder-activity-label-cell", children: [
               /* @__PURE__ */ e.jsx("span", { className: "reminder-activity-label", children: "Type" }),
               /* @__PURE__ */ e.jsx("span", { className: "reminder-activity-colon", children: ":" })
             ] }),
-            /* @__PURE__ */ e.jsx("span", { className: "reminder-activity-value", children: i })
+            /* @__PURE__ */ e.jsx("span", { className: "reminder-activity-value", children: o })
           ] }),
           /* @__PURE__ */ e.jsxs("div", { className: "reminder-activity-meta-row", children: [
             /* @__PURE__ */ e.jsxs("div", { className: "reminder-activity-label-cell", children: [
@@ -1343,7 +1300,7 @@ const z = ({ activity: t }) => /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
               /* @__PURE__ */ e.jsx("span", { className: "reminder-activity-label", children: "Priority" }),
               /* @__PURE__ */ e.jsx("span", { className: "reminder-activity-colon", children: ":" })
             ] }),
-            /* @__PURE__ */ e.jsx(k, { statusKey: n, showIcon: !1, shape: "square" })
+            /* @__PURE__ */ e.jsx(S, { statusKey: n, showIcon: !1, shape: "square" })
           ] }),
           d && /* @__PURE__ */ e.jsxs("div", { className: "reminder-activity-meta-row", children: [
             /* @__PURE__ */ e.jsxs("div", { className: "reminder-activity-label-cell", children: [
@@ -1353,7 +1310,7 @@ const z = ({ activity: t }) => /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
             /* @__PURE__ */ e.jsx("span", { className: "reminder-activity-value", children: d })
           ] })
         ] }),
-        c && /* @__PURE__ */ e.jsx("div", { className: "reminder-activity-description-wrapper", children: /* @__PURE__ */ e.jsxs("div", { className: "reminder-activity-meta-row", children: [
+        r && /* @__PURE__ */ e.jsx("div", { className: "reminder-activity-description-wrapper", children: /* @__PURE__ */ e.jsxs("div", { className: "reminder-activity-meta-row", children: [
           /* @__PURE__ */ e.jsxs("div", { className: "reminder-activity-label-cell", children: [
             /* @__PURE__ */ e.jsx("span", { className: "reminder-activity-label", children: "Description" }),
             /* @__PURE__ */ e.jsx("span", { className: "reminder-activity-colon", children: ":" })
@@ -1362,35 +1319,35 @@ const z = ({ activity: t }) => /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
             "div",
             {
               className: "reminder-activity-description rich-html-content",
-              dangerouslySetInnerHTML: { __html: G(c) }
+              dangerouslySetInnerHTML: { __html: q(r) }
             }
           )
         ] }) })
       ] })
     ] }) })
   ] });
-}, Jt = ({ activity: t }) => {
-  const { renderChatMessageList: l } = X(), { date: s, time: r } = L(t.creation || ""), c = t.type === "Outgoing" || t.is_outbound === 1, n = /* @__PURE__ */ e.jsx(P, { content: "Chat", align: c ? "right" : "left", children: /* @__PURE__ */ e.jsx("div", { className: "activity-icon-wrapper", children: /* @__PURE__ */ e.jsx(Tt, { size: 20, color: c ? "#175353" : "#666" }) }) });
-  return /* @__PURE__ */ e.jsxs("div", { className: `activity-item chat-activity mt-3 ${c ? "chat-outbound" : "chat-incoming"}`, children: [
-    /* @__PURE__ */ e.jsxs("div", { className: `activity-header chat-activity-header ${c ? "chat-header-outbound" : "chat-header-incoming"}`, children: [
-      !c && n,
+}, qt = ({ activity: t }) => {
+  const { renderChatMessageList: l } = J(), { date: s, time: i } = V(t.creation || ""), r = t.type === "Outgoing" || t.is_outbound === 1, n = /* @__PURE__ */ e.jsx(k, { content: "Chat", align: r ? "right" : "left", children: /* @__PURE__ */ e.jsx("div", { className: "activity-icon-wrapper", children: /* @__PURE__ */ e.jsx(Tt, { size: 20, color: r ? "#175353" : "#666" }) }) });
+  return /* @__PURE__ */ e.jsxs("div", { className: `activity-item chat-activity mt-3 ${r ? "chat-outbound" : "chat-incoming"}`, children: [
+    /* @__PURE__ */ e.jsxs("div", { className: `activity-header chat-activity-header ${r ? "chat-header-outbound" : "chat-header-incoming"}`, children: [
+      !r && n,
       /* @__PURE__ */ e.jsxs("div", { className: "activity-date-time", style: { display: "flex", alignItems: "center", gap: "6px" }, children: [
         /* @__PURE__ */ e.jsxs("span", { children: [
           s,
           " - ",
-          r
+          i
         ] }),
-        /* @__PURE__ */ e.jsx(z, { activity: t })
+        /* @__PURE__ */ e.jsx(O, { activity: t })
       ] }),
-      c && n
+      r && n
     ] }),
-    /* @__PURE__ */ e.jsx("div", { className: `activity-content ${c ? "chat-content-outbound" : "chat-content-incoming"}`, children: l ? l({ activity: t, icon: n, showIcon: !1, enableScroll: !1 }) : /* @__PURE__ */ e.jsx("div", { className: "chat-activity-bubble", children: /* @__PURE__ */ e.jsx("span", { className: "chat-message-text", children: t.message || "" }) }) })
+    /* @__PURE__ */ e.jsx("div", { className: `activity-content ${r ? "chat-content-outbound" : "chat-content-incoming"}`, children: l ? l({ activity: t, icon: n, showIcon: !1 }) : /* @__PURE__ */ e.jsx("div", { className: "chat-activity-bubble", children: /* @__PURE__ */ e.jsx("span", { className: "chat-message-text", children: t.message || "" }) }) })
   ] });
 };
-function Kt(t) {
-  const { fetchCallRecording: l, fetchCallRecordingBlob: s } = X(), [r, c] = C(null), [n, d] = C(!1), [i, m] = C(null);
-  return U(() => {
-    if (c(null), m(null), !t || !l) {
+function Gt(t) {
+  const { fetchCallRecording: l, fetchCallRecordingBlob: s } = J(), [i, r] = H(null), [n, d] = H(!1), [o, m] = H(null);
+  return te(() => {
+    if (r(null), m(null), !t || !l) {
       d(!1);
       return;
     }
@@ -1404,11 +1361,11 @@ function Kt(t) {
           return;
         }
         if (s) {
-          const g = await s(v);
+          const y = await s(v);
           if (h) return;
-          p = URL.createObjectURL(g), c(p);
+          p = URL.createObjectURL(y), r(p);
         } else
-          c(v);
+          r(v);
         d(!1);
       } catch (v) {
         h || (m(v instanceof Error ? v : new Error("Failed to fetch recording")), d(!1));
@@ -1416,9 +1373,9 @@ function Kt(t) {
     })(), () => {
       h = !0, p && URL.revokeObjectURL(p);
     };
-  }, [t, l, s]), { audioUrl: r, isLoading: n, error: i };
+  }, [t, l, s]), { audioUrl: i, isLoading: n, error: o };
 }
-function Xt(t) {
+function Jt(t) {
   if (!t) return "";
   if (typeof t == "string") return t;
   if (typeof t == "number") {
@@ -1427,7 +1384,7 @@ function Xt(t) {
   }
   return "";
 }
-function Qt(t) {
+function Kt(t) {
   if (!t)
     return { bgColor: "#F3F4F6", textColor: "#374151", borderColor: "#D1D5DB" };
   switch (t.toLowerCase()) {
@@ -1447,34 +1404,34 @@ function Qt(t) {
   }
 }
 const ue = "#175353", we = ({ activity: t }) => {
-  var f, E;
-  const s = t.activity_type === "out-going" || t.activity_type === "outgoing_call" ? "Outbound Call" : "Inbound Call", { date: r, time: c } = L(t.creation || ""), n = ((f = t._caller) == null ? void 0 : f.label) ?? t.caller ?? "Unknown", d = ((E = t._receiver) == null ? void 0 : E.label) ?? null, {
-    audioUrl: i,
+  var x, _;
+  const s = t.activity_type === "out-going" || t.activity_type === "outgoing_call" ? "Outbound Call" : "Inbound Call", { date: i, time: r } = V(t.creation || ""), n = ((x = t._caller) == null ? void 0 : x.label) ?? t.caller ?? "Unknown", d = ((_ = t._receiver) == null ? void 0 : _.label) ?? null, {
+    audioUrl: o,
     isLoading: m,
     error: h
-  } = Kt(t.recording_url ? t.name : void 0), [p, x] = C(!1), v = t._duration, g = typeof v == "number" ? Xt(v) : v, u = v === 0 || v === "0" || v === "0s" || v === "0m" || g === "0s" || g === "0m", y = Qt(t.status);
+  } = Gt(t.recording_url ? t.name : void 0), [p, g] = H(!1), v = t._duration, y = typeof v == "number" ? Jt(v) : v, u = v === 0 || v === "0" || v === "0s" || v === "0m" || y === "0s" || y === "0m", j = Kt(t.status);
   return /* @__PURE__ */ e.jsxs("div", { className: "activity-item call-activity", children: [
     /* @__PURE__ */ e.jsxs("div", { className: "activity-header", children: [
-      /* @__PURE__ */ e.jsx(P, { content: "Call", align: "left", children: /* @__PURE__ */ e.jsx("div", { className: "activity-icon-wrapper", children: /* @__PURE__ */ e.jsx(Ht, { size: 20, color: ue }) }) }),
+      /* @__PURE__ */ e.jsx(k, { content: "Call", align: "left", children: /* @__PURE__ */ e.jsx("div", { className: "activity-icon-wrapper", children: /* @__PURE__ */ e.jsx(Ht, { size: 20, color: ue }) }) }),
       /* @__PURE__ */ e.jsxs("div", { className: "activity-date-time", style: { display: "flex", alignItems: "center", gap: "6px" }, children: [
         /* @__PURE__ */ e.jsxs("span", { children: [
-          r,
+          i,
           " - ",
-          c
+          r
         ] }),
-        /* @__PURE__ */ e.jsx(z, { activity: t })
+        /* @__PURE__ */ e.jsx(O, { activity: t })
       ] })
     ] }),
     /* @__PURE__ */ e.jsx("div", { className: "activity-content", children: /* @__PURE__ */ e.jsxs("div", { className: "call-activity-card", children: [
       /* @__PURE__ */ e.jsxs("div", { className: "call-activity-header-row", children: [
         /* @__PURE__ */ e.jsx("div", { className: "call-activity-label", children: s }),
         t.status && /* @__PURE__ */ e.jsx(
-          k,
+          S,
           {
             label: t.status,
-            bgColor: y.bgColor,
-            textColor: y.textColor,
-            borderColor: y.borderColor,
+            bgColor: j.bgColor,
+            textColor: j.textColor,
+            borderColor: j.borderColor,
             shape: "pill",
             showIcon: !1
           }
@@ -1497,48 +1454,48 @@ const ue = "#175353", we = ({ activity: t }) => {
         ] }),
         /* @__PURE__ */ e.jsx("div", { className: "call-activity-actions", children: m ? /* @__PURE__ */ e.jsx("span", { className: "call-activity-loading", children: "Loading recording…" }) : h || p ? /* @__PURE__ */ e.jsxs("div", { style: { display: "flex", alignItems: "center", gap: "10px" }, children: [
           /* @__PURE__ */ e.jsx("span", { className: "call-activity-loading", style: { color: "#f44336" }, children: "Recording unavailable" }),
-          g && !u && /* @__PURE__ */ e.jsxs("span", { className: "call-activity-duration", children: [
+          y && !u && /* @__PURE__ */ e.jsxs("span", { className: "call-activity-duration", children: [
             "Duration ",
-            g
+            y
           ] })
-        ] }) : i ? /* @__PURE__ */ e.jsxs("div", { className: "call-activity-player-wrapper", children: [
+        ] }) : o ? /* @__PURE__ */ e.jsxs("div", { className: "call-activity-player-wrapper", children: [
           /* @__PURE__ */ e.jsx(
             Ke,
             {
-              src: i,
+              src: o,
               showJumpControls: !1,
               showDownloadProgress: !1,
               customAdditionalControls: [],
               customVolumeControls: [],
               layout: "horizontal-reverse",
               className: "call-activity-audio-player",
-              onError: () => x(!0)
+              onError: () => g(!0)
             },
-            i
+            o
           ),
-          g && !u && /* @__PURE__ */ e.jsxs("span", { className: "call-activity-duration", children: [
+          y && !u && /* @__PURE__ */ e.jsxs("span", { className: "call-activity-duration", children: [
             "Duration ",
-            g
+            y
           ] })
-        ] }) : g && !u && /* @__PURE__ */ e.jsxs("span", { className: "call-activity-duration", style: { marginLeft: 0 }, children: [
+        ] }) : y && !u && /* @__PURE__ */ e.jsxs("span", { className: "call-activity-duration", style: { marginLeft: 0 }, children: [
           "Duration ",
-          g
+          y
         ] }) })
       ] })
     ] }) })
   ] });
-}, ea = ({ activity: t }) => {
-  const { date: l, time: s } = L(t.creation);
+}, Xt = ({ activity: t }) => {
+  const { date: l, time: s } = V(t.creation);
   return /* @__PURE__ */ e.jsxs("div", { className: "activity-item lead-activity", children: [
     /* @__PURE__ */ e.jsxs("div", { className: "activity-header", children: [
-      /* @__PURE__ */ e.jsx(P, { content: "Lead Created", align: "left", children: /* @__PURE__ */ e.jsx("div", { className: "activity-icon-wrapper", children: /* @__PURE__ */ e.jsx(pe, { size: 20, color: "darkgreen" }) }) }),
+      /* @__PURE__ */ e.jsx(k, { content: "Lead Created", align: "left", children: /* @__PURE__ */ e.jsx("div", { className: "activity-icon-wrapper", children: /* @__PURE__ */ e.jsx(pe, { size: 20, color: "darkgreen" }) }) }),
       /* @__PURE__ */ e.jsxs("div", { className: "activity-date-time", style: { display: "flex", alignItems: "center", gap: "6px" }, children: [
         /* @__PURE__ */ e.jsxs("span", { children: [
           l,
           " - ",
           s
         ] }),
-        /* @__PURE__ */ e.jsx(z, { activity: t })
+        /* @__PURE__ */ e.jsx(O, { activity: t })
       ] })
     ] }),
     /* @__PURE__ */ e.jsx("div", { className: "activity-content", children: /* @__PURE__ */ e.jsxs("div", { className: "lead-activity-card", children: [
@@ -1567,14 +1524,14 @@ const ue = "#175353", we = ({ activity: t }) => {
               /* @__PURE__ */ e.jsx("span", { className: "lead-activity-label", children: "Priority" }),
               /* @__PURE__ */ e.jsx("span", { className: "lead-activity-colon", children: ":" })
             ] }),
-            /* @__PURE__ */ e.jsx(k, { statusKey: t.priority, showIcon: !1, shape: "square" })
+            /* @__PURE__ */ e.jsx(S, { statusKey: t.priority, showIcon: !1, shape: "square" })
           ] }),
           /* @__PURE__ */ e.jsxs("div", { className: "lead-activity-meta-row", children: [
             /* @__PURE__ */ e.jsxs("div", { className: "lead-activity-label-cell", children: [
               /* @__PURE__ */ e.jsx("span", { className: "lead-activity-label", children: "Status" }),
               /* @__PURE__ */ e.jsx("span", { className: "lead-activity-colon", children: ":" })
             ] }),
-            /* @__PURE__ */ e.jsx(k, { statusKey: t.status, showIcon: !1, shape: "square" })
+            /* @__PURE__ */ e.jsx(S, { statusKey: t.status, showIcon: !1, shape: "square" })
           ] }),
           /* @__PURE__ */ e.jsxs("div", { className: "lead-activity-meta-row", children: [
             /* @__PURE__ */ e.jsxs("div", { className: "lead-activity-label-cell", children: [
@@ -1593,43 +1550,43 @@ const ue = "#175353", we = ({ activity: t }) => {
             "div",
             {
               className: "lead-activity-description rich-html-content",
-              dangerouslySetInnerHTML: { __html: G(t.description) }
+              dangerouslySetInnerHTML: { __html: q(t.description) }
             }
           )
         ] }) })
       ] })
     ] }) })
   ] });
-}, ta = ({ activity: t }) => {
-  const l = L(t.creation), s = t.title || "Brief", r = t.status || "", c = t.assigned_to || "", n = t.customer_code || "";
+}, Qt = ({ activity: t }) => {
+  const l = V(t.creation), s = t.title || "Brief", i = t.status || "", r = t.assigned_to || "", n = t.customer_code || "";
   return /* @__PURE__ */ e.jsxs("div", { className: "activity-item brief-activity", children: [
     /* @__PURE__ */ e.jsxs("div", { className: "activity-header", children: [
-      /* @__PURE__ */ e.jsx(P, { content: "Brief", align: "left", children: /* @__PURE__ */ e.jsx("div", { className: "activity-icon-wrapper", children: /* @__PURE__ */ e.jsx(It, { size: 20, color: "#7C3AED" }) }) }),
+      /* @__PURE__ */ e.jsx(k, { content: "Brief", align: "left", children: /* @__PURE__ */ e.jsx("div", { className: "activity-icon-wrapper", children: /* @__PURE__ */ e.jsx(It, { size: 20, color: "#7C3AED" }) }) }),
       /* @__PURE__ */ e.jsxs("div", { className: "activity-date-time", style: { display: "flex", alignItems: "center", gap: "6px" }, children: [
         /* @__PURE__ */ e.jsxs("span", { children: [
           l.date,
           " - ",
           l.time
         ] }),
-        /* @__PURE__ */ e.jsx(z, { activity: t })
+        /* @__PURE__ */ e.jsx(O, { activity: t })
       ] })
     ] }),
     /* @__PURE__ */ e.jsx("div", { className: "activity-content", children: /* @__PURE__ */ e.jsxs("div", { className: "brief-activity-card", children: [
       /* @__PURE__ */ e.jsx("div", { className: "brief-activity-card-header", children: /* @__PURE__ */ e.jsx("h4", { className: "brief-activity-title", children: /* @__PURE__ */ e.jsx("a", { href: t.href, target: "_blank", rel: "noopener noreferrer", children: s }) }) }),
       /* @__PURE__ */ e.jsx("div", { className: "brief-activity-card-content", children: /* @__PURE__ */ e.jsxs("div", { className: "brief-activity-meta", children: [
-        r && /* @__PURE__ */ e.jsxs("div", { className: "brief-activity-meta-row", children: [
+        i && /* @__PURE__ */ e.jsxs("div", { className: "brief-activity-meta-row", children: [
           /* @__PURE__ */ e.jsxs("div", { className: "brief-activity-label-cell", children: [
             /* @__PURE__ */ e.jsx("span", { className: "brief-activity-label", children: "Status" }),
             /* @__PURE__ */ e.jsx("span", { className: "brief-activity-colon", children: ":" })
           ] }),
-          /* @__PURE__ */ e.jsx(k, { statusKey: r, showIcon: !1, shape: "square" })
+          /* @__PURE__ */ e.jsx(S, { statusKey: i, showIcon: !1, shape: "square" })
         ] }),
-        c && /* @__PURE__ */ e.jsxs("div", { className: "brief-activity-meta-row", children: [
+        r && /* @__PURE__ */ e.jsxs("div", { className: "brief-activity-meta-row", children: [
           /* @__PURE__ */ e.jsxs("div", { className: "brief-activity-label-cell", children: [
             /* @__PURE__ */ e.jsx("span", { className: "brief-activity-label", children: "Assigned to" }),
             /* @__PURE__ */ e.jsx("span", { className: "brief-activity-colon", children: ":" })
           ] }),
-          /* @__PURE__ */ e.jsx("span", { className: "brief-activity-value", children: c })
+          /* @__PURE__ */ e.jsx("span", { className: "brief-activity-value", children: r })
         ] }),
         n && /* @__PURE__ */ e.jsxs("div", { className: "brief-activity-meta-row", children: [
           /* @__PURE__ */ e.jsxs("div", { className: "brief-activity-label-cell", children: [
@@ -1648,23 +1605,23 @@ const ue = "#175353", we = ({ activity: t }) => {
       ] }) })
     ] }) })
   ] });
-}, aa = ({ activity: t }) => {
-  const { currentUserEmail: l, apiBaseUrl: s } = X(), { date: r, time: c } = L(t.creation || ""), n = l && t.from === l, d = t.text || t.content || "", i = t.message_type === "Image", m = t.file ? t.file.startsWith("http") ? t.file : `${s}${t.file}` : null, h = /* @__PURE__ */ e.jsx(P, { content: "Raven Chat", align: n ? "right" : "left", children: /* @__PURE__ */ e.jsx("div", { className: "activity-icon-wrapper", children: /* @__PURE__ */ e.jsx(Lt, { size: 20, color: n ? "#175353" : "#666" }) }) });
+}, e0 = ({ activity: t }) => {
+  const { currentUserEmail: l, apiBaseUrl: s } = J(), { date: i, time: r } = V(t.creation || ""), n = l && t.from === l, d = t.text || t.content || "", o = t.message_type === "Image", m = t.file ? t.file.startsWith("http") ? t.file : `${s}${t.file}` : null, h = /* @__PURE__ */ e.jsx(k, { content: "Raven Chat", align: n ? "right" : "left", children: /* @__PURE__ */ e.jsx("div", { className: "activity-icon-wrapper", children: /* @__PURE__ */ e.jsx(Lt, { size: 20, color: n ? "#175353" : "#666" }) }) });
   return /* @__PURE__ */ e.jsxs("div", { className: `activity-item chat-activity mt-3 ${n ? "chat-outbound" : "chat-incoming"}`, children: [
     /* @__PURE__ */ e.jsxs("div", { className: `activity-header chat-activity-header ${n ? "chat-header-outbound" : "chat-header-incoming"}`, children: [
       !n && h,
       /* @__PURE__ */ e.jsxs("div", { className: "activity-date-time", style: { display: "flex", alignItems: "center", gap: "6px" }, children: [
         /* @__PURE__ */ e.jsxs("span", { children: [
-          r,
+          i,
           " - ",
-          c
+          r
         ] }),
-        /* @__PURE__ */ e.jsx(z, { activity: t })
+        /* @__PURE__ */ e.jsx(O, { activity: t })
       ] }),
       n && h
     ] }),
     /* @__PURE__ */ e.jsx("div", { className: `activity-content ${n ? "chat-content-outbound" : "chat-content-incoming"}`, children: /* @__PURE__ */ e.jsxs("div", { className: "chat-activity-bubble", children: [
-      i && m ? /* @__PURE__ */ e.jsx("div", { className: "chat-image-preview", style: { marginBottom: "8px" }, children: /* @__PURE__ */ e.jsx("a", { href: m, target: "_blank", rel: "noopener noreferrer", children: /* @__PURE__ */ e.jsx(
+      o && m ? /* @__PURE__ */ e.jsx("div", { className: "chat-image-preview", style: { marginBottom: "8px" }, children: /* @__PURE__ */ e.jsx("a", { href: m, target: "_blank", rel: "noopener noreferrer", children: /* @__PURE__ */ e.jsx(
         "img",
         {
           src: m,
@@ -1678,8 +1635,8 @@ const ue = "#175353", we = ({ activity: t }) => {
           }
         }
       ) }) }) : null,
-      d && (!i || t.text) && /* @__PURE__ */ e.jsx("div", { className: "chat-message-text", dangerouslySetInnerHTML: { __html: G(d) } }),
-      t.file && !i && /* @__PURE__ */ e.jsx("div", { className: "chat-attachment", style: { marginTop: "4px" }, children: /* @__PURE__ */ e.jsx(
+      d && (!o || t.text) && /* @__PURE__ */ e.jsx("div", { className: "chat-message-text", dangerouslySetInnerHTML: { __html: q(d) } }),
+      t.file && !o && /* @__PURE__ */ e.jsx("div", { className: "chat-attachment", style: { marginTop: "4px" }, children: /* @__PURE__ */ e.jsx(
         "a",
         {
           href: m || "#",
@@ -1691,8 +1648,8 @@ const ue = "#175353", we = ({ activity: t }) => {
       ) })
     ] }) })
   ] });
-}, ce = ({ activity: t }) => t.activity_type === "whatsapp" ? /* @__PURE__ */ e.jsx(Jt, { activity: t }) : t.activity_type === "communication" ? /* @__PURE__ */ e.jsx(Yt, { activity: t }) : t.activity_type === "notes" ? /* @__PURE__ */ e.jsx(Ne, { activity: t }) : t.activity_type === "creation" ? /* @__PURE__ */ e.jsx(Ne, { activity: t }) : t.activity_type === "Schedule" ? /* @__PURE__ */ e.jsx(Wt, { activity: t }) : t.activity_type === "Task" ? /* @__PURE__ */ e.jsx(qt, { activity: t }) : t.activity_type === "Reminder" ? /* @__PURE__ */ e.jsx(Gt, { activity: t }) : t.activity_type === "outgoing_call" ? /* @__PURE__ */ e.jsx(we, { activity: t }) : t.activity_type === "incoming_call" ? /* @__PURE__ */ e.jsx(we, { activity: t }) : t.activity_type === "lead" ? /* @__PURE__ */ e.jsx(ea, { activity: t }) : t.activity_type === "brief" ? /* @__PURE__ */ e.jsx(ta, { activity: t }) : t.activity_type === "raven" ? /* @__PURE__ */ e.jsx(aa, { activity: t }) : null, la = 0;
-function sa(t) {
+}, ce = ({ activity: t }) => t.activity_type === "whatsapp" ? /* @__PURE__ */ e.jsx(qt, { activity: t }) : t.activity_type === "communication" ? /* @__PURE__ */ e.jsx(Bt, { activity: t }) : t.activity_type === "notes" ? /* @__PURE__ */ e.jsx(Ee, { activity: t }) : t.activity_type === "creation" ? /* @__PURE__ */ e.jsx(Ee, { activity: t }) : t.activity_type === "Schedule" ? /* @__PURE__ */ e.jsx(Ut, { activity: t }) : t.activity_type === "Task" ? /* @__PURE__ */ e.jsx(Yt, { activity: t }) : t.activity_type === "Reminder" ? /* @__PURE__ */ e.jsx(Wt, { activity: t }) : t.activity_type === "outgoing_call" ? /* @__PURE__ */ e.jsx(we, { activity: t }) : t.activity_type === "incoming_call" ? /* @__PURE__ */ e.jsx(we, { activity: t }) : t.activity_type === "lead" ? /* @__PURE__ */ e.jsx(Xt, { activity: t }) : t.activity_type === "brief" ? /* @__PURE__ */ e.jsx(Qt, { activity: t }) : t.activity_type === "raven" ? /* @__PURE__ */ e.jsx(e0, { activity: t }) : null, t0 = 0;
+function a0(t) {
   const l = t.activity_type ?? "";
   return {
     whatsapp: "Chats",
@@ -1709,59 +1666,59 @@ function sa(t) {
     raven: "Raven Chats"
   }[l] ?? "Items";
 }
-const na = ({ activities: t, scrollId: l }) => {
-  const s = t[0], r = O(() => t.slice(1), [t]), c = r.length > 0, { isExpanded: n, toggleExpanded: d, shouldShowExpanded: i, wrapperRef: m } = ie(
+const l0 = ({ activities: t }) => {
+  const l = t[0], s = I(() => t.slice(1), [t]), i = s.length > 0, { isExpanded: r, toggleExpanded: n, shouldShowExpanded: d, wrapperRef: o } = ie(
     [t.length],
-    la
+    t0
   );
-  return t.length === 0 ? null : t.length === 1 ? /* @__PURE__ */ e.jsx("div", { "data-activity-id": l, children: /* @__PURE__ */ e.jsx(ce, { activity: s }) }, l) : /* @__PURE__ */ e.jsxs("div", { "data-activity-id": l, className: "activity-date-group", children: [
-    /* @__PURE__ */ e.jsx(ce, { activity: s }),
+  return t.length === 0 ? null : t.length === 1 ? /* @__PURE__ */ e.jsx("div", { children: /* @__PURE__ */ e.jsx(ce, { activity: l }) }) : /* @__PURE__ */ e.jsxs("div", { className: "activity-date-group", children: [
+    /* @__PURE__ */ e.jsx(ce, { activity: l }),
     /* @__PURE__ */ e.jsx(
       "div",
       {
-        ref: m,
-        className: `activity-date-group-rest ${i ? "activity-date-group-rest--expanded" : ""}`,
-        "aria-hidden": !n,
-        children: r.map((h, p) => /* @__PURE__ */ e.jsx(ce, { activity: h }, `${h.name ?? "activity"}-${p}`))
+        ref: o,
+        className: `activity-date-group-rest ${d ? "activity-date-group-rest--expanded" : ""}`,
+        "aria-hidden": !r,
+        children: s.map((m, h) => /* @__PURE__ */ e.jsx(ce, { activity: m }, `${m.name ?? "activity"}-${h}`))
       }
     ),
-    /* @__PURE__ */ e.jsx("div", { className: "activity-date-group-view-more-wrapper", children: c && /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
+    /* @__PURE__ */ e.jsx("div", { className: "activity-date-group-view-more-wrapper", children: i && /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
       /* @__PURE__ */ e.jsx("span", { className: "activity-date-group-view-more-line", "aria-hidden": "true" }),
       /* @__PURE__ */ e.jsx(
         oe,
         {
-          isExpanded: n,
-          onToggle: d,
-          label: `View ${r.length} ${sa(s)}`,
+          isExpanded: r,
+          onToggle: n,
+          label: `View ${s.length} ${a0(l)}`,
           className: "activity-date-group-view-more-btn"
         }
       )
     ] }) })
   ] });
-}, _e = () => /* @__PURE__ */ e.jsx("div", { className: "atw-loader", children: /* @__PURE__ */ e.jsx("div", { className: "atw-loader-spinner" }) }), ra = ({
+}, _e = () => /* @__PURE__ */ e.jsx("div", { className: "atw-loader", children: /* @__PURE__ */ e.jsx("div", { className: "atw-loader-spinner" }) }), s0 = ({
   initialFilters: t,
   onApply: l,
   onClear: s,
-  valueOptions: r
+  valueOptions: i
 }) => {
-  const [c, n] = C(!1), d = q(null), [i, m] = C(
+  const [r, n] = H(!1), d = ee(null), [o, m] = H(
     () => t.filter((u) => u.field === "activity_type").map((u) => u.value)
-  ), h = r.activity_type || [];
-  U(() => {
-    const u = (y) => {
-      d.current && !d.current.contains(y.target) && n(!1);
+  ), h = i.activity_type || [];
+  te(() => {
+    const u = (j) => {
+      d.current && !d.current.contains(j.target) && n(!1);
     };
-    return c && document.addEventListener("mousedown", u), () => document.removeEventListener("mousedown", u);
-  }, [c]);
-  const p = () => n((u) => !u), x = (u, y) => {
-    m(y ? (f) => [...f, u] : (f) => f.filter((E) => E !== u));
+    return r && document.addEventListener("mousedown", u), () => document.removeEventListener("mousedown", u);
+  }, [r]);
+  const p = () => n((u) => !u), g = (u, j) => {
+    m(j ? (x) => [...x, u] : (x) => x.filter((_) => _ !== u));
   }, v = () => {
-    const u = t.filter((E) => E.field !== "activity_type"), y = i.map((E) => ({
+    const u = t.filter((_) => _.field !== "activity_type"), j = o.map((_) => ({
       field: "activity_type",
-      value: E
-    })), f = [...u, ...y];
-    l(f), n(!1);
-  }, g = () => {
+      value: _
+    })), x = [...u, ...j];
+    l(x), n(!1);
+  }, y = () => {
     m([]), s(), n(!1);
   };
   return /* @__PURE__ */ e.jsxs("div", { className: "atw-filter-wrapper", ref: d, children: [
@@ -1774,20 +1731,20 @@ const na = ({ activities: t, scrollId: l }) => {
         children: /* @__PURE__ */ e.jsx(Rt, { size: 22, color: "#175353" })
       }
     ),
-    c && /* @__PURE__ */ e.jsxs("div", { className: "atw-filter-panel", children: [
+    r && /* @__PURE__ */ e.jsxs("div", { className: "atw-filter-panel", children: [
       /* @__PURE__ */ e.jsx("div", { className: "atw-filter-options", children: h.map((u) => /* @__PURE__ */ e.jsxs("label", { className: "atw-filter-option", children: [
         /* @__PURE__ */ e.jsx(
           "input",
           {
             type: "checkbox",
-            checked: i.includes(u.value),
-            onChange: (y) => x(u.value, y.target.checked)
+            checked: o.includes(u.value),
+            onChange: (j) => g(u.value, j.target.checked)
           }
         ),
         /* @__PURE__ */ e.jsx("span", { children: u.label })
       ] }, u.value)) }),
       /* @__PURE__ */ e.jsxs("div", { className: "atw-filter-actions", children: [
-        /* @__PURE__ */ e.jsx("button", { type: "button", onClick: g, className: "atw-filter-clear-btn", children: "Clear" }),
+        /* @__PURE__ */ e.jsx("button", { type: "button", onClick: y, className: "atw-filter-clear-btn", children: "Clear" }),
         /* @__PURE__ */ e.jsx("button", { type: "button", onClick: v, className: "atw-filter-apply-btn", children: "Apply" })
       ] })
     ] })
@@ -1809,7 +1766,7 @@ function ve(t) {
 function Ze(t) {
   return new Date(ve(t)).getTime() || 0;
 }
-const ca = 20, ia = (t, l) => {
+const n0 = 20, r0 = (t, l) => {
   if (!l || typeof l != "object") return null;
   const s = l;
   switch (t) {
@@ -1820,14 +1777,14 @@ const ca = 20, ia = (t, l) => {
     case "fcrm_note":
       return { ...s, activity_type: "notes" };
     case "crm_task": {
-      const c = (s.task_type || s.type || "Schedule") === "Reminder" ? "Reminder" : "Schedule";
-      return { ...s, activity_type: c };
+      const r = (s.task_type || s.type || "Schedule") === "Reminder" ? "Reminder" : "Schedule";
+      return { ...s, activity_type: r };
     }
     case "crm_lead":
       return { ...s, activity_type: "lead" };
     case "crm_call_log": {
-      const r = s.type === "Incoming";
-      return { ...s, activity_type: r ? "incoming_call" : "outgoing_call" };
+      const i = s.type === "Incoming";
+      return { ...s, activity_type: i ? "incoming_call" : "outgoing_call" };
     }
     case "raven_message":
       return { ...s, activity_type: "raven" };
@@ -1837,126 +1794,112 @@ const ca = 20, ia = (t, l) => {
       return null;
   }
 };
-function oa(t, l) {
-  const { fetchActivities: s, onSocketMessage: r } = X(), [c, n] = C([]), [d, i] = C([]), [m, h] = C(!1), [p, x] = C(null), [v, g] = C(!1), [u, y] = C(!1), [f, E] = C(!1), [R, J] = C(!1), W = q(null), $ = q(0), I = te(async (D, F) => {
+function c0(t, l) {
+  const { fetchActivities: s, onSocketMessage: i } = J(), [r, n] = H([]), [d, o] = H([]), [m, h] = H(!1), [p, g] = H(null), [v, y] = H(!1), [u, j] = H(!1), [x, _] = H(!1), [U, Y] = H(!1), P = ee(null), $ = ee(0), E = Q(async (z, T) => {
     if (t) {
-      F ? h(!0) : g(!0);
+      T ? h(!0) : y(!0);
       try {
-        const _ = {};
-        l && Object.entries(l).forEach(([V, N]) => {
-          Array.isArray(N) ? N.length > 0 && (_[V] = N) : N && (_[V] = [N]);
+        const Z = {};
+        l && Object.entries(l).forEach(([F, N]) => {
+          Array.isArray(N) ? N.length > 0 && (Z[F] = N) : N && (Z[F] = [N]);
         });
         const A = await s({
           contactName: t,
-          limit_start: D,
-          limit_page_length: ca,
-          filters: Object.keys(_).length > 0 ? _ : void 0
+          limit_start: z,
+          limit_page_length: n0,
+          filters: Object.keys(Z).length > 0 ? Z : void 0
         });
-        n((V) => F ? [A] : [...V, A]);
-        const S = A.message;
-        F && (E(!!S.includes_pd), J(!!S.includes_dc));
-        const b = S.page + 1;
-        y(b * S.page_size < S.total_count), $.current = b, x(null);
-      } catch (_) {
-        x(_ instanceof Error ? _ : new Error("Failed to fetch activities"));
+        n((F) => T ? [A] : [...F, A]);
+        const R = A.message;
+        T && (_(!!R.includes_pd), Y(!!R.includes_dc));
+        const b = R.page + 1;
+        j(b * R.page_size < R.total_count), $.current = b, g(null);
+      } catch (Z) {
+        g(Z instanceof Error ? Z : new Error("Failed to fetch activities"));
       } finally {
-        h(!1), g(!1);
+        h(!1), y(!1);
       }
     }
   }, [t, l, s]);
-  U(() => {
-    W.current !== t && (W.current = t, i([])), n([]), $.current = 0, I(0, !0);
-  }, [t, l, I]);
-  const K = te(() => {
-    !v && u && I($.current, !1);
-  }, [v, u, I]), H = te(() => {
-    n([]), $.current = 0, I(0, !0);
-  }, [I]);
-  return U(() => r ? r((F) => {
-    const _ = F.event;
-    if (["whatsapp_message", "communication", "fcrm_note", "crm_task", "crm_lead", "crm_call_log", "raven_message", "activity"].includes(_)) {
-      const A = ia(_, F.message);
-      A && i((S) => {
-        const b = "name" in A ? A.name : ve(A), V = S.findIndex((N) => ("name" in N ? N.name : ve(N)) === b);
-        if (V >= 0) {
-          const N = [...S];
-          return N[V] = A, N;
+  te(() => {
+    P.current !== t && (P.current = t, o([])), n([]), $.current = 0, E(0, !0);
+  }, [t, l, E]);
+  const W = Q(() => {
+    !v && u && E($.current, !1);
+  }, [v, u, E]), G = Q(() => {
+    n([]), $.current = 0, E(0, !0);
+  }, [E]);
+  return te(() => i ? i((T) => {
+    const Z = T.event;
+    if (["whatsapp_message", "communication", "fcrm_note", "crm_task", "crm_lead", "crm_call_log", "raven_message", "activity"].includes(Z)) {
+      const A = r0(Z, T.message);
+      A && o((R) => {
+        const b = "name" in A ? A.name : ve(A), F = R.findIndex((N) => ("name" in N ? N.name : ve(N)) === b);
+        if (F >= 0) {
+          const N = [...R];
+          return N[F] = A, N;
         }
-        return [...S, A];
+        return [...R, A];
       });
     }
-  }) : void 0, [r]), {
-    activities: O(() => {
-      const D = c.flatMap((b) => b.message.activities);
-      let F = d;
+  }) : void 0, [i]), {
+    activities: I(() => {
+      const z = r.flatMap((b) => b.message.activities);
+      let T = d;
       if (l) {
-        const b = l.activity_type && Array.isArray(l.activity_type) ? l.activity_type : [], V = l.sources && Array.isArray(l.sources) ? l.sources : [];
-        if (b.length > 0 || V.length > 0) {
-          const N = new Set(b), Q = new Set(V);
-          F = d.filter((se) => {
-            const B = se, o = B.activity_type;
-            return Q.has("pd") && B.is_pd || Q.has("dc") && B.is_dc ? !0 : o ? !!(N.has(o) || N.has("call") && (o === "outgoing_call" || o === "incoming_call") || N.has("brief") && o === "brief" || N.has("raven") && o === "raven" || N.has("pd") && B.is_pd || N.has("dc") && B.is_dc) : !!(N.has("pd") && B.is_pd || N.has("dc") && B.is_dc);
+        const b = l.activity_type && Array.isArray(l.activity_type) ? l.activity_type : [], F = l.sources && Array.isArray(l.sources) ? l.sources : [];
+        if (b.length > 0 || F.length > 0) {
+          const N = new Set(b), K = new Set(F);
+          T = d.filter((se) => {
+            const D = se, c = D.activity_type;
+            return K.has("pd") && D.is_pd || K.has("dc") && D.is_dc ? !0 : c ? !!(N.has(c) || N.has("call") && (c === "outgoing_call" || c === "incoming_call") || N.has("brief") && c === "brief" || N.has("raven") && c === "raven" || N.has("pd") && D.is_pd || N.has("dc") && D.is_dc) : !!(N.has("pd") && D.is_pd || N.has("dc") && D.is_dc);
           });
         }
       }
-      const _ = new Set(
-        F.map((b) => "name" in b && b.name != null ? String(b.name) : null).filter((b) => b != null)
-      ), A = _.size > 0 ? D.filter((b) => !("name" in b && b.name != null && _.has(String(b.name)))) : D;
-      return [...[...F, ...A]].sort((b, V) => Ze(V) - Ze(b));
-    }, [c, d, l]),
+      const Z = new Set(
+        T.map((b) => "name" in b && b.name != null ? String(b.name) : null).filter((b) => b != null)
+      ), A = Z.size > 0 ? z.filter((b) => !("name" in b && b.name != null && Z.has(String(b.name)))) : z;
+      return [...[...T, ...A]].sort((b, F) => Ze(F) - Ze(b));
+    }, [r, d, l]),
     isLoading: m,
     error: p,
     isFetchingNextPage: v,
     hasNextPage: u,
-    fetchNextPage: K,
-    refetch: H,
-    includes_pd: f,
-    includes_dc: R
+    fetchNextPage: W,
+    refetch: G,
+    includes_pd: x,
+    includes_dc: U
   };
 }
-function da(t, l) {
-  const s = t, r = s.name ?? s.creation;
-  return r != null ? String(r) : `i-${l}`;
-}
-function ma(t, l) {
-  return U(() => {
-    if (!t || l.length === 0) return;
-    const s = setTimeout(() => {
-      requestAnimationFrame(() => {
-        const r = document.querySelector(
-          `.activity-timeline [data-activity-id="${CSS.escape(t)}"]`
-        );
-        r == null || r.scrollIntoView({ behavior: "smooth", block: "nearest" });
-      });
-    }, 100);
-    return () => clearTimeout(s);
-  }, [l, t]), { getActivityElementId: da };
+function i0(t, l) {
+  const s = t, i = s.name ?? s.creation;
+  return i != null ? String(i) : `i-${l}`;
 }
 function Me(t) {
   return t.activity_type ?? "";
 }
-const ha = /* @__PURE__ */ new Set(["whatsapp", "raven"]);
-function ua(t) {
+const o0 = /* @__PURE__ */ new Set(["whatsapp", "raven"]);
+function d0(t) {
   const l = [];
   let s = 0;
   for (; s < t.length; ) {
-    const r = t[s], c = be(r), n = Me(r), d = [r];
+    const i = t[s], r = be(i), n = Me(i), d = [i];
     for (s += 1; s < t.length; ) {
       const m = t[s];
-      if (be(m) !== c || Me(m) !== n) break;
+      if (be(m) !== r || Me(m) !== n) break;
       d.push(m), s += 1;
     }
-    const i = ha.has(n) ? [...d].reverse() : d;
-    i.length === 1 ? l.push({ type: "single", activity: i[0], index: s - 1 }) : l.push({ type: "date-group", activities: i, firstIndex: s - i.length });
+    const o = o0.has(n) ? [...d].reverse() : d;
+    o.length === 1 ? l.push({ type: "single", activity: o[0], index: s - 1 }) : l.push({ type: "date-group", activities: o, firstIndex: s - o.length });
   }
   return l;
 }
-function pa(t) {
+function m0(t) {
   const l = {};
-  for (const { field: s, value: r } of t) {
-    if (!r) continue;
-    const c = l[s];
-    c ? Array.isArray(c) ? c.includes(r) || (l[s] = [...c, r]) : c !== r && (l[s] = [c, r]) : l[s] = r;
+  for (const { field: s, value: i } of t) {
+    if (!i) continue;
+    const r = l[s];
+    r ? Array.isArray(r) ? r.includes(i) || (l[s] = [...r, i]) : r !== i && (l[s] = [r, i]) : l[s] = i;
   }
   return l;
 }
@@ -1970,106 +1913,108 @@ const We = {
   Leads: ["lead"],
   Brief: ["brief"],
   "Raven Message": ["raven"]
-}, va = We, fa = Object.keys(We).map((t) => ({
+}, h0 = We, u0 = Object.keys(We).map((t) => ({
   label: t,
   value: t
 }));
-function xa({
+function p0({
   initialParameters: t = {}
 } = {}) {
-  const [l, s] = C(t), r = te((i) => {
-    const m = pa(i);
+  const [l, s] = H(t), i = Q((o) => {
+    const m = m0(o);
     s(Object.keys(m).length === 0 ? {} : m);
-  }, []), c = te(() => {
+  }, []), r = Q(() => {
     s({});
-  }, []), n = O(() => {
-    const i = l, m = {};
-    if (i.activity_type) {
-      const h = Array.isArray(i.activity_type) ? i.activity_type : [i.activity_type], p = [];
-      h.forEach((x) => {
-        const v = va[x];
+  }, []), n = I(() => {
+    const o = l, m = {};
+    if (o.activity_type) {
+      const h = Array.isArray(o.activity_type) ? o.activity_type : [o.activity_type], p = [];
+      h.forEach((g) => {
+        const v = h0[g];
         v && p.push(...v);
       }), p.length > 0 && (m.activity_type = Array.from(new Set(p)));
     }
-    if (i.sources && (m.sources = Array.isArray(i.sources) ? i.sources : [i.sources]), i.lead_id) {
-      const h = Array.isArray(i.lead_id) ? i.lead_id : [i.lead_id];
+    if (o.sources && (m.sources = Array.isArray(o.sources) ? o.sources : [o.sources]), o.lead_id) {
+      const h = Array.isArray(o.lead_id) ? o.lead_id : [o.lead_id];
       m.lead = h;
     }
     return m;
-  }, [l]), d = O(() => {
-    const i = [];
+  }, [l]), d = I(() => {
+    const o = [];
     return Object.entries(l).forEach(([m, h]) => {
       Array.isArray(h) ? h.forEach((p) => {
-        i.push({ field: m, value: p });
-      }) : h && i.push({ field: m, value: h });
-    }), i;
+        o.push({ field: m, value: p });
+      }) : h && o.push({ field: m, value: h });
+    }), o;
   }, [l]);
   return {
     filtersPayload: n,
     initialFilters: d,
-    handleApplyFilters: r,
-    handleClearFilters: c
+    handleApplyFilters: i,
+    handleClearFilters: r
   };
 }
-function ga() {
-  const { contactName: t, searchParams: l, fetchLeads: s } = X(), r = (l == null ? void 0 : l.activityId) ?? null, c = O(() => ((l == null ? void 0 : l.comm_type) ?? null) === "communication" ? { activity_type: "Emails" } : {}, [l]), { filtersPayload: n, initialFilters: d, handleApplyFilters: i, handleClearFilters: m } = xa({
-    initialParameters: c
-  }), { activities: h, isLoading: p, error: x, fetchNextPage: v, hasNextPage: g, isFetchingNextPage: u, refetch: y, includes_pd: f, includes_dc: E } = oa(t, n), R = h.filter((H) => H.activity_type !== "attachment_log"), J = O(() => ua(R), [R]), { getActivityElementId: W } = ma(r, R), $ = q(null);
-  U(() => {
-    const H = $.current;
-    if (!H || !g || u) return;
-    const Y = new IntersectionObserver(
-      (D) => {
-        var F;
-        (F = D[0]) != null && F.isIntersecting && v();
+function v0() {
+  const { contactName: t, searchParams: l, fetchLeads: s } = J();
+  l == null || l.activityId;
+  const i = I(() => ((l == null ? void 0 : l.comm_type) ?? null) === "communication" ? { activity_type: "Emails" } : {}, [l]), { filtersPayload: r, initialFilters: n, handleApplyFilters: d, handleClearFilters: o } = p0({
+    initialParameters: i
+  }), { activities: m, isLoading: h, error: p, fetchNextPage: g, hasNextPage: v, isFetchingNextPage: y, refetch: u, includes_pd: j, includes_dc: x } = c0(t, r), _ = m.filter((E) => E.activity_type !== "attachment_log"), U = I(() => d0(_), [_]), Y = ee(null);
+  te(() => {
+    const E = Y.current;
+    if (!E || !v || y) return;
+    const W = new IntersectionObserver(
+      (G) => {
+        var B;
+        (B = G[0]) != null && B.isIntersecting && g();
       },
       { root: null, rootMargin: "100px", threshold: 0 }
     );
-    return Y.observe(H), () => Y.disconnect();
-  }, [g, u, v]);
-  const I = (s == null ? void 0 : s()) ?? { leads: [] }, K = O(
+    return W.observe(E), () => W.disconnect();
+  }, [v, y, g]);
+  const P = (s == null ? void 0 : s()) ?? { leads: [] }, $ = I(
     () => ({
-      activity_type: fa.map((H) => ({ label: H.label, value: H.label })),
-      lead_id: I.leads.map((H) => ({ label: H.name, value: H.name }))
+      activity_type: u0.map((E) => ({ label: E.label, value: E.label })),
+      lead_id: P.leads.map((E) => ({ label: E.name, value: E.name }))
     }),
-    [I.leads]
+    [P.leads]
   );
   return {
-    activityNodes: J,
-    initialFilters: d,
-    isLoading: p,
-    error: x,
-    isFetchingNextPage: u,
-    valueOptions: K,
-    refetch: y,
-    handleApplyFilters: i,
-    handleClearFilters: m,
-    getActivityElementId: W,
-    loadMoreRef: $,
-    includes_pd: f,
-    includes_dc: E
+    activityNodes: U,
+    initialFilters: n,
+    isLoading: h,
+    error: p,
+    isFetchingNextPage: y,
+    valueOptions: $,
+    refetch: u,
+    handleApplyFilters: d,
+    handleClearFilters: o,
+    getActivityElementId: i0,
+    loadMoreRef: Y,
+    includes_pd: j,
+    includes_dc: x
   };
 }
-const ya = () => {
-  const { title: t = "Activity" } = X(), {
+const x0 = () => {
+  const { title: t = "Activity" } = J(), {
     activityNodes: l,
     initialFilters: s,
-    isLoading: r,
-    error: c,
+    isLoading: i,
+    error: r,
     isFetchingNextPage: n,
     valueOptions: d,
-    refetch: i,
+    refetch: o,
     handleApplyFilters: m,
     handleClearFilters: h,
     getActivityElementId: p,
-    loadMoreRef: x,
+    loadMoreRef: g,
     includes_pd: v,
-    includes_dc: g
-  } = ga();
-  return r ? /* @__PURE__ */ e.jsxs("div", { className: "activity-tab", children: [
+    includes_dc: y
+  } = v0();
+  return i ? /* @__PURE__ */ e.jsxs("div", { className: "activity-tab", children: [
     /* @__PURE__ */ e.jsx("div", { className: "atw-sticky-header", children: /* @__PURE__ */ e.jsx("h2", { className: "activity-tab-title", children: t }) }),
     /* @__PURE__ */ e.jsx(_e, {})
-  ] }) : c ? /* @__PURE__ */ e.jsxs("div", { className: "activity-tab", children: [
+  ] }) : r ? /* @__PURE__ */ e.jsxs("div", { className: "activity-tab", children: [
     /* @__PURE__ */ e.jsx("h2", { className: "activity-tab-title", children: t }),
     /* @__PURE__ */ e.jsxs("div", { className: "atw-error-fallback", children: [
       /* @__PURE__ */ e.jsxs("p", { children: [
@@ -2077,13 +2022,13 @@ const ya = () => {
         t,
         "."
       ] }),
-      /* @__PURE__ */ e.jsx("button", { type: "button", onClick: i, className: "atw-retry-btn", children: "Retry" })
+      /* @__PURE__ */ e.jsx("button", { type: "button", onClick: o, className: "atw-retry-btn", children: "Retry" })
     ] })
   ] }) : /* @__PURE__ */ e.jsxs("div", { className: "activity-tab", children: [
     /* @__PURE__ */ e.jsxs("div", { className: "atw-sticky-header", children: [
       /* @__PURE__ */ e.jsxs("div", { className: "atw-header-left", children: [
         /* @__PURE__ */ e.jsx("span", { className: "activity-tab-title", children: "Total Activity" }),
-        /* @__PURE__ */ e.jsx("span", { className: "atw-activity-count-badge", children: l.reduce((u, y) => u + (y.type === "single" ? 1 : y.activities.length), 0) })
+        /* @__PURE__ */ e.jsx("span", { className: "atw-activity-count-badge", children: l.reduce((u, j) => u + (j.type === "single" ? 1 : j.activities.length), 0) })
       ] }),
       /* @__PURE__ */ e.jsxs("div", { className: "atw-header-right", children: [
         v && /* @__PURE__ */ e.jsx(
@@ -2092,26 +2037,26 @@ const ya = () => {
             type: "button",
             className: `atw-special-filter-btn ${s.some((u) => u.field === "sources" && u.value === "pd") ? "active" : ""}`,
             onClick: () => {
-              const u = s.some((f) => f.field === "sources" && f.value === "pd"), y = s.filter((f) => !(f.field === "sources" && f.value === "pd"));
-              m(u ? y : [...y, { field: "sources", value: "pd" }]);
+              const u = s.some((x) => x.field === "sources" && x.value === "pd"), j = s.filter((x) => !(x.field === "sources" && x.value === "pd"));
+              m(u ? j : [...j, { field: "sources", value: "pd" }]);
             },
             children: "PDA"
           }
         ),
-        g && /* @__PURE__ */ e.jsx(
+        y && /* @__PURE__ */ e.jsx(
           "button",
           {
             type: "button",
             className: `atw-special-filter-btn ${s.some((u) => u.field === "sources" && u.value === "dc") ? "active" : ""}`,
             onClick: () => {
-              const u = s.some((f) => f.field === "sources" && f.value === "dc"), y = s.filter((f) => !(f.field === "sources" && f.value === "dc"));
-              m(u ? y : [...y, { field: "sources", value: "dc" }]);
+              const u = s.some((x) => x.field === "sources" && x.value === "dc"), j = s.filter((x) => !(x.field === "sources" && x.value === "dc"));
+              m(u ? j : [...j, { field: "sources", value: "dc" }]);
             },
             children: "DC"
           }
         ),
         /* @__PURE__ */ e.jsx(
-          ra,
+          s0,
           {
             initialFilters: s,
             onApply: m,
@@ -2125,51 +2070,51 @@ const ya = () => {
     /* @__PURE__ */ e.jsx("div", { className: "activity-timeline", children: l.length === 0 ? /* @__PURE__ */ e.jsx("div", { style: { padding: "20px", textAlign: "center", color: "#666" }, children: "No activities found for this contact." }) : /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
       l.map((u) => {
         if (u.type === "single") {
-          const f = p(u.activity, u.index);
-          return /* @__PURE__ */ e.jsx("div", { "data-activity-id": f, children: /* @__PURE__ */ e.jsx(ce, { activity: u.activity }) }, f);
+          const x = p(u.activity, u.index);
+          return /* @__PURE__ */ e.jsx("div", { children: /* @__PURE__ */ e.jsx(ce, { activity: u.activity }) }, x);
         }
-        const y = p(u.activities[0], u.firstIndex);
-        return /* @__PURE__ */ e.jsx(na, { activities: u.activities, scrollId: y }, y);
+        const j = p(u.activities[0], u.firstIndex);
+        return /* @__PURE__ */ e.jsx(l0, { activities: u.activities }, j);
       }),
-      /* @__PURE__ */ e.jsx("div", { ref: x, className: "activity-load-more-sentinel", "aria-hidden": "true" }),
+      /* @__PURE__ */ e.jsx("div", { ref: g, className: "activity-load-more-sentinel", "aria-hidden": "true" }),
       n && /* @__PURE__ */ e.jsx("div", { className: "activity-load-more", style: { padding: "12px", textAlign: "center", color: "#666" }, children: /* @__PURE__ */ e.jsx(_e, {}) })
     ] }) })
   ] });
-}, ja = (t = "/", l) => {
+}, f0 = (t = "/", l) => {
   const s = {};
   l && (s.Authorization = `token ${l}`);
-  const r = async (n, d = {}) => {
-    const i = { ...s };
+  const i = async (n, d = {}) => {
+    const o = { ...s };
     if (d.headers) {
       const p = new Headers(d.headers);
-      Object.assign(i, Object.fromEntries(p.entries()));
+      Object.assign(o, Object.fromEntries(p.entries()));
     }
     const m = n.startsWith("http") ? n : `${t}${n}`, h = await fetch(m, {
       ...d,
-      headers: i
+      headers: o
     });
     if (!h.ok)
       throw new Error(`API Error: ${h.status} ${h.statusText}`);
     return h.json();
-  }, c = async (n, d = {}) => {
-    const i = { ...s };
+  }, r = async (n, d = {}) => {
+    const o = { ...s };
     if (d.headers) {
       const p = new Headers(d.headers);
-      Object.assign(i, Object.fromEntries(p.entries()));
+      Object.assign(o, Object.fromEntries(p.entries()));
     }
     const m = n.startsWith("http") ? n : `${t}${n}`, h = await fetch(m, {
       ...d,
-      headers: i
+      headers: o
     });
     if (!h.ok)
       throw new Error(`API Error: ${h.status} ${h.statusText}`);
     return h.blob();
   };
   return {
-    get: (n) => r(n, { method: "GET" }),
-    getBlob: (n) => c(n, { method: "GET" })
+    get: (n) => i(n, { method: "GET" }),
+    getBlob: (n) => r(n, { method: "GET" })
   };
-}, Aa = (t) => ({
+}, g0 = (t) => ({
   /**
    * Get activities for a contact (paginated).
    */
@@ -2180,8 +2125,8 @@ const ya = () => {
       limit_page_length: String(l.limit_page_length ?? 20)
     };
     l.filters && (s.filters = JSON.stringify(l.filters));
-    const c = `/api/method/crm_integration.crm_integration.api.activities.get_activities?${new URLSearchParams(s).toString()}`;
-    return t.get(c);
+    const r = `/api/method/crm_integration.crm_integration.api.activities.get_activities?${new URLSearchParams(s).toString()}`;
+    return t.get(r);
   },
   /**
    * Fetch the call recording stream URL for a given call_log_id.
@@ -2189,10 +2134,10 @@ const ya = () => {
   getCallRecording: async (l) => {
     var s;
     try {
-      const r = await t.get(
+      const i = await t.get(
         `/api/method/crm_integration.crm_exotel.api.call_log.get_call_recording?call_log_id=${encodeURIComponent(l)}`
       );
-      return ((s = r == null ? void 0 : r.message) == null ? void 0 : s.url) || null;
+      return ((s = i == null ? void 0 : i.message) == null ? void 0 : s.url) || null;
     } catch {
       return null;
     }
@@ -2205,58 +2150,58 @@ const ya = () => {
     return t.getBlob(s);
   }
 });
-function ba({
+function y0({
   baseURL: t = "/",
   token: l,
   contactName: s,
-  apiBaseUrl: r,
-  type: c,
+  apiBaseUrl: i,
+  type: r,
   title: n,
   onSocketMessage: d,
-  searchParams: i,
+  searchParams: o,
   renderChatMessageList: m,
   onEmailReply: h,
   onEmailReplyAll: p,
-  fetchLeads: x,
+  fetchLeads: g,
   currentUserEmail: v
 }) {
-  const g = O(() => ja(t, l), [t, l]), u = O(() => Aa(g), [g]);
-  return O(
+  const y = I(() => f0(t, l), [t, l]), u = I(() => g0(y), [y]);
+  return I(
     () => ({
       contactName: s,
-      apiBaseUrl: r || t,
-      type: c,
+      apiBaseUrl: i || t,
+      type: r,
       title: n,
       onSocketMessage: d,
-      searchParams: i,
+      searchParams: o,
       renderChatMessageList: m,
       onEmailReply: h,
       onEmailReplyAll: p,
-      fetchLeads: x,
+      fetchLeads: g,
       currentUserEmail: v,
       // API adapters (wired to Frappe backend)
-      fetchActivities: async (f) => u.getActivities(f),
-      fetchCallRecording: async (f) => u.getCallRecording(f),
-      fetchCallRecordingBlob: async (f) => u.fetchBlob(f)
+      fetchActivities: async (x) => u.getActivities(x),
+      fetchCallRecording: async (x) => u.getCallRecording(x),
+      fetchCallRecordingBlob: async (x) => u.fetchBlob(x)
     }),
     [
       s,
-      r,
+      i,
       t,
-      c,
+      r,
       n,
       d,
-      i,
+      o,
       m,
       h,
       p,
-      x,
+      g,
       v,
       u
     ]
   );
 }
-function Ea(t) {
+function j0(t) {
   if (!t) return "";
   try {
     const l = new Date(t);
@@ -2265,12 +2210,12 @@ function Ea(t) {
     return "";
   }
 }
-function Na(t) {
+function A0(t) {
   if (!t) return null;
   const l = /(https?:\/\/[^\s]+)/g;
-  return t.split(l).map((r, c) => r.match(l) ? /* @__PURE__ */ e.jsx("a", { href: r, target: "_blank", rel: "noopener noreferrer", className: "message-url", children: r }, c) : r);
+  return t.split(l).map((i, r) => i.match(l) ? /* @__PURE__ */ e.jsx("a", { href: i, target: "_blank", rel: "noopener noreferrer", className: "message-url", children: i }, r) : i);
 }
-function wa(t, l) {
+function b0(t, l) {
   if (l !== 1) return null;
   switch (typeof t == "number" ? t : parseInt(t || "0", 10)) {
     case 1:
@@ -2287,134 +2232,116 @@ function wa(t, l) {
       return null;
   }
 }
-const _a = ({
-  activity: t,
-  icon: l,
-  showIcon: s = !1,
-  enableScroll: r = !0,
-  apiBaseUrl: c = ""
-}) => {
-  const n = q(null), d = O(() => {
+const N0 = ({ activity: t, icon: l, showIcon: s = !1, apiBaseUrl: i = "" }) => {
+  const r = I(() => {
     if (!t) return null;
-    const h = t.creation || (/* @__PURE__ */ new Date()).toISOString(), p = t.type === "Outgoing" || t.is_outbound === 1;
+    const o = t.creation || (/* @__PURE__ */ new Date()).toISOString(), m = t.type === "Outgoing" || t.is_outbound === 1;
     return {
-      name: t.name || `activity-${h}`,
+      name: t.name || `activity-${o}`,
       message: t.message || "",
-      sender: p ? "You" : "Customer",
-      creation: h,
-      is_outbound: p ? 1 : 0,
+      sender: m ? "You" : "Customer",
+      creation: o,
+      is_outbound: m ? 1 : 0,
       attach: t.attach,
       content_type: t.content_type,
       status: t.status,
       message_type: t.message_type
     };
   }, [t]);
-  if (U(() => {
-    if (!r) return;
-    const h = setTimeout(() => {
-      var p;
-      (p = n.current) == null || p.scrollIntoView({ behavior: "smooth" });
-    }, 0);
-    return () => clearTimeout(h);
-  }, [d, r]), !d) return null;
-  const i = d, m = i.is_outbound === 1;
-  return /* @__PURE__ */ e.jsxs("div", { className: "whatsapp-message-list", children: [
-    /* @__PURE__ */ e.jsxs("div", { className: `message-bubble ${m ? "sent" : "received"}`, children: [
-      s && l && /* @__PURE__ */ e.jsx("div", { className: "message-icon-wrapper", children: l }),
-      /* @__PURE__ */ e.jsxs("div", { className: "message-content", children: [
-        Na(i.message) || i.message,
-        i.attach && /* @__PURE__ */ e.jsx("div", { className: "message-attachment", children: i.content_type === "image" ? /* @__PURE__ */ e.jsx(
-          "img",
-          {
-            src: i.attach.startsWith("http") ? i.attach : `${c}/${i.attach}`,
-            alt: "attachment",
-            style: { maxWidth: "200px", borderRadius: "4px", marginTop: "8px" }
-          }
-        ) : /* @__PURE__ */ e.jsx(
-          "a",
-          {
-            href: i.attach.startsWith("http") ? i.attach : `${c}/${i.attach}`,
-            target: "_blank",
-            rel: "noreferrer",
-            className: "message-attachment-link",
-            children: i.attach.split("/").pop() || "Attachment"
-          }
-        ) }),
-        /* @__PURE__ */ e.jsxs("div", { className: "message-time", children: [
-          Ea(i.creation),
-          m ? wa(i.status, 1) : null
-        ] })
+  if (!r) return null;
+  const n = r, d = n.is_outbound === 1;
+  return /* @__PURE__ */ e.jsx("div", { className: "whatsapp-message-list", children: /* @__PURE__ */ e.jsxs("div", { className: `message-bubble ${d ? "sent" : "received"}`, children: [
+    s && l && /* @__PURE__ */ e.jsx("div", { className: "message-icon-wrapper", children: l }),
+    /* @__PURE__ */ e.jsxs("div", { className: "message-content", children: [
+      A0(n.message) || n.message,
+      n.attach && /* @__PURE__ */ e.jsx("div", { className: "message-attachment", children: n.content_type === "image" ? /* @__PURE__ */ e.jsx(
+        "img",
+        {
+          src: n.attach.startsWith("http") ? n.attach : `${i}/${n.attach}`,
+          alt: "attachment",
+          style: { maxWidth: "200px", borderRadius: "4px", marginTop: "8px" }
+        }
+      ) : /* @__PURE__ */ e.jsx(
+        "a",
+        {
+          href: n.attach.startsWith("http") ? n.attach : `${i}/${n.attach}`,
+          target: "_blank",
+          rel: "noreferrer",
+          className: "message-attachment-link",
+          children: n.attach.split("/").pop() || "Attachment"
+        }
+      ) }),
+      /* @__PURE__ */ e.jsxs("div", { className: "message-time", children: [
+        j0(n.creation),
+        d ? b0(n.status, 1) : null
       ] })
-    ] }),
-    /* @__PURE__ */ e.jsx("div", { ref: n })
-  ] });
-}, Ha = (t) => {
-  const l = ba(t), s = t.renderChatMessageList || (({ activity: r, icon: c, showIcon: n, enableScroll: d }) => /* @__PURE__ */ e.jsx(
-    _a,
+    ] })
+  ] }) });
+}, Z0 = (t) => {
+  const l = y0(t), s = t.renderChatMessageList || (({ activity: i, icon: r, showIcon: n }) => /* @__PURE__ */ e.jsx(
+    N0,
     {
-      activity: r,
-      icon: c,
+      activity: i,
+      icon: r,
       showIcon: n,
-      enableScroll: d,
       apiBaseUrl: t.apiBaseUrl || t.baseURL
     }
   ));
-  return /* @__PURE__ */ e.jsx(Bt, { ...l, renderChatMessageList: s, currentUserEmail: t.currentUserEmail, children: /* @__PURE__ */ e.jsx(ya, {}) });
-}, Fa = ({ activity: t }) => {
-  const l = t.creation, s = l ? L(l) : { date: "Unknown", time: "" }, r = t.personName || "Unknown", c = t.notes || [];
+  return /* @__PURE__ */ e.jsx(Ot, { ...l, renderChatMessageList: s, currentUserEmail: t.currentUserEmail, children: /* @__PURE__ */ e.jsx(x0, {}) });
+}, M0 = ({ activity: t }) => {
+  const l = t.creation, s = l ? V(l) : { date: "Unknown", time: "" }, i = t.personName || "Unknown", r = t.notes || [];
   return /* @__PURE__ */ e.jsxs("div", { className: "activity-item call-notes-activity", children: [
     /* @__PURE__ */ e.jsxs("div", { className: "activity-header", children: [
-      /* @__PURE__ */ e.jsx(P, { content: "Call Notes", align: "left", children: /* @__PURE__ */ e.jsx("div", { className: "activity-icon-wrapper", children: /* @__PURE__ */ e.jsx(ze, { size: 20, color: "#175353" }) }) }),
+      /* @__PURE__ */ e.jsx(k, { content: "Call Notes", align: "left", children: /* @__PURE__ */ e.jsx("div", { className: "activity-icon-wrapper", children: /* @__PURE__ */ e.jsx(ze, { size: 20, color: "#175353" }) }) }),
       /* @__PURE__ */ e.jsxs("div", { className: "activity-date-time", children: [
         s.date,
         " - ",
         s.time,
         ", ",
-        r
+        i
       ] })
     ] }),
-    /* @__PURE__ */ e.jsx("div", { className: "activity-content", children: /* @__PURE__ */ e.jsx("div", { className: "call-notes-activity-card", children: c.map((n, d) => /* @__PURE__ */ e.jsx("div", { className: "call-notes-item", children: n }, d)) }) })
+    /* @__PURE__ */ e.jsx("div", { className: "activity-content", children: /* @__PURE__ */ e.jsx("div", { className: "call-notes-activity-card", children: r.map((n, d) => /* @__PURE__ */ e.jsx("div", { className: "call-notes-item", children: n }, d)) }) })
   ] });
 };
 export {
-  fa as ACTIVITY_TYPE_LABELS,
+  u0 as ACTIVITY_TYPE_LABELS,
   ce as Activity,
-  na as ActivityDateGroup,
-  ra as ActivityFilter,
-  Bt as ActivityProvider,
-  ya as ActivityTab,
-  Ha as ActivityWidget,
+  l0 as ActivityDateGroup,
+  s0 as ActivityFilter,
+  Ot as ActivityProvider,
+  x0 as ActivityTab,
+  Z0 as ActivityWidget,
   we as CallActivity,
-  Fa as CallNotesActivity,
-  Jt as ChatActivity,
-  Yt as EmailActivity,
+  M0 as CallNotesActivity,
+  qt as ChatActivity,
+  Bt as EmailActivity,
   he as EmailRecipientRow,
-  ea as LeadActivity,
-  Ne as NotesActivity,
-  Gt as ReminderActivity,
-  Wt as ScheduleActivity,
-  qt as TaskActivity,
-  Aa as activityApi,
-  ua as buildActivityNodes,
-  ja as createDefaultApiClient,
-  Xt as formatDuration,
-  Ea as formatTimeLocale,
+  Xt as LeadActivity,
+  Ee as NotesActivity,
+  Wt as ReminderActivity,
+  Ut as ScheduleActivity,
+  Yt as TaskActivity,
+  g0 as activityApi,
+  d0 as buildActivityNodes,
+  f0 as createDefaultApiClient,
+  Jt as formatDuration,
+  j0 as formatTimeLocale,
   ve as getActivityDate,
-  zt as getActivityDateKey,
-  da as getActivityElementId,
+  Pt as getActivityDateKey,
+  i0 as getActivityElementId,
   Ze as getActivityTimestamp,
-  Qt as getBadgeColor,
+  Kt as getBadgeColor,
   be as getDateKeyFromActivity,
-  L as parseDateTime,
-  Na as parseMessageWithLinks,
-  wa as renderMessageStatusIcon,
-  G as sanitizeHtmlLight,
-  oa as useActivities,
-  X as useActivityConfig,
-  ga as useActivityTabLogic,
-  Kt as useCallRecording,
-  ba as useDefaultActivityAdapter,
+  V as parseDateTime,
+  A0 as parseMessageWithLinks,
+  b0 as renderMessageStatusIcon,
+  q as sanitizeHtmlLight,
+  c0 as useActivities,
+  J as useActivityConfig,
+  v0 as useActivityTabLogic,
+  Gt as useCallRecording,
+  y0 as useDefaultActivityAdapter,
   ie as useExpandableContent,
-  xa as useFilterState,
-  ma as useScrollToActivity
+  p0 as useFilterState
 };

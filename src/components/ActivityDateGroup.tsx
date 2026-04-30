@@ -28,10 +28,9 @@ function getActivityTypeLabel(activity: ActivityItem): string {
 
 interface ActivityDateGroupProps {
   activities: ActivityItem[];
-  scrollId?: string;
 }
 
-const ActivityDateGroup: React.FC<ActivityDateGroupProps> = ({ activities, scrollId }) => {
+const ActivityDateGroup: React.FC<ActivityDateGroupProps> = ({ activities }) => {
   const first = activities[0];
   const rest = useMemo(() => activities.slice(1), [activities]);
   const hasMore = rest.length > 0;
@@ -44,14 +43,14 @@ const ActivityDateGroup: React.FC<ActivityDateGroupProps> = ({ activities, scrol
   if (activities.length === 0) return null;
   if (activities.length === 1) {
     return (
-      <div key={scrollId} data-activity-id={scrollId}>
+      <div>
         <Activity activity={first} />
       </div>
     );
   }
 
   return (
-    <div data-activity-id={scrollId} className="activity-date-group">
+    <div className="activity-date-group">
       <Activity activity={first} />
       <div
         ref={wrapperRef}

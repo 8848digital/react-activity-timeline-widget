@@ -105,13 +105,13 @@ const ActivityTab: React.FC = () => {
               if (node.type === "single") {
                 const id = getActivityElementId(node.activity, node.index);
                 return (
-                  <div key={id} data-activity-id={id}>
+                  <div key={id}>
                     <Activity activity={node.activity} />
                   </div>
                 );
               }
               const id = getActivityElementId(node.activities[0], node.firstIndex);
-              return <ActivityDateGroup key={id} activities={node.activities} scrollId={id} />;
+              return <ActivityDateGroup key={id} activities={node.activities} />;
             })}
             <div ref={loadMoreRef} className="activity-load-more-sentinel" aria-hidden="true" />
             {isFetchingNextPage && (
