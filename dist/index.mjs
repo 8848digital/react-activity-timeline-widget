@@ -55,11 +55,11 @@ function Qe() {
       switch (o) {
         case f:
           return "Fragment";
-        case I:
+        case R:
           return "Profiler";
         case E:
           return "StrictMode";
-        case S:
+        case I:
           return "Suspense";
         case K:
           return "SuspenseList";
@@ -190,7 +190,7 @@ function Qe() {
       var M = j.children;
       if (M !== void 0)
         if (Z)
-          if (R(M)) {
+          if (S(M)) {
             for (Z = 0; Z < M.length; Z++)
               x(M[Z]);
             Object.freeze && Object.freeze(M);
@@ -240,7 +240,7 @@ React keys must be passed directly to JSX without using spread:
     function v(o) {
       return typeof o == "object" && o !== null && o.$$typeof === u;
     }
-    var g = Ge, u = Symbol.for("react.transitional.element"), y = Symbol.for("react.portal"), f = Symbol.for("react.fragment"), E = Symbol.for("react.strict_mode"), I = Symbol.for("react.profiler"), J = Symbol.for("react.consumer"), W = Symbol.for("react.context"), $ = Symbol.for("react.forward_ref"), S = Symbol.for("react.suspense"), K = Symbol.for("react.suspense_list"), H = Symbol.for("react.memo"), Y = Symbol.for("react.lazy"), D = Symbol.for("react.activity"), F = Symbol.for("react.client.reference"), _ = g.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, A = Object.prototype.hasOwnProperty, R = Array.isArray, b = console.createTask ? console.createTask : function() {
+    var g = Ge, u = Symbol.for("react.transitional.element"), y = Symbol.for("react.portal"), f = Symbol.for("react.fragment"), E = Symbol.for("react.strict_mode"), R = Symbol.for("react.profiler"), J = Symbol.for("react.consumer"), W = Symbol.for("react.context"), $ = Symbol.for("react.forward_ref"), I = Symbol.for("react.suspense"), K = Symbol.for("react.suspense_list"), H = Symbol.for("react.memo"), Y = Symbol.for("react.lazy"), D = Symbol.for("react.activity"), F = Symbol.for("react.client.reference"), _ = g.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, A = Object.prototype.hasOwnProperty, S = Array.isArray, b = console.createTask ? console.createTask : function() {
       return null;
     };
     g = {
@@ -802,8 +802,8 @@ function ie(t, l = kt) {
     const v = d.current, g = () => {
       const f = v.offsetHeight, E = x.height - f;
       if (E <= 0) return;
-      const I = x.scrollParent;
-      I ? I.scrollTop = Math.max(0, I.scrollTop - E) : window.scrollTo({ top: Math.max(0, window.scrollY - E), behavior: "auto" });
+      const R = x.scrollParent;
+      R ? R.scrollTop = Math.max(0, R.scrollTop - E) : window.scrollTo({ top: Math.max(0, window.scrollY - E), behavior: "auto" });
     }, u = (f) => {
       f.target !== v || f.propertyName !== "max-height" || (v.removeEventListener("transitionend", u), clearTimeout(y), g());
     };
@@ -1003,7 +1003,7 @@ const z = ({ activity: t }) => /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
     }
   )
 ] }), Ee = "#FB2828", Yt = ({ activity: t }) => {
-  const { apiBaseUrl: l, onEmailReply: s, onEmailReplyAll: r } = X(), n = t.data && typeof t.data == "object" ? t.data : t, d = t.communication_date || "", i = t.creation || "", m = d || i, { date: h, time: p } = L(m), x = n.sender_full_name || n.sender || "", v = n.recipients || "", g = n.cc || null, u = n.bcc || null, y = n.subject || "", f = n.content || "", E = n.attachments || [], J = (n.sent_or_received || "").toLowerCase() === "received" ? "email_received" : "email_sent", W = 110, { isExpanded: $, toggleExpanded: S, shouldShowExpanded: K, showOverflow: H, wrapperRef: Y } = ie(
+  const { apiBaseUrl: l, onEmailReply: s, onEmailReplyAll: r } = X(), n = t.data && typeof t.data == "object" ? t.data : t, d = t.communication_date || "", i = t.creation || "", m = d || i, { date: h, time: p } = L(m), x = n.sender_full_name || n.sender || "", v = n.recipients || "", g = n.cc || null, u = n.bcc || null, y = n.subject || "", f = n.content || "", E = n.attachments || [], R = (n.sent_or_received || "").toLowerCase(), J = R === "received" ? "email_received" : "email_sent", W = 110, { isExpanded: $, toggleExpanded: I, shouldShowExpanded: K, showOverflow: H, wrapperRef: Y } = ie(
     [f, E],
     W
   ), D = (A) => A.startsWith("http://") || A.startsWith("https://") ? A : `${l || ""}${A}`, F = () => {
@@ -1051,70 +1051,77 @@ const z = ({ activity: t }) => /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
         /* @__PURE__ */ e.jsx(z, { activity: t })
       ] })
     ] }),
-    /* @__PURE__ */ e.jsx("div", { className: "activity-content", children: /* @__PURE__ */ e.jsxs("div", { className: "email-activity-card", children: [
-      /* @__PURE__ */ e.jsxs("div", { style: { display: "flex", justifyContent: "space-between", alignItems: "flex-start" }, children: [
-        /* @__PURE__ */ e.jsxs("div", { children: [
-          /* @__PURE__ */ e.jsxs("h5", { className: "atw-email-from-label", children: [
-            "From: ",
-            /* @__PURE__ */ e.jsx("span", { className: "atw-email-from-value", children: x && `${x}` })
+    /* @__PURE__ */ e.jsx("div", { className: "activity-content", children: /* @__PURE__ */ e.jsxs(
+      "div",
+      {
+        className: "email-activity-card",
+        style: R === "received" ? { borderLeft: "3px solid #1565C0" } : void 0,
+        children: [
+          /* @__PURE__ */ e.jsxs("div", { style: { display: "flex", justifyContent: "space-between", alignItems: "flex-start" }, children: [
+            /* @__PURE__ */ e.jsxs("div", { children: [
+              /* @__PURE__ */ e.jsxs("h5", { className: "atw-email-from-label", children: [
+                "From: ",
+                /* @__PURE__ */ e.jsx("span", { className: "atw-email-from-value", children: x && `${x}` })
+              ] }),
+              /* @__PURE__ */ e.jsx(he, { label: "To", value: v }),
+              /* @__PURE__ */ e.jsx(he, { label: "Cc", value: g }),
+              /* @__PURE__ */ e.jsx(he, { label: "Bcc", value: u })
+            ] }),
+            (s || r) && /* @__PURE__ */ e.jsxs("div", { style: { display: "flex", gap: "8px" }, children: [
+              s && /* @__PURE__ */ e.jsx("button", { type: "button", onClick: F, className: "atw-email-reply-btn", children: "Reply" }),
+              r && /* @__PURE__ */ e.jsx("button", { type: "button", onClick: _, className: "atw-email-reply-btn", children: "Reply All" })
+            ] })
           ] }),
-          /* @__PURE__ */ e.jsx(he, { label: "To", value: v }),
-          /* @__PURE__ */ e.jsx(he, { label: "Cc", value: g }),
-          /* @__PURE__ */ e.jsx(he, { label: "Bcc", value: u })
-        ] }),
-        (s || r) && /* @__PURE__ */ e.jsxs("div", { style: { display: "flex", gap: "8px" }, children: [
-          s && /* @__PURE__ */ e.jsx("button", { type: "button", onClick: F, className: "atw-email-reply-btn", children: "Reply" }),
-          r && /* @__PURE__ */ e.jsx("button", { type: "button", onClick: _, className: "atw-email-reply-btn", children: "Reply All" })
-        ] })
-      ] }),
-      /* @__PURE__ */ e.jsx("hr", { className: "atw-email-divider" }),
-      /* @__PURE__ */ e.jsxs("h4", { children: [
-        "Subject: ",
-        y && /* @__PURE__ */ e.jsx("span", { className: "email-activity-subject", children: y })
-      ] }),
-      (f || E.length > 0) && /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
-        /* @__PURE__ */ e.jsxs(
-          "div",
-          {
-            ref: Y,
-            className: `email-activity-body-wrapper ${K ? "email-activity-body-wrapper--expanded" : ""}`,
-            children: [
-              f && /* @__PURE__ */ e.jsx("div", { className: "email-activity-body rich-html-content", dangerouslySetInnerHTML: { __html: G(f) } }),
-              E.length > 0 && /* @__PURE__ */ e.jsxs("div", { className: "email-activity-attachments", children: [
-                /* @__PURE__ */ e.jsxs("div", { className: "email-activity-attachments-header", children: [
-                  /* @__PURE__ */ e.jsx(ye, { size: 16, color: "#666" }),
-                  /* @__PURE__ */ e.jsxs("span", { children: [
-                    "Attachments (",
-                    E.length,
-                    ")"
-                  ] })
-                ] }),
-                /* @__PURE__ */ e.jsx("div", { className: "email-activity-attachments-list", children: E.map((A, R) => /* @__PURE__ */ e.jsxs(
-                  "a",
-                  {
-                    href: D(A.file_url),
-                    target: "_blank",
-                    rel: "noopener noreferrer",
-                    className: "email-activity-attachment-item",
-                    children: [
-                      /* @__PURE__ */ e.jsx(ye, { size: 14, color: Ee }),
-                      /* @__PURE__ */ e.jsx("span", { children: A.file_name || A.file_url.split("/").pop() || "Attachment" }),
-                      A.file_size && /* @__PURE__ */ e.jsxs("span", { className: "email-activity-attachment-size", children: [
-                        "(",
-                        (A.file_size / 1024).toFixed(2),
-                        " KB)"
+          /* @__PURE__ */ e.jsx("hr", { className: "atw-email-divider" }),
+          /* @__PURE__ */ e.jsxs("h4", { children: [
+            "Subject: ",
+            y && /* @__PURE__ */ e.jsx("span", { className: "email-activity-subject", children: y })
+          ] }),
+          (f || E.length > 0) && /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
+            /* @__PURE__ */ e.jsxs(
+              "div",
+              {
+                ref: Y,
+                className: `email-activity-body-wrapper ${K ? "email-activity-body-wrapper--expanded" : ""}`,
+                children: [
+                  f && /* @__PURE__ */ e.jsx("div", { className: "email-activity-body rich-html-content", dangerouslySetInnerHTML: { __html: G(f) } }),
+                  E.length > 0 && /* @__PURE__ */ e.jsxs("div", { className: "email-activity-attachments", children: [
+                    /* @__PURE__ */ e.jsxs("div", { className: "email-activity-attachments-header", children: [
+                      /* @__PURE__ */ e.jsx(ye, { size: 16, color: "#666" }),
+                      /* @__PURE__ */ e.jsxs("span", { children: [
+                        "Attachments (",
+                        E.length,
+                        ")"
                       ] })
-                    ]
-                  },
-                  A.name || R
-                )) })
-              ] })
-            ]
-          }
-        ),
-        H && /* @__PURE__ */ e.jsx("div", { style: { textAlign: "right", marginTop: "4px" }, children: /* @__PURE__ */ e.jsx(oe, { isExpanded: $, onToggle: S, label: "View More" }) })
-      ] })
-    ] }) })
+                    ] }),
+                    /* @__PURE__ */ e.jsx("div", { className: "email-activity-attachments-list", children: E.map((A, S) => /* @__PURE__ */ e.jsxs(
+                      "a",
+                      {
+                        href: D(A.file_url),
+                        target: "_blank",
+                        rel: "noopener noreferrer",
+                        className: "email-activity-attachment-item",
+                        children: [
+                          /* @__PURE__ */ e.jsx(ye, { size: 14, color: Ee }),
+                          /* @__PURE__ */ e.jsx("span", { children: A.file_name || A.file_url.split("/").pop() || "Attachment" }),
+                          A.file_size && /* @__PURE__ */ e.jsxs("span", { className: "email-activity-attachment-size", children: [
+                            "(",
+                            (A.file_size / 1024).toFixed(2),
+                            " KB)"
+                          ] })
+                        ]
+                      },
+                      A.name || S
+                    )) })
+                  ] })
+                ]
+              }
+            ),
+            H && /* @__PURE__ */ e.jsx("div", { style: { textAlign: "right", marginTop: "4px" }, children: /* @__PURE__ */ e.jsx(oe, { isExpanded: $, onToggle: I, label: "View More" }) })
+          ] })
+        ]
+      }
+    ) })
   ] });
 }, Ut = "#1C73E7", Ne = ({ activity: t }) => {
   let l, s, r, c;
@@ -1831,7 +1838,7 @@ const ca = 20, ia = (t, l) => {
   }
 };
 function oa(t, l) {
-  const { fetchActivities: s, onSocketMessage: r } = X(), [c, n] = C([]), [d, i] = C([]), [m, h] = C(!1), [p, x] = C(null), [v, g] = C(!1), [u, y] = C(!1), [f, E] = C(!1), [I, J] = C(!1), W = q(null), $ = q(0), S = te(async (D, F) => {
+  const { fetchActivities: s, onSocketMessage: r } = X(), [c, n] = C([]), [d, i] = C([]), [m, h] = C(!1), [p, x] = C(null), [v, g] = C(!1), [u, y] = C(!1), [f, E] = C(!1), [R, J] = C(!1), W = q(null), $ = q(0), I = te(async (D, F) => {
     if (t) {
       F ? h(!0) : g(!0);
       try {
@@ -1846,10 +1853,10 @@ function oa(t, l) {
           filters: Object.keys(_).length > 0 ? _ : void 0
         });
         n((V) => F ? [A] : [...V, A]);
-        const R = A.message;
-        F && (E(!!R.includes_pd), J(!!R.includes_dc));
-        const b = R.page + 1;
-        y(b * R.page_size < R.total_count), $.current = b, x(null);
+        const S = A.message;
+        F && (E(!!S.includes_pd), J(!!S.includes_dc));
+        const b = S.page + 1;
+        y(b * S.page_size < S.total_count), $.current = b, x(null);
       } catch (_) {
         x(_ instanceof Error ? _ : new Error("Failed to fetch activities"));
       } finally {
@@ -1858,24 +1865,24 @@ function oa(t, l) {
     }
   }, [t, l, s]);
   U(() => {
-    W.current !== t && (W.current = t, i([])), n([]), $.current = 0, S(0, !0);
-  }, [t, l, S]);
+    W.current !== t && (W.current = t, i([])), n([]), $.current = 0, I(0, !0);
+  }, [t, l, I]);
   const K = te(() => {
-    !v && u && S($.current, !1);
-  }, [v, u, S]), H = te(() => {
-    n([]), $.current = 0, S(0, !0);
-  }, [S]);
+    !v && u && I($.current, !1);
+  }, [v, u, I]), H = te(() => {
+    n([]), $.current = 0, I(0, !0);
+  }, [I]);
   return U(() => r ? r((F) => {
     const _ = F.event;
     if (["whatsapp_message", "communication", "fcrm_note", "crm_task", "crm_lead", "crm_call_log", "raven_message", "activity"].includes(_)) {
       const A = ia(_, F.message);
-      A && i((R) => {
-        const b = "name" in A ? A.name : ve(A), V = R.findIndex((N) => ("name" in N ? N.name : ve(N)) === b);
+      A && i((S) => {
+        const b = "name" in A ? A.name : ve(A), V = S.findIndex((N) => ("name" in N ? N.name : ve(N)) === b);
         if (V >= 0) {
-          const N = [...R];
+          const N = [...S];
           return N[V] = A, N;
         }
-        return [...R, A];
+        return [...S, A];
       });
     }
   }) : void 0, [r]), {
@@ -1904,7 +1911,7 @@ function oa(t, l) {
     fetchNextPage: K,
     refetch: H,
     includes_pd: f,
-    includes_dc: I
+    includes_dc: R
   };
 }
 function da(t, l) {
@@ -2007,7 +2014,7 @@ function xa({
 function ga() {
   const { contactName: t, searchParams: l, fetchLeads: s } = X(), r = (l == null ? void 0 : l.activityId) ?? null, c = O(() => ((l == null ? void 0 : l.comm_type) ?? null) === "communication" ? { activity_type: "Emails" } : {}, [l]), { filtersPayload: n, initialFilters: d, handleApplyFilters: i, handleClearFilters: m } = xa({
     initialParameters: c
-  }), { activities: h, isLoading: p, error: x, fetchNextPage: v, hasNextPage: g, isFetchingNextPage: u, refetch: y, includes_pd: f, includes_dc: E } = oa(t, n), I = h.filter((H) => H.activity_type !== "attachment_log"), J = O(() => ua(I), [I]), { getActivityElementId: W } = ma(r, I), $ = q(null);
+  }), { activities: h, isLoading: p, error: x, fetchNextPage: v, hasNextPage: g, isFetchingNextPage: u, refetch: y, includes_pd: f, includes_dc: E } = oa(t, n), R = h.filter((H) => H.activity_type !== "attachment_log"), J = O(() => ua(R), [R]), { getActivityElementId: W } = ma(r, R), $ = q(null);
   U(() => {
     const H = $.current;
     if (!H || !g || u) return;
@@ -2020,12 +2027,12 @@ function ga() {
     );
     return Y.observe(H), () => Y.disconnect();
   }, [g, u, v]);
-  const S = (s == null ? void 0 : s()) ?? { leads: [] }, K = O(
+  const I = (s == null ? void 0 : s()) ?? { leads: [] }, K = O(
     () => ({
       activity_type: fa.map((H) => ({ label: H.label, value: H.label })),
-      lead_id: S.leads.map((H) => ({ label: H.name, value: H.name }))
+      lead_id: I.leads.map((H) => ({ label: H.name, value: H.name }))
     }),
-    [S.leads]
+    [I.leads]
   );
   return {
     activityNodes: J,
@@ -2303,8 +2310,12 @@ const _a = ({
     };
   }, [t]);
   if (U(() => {
-    var h;
-    r && ((h = n.current) == null || h.scrollIntoView({ behavior: "smooth" }));
+    if (!r) return;
+    const h = setTimeout(() => {
+      var p;
+      (p = n.current) == null || p.scrollIntoView({ behavior: "smooth" });
+    }, 0);
+    return () => clearTimeout(h);
   }, [d, r]), !d) return null;
   const i = d, m = i.is_outbound === 1;
   return /* @__PURE__ */ e.jsxs("div", { className: "whatsapp-message-list", children: [

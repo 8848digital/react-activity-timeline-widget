@@ -105,7 +105,10 @@ const EmailActivity: React.FC<EmailActivityProps> = ({ activity }) => {
         </div>
       </div>
       <div className="activity-content">
-        <div className="email-activity-card">
+        <div
+          className="email-activity-card"
+          style={sentOrReceived === "received" ? { borderLeft: "3px solid #1565C0" } : undefined}
+        >
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
             <div>
               <h5 className="atw-email-from-label">

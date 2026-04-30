@@ -37,10 +37,14 @@ export const MessageList: React.FC<MessageListProps> = ({
     };
   }, [activity]);
 
+  // setTimeout(0) defers scroll until after browser paints (fixes modal open timing).
+  // enableScroll=false is passed by ChatActivity to prevent scrolling the activity feed.
   useEffect(() => {
-    if (enableScroll) {
+    if (!enableScroll) return;
+    const timer = setTimeout(() => {
       bottomRef.current?.scrollIntoView({ behavior: "smooth" });
-    }
+    }, 0);
+    return () => clearTimeout(timer);
   }, [transformedMessage, enableScroll]);
 
   if (!transformedMessage) return null;
