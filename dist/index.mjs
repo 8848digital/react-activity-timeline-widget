@@ -18,8 +18,8 @@ function Xe() {
   xe = 1;
   var t = Symbol.for("react.transitional.element"), l = Symbol.for("react.fragment");
   function s(i, r, n) {
-    var d = null;
-    if (n !== void 0 && (d = "" + n), r.key !== void 0 && (d = "" + r.key), "key" in r) {
+    var m = null;
+    if (n !== void 0 && (m = "" + n), r.key !== void 0 && (m = "" + r.key), "key" in r) {
       n = {};
       for (var o in r)
         o !== "key" && (n[o] = r[o]);
@@ -27,7 +27,7 @@ function Xe() {
     return r = n.ref, {
       $$typeof: t,
       type: i,
-      key: d,
+      key: m,
       ref: r !== void 0 ? r : null,
       props: n
     };
@@ -128,7 +128,7 @@ function Qe() {
     function n() {
       return Error("react-stack-top-frame");
     }
-    function d(c) {
+    function m(c) {
       if (A.call(c, "key")) {
         var f = Object.getOwnPropertyDescriptor(c, "key").get;
         if (f && f.isReactWarning) return !1;
@@ -147,7 +147,7 @@ function Qe() {
         configurable: !0
       });
     }
-    function m() {
+    function d() {
       var c = t(this.type);
       return N[c] || (N[c] = !0, console.error(
         "Accessing element.ref was removed in React 19. ref is now a regular prop. It will be removed from the JSX Element type in a future release."
@@ -163,7 +163,7 @@ function Qe() {
         _owner: M
       }, (C !== void 0 ? C : null) !== null ? Object.defineProperty(c, "ref", {
         enumerable: !1,
-        get: m
+        get: d
       }) : Object.defineProperty(c, "ref", { enumerable: !1, value: null }), c._store = {}, Object.defineProperty(c._store, "validated", {
         configurable: !1,
         enumerable: !1,
@@ -217,7 +217,7 @@ React keys must be passed directly to JSX without using spread:
           C
         ), D[C + M] = !0);
       }
-      if (C = null, w !== void 0 && (s(w), C = "" + w), d(f) && (s(f.key), C = "" + f.key), "key" in f) {
+      if (C = null, w !== void 0 && (s(w), C = "" + w), m(f) && (s(f.key), C = "" + f.key), "key" in f) {
         w = {};
         for (var me in f)
           me !== "key" && (w[me] = f[me]);
@@ -702,9 +702,9 @@ const tt = /* @__PURE__ */ new Map([
       color: i,
       size: r,
       weight: n,
-      mirrored: d,
+      mirrored: m,
       children: o,
-      weights: m,
+      weights: d,
       ...h
     } = t, {
       color: p = "currentColor",
@@ -722,13 +722,13 @@ const tt = /* @__PURE__ */ new Map([
         height: r ?? g,
         fill: i ?? p,
         viewBox: "0 0 256 256",
-        transform: d || y ? "scale(-1, 1)" : void 0,
+        transform: m || y ? "scale(-1, 1)" : void 0,
         ...u,
         ...h
       },
       !!s && /* @__PURE__ */ a.createElement("title", null, s),
       o,
-      m.get(n ?? v)
+      d.get(n ?? v)
     );
   }
 );
@@ -772,16 +772,16 @@ function q(t) {
 }
 const kt = 164;
 function ie(t, l = kt) {
-  const [s, i] = H(!1), [r, n] = H(null), d = ee(null);
+  const [s, i] = H(!1), [r, n] = H(null), m = ee(null);
   te(() => {
-    const p = d.current;
+    const p = m.current;
     if (!p) return;
     const g = () => n(p.scrollHeight > l), v = requestAnimationFrame(() => {
       requestAnimationFrame(g);
     });
     return () => cancelAnimationFrame(v);
   }, [l, ...t]);
-  const o = r === !0, m = r !== null && (s || !r), h = Q(() => {
+  const o = r === !0, d = r !== null && (s || !r), h = Q(() => {
     i((p) => !p);
   }, []);
   return {
@@ -789,8 +789,8 @@ function ie(t, l = kt) {
     toggleExpanded: h,
     hasOverflow: r,
     showOverflow: o,
-    shouldShowExpanded: m,
-    wrapperRef: d
+    shouldShowExpanded: d,
+    wrapperRef: m
   };
 }
 const oe = ({
@@ -811,7 +811,7 @@ const oe = ({
     }
   );
 }, $t = 20, he = ({ label: t, value: l }) => {
-  const { isExpanded: s, toggleExpanded: i, shouldShowExpanded: r, showOverflow: n, wrapperRef: d } = ie(
+  const { isExpanded: s, toggleExpanded: i, shouldShowExpanded: r, showOverflow: n, wrapperRef: m } = ie(
     [l],
     $t
   );
@@ -819,7 +819,7 @@ const oe = ({
     /* @__PURE__ */ e.jsx(
       "div",
       {
-        ref: d,
+        ref: m,
         className: `email-activity-recipients-wrapper ${r ? "email-activity-recipients-wrapper--expanded" : ""}`,
         children: /* @__PURE__ */ e.jsxs("h5", { className: "atw-email-from-label", children: [
           t,
@@ -839,17 +839,17 @@ const oe = ({
     )
   ] }) : null;
 }, k = ({ content: t, children: l, align: s = "center" }) => {
-  const [i, r] = H(!1), [n, d] = H({ top: 0, left: 0 }), o = ee(null), m = () => {
+  const [i, r] = H(!1), [n, m] = H({ top: 0, left: 0 }), o = ee(null), d = () => {
     if (o.current) {
       const p = o.current.getBoundingClientRect();
-      d({
+      m({
         top: p.top - 6,
         left: s === "left" ? p.left : s === "right" ? p.right : p.left + p.width / 2
       });
     }
     r(!0);
   }, h = () => s === "left" ? "translateY(-100%)" : s === "right" ? "translate(-100%, -100%)" : "translate(-50%, -100%)";
-  return /* @__PURE__ */ e.jsxs("div", { ref: o, className: "atw-tooltip-wrapper", onMouseEnter: m, onMouseLeave: () => r(!1), children: [
+  return /* @__PURE__ */ e.jsxs("div", { ref: o, className: "atw-tooltip-wrapper", onMouseEnter: d, onMouseLeave: () => r(!1), children: [
     l,
     i && /* @__PURE__ */ e.jsx("div", { className: "atw-tooltip-content", style: { top: n.top, left: n.left, transform: h() }, children: t })
   ] });
@@ -878,10 +878,10 @@ const oe = ({
   textColor: i,
   borderColor: r,
   shape: n = "pill",
-  style: d = {},
+  style: m = {},
   className: o = ""
 }) => {
-  const m = t ? Dt[t] : void 0, h = l || (m == null ? void 0 : m.label) || t || "", p = s || (m == null ? void 0 : m.bgColor) || "#F3F4F6", g = i || (m == null ? void 0 : m.textColor) || "#374151", v = r || (m == null ? void 0 : m.borderColor) || "#D1D5DB";
+  const d = t ? Dt[t] : void 0, h = l || (d == null ? void 0 : d.label) || t || "", p = s || (d == null ? void 0 : d.bgColor) || "#F3F4F6", g = i || (d == null ? void 0 : d.textColor) || "#374151", v = r || (d == null ? void 0 : d.borderColor) || "#D1D5DB";
   return h ? /* @__PURE__ */ e.jsx(
     "span",
     {
@@ -890,7 +890,7 @@ const oe = ({
         backgroundColor: p,
         color: g,
         border: `1px solid ${v}`,
-        ...d
+        ...m
       },
       children: h
     }
@@ -904,12 +904,12 @@ function J() {
 }
 const Ot = ({ children: t, ...l }) => /* @__PURE__ */ e.jsx(Ye.Provider, { value: l, children: t });
 function V(t) {
-  const l = new Date(t), s = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"], i = l.getDate().toString().padStart(2, "0"), r = s[l.getMonth()], n = l.getFullYear(), d = `${i} ${r} ${n}`;
+  const l = new Date(t), s = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"], i = l.getDate().toString().padStart(2, "0"), r = s[l.getMonth()], n = l.getFullYear(), m = `${i} ${r} ${n}`;
   let o = l.getHours();
-  const m = l.getMinutes().toString().padStart(2, "0"), h = o >= 12 ? "PM" : "AM";
+  const d = l.getMinutes().toString().padStart(2, "0"), h = o >= 12 ? "PM" : "AM";
   o = o % 12, o = o || 12;
-  const p = `${o.toString().padStart(2, "0")}:${m} ${h}`;
-  return { date: d, time: p };
+  const p = `${o.toString().padStart(2, "0")}:${d} ${h}`;
+  return { date: m, time: p };
 }
 function Pt(t) {
   try {
@@ -960,7 +960,7 @@ const O = ({ activity: t }) => /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
     }
   )
 ] }), Ne = "#FB2828", Bt = ({ activity: t }) => {
-  const { apiBaseUrl: l, onEmailReply: s, onEmailReplyAll: i } = J(), n = t.data && typeof t.data == "object" ? t.data : t, d = t.communication_date || "", o = t.creation || "", m = d || o, { date: h, time: p } = V(m), g = n.sender_full_name || n.sender || "", v = n.recipients || "", y = n.cc || null, u = n.bcc || null, j = n.subject || "", x = n.content || "", _ = n.attachments || [], U = (n.sent_or_received || "").toLowerCase(), Y = U === "received" ? "email_received" : "email_sent", P = 110, { isExpanded: $, toggleExpanded: E, shouldShowExpanded: W, showOverflow: G, wrapperRef: B } = ie(
+  const { apiBaseUrl: l, onEmailReply: s, onEmailReplyAll: i } = J(), n = t.data && typeof t.data == "object" ? t.data : t, m = t.communication_date || "", o = t.creation || "", d = m || o, { date: h, time: p } = V(d), g = n.sender_full_name || n.sender || "", v = n.recipients || "", y = n.cc || null, u = n.bcc || null, j = n.subject || "", x = n.content || "", _ = n.attachments || [], U = (n.sent_or_received || "").toLowerCase(), Y = U === "received" ? "email_received" : "email_sent", P = 110, { isExpanded: $, toggleExpanded: E, shouldShowExpanded: W, showOverflow: G, wrapperRef: B } = ie(
     [x, _],
     P
   ), z = (A) => A.startsWith("http://") || A.startsWith("https://") ? A : `${l || ""}${A}`, T = () => {
@@ -1089,7 +1089,7 @@ const O = ({ activity: t }) => /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
     const p = V(t.creation || "");
     l = p.date, s = p.time, i = typeof t.data == "string" ? t.data : void 0, r = "Creation";
   }
-  const { isExpanded: n, toggleExpanded: d, shouldShowExpanded: o, showOverflow: m, wrapperRef: h } = ie([i]);
+  const { isExpanded: n, toggleExpanded: m, shouldShowExpanded: o, showOverflow: d, wrapperRef: h } = ie([i]);
   return /* @__PURE__ */ e.jsxs("div", { className: "activity-item notes-activity", children: [
     /* @__PURE__ */ e.jsxs("div", { className: "activity-header", children: [
       /* @__PURE__ */ e.jsx(k, { content: `${t.activity_type === "notes" ? "Note" : "Creation"}`, align: "left", children: /* @__PURE__ */ e.jsx("div", { className: "activity-icon-wrapper", children: /* @__PURE__ */ e.jsx(ze, { size: 20, color: zt }) }) }),
@@ -1113,12 +1113,12 @@ const O = ({ activity: t }) => /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
             children: /* @__PURE__ */ e.jsx("div", { className: "notes-item rich-html-content", dangerouslySetInnerHTML: { __html: q(i) } })
           }
         ),
-        m && /* @__PURE__ */ e.jsx("div", { style: { textAlign: "right", marginTop: "4px" }, children: /* @__PURE__ */ e.jsx(oe, { isExpanded: n, onToggle: d, label: "View More" }) })
+        d && /* @__PURE__ */ e.jsx("div", { style: { textAlign: "right", marginTop: "4px" }, children: /* @__PURE__ */ e.jsx(oe, { isExpanded: n, onToggle: m, label: "View More" }) })
       ] })
     ] }) })
   ] });
 }, Ut = ({ activity: t }) => {
-  const l = V(t.creation), s = t.due_date ? V(t.due_date) : null, i = t.title || "Schedule", r = t.description || "", n = t.priority || "", d = t.task_type || t.activity_type || "", o = t.type || "";
+  const l = V(t.creation), s = t.due_date ? V(t.due_date) : null, i = t.title || "Schedule", r = t.description || "", n = t.priority || "", m = t.task_type || t.activity_type || "", o = t.type || "";
   return /* @__PURE__ */ e.jsxs("div", { className: "activity-item schedule-activity", children: [
     /* @__PURE__ */ e.jsxs("div", { className: "activity-header", children: [
       /* @__PURE__ */ e.jsx(k, { content: "Schedule", align: "left", children: /* @__PURE__ */ e.jsx("div", { className: "activity-icon-wrapper", children: /* @__PURE__ */ e.jsx(Ue, { size: 20, color: "#0DBFFF" }) }) }),
@@ -1156,12 +1156,12 @@ const O = ({ activity: t }) => /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
             ] }),
             /* @__PURE__ */ e.jsx(S, { statusKey: n, showIcon: !1, shape: "square" })
           ] }),
-          d && /* @__PURE__ */ e.jsxs("div", { className: "schedule-activity-meta-row", children: [
+          m && /* @__PURE__ */ e.jsxs("div", { className: "schedule-activity-meta-row", children: [
             /* @__PURE__ */ e.jsxs("div", { className: "schedule-activity-label-cell", children: [
               /* @__PURE__ */ e.jsx("span", { className: "schedule-activity-label", children: "Task type" }),
               /* @__PURE__ */ e.jsx("span", { className: "schedule-activity-colon", children: ":" })
             ] }),
-            /* @__PURE__ */ e.jsx("span", { className: "schedule-activity-value", children: d })
+            /* @__PURE__ */ e.jsx("span", { className: "schedule-activity-value", children: m })
           ] })
         ] }),
         r && /* @__PURE__ */ e.jsx("div", { className: "schedule-activity-description-wrapper", children: /* @__PURE__ */ e.jsxs("div", { className: "schedule-activity-meta-row", children: [
@@ -1181,7 +1181,7 @@ const O = ({ activity: t }) => /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
     ] }) })
   ] });
 }, Yt = ({ activity: t }) => {
-  const l = V(t.creation), s = t.due_date ? V(t.due_date) : null, i = t.title || "Task", r = t.description || "", n = t.priority || "", d = t.task_type || t.activity_type || "", o = t.type || "", m = t.status || "", h = t.skip_reason || "";
+  const l = V(t.creation), s = t.due_date ? V(t.due_date) : null, i = t.title || "Task", r = t.description || "", n = t.priority || "", m = t.task_type || t.activity_type || "", o = t.type || "", d = t.status || "", h = t.skip_reason || "";
   return /* @__PURE__ */ e.jsxs("div", { className: "activity-item schedule-activity", children: [
     /* @__PURE__ */ e.jsxs("div", { className: "activity-header", children: [
       /* @__PURE__ */ e.jsx(k, { content: "Task", align: "left", children: /* @__PURE__ */ e.jsx("div", { className: "activity-icon-wrapper", children: /* @__PURE__ */ e.jsx(Ue, { size: 20, color: "#0DBFFF" }) }) }),
@@ -1219,22 +1219,22 @@ const O = ({ activity: t }) => /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
             ] }),
             /* @__PURE__ */ e.jsx(S, { statusKey: n, showIcon: !1, shape: "square" })
           ] }),
-          d && /* @__PURE__ */ e.jsxs("div", { className: "schedule-activity-meta-row", children: [
+          m && /* @__PURE__ */ e.jsxs("div", { className: "schedule-activity-meta-row", children: [
             /* @__PURE__ */ e.jsxs("div", { className: "schedule-activity-label-cell", children: [
               /* @__PURE__ */ e.jsx("span", { className: "schedule-activity-label", children: "Task type" }),
               /* @__PURE__ */ e.jsx("span", { className: "schedule-activity-colon", children: ":" })
             ] }),
-            /* @__PURE__ */ e.jsx("span", { className: "schedule-activity-value", children: d })
+            /* @__PURE__ */ e.jsx("span", { className: "schedule-activity-value", children: m })
           ] }),
-          m && /* @__PURE__ */ e.jsxs("div", { className: "schedule-activity-meta-row", children: [
+          d && /* @__PURE__ */ e.jsxs("div", { className: "schedule-activity-meta-row", children: [
             /* @__PURE__ */ e.jsxs("div", { className: "schedule-activity-label-cell", children: [
               /* @__PURE__ */ e.jsx("span", { className: "schedule-activity-label", children: "Status" }),
               /* @__PURE__ */ e.jsx("span", { className: "schedule-activity-colon", children: ":" })
             ] }),
-            /* @__PURE__ */ e.jsx(S, { statusKey: m, showIcon: !1, shape: "square" })
+            /* @__PURE__ */ e.jsx(S, { statusKey: d, showIcon: !1, shape: "square" })
           ] })
         ] }),
-        m === "Skipped" && h && /* @__PURE__ */ e.jsx("div", { className: "schedule-activity-description-wrapper", children: /* @__PURE__ */ e.jsxs("div", { className: "schedule-activity-meta-row", children: [
+        d === "Skipped" && h && /* @__PURE__ */ e.jsx("div", { className: "schedule-activity-description-wrapper", children: /* @__PURE__ */ e.jsxs("div", { className: "schedule-activity-meta-row", children: [
           /* @__PURE__ */ e.jsxs("div", { className: "schedule-activity-label-cell", children: [
             /* @__PURE__ */ e.jsx("span", { className: "schedule-activity-label", children: "Skip Reason" }),
             /* @__PURE__ */ e.jsx("span", { className: "schedule-activity-colon", children: ":" })
@@ -1264,7 +1264,7 @@ const O = ({ activity: t }) => /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
     ] }) })
   ] });
 }, Wt = ({ activity: t }) => {
-  const l = V(t.creation), s = t.due_date ? V(t.due_date) : null, i = t.title || "Reminder", r = t.description || "", n = t.priority || "", d = t.task_type || t.activity_type || "", o = t.type || "";
+  const l = V(t.creation), s = t.due_date ? V(t.due_date) : null, i = t.title || "Reminder", r = t.description || "", n = t.priority || "", m = t.task_type || t.activity_type || "", o = t.type || "";
   return /* @__PURE__ */ e.jsxs("div", { className: "activity-item reminder-activity", children: [
     /* @__PURE__ */ e.jsxs("div", { className: "activity-header", children: [
       /* @__PURE__ */ e.jsx(k, { content: "Reminder", align: "left", children: /* @__PURE__ */ e.jsx("div", { className: "activity-icon-wrapper", children: /* @__PURE__ */ e.jsx(Vt, { size: 20, color: "#FF3434" }) }) }),
@@ -1302,12 +1302,12 @@ const O = ({ activity: t }) => /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
             ] }),
             /* @__PURE__ */ e.jsx(S, { statusKey: n, showIcon: !1, shape: "square" })
           ] }),
-          d && /* @__PURE__ */ e.jsxs("div", { className: "reminder-activity-meta-row", children: [
+          m && /* @__PURE__ */ e.jsxs("div", { className: "reminder-activity-meta-row", children: [
             /* @__PURE__ */ e.jsxs("div", { className: "reminder-activity-label-cell", children: [
               /* @__PURE__ */ e.jsx("span", { className: "reminder-activity-label", children: "Task type" }),
               /* @__PURE__ */ e.jsx("span", { className: "reminder-activity-colon", children: ":" })
             ] }),
-            /* @__PURE__ */ e.jsx("span", { className: "reminder-activity-value", children: d })
+            /* @__PURE__ */ e.jsx("span", { className: "reminder-activity-value", children: m })
           ] })
         ] }),
         r && /* @__PURE__ */ e.jsx("div", { className: "reminder-activity-description-wrapper", children: /* @__PURE__ */ e.jsxs("div", { className: "reminder-activity-meta-row", children: [
@@ -1345,19 +1345,19 @@ const O = ({ activity: t }) => /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
   ] });
 };
 function Gt(t) {
-  const { fetchCallRecording: l, fetchCallRecordingBlob: s } = J(), [i, r] = H(null), [n, d] = H(!1), [o, m] = H(null);
+  const { fetchCallRecording: l, fetchCallRecordingBlob: s } = J(), [i, r] = H(null), [n, m] = H(!1), [o, d] = H(null);
   return te(() => {
-    if (r(null), m(null), !t || !l) {
-      d(!1);
+    if (r(null), d(null), !t || !l) {
+      m(!1);
       return;
     }
     let h = !1, p = null;
-    return d(!0), (async () => {
+    return m(!0), (async () => {
       try {
         const v = await l(t);
         if (h) return;
         if (!v) {
-          d(!1);
+          m(!1);
           return;
         }
         if (s) {
@@ -1366,9 +1366,9 @@ function Gt(t) {
           p = URL.createObjectURL(y), r(p);
         } else
           r(v);
-        d(!1);
+        m(!1);
       } catch (v) {
-        h || (m(v instanceof Error ? v : new Error("Failed to fetch recording")), d(!1));
+        h || (d(v instanceof Error ? v : new Error("Failed to fetch recording")), m(!1));
       }
     })(), () => {
       h = !0, p && URL.revokeObjectURL(p);
@@ -1405,9 +1405,9 @@ function Kt(t) {
 }
 const ue = "#175353", we = ({ activity: t }) => {
   var x, _;
-  const s = t.activity_type === "out-going" || t.activity_type === "outgoing_call" ? "Outbound Call" : "Inbound Call", { date: i, time: r } = V(t.creation || ""), n = ((x = t._caller) == null ? void 0 : x.label) ?? t.caller ?? "Unknown", d = ((_ = t._receiver) == null ? void 0 : _.label) ?? null, {
+  const s = t.activity_type === "out-going" || t.activity_type === "outgoing_call" ? "Outbound Call" : "Inbound Call", { date: i, time: r } = V(t.creation || ""), n = ((x = t._caller) == null ? void 0 : x.label) ?? t.caller ?? "Unknown", m = ((_ = t._receiver) == null ? void 0 : _.label) ?? null, {
     audioUrl: o,
-    isLoading: m,
+    isLoading: d,
     error: h
   } = Gt(t.recording_url ? t.name : void 0), [p, g] = H(!1), v = t._duration, y = typeof v == "number" ? Jt(v) : v, u = v === 0 || v === "0" || v === "0s" || v === "0m" || y === "0s" || y === "0m", j = Kt(t.status);
   return /* @__PURE__ */ e.jsxs("div", { className: "activity-item call-activity", children: [
@@ -1443,16 +1443,16 @@ const ue = "#175353", we = ({ activity: t }) => {
             /* @__PURE__ */ e.jsx("div", { className: "call-activity-avatar", children: /* @__PURE__ */ e.jsx(pe, { size: 16, color: ue }) }),
             /* @__PURE__ */ e.jsx("span", { className: "call-activity-name", children: n })
           ] }),
-          d != null && d !== "" && /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
+          m != null && m !== "" && /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
             /* @__PURE__ */ e.jsx("span", { className: "call-activity-to-label", children: "To" }),
             /* @__PURE__ */ e.jsx("span", { className: "call-activity-arrow", children: "→" }),
             /* @__PURE__ */ e.jsxs("div", { className: "call-activity-to-contact", children: [
               /* @__PURE__ */ e.jsx("div", { className: "call-activity-avatar", children: /* @__PURE__ */ e.jsx(pe, { size: 16, color: ue }) }),
-              /* @__PURE__ */ e.jsx("span", { className: "call-activity-to-name", children: d })
+              /* @__PURE__ */ e.jsx("span", { className: "call-activity-to-name", children: m })
             ] })
           ] })
         ] }),
-        /* @__PURE__ */ e.jsx("div", { className: "call-activity-actions", children: m ? /* @__PURE__ */ e.jsx("span", { className: "call-activity-loading", children: "Loading recording…" }) : h || p ? /* @__PURE__ */ e.jsxs("div", { style: { display: "flex", alignItems: "center", gap: "10px" }, children: [
+        /* @__PURE__ */ e.jsx("div", { className: "call-activity-actions", children: d ? /* @__PURE__ */ e.jsx("span", { className: "call-activity-loading", children: "Loading recording…" }) : h || p ? /* @__PURE__ */ e.jsxs("div", { style: { display: "flex", alignItems: "center", gap: "10px" }, children: [
           /* @__PURE__ */ e.jsx("span", { className: "call-activity-loading", style: { color: "#f44336" }, children: "Recording unavailable" }),
           y && !u && /* @__PURE__ */ e.jsxs("span", { className: "call-activity-duration", children: [
             "Duration ",
@@ -1606,7 +1606,7 @@ const ue = "#175353", we = ({ activity: t }) => {
     ] }) })
   ] });
 }, e0 = ({ activity: t }) => {
-  const { currentUserEmail: l, apiBaseUrl: s } = J(), { date: i, time: r } = V(t.creation || ""), n = l && t.from === l, d = t.text || t.content || "", o = t.message_type === "Image", m = t.file ? t.file.startsWith("http") ? t.file : `${s}${t.file}` : null, h = /* @__PURE__ */ e.jsx(k, { content: "Raven Chat", align: n ? "right" : "left", children: /* @__PURE__ */ e.jsx("div", { className: "activity-icon-wrapper", children: /* @__PURE__ */ e.jsx(Lt, { size: 20, color: n ? "#175353" : "#666" }) }) });
+  const { currentUserEmail: l, apiBaseUrl: s } = J(), { date: i, time: r } = V(t.creation || ""), n = l && t.from === l, m = t.text || t.content || "", o = t.message_type === "Image", d = t.file ? t.file.startsWith("http") ? t.file : `${s}${t.file}` : null, h = /* @__PURE__ */ e.jsx(k, { content: "Raven Chat", align: n ? "right" : "left", children: /* @__PURE__ */ e.jsx("div", { className: "activity-icon-wrapper", children: /* @__PURE__ */ e.jsx(Lt, { size: 20, color: n ? "#175353" : "#666" }) }) });
   return /* @__PURE__ */ e.jsxs("div", { className: `activity-item chat-activity mt-3 ${n ? "chat-outbound" : "chat-incoming"}`, children: [
     /* @__PURE__ */ e.jsxs("div", { className: `activity-header chat-activity-header ${n ? "chat-header-outbound" : "chat-header-incoming"}`, children: [
       !n && h,
@@ -1621,10 +1621,10 @@ const ue = "#175353", we = ({ activity: t }) => {
       n && h
     ] }),
     /* @__PURE__ */ e.jsx("div", { className: `activity-content ${n ? "chat-content-outbound" : "chat-content-incoming"}`, children: /* @__PURE__ */ e.jsxs("div", { className: "chat-activity-bubble", children: [
-      o && m ? /* @__PURE__ */ e.jsx("div", { className: "chat-image-preview", style: { marginBottom: "8px" }, children: /* @__PURE__ */ e.jsx("a", { href: m, target: "_blank", rel: "noopener noreferrer", children: /* @__PURE__ */ e.jsx(
+      o && d ? /* @__PURE__ */ e.jsx("div", { className: "chat-image-preview", style: { marginBottom: "8px" }, children: /* @__PURE__ */ e.jsx("a", { href: d, target: "_blank", rel: "noopener noreferrer", children: /* @__PURE__ */ e.jsx(
         "img",
         {
-          src: m,
+          src: d,
           alt: "Attachment",
           className: "message-attachment-image",
           style: {
@@ -1635,11 +1635,11 @@ const ue = "#175353", we = ({ activity: t }) => {
           }
         }
       ) }) }) : null,
-      d && (!o || t.text) && /* @__PURE__ */ e.jsx("div", { className: "chat-message-text", dangerouslySetInnerHTML: { __html: q(d) } }),
+      m && (!o || t.text) && /* @__PURE__ */ e.jsx("div", { className: "chat-message-text", dangerouslySetInnerHTML: { __html: q(m) } }),
       t.file && !o && /* @__PURE__ */ e.jsx("div", { className: "chat-attachment", style: { marginTop: "4px" }, children: /* @__PURE__ */ e.jsx(
         "a",
         {
-          href: m || "#",
+          href: d || "#",
           target: "_blank",
           rel: "noopener noreferrer",
           style: { fontSize: "12px", color: n ? "white" : "#175353", textDecoration: "underline" },
@@ -1667,7 +1667,7 @@ function a0(t) {
   }[l] ?? "Items";
 }
 const l0 = ({ activities: t }) => {
-  const l = t[0], s = I(() => t.slice(1), [t]), i = s.length > 0, { isExpanded: r, toggleExpanded: n, shouldShowExpanded: d, wrapperRef: o } = ie(
+  const l = t[0], s = I(() => t.slice(1), [t]), i = s.length > 0, { isExpanded: r, toggleExpanded: n, shouldShowExpanded: m, wrapperRef: o } = ie(
     [t.length],
     t0
   );
@@ -1677,9 +1677,9 @@ const l0 = ({ activities: t }) => {
       "div",
       {
         ref: o,
-        className: `activity-date-group-rest ${d ? "activity-date-group-rest--expanded" : ""}`,
+        className: `activity-date-group-rest ${m ? "activity-date-group-rest--expanded" : ""}`,
         "aria-hidden": !r,
-        children: s.map((m, h) => /* @__PURE__ */ e.jsx(ce, { activity: m }, `${m.name ?? "activity"}-${h}`))
+        children: s.map((d, h) => /* @__PURE__ */ e.jsx(ce, { activity: d }, `${d.name ?? "activity"}-${h}`))
       }
     ),
     /* @__PURE__ */ e.jsx("div", { className: "activity-date-group-view-more-wrapper", children: i && /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
@@ -1701,17 +1701,17 @@ const l0 = ({ activities: t }) => {
   onClear: s,
   valueOptions: i
 }) => {
-  const [r, n] = H(!1), d = ee(null), [o, m] = H(
+  const [r, n] = H(!1), m = ee(null), [o, d] = H(
     () => t.filter((u) => u.field === "activity_type").map((u) => u.value)
   ), h = i.activity_type || [];
   te(() => {
     const u = (j) => {
-      d.current && !d.current.contains(j.target) && n(!1);
+      m.current && !m.current.contains(j.target) && n(!1);
     };
     return r && document.addEventListener("mousedown", u), () => document.removeEventListener("mousedown", u);
   }, [r]);
   const p = () => n((u) => !u), g = (u, j) => {
-    m(j ? (x) => [...x, u] : (x) => x.filter((_) => _ !== u));
+    d(j ? (x) => [...x, u] : (x) => x.filter((_) => _ !== u));
   }, v = () => {
     const u = t.filter((_) => _.field !== "activity_type"), j = o.map((_) => ({
       field: "activity_type",
@@ -1719,9 +1719,9 @@ const l0 = ({ activities: t }) => {
     })), x = [...u, ...j];
     l(x), n(!1);
   }, y = () => {
-    m([]), s(), n(!1);
+    d([]), s(), n(!1);
   };
-  return /* @__PURE__ */ e.jsxs("div", { className: "atw-filter-wrapper", ref: d, children: [
+  return /* @__PURE__ */ e.jsxs("div", { className: "atw-filter-wrapper", ref: m, children: [
     /* @__PURE__ */ e.jsx(
       "button",
       {
@@ -1795,7 +1795,7 @@ const n0 = 20, r0 = (t, l) => {
   }
 };
 function c0(t, l) {
-  const { fetchActivities: s, onSocketMessage: i } = J(), [r, n] = H([]), [d, o] = H([]), [m, h] = H(!1), [p, g] = H(null), [v, y] = H(!1), [u, j] = H(!1), [x, _] = H(!1), [U, Y] = H(!1), P = ee(null), $ = ee(0), E = Q(async (z, T) => {
+  const { fetchActivities: s, onSocketMessage: i } = J(), [r, n] = H([]), [m, o] = H([]), [d, h] = H(!1), [p, g] = H(null), [v, y] = H(!1), [u, j] = H(!1), [x, _] = H(!1), [U, Y] = H(!1), P = ee(null), $ = ee(0), E = Q(async (z, T) => {
     if (t) {
       T ? h(!0) : y(!0);
       try {
@@ -1845,12 +1845,12 @@ function c0(t, l) {
   }) : void 0, [i]), {
     activities: I(() => {
       const z = r.flatMap((b) => b.message.activities);
-      let T = d;
+      let T = m;
       if (l) {
         const b = l.activity_type && Array.isArray(l.activity_type) ? l.activity_type : [], F = l.sources && Array.isArray(l.sources) ? l.sources : [];
         if (b.length > 0 || F.length > 0) {
           const N = new Set(b), K = new Set(F);
-          T = d.filter((se) => {
+          T = m.filter((se) => {
             const D = se, c = D.activity_type;
             return K.has("pd") && D.is_pd || K.has("dc") && D.is_dc ? !0 : c ? !!(N.has(c) || N.has("call") && (c === "outgoing_call" || c === "incoming_call") || N.has("brief") && c === "brief" || N.has("raven") && c === "raven" || N.has("pd") && D.is_pd || N.has("dc") && D.is_dc) : !!(N.has("pd") && D.is_pd || N.has("dc") && D.is_dc);
           });
@@ -1860,8 +1860,8 @@ function c0(t, l) {
         T.map((b) => "name" in b && b.name != null ? String(b.name) : null).filter((b) => b != null)
       ), A = Z.size > 0 ? z.filter((b) => !("name" in b && b.name != null && Z.has(String(b.name)))) : z;
       return [...[...T, ...A]].sort((b, F) => Ze(F) - Ze(b));
-    }, [r, d, l]),
-    isLoading: m,
+    }, [r, m, l]),
+    isLoading: d,
     error: p,
     isFetchingNextPage: v,
     hasNextPage: u,
@@ -1883,13 +1883,13 @@ function d0(t) {
   const l = [];
   let s = 0;
   for (; s < t.length; ) {
-    const i = t[s], r = be(i), n = Me(i), d = [i];
+    const i = t[s], r = be(i), n = Me(i), m = [i];
     for (s += 1; s < t.length; ) {
-      const m = t[s];
-      if (be(m) !== r || Me(m) !== n) break;
-      d.push(m), s += 1;
+      const d = t[s];
+      if (be(d) !== r || Me(d) !== n) break;
+      m.push(d), s += 1;
     }
-    const o = o0.has(n) ? [...d].reverse() : d;
+    const o = o0.has(n) ? [...m].reverse() : m;
     o.length === 1 ? l.push({ type: "single", activity: o[0], index: s - 1 }) : l.push({ type: "date-group", activities: o, firstIndex: s - o.length });
   }
   return l;
@@ -1921,35 +1921,35 @@ function p0({
   initialParameters: t = {}
 } = {}) {
   const [l, s] = H(t), i = Q((o) => {
-    const m = m0(o);
-    s(Object.keys(m).length === 0 ? {} : m);
+    const d = m0(o);
+    s(Object.keys(d).length === 0 ? {} : d);
   }, []), r = Q(() => {
     s({});
   }, []), n = I(() => {
-    const o = l, m = {};
+    const o = l, d = {};
     if (o.activity_type) {
       const h = Array.isArray(o.activity_type) ? o.activity_type : [o.activity_type], p = [];
       h.forEach((g) => {
         const v = h0[g];
         v && p.push(...v);
-      }), p.length > 0 && (m.activity_type = Array.from(new Set(p)));
+      }), p.length > 0 && (d.activity_type = Array.from(new Set(p)));
     }
-    if (o.sources && (m.sources = Array.isArray(o.sources) ? o.sources : [o.sources]), o.lead_id) {
+    if (o.sources && (d.sources = Array.isArray(o.sources) ? o.sources : [o.sources]), o.lead_id) {
       const h = Array.isArray(o.lead_id) ? o.lead_id : [o.lead_id];
-      m.lead = h;
+      d.lead = h;
     }
-    return m;
-  }, [l]), d = I(() => {
+    return d;
+  }, [l]), m = I(() => {
     const o = [];
-    return Object.entries(l).forEach(([m, h]) => {
+    return Object.entries(l).forEach(([d, h]) => {
       Array.isArray(h) ? h.forEach((p) => {
-        o.push({ field: m, value: p });
-      }) : h && o.push({ field: m, value: h });
+        o.push({ field: d, value: p });
+      }) : h && o.push({ field: d, value: h });
     }), o;
   }, [l]);
   return {
     filtersPayload: n,
-    initialFilters: d,
+    initialFilters: m,
     handleApplyFilters: i,
     handleClearFilters: r
   };
@@ -1957,9 +1957,9 @@ function p0({
 function v0() {
   const { contactName: t, searchParams: l, fetchLeads: s } = J();
   l == null || l.activityId;
-  const i = I(() => ((l == null ? void 0 : l.comm_type) ?? null) === "communication" ? { activity_type: "Emails" } : {}, [l]), { filtersPayload: r, initialFilters: n, handleApplyFilters: d, handleClearFilters: o } = p0({
+  const i = I(() => ((l == null ? void 0 : l.comm_type) ?? null) === "communication" ? { activity_type: "Emails" } : {}, [l]), { filtersPayload: r, initialFilters: n, handleApplyFilters: m, handleClearFilters: o } = p0({
     initialParameters: i
-  }), { activities: m, isLoading: h, error: p, fetchNextPage: g, hasNextPage: v, isFetchingNextPage: y, refetch: u, includes_pd: j, includes_dc: x } = c0(t, r), _ = m.filter((E) => E.activity_type !== "attachment_log"), U = I(() => d0(_), [_]), Y = ee(null);
+  }), { activities: d, isLoading: h, error: p, fetchNextPage: g, hasNextPage: v, isFetchingNextPage: y, refetch: u, includes_pd: j, includes_dc: x } = c0(t, r), _ = d.filter((E) => E.activity_type !== "attachment_log"), U = I(() => d0(_), [_]), Y = ee(null);
   te(() => {
     const E = Y.current;
     if (!E || !v || y) return;
@@ -1971,7 +1971,7 @@ function v0() {
       { root: null, rootMargin: "100px", threshold: 0 }
     );
     return W.observe(E), () => W.disconnect();
-  }, [v, y, g]);
+  }, [v, y, g, d]);
   const P = (s == null ? void 0 : s()) ?? { leads: [] }, $ = I(
     () => ({
       activity_type: u0.map((E) => ({ label: E.label, value: E.label })),
@@ -1987,7 +1987,7 @@ function v0() {
     isFetchingNextPage: y,
     valueOptions: $,
     refetch: u,
-    handleApplyFilters: d,
+    handleApplyFilters: m,
     handleClearFilters: o,
     getActivityElementId: i0,
     loadMoreRef: Y,
@@ -2002,9 +2002,9 @@ const x0 = () => {
     isLoading: i,
     error: r,
     isFetchingNextPage: n,
-    valueOptions: d,
+    valueOptions: m,
     refetch: o,
-    handleApplyFilters: m,
+    handleApplyFilters: d,
     handleClearFilters: h,
     getActivityElementId: p,
     loadMoreRef: g,
@@ -2038,7 +2038,7 @@ const x0 = () => {
             className: `atw-special-filter-btn ${s.some((u) => u.field === "sources" && u.value === "pd") ? "active" : ""}`,
             onClick: () => {
               const u = s.some((x) => x.field === "sources" && x.value === "pd"), j = s.filter((x) => !(x.field === "sources" && x.value === "pd"));
-              m(u ? j : [...j, { field: "sources", value: "pd" }]);
+              d(u ? j : [...j, { field: "sources", value: "pd" }]);
             },
             children: "PDA"
           }
@@ -2050,7 +2050,7 @@ const x0 = () => {
             className: `atw-special-filter-btn ${s.some((u) => u.field === "sources" && u.value === "dc") ? "active" : ""}`,
             onClick: () => {
               const u = s.some((x) => x.field === "sources" && x.value === "dc"), j = s.filter((x) => !(x.field === "sources" && x.value === "dc"));
-              m(u ? j : [...j, { field: "sources", value: "dc" }]);
+              d(u ? j : [...j, { field: "sources", value: "dc" }]);
             },
             children: "DC"
           }
@@ -2059,9 +2059,9 @@ const x0 = () => {
           s0,
           {
             initialFilters: s,
-            onApply: m,
+            onApply: d,
             onClear: h,
-            valueOptions: d
+            valueOptions: m
           },
           JSON.stringify(s)
         )
@@ -2083,27 +2083,27 @@ const x0 = () => {
 }, f0 = (t = "/", l) => {
   const s = {};
   l && (s.Authorization = `token ${l}`);
-  const i = async (n, d = {}) => {
+  const i = async (n, m = {}) => {
     const o = { ...s };
-    if (d.headers) {
-      const p = new Headers(d.headers);
+    if (m.headers) {
+      const p = new Headers(m.headers);
       Object.assign(o, Object.fromEntries(p.entries()));
     }
-    const m = n.startsWith("http") ? n : `${t}${n}`, h = await fetch(m, {
-      ...d,
+    const d = n.startsWith("http") ? n : `${t}${n}`, h = await fetch(d, {
+      ...m,
       headers: o
     });
     if (!h.ok)
       throw new Error(`API Error: ${h.status} ${h.statusText}`);
     return h.json();
-  }, r = async (n, d = {}) => {
+  }, r = async (n, m = {}) => {
     const o = { ...s };
-    if (d.headers) {
-      const p = new Headers(d.headers);
+    if (m.headers) {
+      const p = new Headers(m.headers);
       Object.assign(o, Object.fromEntries(p.entries()));
     }
-    const m = n.startsWith("http") ? n : `${t}${n}`, h = await fetch(m, {
-      ...d,
+    const d = n.startsWith("http") ? n : `${t}${n}`, h = await fetch(d, {
+      ...m,
       headers: o
     });
     if (!h.ok)
@@ -2157,9 +2157,9 @@ function y0({
   apiBaseUrl: i,
   type: r,
   title: n,
-  onSocketMessage: d,
+  onSocketMessage: m,
   searchParams: o,
-  renderChatMessageList: m,
+  renderChatMessageList: d,
   onEmailReply: h,
   onEmailReplyAll: p,
   fetchLeads: g,
@@ -2172,9 +2172,9 @@ function y0({
       apiBaseUrl: i || t,
       type: r,
       title: n,
-      onSocketMessage: d,
+      onSocketMessage: m,
       searchParams: o,
-      renderChatMessageList: m,
+      renderChatMessageList: d,
       onEmailReply: h,
       onEmailReplyAll: p,
       fetchLeads: g,
@@ -2190,9 +2190,9 @@ function y0({
       t,
       r,
       n,
-      d,
-      o,
       m,
+      o,
+      d,
       h,
       p,
       g,
@@ -2235,13 +2235,13 @@ function b0(t, l) {
 const N0 = ({ activity: t, icon: l, showIcon: s = !1, apiBaseUrl: i = "" }) => {
   const r = I(() => {
     if (!t) return null;
-    const o = t.creation || (/* @__PURE__ */ new Date()).toISOString(), m = t.type === "Outgoing" || t.is_outbound === 1;
+    const o = t.creation || (/* @__PURE__ */ new Date()).toISOString(), d = t.type === "Outgoing" || t.is_outbound === 1;
     return {
       name: t.name || `activity-${o}`,
       message: t.message || "",
-      sender: m ? "You" : "Customer",
+      sender: d ? "You" : "Customer",
       creation: o,
-      is_outbound: m ? 1 : 0,
+      is_outbound: d ? 1 : 0,
       attach: t.attach,
       content_type: t.content_type,
       status: t.status,
@@ -2249,8 +2249,8 @@ const N0 = ({ activity: t, icon: l, showIcon: s = !1, apiBaseUrl: i = "" }) => {
     };
   }, [t]);
   if (!r) return null;
-  const n = r, d = n.is_outbound === 1;
-  return /* @__PURE__ */ e.jsx("div", { className: "whatsapp-message-list", children: /* @__PURE__ */ e.jsxs("div", { className: `message-bubble ${d ? "sent" : "received"}`, children: [
+  const n = r, m = n.is_outbound === 1;
+  return /* @__PURE__ */ e.jsx("div", { className: "whatsapp-message-list", children: /* @__PURE__ */ e.jsxs("div", { className: `message-bubble ${m ? "sent" : "received"}`, children: [
     s && l && /* @__PURE__ */ e.jsx("div", { className: "message-icon-wrapper", children: l }),
     /* @__PURE__ */ e.jsxs("div", { className: "message-content", children: [
       A0(n.message) || n.message,
@@ -2273,7 +2273,7 @@ const N0 = ({ activity: t, icon: l, showIcon: s = !1, apiBaseUrl: i = "" }) => {
       ) }),
       /* @__PURE__ */ e.jsxs("div", { className: "message-time", children: [
         j0(n.creation),
-        d ? b0(n.status, 1) : null
+        m ? b0(n.status, 1) : null
       ] })
     ] })
   ] }) });
@@ -2301,7 +2301,7 @@ const N0 = ({ activity: t, icon: l, showIcon: s = !1, apiBaseUrl: i = "" }) => {
         i
       ] })
     ] }),
-    /* @__PURE__ */ e.jsx("div", { className: "activity-content", children: /* @__PURE__ */ e.jsx("div", { className: "call-notes-activity-card", children: r.map((n, d) => /* @__PURE__ */ e.jsx("div", { className: "call-notes-item", children: n }, d)) }) })
+    /* @__PURE__ */ e.jsx("div", { className: "activity-content", children: /* @__PURE__ */ e.jsx("div", { className: "call-notes-activity-card", children: r.map((n, m) => /* @__PURE__ */ e.jsx("div", { className: "call-notes-item", children: n }, m)) }) })
   ] });
 };
 export {

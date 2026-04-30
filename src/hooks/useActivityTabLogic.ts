@@ -65,7 +65,7 @@ export function useActivityTabLogic(): UseActivityTabLogicReturn {
     );
     observer.observe(el);
     return () => observer.disconnect();
-  }, [hasNextPage, isFetchingNextPage, fetchNextPage]);
+  }, [hasNextPage, isFetchingNextPage, fetchNextPage, activities]);
 
   // Filter Options
   const leads = fetchLeads?.() ?? { leads: [] };
