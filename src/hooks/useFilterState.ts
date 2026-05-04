@@ -31,7 +31,7 @@ function toFilterRecord<T extends string>(filters: TableFilterItem<T>[]): Partia
 const ACTIVITY_CONFIG: Record<string, string[]> = {
   "WhatsApp Chat": ["whatsapp"],
   Emails: ["communication"],
-  Notes: ["notes"],
+  Notes: ["note"],
   Schedules: ["schedule"],
   Reminders: ["reminder"],
   Calls: ["call"],
