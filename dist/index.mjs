@@ -1906,7 +1906,7 @@ function m0(t) {
 const We = {
   "WhatsApp Chat": ["whatsapp"],
   Emails: ["communication"],
-  Notes: ["notes"],
+  Notes: ["note"],
   Schedules: ["schedule"],
   Reminders: ["reminder"],
   Calls: ["call"],
