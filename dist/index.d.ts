@@ -13,6 +13,7 @@ export { default as ScheduleActivity } from './components/ScheduleActivity';
 export { default as TaskActivity } from './components/TaskActivity';
 export { default as ReminderActivity } from './components/ReminderActivity';
 export { default as LeadActivity } from './components/LeadActivity';
+export { default as QuotationActivity } from './components/QuotationActivity';
 export { EmailRecipientRow } from './components/EmailRecipientRow';
 export { ActivityProvider, useActivityConfig } from './context/ActivityContext';
 export { useActivityTabLogic } from './hooks/useActivityTabLogic';

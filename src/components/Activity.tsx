@@ -10,6 +10,7 @@ import CallActivity from "./CallActivity";
 import LeadActivity from "./LeadActivity";
 import BriefActivity from "./BriefActivity";
 import RavenActivity from "./RavenActivity";
+import QuotationActivity from "./QuotationActivity";
 
 export type { ActivityItem };
 
@@ -53,6 +54,9 @@ export const Activity: React.FC<ActivityProps> = ({ activity }) => {
   }
   if (activity.activity_type === "raven") {
     return <RavenActivity activity={activity} />;
+  }
+  if (activity.activity_type === "quotation") {
+    return <QuotationActivity activity={activity} />;
   }
   return null;
 };

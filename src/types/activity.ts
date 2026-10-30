@@ -221,7 +221,43 @@ export type ActivityItem =
     is_dc: boolean;
     content?: string;
     [key: string]: unknown;
+  }
+  | {
+    activity_type: "quotation";
+    name: string;
+    creation: string;
+    quotation_no: string;
+    company: string;
+    quotation_date: string;
+    customer_code: string;
+    currency: string | null;
+    po_no: string | null;
+    remarks: string | null;
+    sales_person: string | null;
+    created_by: string | null;
+    last_modified: string | null;
+    leads: string[];
+    is_lead: boolean;
+    item_count: number;
+    total_qty: number;
+    total_amount: number;
+    items: QuotationItem[];
+    [key: string]: unknown;
   };
+
+/** One design line of an EMR quotation */
+export interface QuotationItem {
+  sr: number;
+  design_code: string;
+  suffix: string | null;
+  size: string | null;
+  karat: string | null;
+  colour: string | null;
+  qty: number;
+  /** Price of one piece */
+  rate: number;
+  amount: number;
+}
 
 /**
  * Paginated message wrapper from API
@@ -275,6 +311,7 @@ export type TaskActivityType = Extract<ActivityItem, { activity_type: "Task" }>;
 export type LeadActivityType = Extract<ActivityItem, { activity_type: "lead" }>;
 export type BriefActivityType = Extract<ActivityItem, { activity_type: "brief" }>;
 export type RavenActivityType = Extract<ActivityItem, { activity_type: "raven" }>;
+export type QuotationActivityType = Extract<ActivityItem, { activity_type: "quotation" }>;
 
 /** Node types for activity grouping display */
 export type ActivityNode =

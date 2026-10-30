@@ -15,6 +15,7 @@ import {
   Warning as PhWarning,
   ArrowSquareOut as PhArrowSquareOut,
   FileText as PhFileText,
+  Receipt as PhReceipt,
 } from "@phosphor-icons/react";
 
 /** Lightweight wrapper for Phosphor icons used by the activity timeline widget. */
@@ -42,4 +43,5 @@ export const CheckDouble = (props: IconProps) => <PhChecks {...props} />;
 export const Warning = (props: IconProps) => <PhWarning {...props} />;
 export const ArrowSquareOut = (props: IconProps) => <PhArrowSquareOut {...props} />;
 export const FileText = (props: IconProps) => <PhFileText {...props} />;
+export const Receipt = (props: IconProps) => <PhReceipt {...props} />;
 
