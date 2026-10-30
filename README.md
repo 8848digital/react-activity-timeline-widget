@@ -8,6 +8,7 @@
 - **Unified Widget**: High-level `ActivityWidget` that handles Provider and Adapter internally for zero-boilerplate integration.
 - **Live Updates**: Built-in support for Socket.io/WebSocket via the `onSocketMessage` bridge (now supports `raven_message` and `activity` events).
 - **Raven Chat Integration**: Support for the new Raven chat type with inbound/outbound styling and image previews.
+- **Quotation Cards**: EMR quotations linked to a customer or lead render with number, total, customer code, lead and a collapsible table of design lines.
 - **Infinite Scroll**: Automated lazy loading and "fetch more" logic as you scroll.
 - **Filtering**: Built-in filter state for communication types and related leads.
 
@@ -20,7 +21,10 @@
 ## 🛠️ Installation
 
 ```bash
-# If using Git installation
+# From npm (recommended)
+npm install react-activity-timeline-widget@^1.3.0
+
+# Or from Git
 npm install https://github.com/8848digital/react-activity-timeline-widget.git
 ```
 
@@ -178,6 +182,59 @@ The `ActivityWidget` supports the following props:
 | `fetchLeads`              | `() => Promise<LeadResponse>`    | -            | Provides options for the "Link to Lead" filter.                                           |
 | `renderChatMessageList`   | `(props) => ReactNode`           | -            | Custom renderer for nested WhatsApp/Chat message threads.                                 |
 
+## 🗂️ Supported Activity Types
+
+Each activity returned by the API is rendered by its `activity_type`. The filter label is what appears in the widget's activity-type filter, and the filter value is what is sent to the API.
+
+| `activity_type` (rendered)        | Component           | Filter label  | Filter value    |
+| :-------------------------------- | :------------------ | :------------ | :-------------- |
+| `whatsapp`                        | `ChatActivity`      | WhatsApp Chat | `whatsapp`      |
+| `communication`                   | `EmailActivity`     | Emails        | `communication` |
+| `notes` / `creation`              | `NotesActivity`     | Notes         | `note`          |
+| `Schedule`                        | `ScheduleActivity`  | Schedules     | `schedule`      |
+| `Reminder`                        | `ReminderActivity`  | Reminders     | `reminder`      |
+| `Task`                            | `TaskActivity`      | -             | -               |
+| `outgoing_call` / `incoming_call` | `CallActivity`      | Calls         | `call`          |
+| `lead`                            | `LeadActivity`      | Leads         | `lead`          |
+| `brief`                           | `BriefActivity`     | Brief         | `brief`         |
+| `raven`                           | `RavenActivity`     | Raven Message | `raven`         |
+| `quotation`                       | `QuotationActivity` | Quotations    | `quotation`     |
+
+### Quotation activity
+
+Added in **1.3.0**. The backend sends one item per quotation; its types are exported as `QuotationActivityType` and `QuotationItem`:
+
+```ts
+import type { QuotationActivityType, QuotationItem } from "react-activity-timeline-widget";
+
+const example: QuotationActivityType = {
+  activity_type: "quotation",
+  name: "QTN-0001",
+  creation: "2026-10-30 10:15:00",
+  quotation_no: "QTN-0001",
+  company: "8848 Digital",
+  quotation_date: "2026-10-30",
+  customer_code: "CUST-001",
+  currency: "INR",
+  po_no: null,
+  remarks: null,
+  sales_person: "Jane Doe",
+  created_by: "jane@example.com",
+  last_modified: null,
+  leads: ["CRM-LEAD-0001"],
+  is_lead: true, // shows the "Lead" badge
+  item_count: 2,
+  total_qty: 3,
+  total_amount: 45000,
+  items: [
+    { sr: 1, design_code: "D-100", suffix: null, size: "12", karat: "18K", colour: "Yellow", qty: 1, rate: 15000, amount: 15000 },
+    { sr: 2, design_code: "D-200", suffix: null, size: null, karat: "22K", colour: null, qty: 2, rate: 15000, amount: 30000 },
+  ],
+};
+```
+
+The card shows the first 3 design lines and a "View all N designs" toggle for the rest. Optional fields (`customer_code`, `po_no`, `sales_person`, `created_by`, `remarks`, `leads`) are hidden when empty. Dates of quotations grouped together show as "View N Quotations".
+
 ## ⚙️ Advanced Customization
 
 If `ActivityWidget` is too opinionated, you can use the lower-level hooks and components:
@@ -246,6 +303,14 @@ export const useSocket = (onMessage: (data: SocketMessage) => void) => {
   }, []);
 };
 ```
+
+## 📝 Changelog
+
+### 1.3.0
+
+- New `QuotationActivity` card for `activity_type: "quotation"`, with a collapsible table of design lines and the Lead badge from `is_lead`.
+- New exported types `QuotationActivityType` and `QuotationItem`, and an exported `QuotationActivity` component.
+- "Quotations" option in the activity-type filter and a "View N Quotations" group label.
 
 ## 📄 License
 
