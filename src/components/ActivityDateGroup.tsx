@@ -22,6 +22,7 @@ function getActivityTypeLabel(activity: ActivityItem): string {
     lead: "Leads",
     brief: "Briefs",
     raven: "Raven Chats",
+    quotation: "Quotations",
   };
   return map[type] ?? "Items";
 }

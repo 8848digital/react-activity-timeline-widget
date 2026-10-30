@@ -22,3 +22,4 @@ export declare const CheckDouble: (props: IconProps) => import("react/jsx-runtim
 export declare const Warning: (props: IconProps) => import("react/jsx-runtime").JSX.Element;
 export declare const ArrowSquareOut: (props: IconProps) => import("react/jsx-runtime").JSX.Element;
 export declare const FileText: (props: IconProps) => import("react/jsx-runtime").JSX.Element;
+export declare const Receipt: (props: IconProps) => import("react/jsx-runtime").JSX.Element;

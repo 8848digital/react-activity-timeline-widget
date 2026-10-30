@@ -1,8 +1,8 @@
 import * as a from "react";
-import Ge, { createContext as Ce, useState as H, useRef as ee, useEffect as te, useCallback as Q, useContext as Je, useMemo as I } from "react";
-import Ke from "react-h5-audio-player";
+import e0, { createContext as Fe, useState as Z, useRef as te, useEffect as ae, useCallback as ee, useContext as t0, useMemo as k } from "react";
+import a0 from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css";
-import './index.css';var re = { exports: {} }, ae = {};
+import './index.css';var ce = { exports: {} }, le = {};
 /**
  * @license React
  * react-jsx-runtime.production.js
@@ -12,12 +12,12 @@ import './index.css';var re = { exports: {} }, ae = {};
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-var xe;
-function Xe() {
-  if (xe) return ae;
-  xe = 1;
+var ge;
+function l0() {
+  if (ge) return le;
+  ge = 1;
   var t = Symbol.for("react.transitional.element"), l = Symbol.for("react.fragment");
-  function s(i, r, n) {
+  function s(c, r, n) {
     var m = null;
     if (n !== void 0 && (m = "" + n), r.key !== void 0 && (m = "" + r.key), "key" in r) {
       n = {};
@@ -26,15 +26,15 @@ function Xe() {
     } else n = r;
     return r = n.ref, {
       $$typeof: t,
-      type: i,
+      type: c,
       key: m,
       ref: r !== void 0 ? r : null,
       props: n
     };
   }
-  return ae.Fragment = l, ae.jsx = s, ae.jsxs = s, ae;
+  return le.Fragment = l, le.jsx = s, le.jsxs = s, le;
 }
-var le = {};
+var se = {};
 /**
  * @license React
  * react-jsx-runtime.development.js
@@ -44,243 +44,243 @@ var le = {};
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-var fe;
-function Qe() {
-  return fe || (fe = 1, process.env.NODE_ENV !== "production" && (function() {
-    function t(c) {
-      if (c == null) return null;
-      if (typeof c == "function")
-        return c.$$typeof === T ? null : c.displayName || c.name || null;
-      if (typeof c == "string") return c;
-      switch (c) {
+var ye;
+function s0() {
+  return ye || (ye = 1, process.env.NODE_ENV !== "production" && (function() {
+    function t(i) {
+      if (i == null) return null;
+      if (typeof i == "function")
+        return i.$$typeof === T ? null : i.displayName || i.name || null;
+      if (typeof i == "string") return i;
+      switch (i) {
         case x:
           return "Fragment";
-        case U:
+        case z:
           return "Profiler";
         case _:
           return "StrictMode";
         case E:
           return "Suspense";
-        case W:
+        case Y:
           return "SuspenseList";
-        case z:
+        case q:
           return "Activity";
       }
-      if (typeof c == "object")
-        switch (typeof c.tag == "number" && console.error(
+      if (typeof i == "object")
+        switch (typeof i.tag == "number" && console.error(
           "Received an unexpected object in getComponentNameFromType(). This is likely a bug in React. Please file an issue."
-        ), c.$$typeof) {
+        ), i.$$typeof) {
           case j:
             return "Portal";
           case P:
-            return c.displayName || "Context";
-          case Y:
-            return (c._context.displayName || "Context") + ".Consumer";
-          case $:
-            var f = c.render;
-            return c = c.displayName, c || (c = f.displayName || f.name || "", c = c !== "" ? "ForwardRef(" + c + ")" : "ForwardRef"), c;
-          case G:
-            return f = c.displayName || null, f !== null ? f : t(c.type) || "Memo";
+            return i.displayName || "Context";
+          case U:
+            return (i._context.displayName || "Context") + ".Consumer";
+          case D:
+            var f = i.render;
+            return i = i.displayName, i || (i = f.displayName || f.name || "", i = i !== "" ? "ForwardRef(" + i + ")" : "ForwardRef"), i;
+          case J:
+            return f = i.displayName || null, f !== null ? f : t(i.type) || "Memo";
           case B:
-            f = c._payload, c = c._init;
+            f = i._payload, i = i._init;
             try {
-              return t(c(f));
+              return t(i(f));
             } catch {
             }
         }
       return null;
     }
-    function l(c) {
-      return "" + c;
+    function l(i) {
+      return "" + i;
     }
-    function s(c) {
+    function s(i) {
       try {
-        l(c);
+        l(i);
         var f = !1;
       } catch {
         f = !0;
       }
       if (f) {
         f = console;
-        var w = f.error, M = typeof Symbol == "function" && Symbol.toStringTag && c[Symbol.toStringTag] || c.constructor.name || "Object";
+        var w = f.error, H = typeof Symbol == "function" && Symbol.toStringTag && i[Symbol.toStringTag] || i.constructor.name || "Object";
         return w.call(
           f,
           "The provided key is an unsupported type %s. This value must be coerced to a string before using it here.",
-          M
-        ), l(c);
+          H
+        ), l(i);
       }
     }
-    function i(c) {
-      if (c === x) return "<>";
-      if (typeof c == "object" && c !== null && c.$$typeof === B)
+    function c(i) {
+      if (i === x) return "<>";
+      if (typeof i == "object" && i !== null && i.$$typeof === B)
         return "<...>";
       try {
-        var f = t(c);
+        var f = t(i);
         return f ? "<" + f + ">" : "<...>";
       } catch {
         return "<...>";
       }
     }
     function r() {
-      var c = Z.A;
-      return c === null ? null : c.getOwner();
+      var i = M.A;
+      return i === null ? null : i.getOwner();
     }
     function n() {
       return Error("react-stack-top-frame");
     }
-    function m(c) {
-      if (A.call(c, "key")) {
-        var f = Object.getOwnPropertyDescriptor(c, "key").get;
+    function m(i) {
+      if (A.call(i, "key")) {
+        var f = Object.getOwnPropertyDescriptor(i, "key").get;
         if (f && f.isReactWarning) return !1;
       }
-      return c.key !== void 0;
+      return i.key !== void 0;
     }
-    function o(c, f) {
+    function o(i, f) {
       function w() {
         F || (F = !0, console.error(
           "%s: `key` is not a prop. Trying to access it will result in `undefined` being returned. If you need to access the same value within the child component, you should pass it as a different prop. (https://react.dev/link/special-props)",
           f
         ));
       }
-      w.isReactWarning = !0, Object.defineProperty(c, "key", {
+      w.isReactWarning = !0, Object.defineProperty(i, "key", {
         get: w,
         configurable: !0
       });
     }
     function d() {
-      var c = t(this.type);
-      return N[c] || (N[c] = !0, console.error(
+      var i = t(this.type);
+      return b[i] || (b[i] = !0, console.error(
         "Accessing element.ref was removed in React 19. ref is now a regular prop. It will be removed from the JSX Element type in a future release."
-      )), c = this.props.ref, c !== void 0 ? c : null;
+      )), i = this.props.ref, i !== void 0 ? i : null;
     }
-    function h(c, f, w, M, ne, de) {
-      var C = w.ref;
-      return c = {
+    function h(i, f, w, H, re, me) {
+      var L = w.ref;
+      return i = {
         $$typeof: u,
-        type: c,
+        type: i,
         key: f,
         props: w,
-        _owner: M
-      }, (C !== void 0 ? C : null) !== null ? Object.defineProperty(c, "ref", {
+        _owner: H
+      }, (L !== void 0 ? L : null) !== null ? Object.defineProperty(i, "ref", {
         enumerable: !1,
         get: d
-      }) : Object.defineProperty(c, "ref", { enumerable: !1, value: null }), c._store = {}, Object.defineProperty(c._store, "validated", {
+      }) : Object.defineProperty(i, "ref", { enumerable: !1, value: null }), i._store = {}, Object.defineProperty(i._store, "validated", {
         configurable: !1,
         enumerable: !1,
         writable: !0,
         value: 0
-      }), Object.defineProperty(c, "_debugInfo", {
+      }), Object.defineProperty(i, "_debugInfo", {
         configurable: !1,
         enumerable: !1,
         writable: !0,
         value: null
-      }), Object.defineProperty(c, "_debugStack", {
+      }), Object.defineProperty(i, "_debugStack", {
         configurable: !1,
         enumerable: !1,
         writable: !0,
-        value: ne
-      }), Object.defineProperty(c, "_debugTask", {
+        value: re
+      }), Object.defineProperty(i, "_debugTask", {
         configurable: !1,
         enumerable: !1,
         writable: !0,
-        value: de
-      }), Object.freeze && (Object.freeze(c.props), Object.freeze(c)), c;
+        value: me
+      }), Object.freeze && (Object.freeze(i.props), Object.freeze(i)), i;
     }
-    function p(c, f, w, M, ne, de) {
-      var C = f.children;
-      if (C !== void 0)
-        if (M)
-          if (R(C)) {
-            for (M = 0; M < C.length; M++)
-              g(C[M]);
-            Object.freeze && Object.freeze(C);
+    function p(i, f, w, H, re, me) {
+      var L = f.children;
+      if (L !== void 0)
+        if (H)
+          if (R(L)) {
+            for (H = 0; H < L.length; H++)
+              g(L[H]);
+            Object.freeze && Object.freeze(L);
           } else
             console.error(
               "React.jsx: Static children should always be an array. You are likely explicitly calling React.jsxs or React.jsxDEV. Use the Babel transform instead."
             );
-        else g(C);
+        else g(L);
       if (A.call(f, "key")) {
-        C = t(c);
-        var X = Object.keys(f).filter(function(qe) {
-          return qe !== "key";
+        L = t(i);
+        var X = Object.keys(f).filter(function(Xe) {
+          return Xe !== "key";
         });
-        M = 0 < X.length ? "{key: someKey, " + X.join(": ..., ") + ": ...}" : "{key: someKey}", D[C + M] || (X = 0 < X.length ? "{" + X.join(": ..., ") + ": ...}" : "{}", console.error(
+        H = 0 < X.length ? "{key: someKey, " + X.join(": ..., ") + ": ...}" : "{key: someKey}", O[L + H] || (X = 0 < X.length ? "{" + X.join(": ..., ") + ": ...}" : "{}", console.error(
           `A props object containing a "key" prop is being spread into JSX:
   let props = %s;
   <%s {...props} />
 React keys must be passed directly to JSX without using spread:
   let props = %s;
   <%s key={someKey} {...props} />`,
-          M,
-          C,
+          H,
+          L,
           X,
-          C
-        ), D[C + M] = !0);
+          L
+        ), O[L + H] = !0);
       }
-      if (C = null, w !== void 0 && (s(w), C = "" + w), m(f) && (s(f.key), C = "" + f.key), "key" in f) {
+      if (L = null, w !== void 0 && (s(w), L = "" + w), m(f) && (s(f.key), L = "" + f.key), "key" in f) {
         w = {};
-        for (var me in f)
-          me !== "key" && (w[me] = f[me]);
+        for (var he in f)
+          he !== "key" && (w[he] = f[he]);
       } else w = f;
-      return C && o(
+      return L && o(
         w,
-        typeof c == "function" ? c.displayName || c.name || "Unknown" : c
+        typeof i == "function" ? i.displayName || i.name || "Unknown" : i
       ), h(
-        c,
-        C,
+        i,
+        L,
         w,
         r(),
-        ne,
-        de
+        re,
+        me
       );
     }
-    function g(c) {
-      v(c) ? c._store && (c._store.validated = 1) : typeof c == "object" && c !== null && c.$$typeof === B && (c._payload.status === "fulfilled" ? v(c._payload.value) && c._payload.value._store && (c._payload.value._store.validated = 1) : c._store && (c._store.validated = 1));
+    function g(i) {
+      v(i) ? i._store && (i._store.validated = 1) : typeof i == "object" && i !== null && i.$$typeof === B && (i._payload.status === "fulfilled" ? v(i._payload.value) && i._payload.value._store && (i._payload.value._store.validated = 1) : i._store && (i._store.validated = 1));
     }
-    function v(c) {
-      return typeof c == "object" && c !== null && c.$$typeof === u;
+    function v(i) {
+      return typeof i == "object" && i !== null && i.$$typeof === u;
     }
-    var y = Ge, u = Symbol.for("react.transitional.element"), j = Symbol.for("react.portal"), x = Symbol.for("react.fragment"), _ = Symbol.for("react.strict_mode"), U = Symbol.for("react.profiler"), Y = Symbol.for("react.consumer"), P = Symbol.for("react.context"), $ = Symbol.for("react.forward_ref"), E = Symbol.for("react.suspense"), W = Symbol.for("react.suspense_list"), G = Symbol.for("react.memo"), B = Symbol.for("react.lazy"), z = Symbol.for("react.activity"), T = Symbol.for("react.client.reference"), Z = y.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, A = Object.prototype.hasOwnProperty, R = Array.isArray, b = console.createTask ? console.createTask : function() {
+    var y = e0, u = Symbol.for("react.transitional.element"), j = Symbol.for("react.portal"), x = Symbol.for("react.fragment"), _ = Symbol.for("react.strict_mode"), z = Symbol.for("react.profiler"), U = Symbol.for("react.consumer"), P = Symbol.for("react.context"), D = Symbol.for("react.forward_ref"), E = Symbol.for("react.suspense"), Y = Symbol.for("react.suspense_list"), J = Symbol.for("react.memo"), B = Symbol.for("react.lazy"), q = Symbol.for("react.activity"), T = Symbol.for("react.client.reference"), M = y.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, A = Object.prototype.hasOwnProperty, R = Array.isArray, N = console.createTask ? console.createTask : function() {
       return null;
     };
     y = {
-      react_stack_bottom_frame: function(c) {
-        return c();
+      react_stack_bottom_frame: function(i) {
+        return i();
       }
     };
-    var F, N = {}, K = y.react_stack_bottom_frame.bind(
+    var F, b = {}, Q = y.react_stack_bottom_frame.bind(
       y,
       n
-    )(), se = b(i(n)), D = {};
-    le.Fragment = x, le.jsx = function(c, f, w) {
-      var M = 1e4 > Z.recentlyCreatedOwnerStacks++;
+    )(), ne = N(c(n)), O = {};
+    se.Fragment = x, se.jsx = function(i, f, w) {
+      var H = 1e4 > M.recentlyCreatedOwnerStacks++;
       return p(
-        c,
+        i,
         f,
         w,
         !1,
-        M ? Error("react-stack-top-frame") : K,
-        M ? b(i(c)) : se
+        H ? Error("react-stack-top-frame") : Q,
+        H ? N(c(i)) : ne
       );
-    }, le.jsxs = function(c, f, w) {
-      var M = 1e4 > Z.recentlyCreatedOwnerStacks++;
+    }, se.jsxs = function(i, f, w) {
+      var H = 1e4 > M.recentlyCreatedOwnerStacks++;
       return p(
-        c,
+        i,
         f,
         w,
         !0,
-        M ? Error("react-stack-top-frame") : K,
-        M ? b(i(c)) : se
+        H ? Error("react-stack-top-frame") : Q,
+        H ? N(c(i)) : ne
       );
     };
-  })()), le;
+  })()), se;
 }
-var ge;
-function et() {
-  return ge || (ge = 1, process.env.NODE_ENV === "production" ? re.exports = Xe() : re.exports = Qe()), re.exports;
+var je;
+function n0() {
+  return je || (je = 1, process.env.NODE_ENV === "production" ? ce.exports = l0() : ce.exports = s0()), ce.exports;
 }
-var e = et();
-const tt = /* @__PURE__ */ new Map([
+var e = n0();
+const r0 = /* @__PURE__ */ new Map([
   [
     "bold",
     /* @__PURE__ */ a.createElement(a.Fragment, null, /* @__PURE__ */ a.createElement("path", { d: "M225.29,165.93C216.61,151,212,129.57,212,104a84,84,0,0,0-168,0c0,25.58-4.59,47-13.27,61.93A20.08,20.08,0,0,0,30.66,186,19.77,19.77,0,0,0,48,196H84.18a44,44,0,0,0,87.64,0H208a19.77,19.77,0,0,0,17.31-10A20.08,20.08,0,0,0,225.29,165.93ZM128,212a20,20,0,0,1-19.6-16h39.2A20,20,0,0,1,128,212ZM54.66,172C63.51,154,68,131.14,68,104a60,60,0,0,1,120,0c0,27.13,4.48,50,13.33,68Z" }))
@@ -311,7 +311,7 @@ const tt = /* @__PURE__ */ new Map([
     "thin",
     /* @__PURE__ */ a.createElement(a.Fragment, null, /* @__PURE__ */ a.createElement("path", { d: "M218.35,178C212.58,168,204,140.13,204,104a76,76,0,1,0-152,0c0,36.13-8.59,64-14.36,73.95A12,12,0,0,0,48,196H92.23a36,36,0,0,0,71.54,0H208A12,12,0,0,0,218.35,178ZM128,220a28,28,0,0,1-27.71-24h55.42A28,28,0,0,1,128,220Zm83.45-34a3.91,3.91,0,0,1-3.44,2H48a3.91,3.91,0,0,1-3.44-2,4,4,0,0,1,0-4C52,169.17,60,139.32,60,104a68,68,0,1,1,136,0c0,35.31,8,65.17,15.44,78A4,4,0,0,1,211.45,186Z" }))
   ]
-]), at = /* @__PURE__ */ new Map([
+]), c0 = /* @__PURE__ */ new Map([
   [
     "bold",
     /* @__PURE__ */ a.createElement(a.Fragment, null, /* @__PURE__ */ a.createElement("path", { d: "M208,28H188V24a12,12,0,0,0-24,0v4H92V24a12,12,0,0,0-24,0v4H48A20,20,0,0,0,28,48V208a20,20,0,0,0,20,20H208a20,20,0,0,0,20-20V48A20,20,0,0,0,208,28ZM68,52a12,12,0,0,0,24,0h72a12,12,0,0,0,24,0h16V76H52V52ZM52,204V100H204V204Zm60-80v56a12,12,0,0,1-24,0V143.32a12,12,0,0,1-9.37-22l16-8A12,12,0,0,1,112,124Zm61.49,33.88L163.9,168H168a12,12,0,0,1,0,24H136a12,12,0,0,1-8.71-20.25L155.45,142a4,4,0,0,0,.55-2,4,4,0,0,0-7.47-2,12,12,0,0,1-20.78-12A28,28,0,0,1,180,140a27.77,27.77,0,0,1-5.64,16.86A10.63,10.63,0,0,1,173.49,157.88Z" }))
@@ -342,7 +342,7 @@ const tt = /* @__PURE__ */ new Map([
     "thin",
     /* @__PURE__ */ a.createElement(a.Fragment, null, /* @__PURE__ */ a.createElement("path", { d: "M208,36H180V24a4,4,0,0,0-8,0V36H84V24a4,4,0,0,0-8,0V36H48A12,12,0,0,0,36,48V208a12,12,0,0,0,12,12H208a12,12,0,0,0,12-12V48A12,12,0,0,0,208,36ZM48,44H76V56a4,4,0,0,0,8,0V44h88V56a4,4,0,0,0,8,0V44h28a4,4,0,0,1,4,4V84H44V48A4,4,0,0,1,48,44ZM208,212H48a4,4,0,0,1-4-4V92H212V208A4,4,0,0,1,208,212ZM108,120v64a4,4,0,0,1-8,0V126.47l-10.21,5.11a4,4,0,0,1-3.58-7.16l16-8A4,4,0,0,1,108,120Zm60,28-24,32h24a4,4,0,0,1,0,8H136a4,4,0,0,1-3.2-6.4l28.78-38.37A11.88,11.88,0,0,0,164,136a12,12,0,0,0-22.4-6,4,4,0,0,1-6.92-4A20,20,0,0,1,172,136,19.79,19.79,0,0,1,168,148Z" }))
   ]
-]), lt = /* @__PURE__ */ new Map([
+]), i0 = /* @__PURE__ */ new Map([
   [
     "bold",
     /* @__PURE__ */ a.createElement(a.Fragment, null, /* @__PURE__ */ a.createElement("path", { d: "M216,44H40A20,20,0,0,0,20,64V224A19.82,19.82,0,0,0,31.56,242.1a20.14,20.14,0,0,0,8.49,1.9,19.91,19.91,0,0,0,12.82-4.72l.12-.11L84.47,212H216a20,20,0,0,0,20-20V64A20,20,0,0,0,216,44Zm-4,144H80a11.93,11.93,0,0,0-7.84,2.92L44,215.23V68H212Z" }))
@@ -373,7 +373,7 @@ const tt = /* @__PURE__ */ new Map([
     "thin",
     /* @__PURE__ */ a.createElement(a.Fragment, null, /* @__PURE__ */ a.createElement("path", { d: "M216,52H40A12,12,0,0,0,28,64V224a11.89,11.89,0,0,0,6.93,10.88A12.17,12.17,0,0,0,40,236a11.89,11.89,0,0,0,7.69-2.83l0,0L81.49,204H216a12,12,0,0,0,12-12V64A12,12,0,0,0,216,52Zm4,140a4,4,0,0,1-4,4H80a4,4,0,0,0-2.62,1L42.56,227.06A4,4,0,0,1,36,224V64a4,4,0,0,1,4-4H216a4,4,0,0,1,4,4Z" }))
   ]
-]), st = /* @__PURE__ */ new Map([
+]), o0 = /* @__PURE__ */ new Map([
   [
     "bold",
     /* @__PURE__ */ a.createElement(a.Fragment, null, /* @__PURE__ */ a.createElement("path", { d: "M232.49,80.49l-128,128a12,12,0,0,1-17,0l-56-56a12,12,0,1,1,17-17L96,183,215.51,63.51a12,12,0,0,1,17,17Z" }))
@@ -404,7 +404,7 @@ const tt = /* @__PURE__ */ new Map([
     "thin",
     /* @__PURE__ */ a.createElement(a.Fragment, null, /* @__PURE__ */ a.createElement("path", { d: "M226.83,74.83l-128,128a4,4,0,0,1-5.66,0l-56-56a4,4,0,0,1,5.66-5.66L96,194.34,221.17,69.17a4,4,0,1,1,5.66,5.66Z" }))
   ]
-]), nt = /* @__PURE__ */ new Map([
+]), d0 = /* @__PURE__ */ new Map([
   [
     "bold",
     /* @__PURE__ */ a.createElement(a.Fragment, null, /* @__PURE__ */ a.createElement("path", { d: "M152.41,88.56l-89.6,88a12,12,0,0,1-16.82,0L7.59,138.85a12,12,0,0,1,16.82-17.13l30,29.46,81.19-79.74a12,12,0,0,1,16.82,17.12Zm96.15-17a12,12,0,0,0-17-.15L150.4,151.18l-7.88-7.74a12,12,0,0,0-16.82,17.12l16.29,16a12,12,0,0,0,16.82,0l89.6-88A12,12,0,0,0,248.56,71.59Z" }))
@@ -435,7 +435,7 @@ const tt = /* @__PURE__ */ new Map([
     "thin",
     /* @__PURE__ */ a.createElement(a.Fragment, null, /* @__PURE__ */ a.createElement("path", { d: "M146.8,82.85l-89.6,88a4,4,0,0,1-5.6,0L13.2,133.14a4,4,0,0,1,5.6-5.71l35.6,35,86.8-85.24a4,4,0,0,1,5.6,5.7Zm96-5.65a4,4,0,0,0-5.65,0l-86.8,85.24-21.63-21.24a4,4,0,1,0-5.61,5.7l24.44,24a4,4,0,0,0,5.6,0l89.6-88A4,4,0,0,0,242.85,77.2Z" }))
   ]
-]), rt = /* @__PURE__ */ new Map([
+]), m0 = /* @__PURE__ */ new Map([
   [
     "bold",
     /* @__PURE__ */ a.createElement(a.Fragment, null, /* @__PURE__ */ a.createElement("path", { d: "M224,44H32A12,12,0,0,0,20,56V192a20,20,0,0,0,20,20H216a20,20,0,0,0,20-20V56A12,12,0,0,0,224,44Zm-96,83.72L62.85,68h130.3ZM92.79,128,44,172.72V83.28Zm17.76,16.28,9.34,8.57a12,12,0,0,0,16.22,0l9.34-8.57L193.15,188H62.85ZM163.21,128,212,83.28v89.44Z" }))
@@ -460,7 +460,7 @@ const tt = /* @__PURE__ */ new Map([
     "thin",
     /* @__PURE__ */ a.createElement(a.Fragment, null, /* @__PURE__ */ a.createElement("path", { d: "M224,52H32a4,4,0,0,0-4,4V192a12,12,0,0,0,12,12H216a12,12,0,0,0,12-12V56A4,4,0,0,0,224,52Zm-96,86.57L42.28,60H213.72ZM104.63,128,36,190.91V65.09Zm5.92,5.43L125.3,147a4,4,0,0,0,5.4,0l14.75-13.52L213.72,196H42.28ZM151.37,128,220,65.09V190.91Z" }))
   ]
-]), ct = /* @__PURE__ */ new Map([
+]), h0 = /* @__PURE__ */ new Map([
   [
     "bold",
     /* @__PURE__ */ a.createElement(a.Fragment, null, /* @__PURE__ */ a.createElement("path", { d: "M216.49,79.52l-56-56A12,12,0,0,0,152,20H56A20,20,0,0,0,36,40V216a20,20,0,0,0,20,20H200a20,20,0,0,0,20-20V88A12,12,0,0,0,216.49,79.52ZM160,57l23,23H160ZM60,212V44h76V92a12,12,0,0,0,12,12h48V212Zm112-80a12,12,0,0,1-12,12H96a12,12,0,0,1,0-24h64A12,12,0,0,1,172,132Zm0,40a12,12,0,0,1-12,12H96a12,12,0,0,1,0-24h64A12,12,0,0,1,172,172Z" }))
@@ -485,7 +485,7 @@ const tt = /* @__PURE__ */ new Map([
     "thin",
     /* @__PURE__ */ a.createElement(a.Fragment, null, /* @__PURE__ */ a.createElement("path", { d: "M210.83,85.17l-56-56A4,4,0,0,0,152,28H56A12,12,0,0,0,44,40V216a12,12,0,0,0,12,12H200a12,12,0,0,0,12-12V88A4,4,0,0,0,210.83,85.17ZM156,41.65,198.34,84H156ZM200,220H56a4,4,0,0,1-4-4V40a4,4,0,0,1,4-4h92V88a4,4,0,0,0,4,4h52V216A4,4,0,0,1,200,220Zm-36-84a4,4,0,0,1-4,4H96a4,4,0,0,1,0-8h64A4,4,0,0,1,164,136Zm0,32a4,4,0,0,1-4,4H96a4,4,0,0,1,0-8h64A4,4,0,0,1,164,168Z" }))
   ]
-]), it = /* @__PURE__ */ new Map([
+]), u0 = /* @__PURE__ */ new Map([
   [
     "bold",
     /* @__PURE__ */ a.createElement(a.Fragment, null, /* @__PURE__ */ a.createElement("path", { d: "M234.29,47.91A20,20,0,0,0,216,36H40A20,20,0,0,0,25.2,69.45l.12.14L92,140.75V216a20,20,0,0,0,31.1,16.64l32-21.33A20,20,0,0,0,164,194.66V140.75l66.67-71.16.12-.14A20,20,0,0,0,234.29,47.91Zm-91,79.89A12,12,0,0,0,140,136v56.52l-24,16V136a12,12,0,0,0-3.25-8.2L49.23,60H206.77Z" }))
@@ -516,7 +516,7 @@ const tt = /* @__PURE__ */ new Map([
     "thin",
     /* @__PURE__ */ a.createElement(a.Fragment, null, /* @__PURE__ */ a.createElement("path", { d: "M227,51.15A11.85,11.85,0,0,0,216,44H40a12,12,0,0,0-8.88,20.07l.05.05L100,137.59V216a12,12,0,0,0,18.66,10l32-21.33a12,12,0,0,0,5.35-10V137.59l68.86-73.52A11.85,11.85,0,0,0,227,51.15Zm-8,7.5-69.9,74.62A4,4,0,0,0,148,136v58.65a4,4,0,0,1-1.78,3.33l-32,21.33A4,4,0,0,1,108,216V136a4,4,0,0,0-1.08-2.74L37.05,58.67A4,4,0,0,1,40,52H216a4,4,0,0,1,3,6.65Z" }))
   ]
-]), ot = /* @__PURE__ */ new Map([
+]), p0 = /* @__PURE__ */ new Map([
   [
     "bold",
     /* @__PURE__ */ a.createElement(a.Fragment, null, /* @__PURE__ */ a.createElement("path", { d: "M84,108A12,12,0,0,1,96,96h64a12,12,0,0,1,0,24H96A12,12,0,0,1,84,108Zm32,28H96a12,12,0,0,0,0,24h20a12,12,0,0,0,0-24ZM228,48V156.69a19.86,19.86,0,0,1-5.86,14.14l-51.31,51.31A19.86,19.86,0,0,1,156.69,228H48a20,20,0,0,1-20-20V48A20,20,0,0,1,48,28H208A20,20,0,0,1,228,48ZM52,204h92V156a12,12,0,0,1,12-12h48V52H52Zm139-36H168v23Z" }))
@@ -541,7 +541,7 @@ const tt = /* @__PURE__ */ new Map([
     "thin",
     /* @__PURE__ */ a.createElement(a.Fragment, null, /* @__PURE__ */ a.createElement("path", { d: "M92,96a4,4,0,0,1,4-4h64a4,4,0,0,1,0,8H96A4,4,0,0,1,92,96Zm4,36h64a4,4,0,0,0,0-8H96a4,4,0,0,0,0,8Zm32,24H96a4,4,0,0,0,0,8h32a4,4,0,0,0,0-8ZM220,48V156.69a11.9,11.9,0,0,1-3.52,8.48l-51.31,51.32a11.93,11.93,0,0,1-8.48,3.51H48a12,12,0,0,1-12-12V48A12,12,0,0,1,48,36H208A12,12,0,0,1,220,48ZM48,212H156V160a4,4,0,0,1,4-4h52V48a4,4,0,0,0-4-4H48a4,4,0,0,0-4,4V208A4,4,0,0,0,48,212Zm158.35-48H164v42.35Z" }))
   ]
-]), dt = /* @__PURE__ */ new Map([
+]), v0 = /* @__PURE__ */ new Map([
   [
     "bold",
     /* @__PURE__ */ a.createElement(a.Fragment, null, /* @__PURE__ */ a.createElement("path", { d: "M212.48,136.49l-82.06,82a60,60,0,0,1-84.85-84.88l98.16-97.89a40,40,0,0,1,56.56,56.59l-.17.16-95.8,92.22a12,12,0,1,1-16.64-17.3l95.71-92.12a16,16,0,0,0-22.7-22.56L62.53,150.57a36,36,0,0,0,50.93,50.91l82.06-82a12,12,0,0,1,17,17Z" }))
@@ -572,7 +572,7 @@ const tt = /* @__PURE__ */ new Map([
     "thin",
     /* @__PURE__ */ a.createElement(a.Fragment, null, /* @__PURE__ */ a.createElement("path", { d: "M206.83,125.17a4,4,0,0,1,0,5.66l-82.06,82a52,52,0,0,1-73.54-73.55L150.52,38.55a36,36,0,1,1,50.94,50.9l-99.3,100.69a20,20,0,1,1-28.3-28.27l83.29-84.68a4,4,0,1,1,5.7,5.61L79.54,167.5a12,12,0,1,0,16.95,17L195.78,83.81A28,28,0,1,0,156.2,44.18L56.91,144.87a44,44,0,1,0,62.21,62.26l82-82A4,4,0,0,1,206.83,125.17Z" }))
   ]
-]), mt = /* @__PURE__ */ new Map([
+]), x0 = /* @__PURE__ */ new Map([
   [
     "bold",
     /* @__PURE__ */ a.createElement(a.Fragment, null, /* @__PURE__ */ a.createElement("path", { d: "M224,154.8l-47.09-21.11-.18-.08a19.94,19.94,0,0,0-19,1.75,13.08,13.08,0,0,0-1.12.84l-22.31,19c-13-7.05-26.43-20.37-33.49-33.21l19.06-22.66a11.76,11.76,0,0,0,.85-1.15,20,20,0,0,0,1.66-18.83,1.42,1.42,0,0,1-.08-.18L101.2,32A20.06,20.06,0,0,0,80.42,20.15,60.27,60.27,0,0,0,28,80c0,81.61,66.39,148,148,148a60.27,60.27,0,0,0,59.85-52.42A20.06,20.06,0,0,0,224,154.8ZM176,204A124.15,124.15,0,0,1,52,80,36.29,36.29,0,0,1,80.48,44.46l18.82,42L80.14,109.28a12,12,0,0,0-.86,1.16A20,20,0,0,0,78,130.08c9.42,19.28,28.83,38.56,48.31,48A20,20,0,0,0,146,176.63a11.63,11.63,0,0,0,1.11-.85l22.43-19.07,42,18.81A36.29,36.29,0,0,1,176,204Z" }))
@@ -603,7 +603,38 @@ const tt = /* @__PURE__ */ new Map([
     "thin",
     /* @__PURE__ */ a.createElement(a.Fragment, null, /* @__PURE__ */ a.createElement("path", { d: "M220.78,162.13,173.56,141A12,12,0,0,0,162.18,142a3.37,3.37,0,0,0-.38.28L137,163.42a3.93,3.93,0,0,1-3.7.21c-16.24-7.84-33.05-24.52-40.89-40.57a3.9,3.9,0,0,1,.18-3.69l21.2-25.21c.1-.12.19-.25.28-.38a12,12,0,0,0,1-11.36L93.9,35.28a12,12,0,0,0-12.48-7.19A52.25,52.25,0,0,0,36,80c0,77.2,62.8,140,140,140a52.25,52.25,0,0,0,51.91-45.42A12,12,0,0,0,220.78,162.13ZM220,173.58A44.23,44.23,0,0,1,176,212C103.22,212,44,152.78,44,80A44.23,44.23,0,0,1,82.42,36a3.87,3.87,0,0,1,.48,0,4,4,0,0,1,3.67,2.49l21.11,47.14a4,4,0,0,1-.23,3.6l-21.19,25.2c-.1.13-.2.25-.29.39a12,12,0,0,0-.78,11.75c8.69,17.79,26.61,35.58,44.6,44.27a12,12,0,0,0,11.79-.87l.37-.28,24.83-21.12a3.93,3.93,0,0,1,3.57-.27l47.21,21.16A4,4,0,0,1,220,173.58Z" }))
   ]
-]), ht = /* @__PURE__ */ new Map([
+]), f0 = /* @__PURE__ */ new Map([
+  [
+    "bold",
+    /* @__PURE__ */ a.createElement(a.Fragment, null, /* @__PURE__ */ a.createElement("path", { d: "M68,100A12,12,0,0,1,80,88h96a12,12,0,0,1,0,24H80A12,12,0,0,1,68,100Zm12,52h96a12,12,0,0,0,0-24H80a12,12,0,0,0,0,24ZM236,56V208a12,12,0,0,1-17.37,10.73L192,205.42l-26.63,13.31a12,12,0,0,1-10.74,0L128,205.42l-26.63,13.31a12,12,0,0,1-10.74,0L64,205.42,37.37,218.73A12,12,0,0,1,20,208V56A20,20,0,0,1,40,36H216A20,20,0,0,1,236,56Zm-24,4H44V188.58l14.63-7.31a12,12,0,0,1,10.74,0L96,194.58l26.63-13.31a12,12,0,0,1,10.74,0L160,194.58l26.63-13.31a12,12,0,0,1,10.74,0L212,188.58Z" }))
+  ],
+  [
+    "duotone",
+    /* @__PURE__ */ a.createElement(a.Fragment, null, /* @__PURE__ */ a.createElement(
+      "path",
+      {
+        d: "M224,56V208l-32-16-32,16-32-16L96,208,64,192,32,208V56a8,8,0,0,1,8-8H216A8,8,0,0,1,224,56Z",
+        opacity: "0.2"
+      }
+    ), /* @__PURE__ */ a.createElement("path", { d: "M72,104a8,8,0,0,1,8-8h96a8,8,0,0,1,0,16H80A8,8,0,0,1,72,104Zm8,40h96a8,8,0,0,0,0-16H80a8,8,0,0,0,0,16ZM232,56V208a8,8,0,0,1-11.58,7.15L192,200.94l-28.42,14.21a8,8,0,0,1-7.16,0L128,200.94,99.58,215.15a8,8,0,0,1-7.16,0L64,200.94,35.58,215.15A8,8,0,0,1,24,208V56A16,16,0,0,1,40,40H216A16,16,0,0,1,232,56Zm-16,0H40V195.06l20.42-10.22a8,8,0,0,1,7.16,0L96,199.06l28.42-14.22a8,8,0,0,1,7.16,0L160,199.06l28.42-14.22a8,8,0,0,1,7.16,0L216,195.06Z" }))
+  ],
+  [
+    "fill",
+    /* @__PURE__ */ a.createElement(a.Fragment, null, /* @__PURE__ */ a.createElement("path", { d: "M216,40H40A16,16,0,0,0,24,56V208a8,8,0,0,0,11.58,7.15L64,200.94l28.42,14.21a8,8,0,0,0,7.16,0L128,200.94l28.42,14.21a8,8,0,0,0,7.16,0L192,200.94l28.42,14.21A8,8,0,0,0,232,208V56A16,16,0,0,0,216,40ZM176,144H80a8,8,0,0,1,0-16h96a8,8,0,0,1,0,16Zm0-32H80a8,8,0,0,1,0-16h96a8,8,0,0,1,0,16Z" }))
+  ],
+  [
+    "light",
+    /* @__PURE__ */ a.createElement(a.Fragment, null, /* @__PURE__ */ a.createElement("path", { d: "M182,104a6,6,0,0,1-6,6H80a6,6,0,0,1,0-12h96A6,6,0,0,1,182,104Zm-6,26H80a6,6,0,0,0,0,12h96a6,6,0,0,0,0-12Zm54-74V208a6,6,0,0,1-2.85,5.1,5.93,5.93,0,0,1-3.15.9,6,6,0,0,1-2.68-.63L192,198.71l-29.32,14.66a6,6,0,0,1-5.36,0L128,198.71,98.68,213.37a6,6,0,0,1-5.36,0L64,198.71,34.68,213.37A6,6,0,0,1,26,208V56A14,14,0,0,1,40,42H216A14,14,0,0,1,230,56Zm-12,0a2,2,0,0,0-2-2H40a2,2,0,0,0-2,2V198.29l23.32-11.66a6,6,0,0,1,5.36,0L96,201.29l29.32-14.66a6,6,0,0,1,5.36,0L160,201.29l29.32-14.66a6,6,0,0,1,5.36,0L218,198.29Z" }))
+  ],
+  [
+    "regular",
+    /* @__PURE__ */ a.createElement(a.Fragment, null, /* @__PURE__ */ a.createElement("path", { d: "M72,104a8,8,0,0,1,8-8h96a8,8,0,0,1,0,16H80A8,8,0,0,1,72,104Zm8,40h96a8,8,0,0,0,0-16H80a8,8,0,0,0,0,16ZM232,56V208a8,8,0,0,1-11.58,7.15L192,200.94l-28.42,14.21a8,8,0,0,1-7.16,0L128,200.94,99.58,215.15a8,8,0,0,1-7.16,0L64,200.94,35.58,215.15A8,8,0,0,1,24,208V56A16,16,0,0,1,40,40H216A16,16,0,0,1,232,56Zm-16,0H40V195.06l20.42-10.22a8,8,0,0,1,7.16,0L96,199.06l28.42-14.22a8,8,0,0,1,7.16,0L160,199.06l28.42-14.22a8,8,0,0,1,7.16,0L216,195.06Z" }))
+  ],
+  [
+    "thin",
+    /* @__PURE__ */ a.createElement(a.Fragment, null, /* @__PURE__ */ a.createElement("path", { d: "M180,104a4,4,0,0,1-4,4H80a4,4,0,0,1,0-8h96A4,4,0,0,1,180,104Zm-4,28H80a4,4,0,0,0,0,8h96a4,4,0,0,0,0-8Zm52-76V208a4,4,0,0,1-4,4,4.05,4.05,0,0,1-1.79-.42L192,196.47l-30.21,15.11a4,4,0,0,1-3.58,0L128,196.47,97.79,211.58a4,4,0,0,1-3.58,0L64,196.47,33.79,211.58A4,4,0,0,1,28,208V56A12,12,0,0,1,40,44H216A12,12,0,0,1,228,56Zm-8,0a4,4,0,0,0-4-4H40a4,4,0,0,0-4,4V201.53l26.21-13.11a4,4,0,0,1,3.58,0L96,203.53l30.21-15.11a4,4,0,0,1,3.58,0L160,203.53l30.21-15.11a4,4,0,0,1,3.58,0L220,201.53Z" }))
+  ]
+]), g0 = /* @__PURE__ */ new Map([
   [
     "bold",
     /* @__PURE__ */ a.createElement(a.Fragment, null, /* @__PURE__ */ a.createElement("path", { d: "M234.38,210a123.36,123.36,0,0,0-60.78-53.23,76,76,0,1,0-91.2,0A123.36,123.36,0,0,0,21.62,210a12,12,0,1,0,20.77,12c18.12-31.32,50.12-50,85.61-50s67.49,18.69,85.61,50a12,12,0,0,0,20.77-12ZM76,96a52,52,0,1,1,52,52A52.06,52.06,0,0,1,76,96Z" }))
@@ -628,7 +659,7 @@ const tt = /* @__PURE__ */ new Map([
     "thin",
     /* @__PURE__ */ a.createElement(a.Fragment, null, /* @__PURE__ */ a.createElement("path", { d: "M227.46,214c-16.52-28.56-43-48.06-73.68-55.09a68,68,0,1,0-51.56,0c-30.64,7-57.16,26.53-73.68,55.09a4,4,0,0,0,6.92,4C55,184.19,89.62,164,128,164s73,20.19,92.54,54a4,4,0,0,0,3.46,2,3.93,3.93,0,0,0,2-.54A4,4,0,0,0,227.46,214ZM68,96a60,60,0,1,1,60,60A60.07,60.07,0,0,1,68,96Z" }))
   ]
-]), ut = /* @__PURE__ */ new Map([
+]), y0 = /* @__PURE__ */ new Map([
   [
     "bold",
     /* @__PURE__ */ a.createElement(a.Fragment, null, /* @__PURE__ */ a.createElement("path", { d: "M240.26,186.1,152.81,34.23h0a28.74,28.74,0,0,0-49.62,0L15.74,186.1a27.45,27.45,0,0,0,0,27.71A28.31,28.31,0,0,0,40.55,228h174.9a28.31,28.31,0,0,0,24.79-14.19A27.45,27.45,0,0,0,240.26,186.1Zm-20.8,15.7a4.46,4.46,0,0,1-4,2.2H40.55a4.46,4.46,0,0,1-4-2.2,3.56,3.56,0,0,1,0-3.73L124,46.2a4.77,4.77,0,0,1,8,0l87.44,151.87A3.56,3.56,0,0,1,219.46,201.8ZM116,136V104a12,12,0,0,1,24,0v32a12,12,0,0,1-24,0Zm28,40a16,16,0,1,1-16-16A16,16,0,0,1,144,176Z" }))
@@ -659,7 +690,7 @@ const tt = /* @__PURE__ */ new Map([
     "thin",
     /* @__PURE__ */ a.createElement(a.Fragment, null, /* @__PURE__ */ a.createElement("path", { d: "M233.34,190.09,145.88,38.22h0a20.75,20.75,0,0,0-35.76,0L22.66,190.09a19.52,19.52,0,0,0,0,19.71A20.36,20.36,0,0,0,40.54,220H215.46a20.36,20.36,0,0,0,17.86-10.2A19.52,19.52,0,0,0,233.34,190.09ZM226.4,205.8a12.47,12.47,0,0,1-10.94,6.2H40.54a12.47,12.47,0,0,1-10.94-6.2,11.45,11.45,0,0,1,0-11.72L117.05,42.21a12.76,12.76,0,0,1,21.9,0L226.4,194.08A11.45,11.45,0,0,1,226.4,205.8ZM124,144V104a4,4,0,0,1,8,0v40a4,4,0,0,1-8,0Zm12,36a8,8,0,1,1-8-8A8,8,0,0,1,136,180Z" }))
   ]
-]), pt = /* @__PURE__ */ new Map([
+]), j0 = /* @__PURE__ */ new Map([
   [
     "bold",
     /* @__PURE__ */ a.createElement(a.Fragment, null, /* @__PURE__ */ a.createElement("path", { d: "M187.3,159.06A36.09,36.09,0,0,1,152,188a84.09,84.09,0,0,1-84-84A36.09,36.09,0,0,1,96.94,68.7,12,12,0,0,1,110,75.1l11.48,23a12,12,0,0,1-.75,12l-8.52,12.78a44.56,44.56,0,0,0,20.91,20.91l12.78-8.52a12,12,0,0,1,12-.75l23,11.48A12,12,0,0,1,187.3,159.06ZM236,128A108,108,0,0,1,78.77,224.15L46.34,235A20,20,0,0,1,21,209.66l10.81-32.43A108,108,0,1,1,236,128Zm-24,0A84,84,0,1,0,55.27,170.06a12,12,0,0,1,1,9.81l-9.93,29.79,29.79-9.93a12.1,12.1,0,0,1,3.8-.62,12,12,0,0,1,6,1.62A84,84,0,0,0,212,128Z" }))
@@ -690,16 +721,16 @@ const tt = /* @__PURE__ */ new Map([
     "thin",
     /* @__PURE__ */ a.createElement(a.Fragment, null, /* @__PURE__ */ a.createElement("path", { d: "M185.79,148.42l-32-16a4,4,0,0,0-4,.25l-16.64,11.1a44.56,44.56,0,0,1-20.91-20.91l11.1-16.64a4,4,0,0,0,.25-4l-16-32A4,4,0,0,0,104,68a36,36,0,0,0-36,36,84.09,84.09,0,0,0,84,84,36,36,0,0,0,36-36A4,4,0,0,0,185.79,148.42ZM152,180a76.08,76.08,0,0,1-76-76,28,28,0,0,1,25.58-27.9l13.8,27.61-11,16.54A4,4,0,0,0,104,124a52.43,52.43,0,0,0,28,28,4,4,0,0,0,3.76-.37l16.54-11,27.61,13.8A28,28,0,0,1,152,180ZM128,28A100,100,0,0,0,40.53,176.5l-11.9,35.69a12,12,0,0,0,15.18,15.18l35.69-11.9A100,100,0,1,0,128,28Zm0,192a92,92,0,0,1-46.07-12.35,4.05,4.05,0,0,0-2-.54,3.93,3.93,0,0,0-1.27.21L41.28,219.78a4,4,0,0,1-5.06-5.06l12.46-37.38a4,4,0,0,0-.33-3.27A92,92,0,1,1,128,220Z" }))
   ]
-]), vt = Ce({
+]), A0 = Fe({
   color: "currentColor",
   size: "1em",
   weight: "regular",
   mirrored: !1
-}), L = a.forwardRef(
+}), V = a.forwardRef(
   (t, l) => {
     const {
       alt: s,
-      color: i,
+      color: c,
       size: r,
       weight: n,
       mirrored: m,
@@ -712,7 +743,7 @@ const tt = /* @__PURE__ */ new Map([
       weight: v = "regular",
       mirrored: y = !1,
       ...u
-    } = a.useContext(vt);
+    } = a.useContext(A0);
     return /* @__PURE__ */ a.createElement(
       "svg",
       {
@@ -720,7 +751,7 @@ const tt = /* @__PURE__ */ new Map([
         xmlns: "http://www.w3.org/2000/svg",
         width: r ?? g,
         height: r ?? g,
-        fill: i ?? p,
+        fill: c ?? p,
         viewBox: "0 0 256 256",
         transform: m || y ? "scale(-1, 1)" : void 0,
         ...u,
@@ -732,48 +763,50 @@ const tt = /* @__PURE__ */ new Map([
     );
   }
 );
-L.displayName = "IconBase";
-const He = a.forwardRef((t, l) => /* @__PURE__ */ a.createElement(L, { ref: l, ...t, weights: tt }));
-He.displayName = "BellIcon";
-const xt = He, Fe = a.forwardRef((t, l) => /* @__PURE__ */ a.createElement(L, { ref: l, ...t, weights: at }));
-Fe.displayName = "CalendarIcon";
-const ft = Fe, Ve = a.forwardRef((t, l) => /* @__PURE__ */ a.createElement(L, { ref: l, ...t, weights: lt }));
-Ve.displayName = "ChatIcon";
-const gt = Ve, Le = a.forwardRef((t, l) => /* @__PURE__ */ a.createElement(L, { ref: l, ...t, weights: st }));
-Le.displayName = "CheckIcon";
-const yt = Le, Te = a.forwardRef((t, l) => /* @__PURE__ */ a.createElement(L, { ref: l, ...t, weights: nt }));
-Te.displayName = "ChecksIcon";
-const jt = Te, Re = a.forwardRef((t, l) => /* @__PURE__ */ a.createElement(L, { ref: l, ...t, weights: rt }));
-Re.displayName = "EnvelopeIcon";
-const At = Re, Se = a.forwardRef((t, l) => /* @__PURE__ */ a.createElement(L, { ref: l, ...t, weights: ct }));
-Se.displayName = "FileTextIcon";
-const bt = Se, Ie = a.forwardRef((t, l) => /* @__PURE__ */ a.createElement(L, { ref: l, ...t, weights: it }));
-Ie.displayName = "FunnelIcon";
-const Nt = Ie, ke = a.forwardRef((t, l) => /* @__PURE__ */ a.createElement(L, { ref: l, ...t, weights: ot }));
-ke.displayName = "NoteIcon";
-const Et = ke, $e = a.forwardRef((t, l) => /* @__PURE__ */ a.createElement(L, { ref: l, ...t, weights: dt }));
-$e.displayName = "PaperclipIcon";
-const wt = $e, De = a.forwardRef((t, l) => /* @__PURE__ */ a.createElement(L, { ref: l, ...t, weights: mt }));
-De.displayName = "PhoneIcon";
-const _t = De, Oe = a.forwardRef((t, l) => /* @__PURE__ */ a.createElement(L, { ref: l, ...t, weights: ht }));
-Oe.displayName = "UserIcon";
-const Zt = Oe, Pe = a.forwardRef((t, l) => /* @__PURE__ */ a.createElement(L, { ref: l, ...t, weights: ut }));
-Pe.displayName = "WarningIcon";
-const Mt = Pe, Be = a.forwardRef((t, l) => /* @__PURE__ */ a.createElement(L, { ref: l, ...t, weights: pt }));
-Be.displayName = "WhatsappLogoIcon";
-const Ct = Be, Ht = (t) => /* @__PURE__ */ e.jsx(_t, { ...t }), Ft = (t) => /* @__PURE__ */ e.jsx(At, { ...t }), ze = (t) => /* @__PURE__ */ e.jsx(Et, { ...t }), Ue = (t) => /* @__PURE__ */ e.jsx(ft, { ...t }), Vt = (t) => /* @__PURE__ */ e.jsx(xt, { ...t }), Lt = (t) => /* @__PURE__ */ e.jsx(gt, { ...t }), Tt = (t) => /* @__PURE__ */ e.jsx(Ct, { ...t }), pe = (t) => /* @__PURE__ */ e.jsx(Zt, { ...t }), ye = (t) => /* @__PURE__ */ e.jsx(wt, { ...t }), Rt = (t) => /* @__PURE__ */ e.jsx(Nt, { ...t }), je = (t) => /* @__PURE__ */ e.jsx(yt, { ...t }), Ae = (t) => /* @__PURE__ */ e.jsx(jt, { ...t }), St = (t) => /* @__PURE__ */ e.jsx(Mt, { ...t }), It = (t) => /* @__PURE__ */ e.jsx(bt, { ...t });
-function q(t) {
+V.displayName = "IconBase";
+const Te = a.forwardRef((t, l) => /* @__PURE__ */ a.createElement(V, { ref: l, ...t, weights: r0 }));
+Te.displayName = "BellIcon";
+const N0 = Te, Re = a.forwardRef((t, l) => /* @__PURE__ */ a.createElement(V, { ref: l, ...t, weights: c0 }));
+Re.displayName = "CalendarIcon";
+const b0 = Re, Ie = a.forwardRef((t, l) => /* @__PURE__ */ a.createElement(V, { ref: l, ...t, weights: i0 }));
+Ie.displayName = "ChatIcon";
+const E0 = Ie, Se = a.forwardRef((t, l) => /* @__PURE__ */ a.createElement(V, { ref: l, ...t, weights: o0 }));
+Se.displayName = "CheckIcon";
+const w0 = Se, ke = a.forwardRef((t, l) => /* @__PURE__ */ a.createElement(V, { ref: l, ...t, weights: d0 }));
+ke.displayName = "ChecksIcon";
+const _0 = ke, $e = a.forwardRef((t, l) => /* @__PURE__ */ a.createElement(V, { ref: l, ...t, weights: m0 }));
+$e.displayName = "EnvelopeIcon";
+const Z0 = $e, De = a.forwardRef((t, l) => /* @__PURE__ */ a.createElement(V, { ref: l, ...t, weights: h0 }));
+De.displayName = "FileTextIcon";
+const M0 = De, Oe = a.forwardRef((t, l) => /* @__PURE__ */ a.createElement(V, { ref: l, ...t, weights: u0 }));
+Oe.displayName = "FunnelIcon";
+const H0 = Oe, Pe = a.forwardRef((t, l) => /* @__PURE__ */ a.createElement(V, { ref: l, ...t, weights: p0 }));
+Pe.displayName = "NoteIcon";
+const L0 = Pe, Be = a.forwardRef((t, l) => /* @__PURE__ */ a.createElement(V, { ref: l, ...t, weights: v0 }));
+Be.displayName = "PaperclipIcon";
+const C0 = Be, qe = a.forwardRef((t, l) => /* @__PURE__ */ a.createElement(V, { ref: l, ...t, weights: x0 }));
+qe.displayName = "PhoneIcon";
+const V0 = qe, ze = a.forwardRef((t, l) => /* @__PURE__ */ a.createElement(V, { ref: l, ...t, weights: f0 }));
+ze.displayName = "ReceiptIcon";
+const F0 = ze, Ue = a.forwardRef((t, l) => /* @__PURE__ */ a.createElement(V, { ref: l, ...t, weights: g0 }));
+Ue.displayName = "UserIcon";
+const T0 = Ue, Ye = a.forwardRef((t, l) => /* @__PURE__ */ a.createElement(V, { ref: l, ...t, weights: y0 }));
+Ye.displayName = "WarningIcon";
+const R0 = Ye, We = a.forwardRef((t, l) => /* @__PURE__ */ a.createElement(V, { ref: l, ...t, weights: j0 }));
+We.displayName = "WhatsappLogoIcon";
+const I0 = We, S0 = (t) => /* @__PURE__ */ e.jsx(V0, { ...t }), k0 = (t) => /* @__PURE__ */ e.jsx(Z0, { ...t }), Ge = (t) => /* @__PURE__ */ e.jsx(L0, { ...t }), Je = (t) => /* @__PURE__ */ e.jsx(b0, { ...t }), $0 = (t) => /* @__PURE__ */ e.jsx(N0, { ...t }), D0 = (t) => /* @__PURE__ */ e.jsx(E0, { ...t }), O0 = (t) => /* @__PURE__ */ e.jsx(I0, { ...t }), xe = (t) => /* @__PURE__ */ e.jsx(T0, { ...t }), Ae = (t) => /* @__PURE__ */ e.jsx(C0, { ...t }), P0 = (t) => /* @__PURE__ */ e.jsx(H0, { ...t }), Ne = (t) => /* @__PURE__ */ e.jsx(w0, { ...t }), be = (t) => /* @__PURE__ */ e.jsx(_0, { ...t }), B0 = (t) => /* @__PURE__ */ e.jsx(R0, { ...t }), q0 = (t) => /* @__PURE__ */ e.jsx(M0, { ...t }), z0 = (t) => /* @__PURE__ */ e.jsx(F0, { ...t });
+function G(t) {
   if (!t || typeof t != "string") return "";
   if (typeof document > "u") return t;
   const l = document.createElement("div");
-  return l.innerHTML = t, ["style", "script", "link", "iframe"].forEach((i) => {
-    l.querySelectorAll(i).forEach((n) => n.remove());
+  return l.innerHTML = t, ["style", "script", "link", "iframe"].forEach((c) => {
+    l.querySelectorAll(c).forEach((n) => n.remove());
   }), l.innerHTML;
 }
-const kt = 164;
-function ie(t, l = kt) {
-  const [s, i] = H(!1), [r, n] = H(null), m = ee(null);
-  te(() => {
+const U0 = 164;
+function oe(t, l = U0) {
+  const [s, c] = Z(!1), [r, n] = Z(null), m = te(null);
+  ae(() => {
     const p = m.current;
     if (!p) return;
     const g = () => n(p.scrollHeight > l), v = requestAnimationFrame(() => {
@@ -781,8 +814,8 @@ function ie(t, l = kt) {
     });
     return () => cancelAnimationFrame(v);
   }, [l, ...t]);
-  const o = r === !0, d = r !== null && (s || !r), h = Q(() => {
-    i((p) => !p);
+  const o = r === !0, d = r !== null && (s || !r), h = ee(() => {
+    c((p) => !p);
   }, []);
   return {
     isExpanded: s,
@@ -793,14 +826,14 @@ function ie(t, l = kt) {
     wrapperRef: m
   };
 }
-const oe = ({
+const de = ({
   isExpanded: t,
   onToggle: l,
   label: s = "View More",
-  expandedLabel: i,
+  expandedLabel: c,
   className: r = ""
 }) => {
-  const n = t ? i || "View Less" : s;
+  const n = t ? c || "View Less" : s;
   return /* @__PURE__ */ e.jsx(
     "button",
     {
@@ -810,10 +843,10 @@ const oe = ({
       children: n
     }
   );
-}, $t = 20, he = ({ label: t, value: l }) => {
-  const { isExpanded: s, toggleExpanded: i, shouldShowExpanded: r, showOverflow: n, wrapperRef: m } = ie(
+}, Y0 = 20, ue = ({ label: t, value: l }) => {
+  const { isExpanded: s, toggleExpanded: c, shouldShowExpanded: r, showOverflow: n, wrapperRef: m } = oe(
     [l],
-    $t
+    Y0
   );
   return l ? /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
     /* @__PURE__ */ e.jsx(
@@ -829,17 +862,17 @@ const oe = ({
       }
     ),
     n && /* @__PURE__ */ e.jsx(
-      oe,
+      de,
       {
         isExpanded: s,
-        onToggle: i,
+        onToggle: c,
         label: `View more (${t})`,
         expandedLabel: `View less (${t})`
       }
     )
   ] }) : null;
-}, k = ({ content: t, children: l, align: s = "center" }) => {
-  const [i, r] = H(!1), [n, m] = H({ top: 0, left: 0 }), o = ee(null), d = () => {
+}, S = ({ content: t, children: l, align: s = "center" }) => {
+  const [c, r] = Z(!1), [n, m] = Z({ top: 0, left: 0 }), o = te(null), d = () => {
     if (o.current) {
       const p = o.current.getBoundingClientRect();
       m({
@@ -851,9 +884,9 @@ const oe = ({
   }, h = () => s === "left" ? "translateY(-100%)" : s === "right" ? "translate(-100%, -100%)" : "translate(-50%, -100%)";
   return /* @__PURE__ */ e.jsxs("div", { ref: o, className: "atw-tooltip-wrapper", onMouseEnter: d, onMouseLeave: () => r(!1), children: [
     l,
-    i && /* @__PURE__ */ e.jsx("div", { className: "atw-tooltip-content", style: { top: n.top, left: n.left, transform: h() }, children: t })
+    c && /* @__PURE__ */ e.jsx("div", { className: "atw-tooltip-content", style: { top: n.top, left: n.left, transform: h() }, children: t })
   ] });
-}, Dt = {
+}, W0 = {
   // Priority
   Low: { label: "Low", bgColor: "#E8F5E9", textColor: "#2E7D32", borderColor: "#A5D6A7" },
   Medium: { label: "Medium", bgColor: "#FFF3E0", textColor: "#E65100", borderColor: "#FFCC80" },
@@ -871,17 +904,17 @@ const oe = ({
   email_received: { label: "Received", bgColor: "#E3F2FD", textColor: "#1565C0", borderColor: "#90CAF9" },
   // Lead
   active_lead: { label: "Active", bgColor: "#E8F5E9", textColor: "#2E7D32", borderColor: "#A5D6A7" }
-}, S = ({
+}, I = ({
   statusKey: t,
   label: l,
   bgColor: s,
-  textColor: i,
+  textColor: c,
   borderColor: r,
   shape: n = "pill",
   style: m = {},
   className: o = ""
 }) => {
-  const d = t ? Dt[t] : void 0, h = l || (d == null ? void 0 : d.label) || t || "", p = s || (d == null ? void 0 : d.bgColor) || "#F3F4F6", g = i || (d == null ? void 0 : d.textColor) || "#374151", v = r || (d == null ? void 0 : d.borderColor) || "#D1D5DB";
+  const d = t ? W0[t] : void 0, h = l || (d == null ? void 0 : d.label) || t || "", p = s || (d == null ? void 0 : d.bgColor) || "#F3F4F6", g = c || (d == null ? void 0 : d.textColor) || "#374151", v = r || (d == null ? void 0 : d.borderColor) || "#D1D5DB";
   return h ? /* @__PURE__ */ e.jsx(
     "span",
     {
@@ -895,39 +928,39 @@ const oe = ({
       children: h
     }
   ) : null;
-}, Ye = Ce(null);
-function J() {
-  const t = Je(Ye);
+}, Ke = Fe(null);
+function K() {
+  const t = t0(Ke);
   if (!t)
     throw new Error("useActivityConfig must be used within an <ActivityProvider>");
   return t;
 }
-const Ot = ({ children: t, ...l }) => /* @__PURE__ */ e.jsx(Ye.Provider, { value: l, children: t });
-function V(t) {
-  const l = new Date(t), s = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"], i = l.getDate().toString().padStart(2, "0"), r = s[l.getMonth()], n = l.getFullYear(), m = `${i} ${r} ${n}`;
+const G0 = ({ children: t, ...l }) => /* @__PURE__ */ e.jsx(Ke.Provider, { value: l, children: t });
+function C(t) {
+  const l = new Date(t), s = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"], c = l.getDate().toString().padStart(2, "0"), r = s[l.getMonth()], n = l.getFullYear(), m = `${c} ${r} ${n}`;
   let o = l.getHours();
   const d = l.getMinutes().toString().padStart(2, "0"), h = o >= 12 ? "PM" : "AM";
   o = o % 12, o = o || 12;
   const p = `${o.toString().padStart(2, "0")}:${d} ${h}`;
   return { date: m, time: p };
 }
-function Pt(t) {
+function J0(t) {
   try {
     const l = new Date(t);
     if (Number.isNaN(l.getTime())) return "";
-    const s = l.getFullYear(), i = String(l.getMonth() + 1).padStart(2, "0"), r = String(l.getDate()).padStart(2, "0");
-    return `${s}-${i}-${r}`;
+    const s = l.getFullYear(), c = String(l.getMonth() + 1).padStart(2, "0"), r = String(l.getDate()).padStart(2, "0");
+    return `${s}-${c}-${r}`;
   } catch {
     return "";
   }
 }
-function be(t) {
+function Ee(t) {
   const l = t.creation ?? "";
-  return Pt(l);
+  return J0(l);
 }
-const O = ({ activity: t }) => /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
+const $ = ({ activity: t }) => /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
   t.is_lead && /* @__PURE__ */ e.jsx(
-    S,
+    I,
     {
       label: "Lead",
       bgColor: "#F0F9FF",
@@ -938,7 +971,7 @@ const O = ({ activity: t }) => /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
     }
   ),
   t.is_pd && /* @__PURE__ */ e.jsx(
-    S,
+    I,
     {
       label: "PDA",
       bgColor: "#FDF2F8",
@@ -949,7 +982,7 @@ const O = ({ activity: t }) => /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
     }
   ),
   t.is_dc && /* @__PURE__ */ e.jsx(
-    S,
+    I,
     {
       label: "DC",
       bgColor: "#FFF7ED",
@@ -959,11 +992,11 @@ const O = ({ activity: t }) => /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
       style: { fontSize: "10px", padding: "0 8px", height: "18px", lineHeight: "16px", fontWeight: "600" }
     }
   )
-] }), Ne = "#FB2828", Bt = ({ activity: t }) => {
-  const { apiBaseUrl: l, onEmailReply: s, onEmailReplyAll: i } = J(), n = t.data && typeof t.data == "object" ? t.data : t, m = t.communication_date || "", o = t.creation || "", d = m || o, { date: h, time: p } = V(d), g = n.sender_full_name || n.sender || "", v = n.recipients || "", y = n.cc || null, u = n.bcc || null, j = n.subject || "", x = n.content || "", _ = n.attachments || [], U = (n.sent_or_received || "").toLowerCase(), Y = U === "received" ? "email_received" : "email_sent", P = 110, { isExpanded: $, toggleExpanded: E, shouldShowExpanded: W, showOverflow: G, wrapperRef: B } = ie(
+] }), we = "#FB2828", K0 = ({ activity: t }) => {
+  const { apiBaseUrl: l, onEmailReply: s, onEmailReplyAll: c } = K(), n = t.data && typeof t.data == "object" ? t.data : t, m = t.communication_date || "", o = t.creation || "", d = m || o, { date: h, time: p } = C(d), g = n.sender_full_name || n.sender || "", v = n.recipients || "", y = n.cc || null, u = n.bcc || null, j = n.subject || "", x = n.content || "", _ = n.attachments || [], z = (n.sent_or_received || "").toLowerCase(), U = z === "received" ? "email_received" : "email_sent", P = 110, { isExpanded: D, toggleExpanded: E, shouldShowExpanded: Y, showOverflow: J, wrapperRef: B } = oe(
     [x, _],
     P
-  ), z = (A) => A.startsWith("http://") || A.startsWith("https://") ? A : `${l || ""}${A}`, T = () => {
+  ), q = (A) => A.startsWith("http://") || A.startsWith("https://") ? A : `${l || ""}${A}`, T = () => {
     s == null || s({
       name: t.name,
       subject: j,
@@ -974,8 +1007,8 @@ const O = ({ activity: t }) => /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
       sender: n.sender || "",
       senderFullName: g
     });
-  }, Z = () => {
-    i == null || i({
+  }, M = () => {
+    c == null || c({
       name: t.name,
       subject: j,
       content: x,
@@ -989,7 +1022,7 @@ const O = ({ activity: t }) => /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
   };
   return /* @__PURE__ */ e.jsxs("div", { className: "activity-item email-activity", children: [
     /* @__PURE__ */ e.jsxs("div", { className: "activity-header", children: [
-      /* @__PURE__ */ e.jsx(k, { content: "Email", align: "left", children: /* @__PURE__ */ e.jsx("div", { className: "activity-icon-wrapper", children: /* @__PURE__ */ e.jsx(Ft, { size: 20, color: Ne }) }) }),
+      /* @__PURE__ */ e.jsx(S, { content: "Email", align: "left", children: /* @__PURE__ */ e.jsx("div", { className: "activity-icon-wrapper", children: /* @__PURE__ */ e.jsx(k0, { size: 20, color: we }) }) }),
       /* @__PURE__ */ e.jsxs("div", { className: "activity-date-time", style: { display: "flex", alignItems: "center", gap: "6px" }, children: [
         /* @__PURE__ */ e.jsxs("span", { children: [
           h,
@@ -997,22 +1030,22 @@ const O = ({ activity: t }) => /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
           p
         ] }),
         /* @__PURE__ */ e.jsx(
-          S,
+          I,
           {
-            statusKey: Y,
+            statusKey: U,
             shape: "pill",
             showIcon: !1,
             style: { fontSize: "11px", padding: "1px 8px", lineHeight: "16px" }
           }
         ),
-        /* @__PURE__ */ e.jsx(O, { activity: t })
+        /* @__PURE__ */ e.jsx($, { activity: t })
       ] })
     ] }),
     /* @__PURE__ */ e.jsx("div", { className: "activity-content", children: /* @__PURE__ */ e.jsxs(
       "div",
       {
         className: "email-activity-card",
-        style: U === "received" ? { borderLeft: "3px solid #1565C0" } : void 0,
+        style: z === "received" ? { borderLeft: "3px solid #1565C0" } : void 0,
         children: [
           /* @__PURE__ */ e.jsxs("div", { style: { display: "flex", justifyContent: "space-between", alignItems: "flex-start" }, children: [
             /* @__PURE__ */ e.jsxs("div", { children: [
@@ -1020,13 +1053,13 @@ const O = ({ activity: t }) => /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
                 "From: ",
                 /* @__PURE__ */ e.jsx("span", { className: "atw-email-from-value", children: g && `${g}` })
               ] }),
-              /* @__PURE__ */ e.jsx(he, { label: "To", value: v }),
-              /* @__PURE__ */ e.jsx(he, { label: "Cc", value: y }),
-              /* @__PURE__ */ e.jsx(he, { label: "Bcc", value: u })
+              /* @__PURE__ */ e.jsx(ue, { label: "To", value: v }),
+              /* @__PURE__ */ e.jsx(ue, { label: "Cc", value: y }),
+              /* @__PURE__ */ e.jsx(ue, { label: "Bcc", value: u })
             ] }),
-            (s || i) && /* @__PURE__ */ e.jsxs("div", { style: { display: "flex", gap: "8px" }, children: [
+            (s || c) && /* @__PURE__ */ e.jsxs("div", { style: { display: "flex", gap: "8px" }, children: [
               s && /* @__PURE__ */ e.jsx("button", { type: "button", onClick: T, className: "atw-email-reply-btn", children: "Reply" }),
-              i && /* @__PURE__ */ e.jsx("button", { type: "button", onClick: Z, className: "atw-email-reply-btn", children: "Reply All" })
+              c && /* @__PURE__ */ e.jsx("button", { type: "button", onClick: M, className: "atw-email-reply-btn", children: "Reply All" })
             ] })
           ] }),
           /* @__PURE__ */ e.jsx("hr", { className: "atw-email-divider" }),
@@ -1039,12 +1072,12 @@ const O = ({ activity: t }) => /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
               "div",
               {
                 ref: B,
-                className: `email-activity-body-wrapper ${W ? "email-activity-body-wrapper--expanded" : ""}`,
+                className: `email-activity-body-wrapper ${Y ? "email-activity-body-wrapper--expanded" : ""}`,
                 children: [
-                  x && /* @__PURE__ */ e.jsx("div", { className: "email-activity-body rich-html-content", dangerouslySetInnerHTML: { __html: q(x) } }),
+                  x && /* @__PURE__ */ e.jsx("div", { className: "email-activity-body rich-html-content", dangerouslySetInnerHTML: { __html: G(x) } }),
                   _.length > 0 && /* @__PURE__ */ e.jsxs("div", { className: "email-activity-attachments", children: [
                     /* @__PURE__ */ e.jsxs("div", { className: "email-activity-attachments-header", children: [
-                      /* @__PURE__ */ e.jsx(ye, { size: 16, color: "#666" }),
+                      /* @__PURE__ */ e.jsx(Ae, { size: 16, color: "#666" }),
                       /* @__PURE__ */ e.jsxs("span", { children: [
                         "Attachments (",
                         _.length,
@@ -1054,12 +1087,12 @@ const O = ({ activity: t }) => /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
                     /* @__PURE__ */ e.jsx("div", { className: "email-activity-attachments-list", children: _.map((A, R) => /* @__PURE__ */ e.jsxs(
                       "a",
                       {
-                        href: z(A.file_url),
+                        href: q(A.file_url),
                         target: "_blank",
                         rel: "noopener noreferrer",
                         className: "email-activity-attachment-item",
                         children: [
-                          /* @__PURE__ */ e.jsx(ye, { size: 14, color: Ne }),
+                          /* @__PURE__ */ e.jsx(Ae, { size: 14, color: we }),
                           /* @__PURE__ */ e.jsx("span", { children: A.file_name || A.file_url.split("/").pop() || "Attachment" }),
                           A.file_size && /* @__PURE__ */ e.jsxs("span", { className: "email-activity-attachment-size", children: [
                             "(",
@@ -1074,65 +1107,65 @@ const O = ({ activity: t }) => /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
                 ]
               }
             ),
-            G && /* @__PURE__ */ e.jsx("div", { style: { textAlign: "right", marginTop: "4px" }, children: /* @__PURE__ */ e.jsx(oe, { isExpanded: $, onToggle: E, label: "View More" }) })
+            J && /* @__PURE__ */ e.jsx("div", { style: { textAlign: "right", marginTop: "4px" }, children: /* @__PURE__ */ e.jsx(de, { isExpanded: D, onToggle: E, label: "View More" }) })
           ] })
         ]
       }
     ) })
   ] });
-}, zt = "#1C73E7", Ee = ({ activity: t }) => {
-  let l, s, i, r;
+}, Q0 = "#1C73E7", _e = ({ activity: t }) => {
+  let l, s, c, r;
   if (t.activity_type === "notes") {
-    const p = t.creation ?? "", g = V(p);
-    l = g.date, s = g.time, i = t.content, r = t.title || "Note";
+    const p = t.creation ?? "", g = C(p);
+    l = g.date, s = g.time, c = t.content, r = t.title || "Note";
   } else {
-    const p = V(t.creation || "");
-    l = p.date, s = p.time, i = typeof t.data == "string" ? t.data : void 0, r = "Creation";
+    const p = C(t.creation || "");
+    l = p.date, s = p.time, c = typeof t.data == "string" ? t.data : void 0, r = "Creation";
   }
-  const { isExpanded: n, toggleExpanded: m, shouldShowExpanded: o, showOverflow: d, wrapperRef: h } = ie([i]);
+  const { isExpanded: n, toggleExpanded: m, shouldShowExpanded: o, showOverflow: d, wrapperRef: h } = oe([c]);
   return /* @__PURE__ */ e.jsxs("div", { className: "activity-item notes-activity", children: [
     /* @__PURE__ */ e.jsxs("div", { className: "activity-header", children: [
-      /* @__PURE__ */ e.jsx(k, { content: `${t.activity_type === "notes" ? "Note" : "Creation"}`, align: "left", children: /* @__PURE__ */ e.jsx("div", { className: "activity-icon-wrapper", children: /* @__PURE__ */ e.jsx(ze, { size: 20, color: zt }) }) }),
+      /* @__PURE__ */ e.jsx(S, { content: `${t.activity_type === "notes" ? "Note" : "Creation"}`, align: "left", children: /* @__PURE__ */ e.jsx("div", { className: "activity-icon-wrapper", children: /* @__PURE__ */ e.jsx(Ge, { size: 20, color: Q0 }) }) }),
       /* @__PURE__ */ e.jsxs("div", { className: "activity-date-time", style: { display: "flex", alignItems: "center", gap: "6px" }, children: [
         /* @__PURE__ */ e.jsxs("span", { children: [
           l,
           " - ",
           s
         ] }),
-        /* @__PURE__ */ e.jsx(O, { activity: t })
+        /* @__PURE__ */ e.jsx($, { activity: t })
       ] })
     ] }),
     /* @__PURE__ */ e.jsx("div", { className: "activity-content", children: /* @__PURE__ */ e.jsxs("div", { className: "notes-activity-card", children: [
       /* @__PURE__ */ e.jsx("div", { className: "notes-activity-card-header", children: /* @__PURE__ */ e.jsx("h3", { className: "notes-activity-title", children: r }) }),
-      i && /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
+      c && /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
         /* @__PURE__ */ e.jsx(
           "div",
           {
             ref: h,
             className: `notes-activity-body-wrapper ${o ? "notes-activity-body-wrapper--expanded" : ""}`,
-            children: /* @__PURE__ */ e.jsx("div", { className: "notes-item rich-html-content", dangerouslySetInnerHTML: { __html: q(i) } })
+            children: /* @__PURE__ */ e.jsx("div", { className: "notes-item rich-html-content", dangerouslySetInnerHTML: { __html: G(c) } })
           }
         ),
-        d && /* @__PURE__ */ e.jsx("div", { style: { textAlign: "right", marginTop: "4px" }, children: /* @__PURE__ */ e.jsx(oe, { isExpanded: n, onToggle: m, label: "View More" }) })
+        d && /* @__PURE__ */ e.jsx("div", { style: { textAlign: "right", marginTop: "4px" }, children: /* @__PURE__ */ e.jsx(de, { isExpanded: n, onToggle: m, label: "View More" }) })
       ] })
     ] }) })
   ] });
-}, Ut = ({ activity: t }) => {
-  const l = V(t.creation), s = t.due_date ? V(t.due_date) : null, i = t.title || "Schedule", r = t.description || "", n = t.priority || "", m = t.task_type || t.activity_type || "", o = t.type || "";
+}, X0 = ({ activity: t }) => {
+  const l = C(t.creation), s = t.due_date ? C(t.due_date) : null, c = t.title || "Schedule", r = t.description || "", n = t.priority || "", m = t.task_type || t.activity_type || "", o = t.type || "";
   return /* @__PURE__ */ e.jsxs("div", { className: "activity-item schedule-activity", children: [
     /* @__PURE__ */ e.jsxs("div", { className: "activity-header", children: [
-      /* @__PURE__ */ e.jsx(k, { content: "Schedule", align: "left", children: /* @__PURE__ */ e.jsx("div", { className: "activity-icon-wrapper", children: /* @__PURE__ */ e.jsx(Ue, { size: 20, color: "#0DBFFF" }) }) }),
+      /* @__PURE__ */ e.jsx(S, { content: "Schedule", align: "left", children: /* @__PURE__ */ e.jsx("div", { className: "activity-icon-wrapper", children: /* @__PURE__ */ e.jsx(Je, { size: 20, color: "#0DBFFF" }) }) }),
       /* @__PURE__ */ e.jsxs("div", { className: "activity-date-time", style: { display: "flex", alignItems: "center", gap: "6px" }, children: [
         /* @__PURE__ */ e.jsxs("span", { children: [
           l.date,
           " - ",
           l.time
         ] }),
-        /* @__PURE__ */ e.jsx(O, { activity: t })
+        /* @__PURE__ */ e.jsx($, { activity: t })
       ] })
     ] }),
     /* @__PURE__ */ e.jsx("div", { className: "activity-content", children: /* @__PURE__ */ e.jsxs("div", { className: "schedule-activity-card", children: [
-      /* @__PURE__ */ e.jsx("div", { className: "schedule-activity-card-header", children: /* @__PURE__ */ e.jsx("h4", { className: "schedule-activity-title", children: i }) }),
+      /* @__PURE__ */ e.jsx("div", { className: "schedule-activity-card-header", children: /* @__PURE__ */ e.jsx("h4", { className: "schedule-activity-title", children: c }) }),
       /* @__PURE__ */ e.jsxs("div", { className: "schedule-activity-card-content", children: [
         /* @__PURE__ */ e.jsxs("div", { className: "schedule-activity-meta", children: [
           o && /* @__PURE__ */ e.jsxs("div", { className: "schedule-activity-meta-row", children: [
@@ -1154,7 +1187,7 @@ const O = ({ activity: t }) => /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
               /* @__PURE__ */ e.jsx("span", { className: "schedule-activity-label", children: "Priority" }),
               /* @__PURE__ */ e.jsx("span", { className: "schedule-activity-colon", children: ":" })
             ] }),
-            /* @__PURE__ */ e.jsx(S, { statusKey: n, showIcon: !1, shape: "square" })
+            /* @__PURE__ */ e.jsx(I, { statusKey: n, showIcon: !1, shape: "square" })
           ] }),
           m && /* @__PURE__ */ e.jsxs("div", { className: "schedule-activity-meta-row", children: [
             /* @__PURE__ */ e.jsxs("div", { className: "schedule-activity-label-cell", children: [
@@ -1173,29 +1206,29 @@ const O = ({ activity: t }) => /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
             "div",
             {
               className: "schedule-activity-description rich-html-content",
-              dangerouslySetInnerHTML: { __html: q(r) }
+              dangerouslySetInnerHTML: { __html: G(r) }
             }
           )
         ] }) })
       ] })
     ] }) })
   ] });
-}, Yt = ({ activity: t }) => {
-  const l = V(t.creation), s = t.due_date ? V(t.due_date) : null, i = t.title || "Task", r = t.description || "", n = t.priority || "", m = t.task_type || t.activity_type || "", o = t.type || "", d = t.status || "", h = t.skip_reason || "";
+}, et = ({ activity: t }) => {
+  const l = C(t.creation), s = t.due_date ? C(t.due_date) : null, c = t.title || "Task", r = t.description || "", n = t.priority || "", m = t.task_type || t.activity_type || "", o = t.type || "", d = t.status || "", h = t.skip_reason || "";
   return /* @__PURE__ */ e.jsxs("div", { className: "activity-item schedule-activity", children: [
     /* @__PURE__ */ e.jsxs("div", { className: "activity-header", children: [
-      /* @__PURE__ */ e.jsx(k, { content: "Task", align: "left", children: /* @__PURE__ */ e.jsx("div", { className: "activity-icon-wrapper", children: /* @__PURE__ */ e.jsx(Ue, { size: 20, color: "#0DBFFF" }) }) }),
+      /* @__PURE__ */ e.jsx(S, { content: "Task", align: "left", children: /* @__PURE__ */ e.jsx("div", { className: "activity-icon-wrapper", children: /* @__PURE__ */ e.jsx(Je, { size: 20, color: "#0DBFFF" }) }) }),
       /* @__PURE__ */ e.jsxs("div", { className: "activity-date-time", style: { display: "flex", alignItems: "center", gap: "6px" }, children: [
         /* @__PURE__ */ e.jsxs("span", { children: [
           l.date,
           " - ",
           l.time
         ] }),
-        /* @__PURE__ */ e.jsx(O, { activity: t })
+        /* @__PURE__ */ e.jsx($, { activity: t })
       ] })
     ] }),
     /* @__PURE__ */ e.jsx("div", { className: "activity-content", children: /* @__PURE__ */ e.jsxs("div", { className: "schedule-activity-card", children: [
-      /* @__PURE__ */ e.jsx("div", { className: "schedule-activity-card-header", children: /* @__PURE__ */ e.jsx("h4", { className: "schedule-activity-title", children: i }) }),
+      /* @__PURE__ */ e.jsx("div", { className: "schedule-activity-card-header", children: /* @__PURE__ */ e.jsx("h4", { className: "schedule-activity-title", children: c }) }),
       /* @__PURE__ */ e.jsxs("div", { className: "schedule-activity-card-content", children: [
         /* @__PURE__ */ e.jsxs("div", { className: "schedule-activity-meta", children: [
           o && /* @__PURE__ */ e.jsxs("div", { className: "schedule-activity-meta-row", children: [
@@ -1217,7 +1250,7 @@ const O = ({ activity: t }) => /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
               /* @__PURE__ */ e.jsx("span", { className: "schedule-activity-label", children: "Priority" }),
               /* @__PURE__ */ e.jsx("span", { className: "schedule-activity-colon", children: ":" })
             ] }),
-            /* @__PURE__ */ e.jsx(S, { statusKey: n, showIcon: !1, shape: "square" })
+            /* @__PURE__ */ e.jsx(I, { statusKey: n, showIcon: !1, shape: "square" })
           ] }),
           m && /* @__PURE__ */ e.jsxs("div", { className: "schedule-activity-meta-row", children: [
             /* @__PURE__ */ e.jsxs("div", { className: "schedule-activity-label-cell", children: [
@@ -1231,7 +1264,7 @@ const O = ({ activity: t }) => /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
               /* @__PURE__ */ e.jsx("span", { className: "schedule-activity-label", children: "Status" }),
               /* @__PURE__ */ e.jsx("span", { className: "schedule-activity-colon", children: ":" })
             ] }),
-            /* @__PURE__ */ e.jsx(S, { statusKey: d, showIcon: !1, shape: "square" })
+            /* @__PURE__ */ e.jsx(I, { statusKey: d, showIcon: !1, shape: "square" })
           ] })
         ] }),
         d === "Skipped" && h && /* @__PURE__ */ e.jsx("div", { className: "schedule-activity-description-wrapper", children: /* @__PURE__ */ e.jsxs("div", { className: "schedule-activity-meta-row", children: [
@@ -1243,7 +1276,7 @@ const O = ({ activity: t }) => /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
             "div",
             {
               className: "schedule-activity-description rich-html-content",
-              dangerouslySetInnerHTML: { __html: q(h) }
+              dangerouslySetInnerHTML: { __html: G(h) }
             }
           )
         ] }) }),
@@ -1256,29 +1289,29 @@ const O = ({ activity: t }) => /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
             "div",
             {
               className: "schedule-activity-description rich-html-content",
-              dangerouslySetInnerHTML: { __html: q(r) }
+              dangerouslySetInnerHTML: { __html: G(r) }
             }
           )
         ] }) })
       ] })
     ] }) })
   ] });
-}, Wt = ({ activity: t }) => {
-  const l = V(t.creation), s = t.due_date ? V(t.due_date) : null, i = t.title || "Reminder", r = t.description || "", n = t.priority || "", m = t.task_type || t.activity_type || "", o = t.type || "";
+}, tt = ({ activity: t }) => {
+  const l = C(t.creation), s = t.due_date ? C(t.due_date) : null, c = t.title || "Reminder", r = t.description || "", n = t.priority || "", m = t.task_type || t.activity_type || "", o = t.type || "";
   return /* @__PURE__ */ e.jsxs("div", { className: "activity-item reminder-activity", children: [
     /* @__PURE__ */ e.jsxs("div", { className: "activity-header", children: [
-      /* @__PURE__ */ e.jsx(k, { content: "Reminder", align: "left", children: /* @__PURE__ */ e.jsx("div", { className: "activity-icon-wrapper", children: /* @__PURE__ */ e.jsx(Vt, { size: 20, color: "#FF3434" }) }) }),
+      /* @__PURE__ */ e.jsx(S, { content: "Reminder", align: "left", children: /* @__PURE__ */ e.jsx("div", { className: "activity-icon-wrapper", children: /* @__PURE__ */ e.jsx($0, { size: 20, color: "#FF3434" }) }) }),
       /* @__PURE__ */ e.jsxs("div", { className: "activity-date-time", style: { display: "flex", alignItems: "center", gap: "6px" }, children: [
         /* @__PURE__ */ e.jsxs("span", { children: [
           l.date,
           " - ",
           l.time
         ] }),
-        /* @__PURE__ */ e.jsx(O, { activity: t })
+        /* @__PURE__ */ e.jsx($, { activity: t })
       ] })
     ] }),
     /* @__PURE__ */ e.jsx("div", { className: "activity-content", children: /* @__PURE__ */ e.jsxs("div", { className: "reminder-activity-card", children: [
-      /* @__PURE__ */ e.jsx("div", { className: "reminder-activity-card-header", children: /* @__PURE__ */ e.jsx("h4", { className: "reminder-activity-title", children: i }) }),
+      /* @__PURE__ */ e.jsx("div", { className: "reminder-activity-card-header", children: /* @__PURE__ */ e.jsx("h4", { className: "reminder-activity-title", children: c }) }),
       /* @__PURE__ */ e.jsxs("div", { className: "reminder-activity-card-content", children: [
         /* @__PURE__ */ e.jsxs("div", { className: "reminder-activity-meta", children: [
           o && /* @__PURE__ */ e.jsxs("div", { className: "reminder-activity-meta-row", children: [
@@ -1300,7 +1333,7 @@ const O = ({ activity: t }) => /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
               /* @__PURE__ */ e.jsx("span", { className: "reminder-activity-label", children: "Priority" }),
               /* @__PURE__ */ e.jsx("span", { className: "reminder-activity-colon", children: ":" })
             ] }),
-            /* @__PURE__ */ e.jsx(S, { statusKey: n, showIcon: !1, shape: "square" })
+            /* @__PURE__ */ e.jsx(I, { statusKey: n, showIcon: !1, shape: "square" })
           ] }),
           m && /* @__PURE__ */ e.jsxs("div", { className: "reminder-activity-meta-row", children: [
             /* @__PURE__ */ e.jsxs("div", { className: "reminder-activity-label-cell", children: [
@@ -1319,15 +1352,15 @@ const O = ({ activity: t }) => /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
             "div",
             {
               className: "reminder-activity-description rich-html-content",
-              dangerouslySetInnerHTML: { __html: q(r) }
+              dangerouslySetInnerHTML: { __html: G(r) }
             }
           )
         ] }) })
       ] })
     ] }) })
   ] });
-}, qt = ({ activity: t }) => {
-  const { renderChatMessageList: l } = J(), { date: s, time: i } = V(t.creation || ""), r = t.type === "Outgoing" || t.is_outbound === 1, n = /* @__PURE__ */ e.jsx(k, { content: "Chat", align: r ? "right" : "left", children: /* @__PURE__ */ e.jsx("div", { className: "activity-icon-wrapper", children: /* @__PURE__ */ e.jsx(Tt, { size: 20, color: r ? "#175353" : "#666" }) }) });
+}, at = ({ activity: t }) => {
+  const { renderChatMessageList: l } = K(), { date: s, time: c } = C(t.creation || ""), r = t.type === "Outgoing" || t.is_outbound === 1, n = /* @__PURE__ */ e.jsx(S, { content: "Chat", align: r ? "right" : "left", children: /* @__PURE__ */ e.jsx("div", { className: "activity-icon-wrapper", children: /* @__PURE__ */ e.jsx(O0, { size: 20, color: r ? "#175353" : "#666" }) }) });
   return /* @__PURE__ */ e.jsxs("div", { className: `activity-item chat-activity mt-3 ${r ? "chat-outbound" : "chat-incoming"}`, children: [
     /* @__PURE__ */ e.jsxs("div", { className: `activity-header chat-activity-header ${r ? "chat-header-outbound" : "chat-header-incoming"}`, children: [
       !r && n,
@@ -1335,18 +1368,18 @@ const O = ({ activity: t }) => /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
         /* @__PURE__ */ e.jsxs("span", { children: [
           s,
           " - ",
-          i
+          c
         ] }),
-        /* @__PURE__ */ e.jsx(O, { activity: t })
+        /* @__PURE__ */ e.jsx($, { activity: t })
       ] }),
       r && n
     ] }),
     /* @__PURE__ */ e.jsx("div", { className: `activity-content ${r ? "chat-content-outbound" : "chat-content-incoming"}`, children: l ? l({ activity: t, icon: n, showIcon: !1 }) : /* @__PURE__ */ e.jsx("div", { className: "chat-activity-bubble", children: /* @__PURE__ */ e.jsx("span", { className: "chat-message-text", children: t.message || "" }) }) })
   ] });
 };
-function Gt(t) {
-  const { fetchCallRecording: l, fetchCallRecordingBlob: s } = J(), [i, r] = H(null), [n, m] = H(!1), [o, d] = H(null);
-  return te(() => {
+function lt(t) {
+  const { fetchCallRecording: l, fetchCallRecordingBlob: s } = K(), [c, r] = Z(null), [n, m] = Z(!1), [o, d] = Z(null);
+  return ae(() => {
     if (r(null), d(null), !t || !l) {
       m(!1);
       return;
@@ -1373,9 +1406,9 @@ function Gt(t) {
     })(), () => {
       h = !0, p && URL.revokeObjectURL(p);
     };
-  }, [t, l, s]), { audioUrl: i, isLoading: n, error: o };
+  }, [t, l, s]), { audioUrl: c, isLoading: n, error: o };
 }
-function Jt(t) {
+function st(t) {
   if (!t) return "";
   if (typeof t == "string") return t;
   if (typeof t == "number") {
@@ -1384,7 +1417,7 @@ function Jt(t) {
   }
   return "";
 }
-function Kt(t) {
+function nt(t) {
   if (!t)
     return { bgColor: "#F3F4F6", textColor: "#374151", borderColor: "#D1D5DB" };
   switch (t.toLowerCase()) {
@@ -1403,30 +1436,30 @@ function Kt(t) {
       return { bgColor: "#F3F4F6", textColor: "#374151", borderColor: "#D1D5DB" };
   }
 }
-const ue = "#175353", we = ({ activity: t }) => {
+const pe = "#175353", Ze = ({ activity: t }) => {
   var x, _;
-  const s = t.activity_type === "out-going" || t.activity_type === "outgoing_call" ? "Outbound Call" : "Inbound Call", { date: i, time: r } = V(t.creation || ""), n = ((x = t._caller) == null ? void 0 : x.label) ?? t.caller ?? "Unknown", m = ((_ = t._receiver) == null ? void 0 : _.label) ?? null, {
+  const s = t.activity_type === "out-going" || t.activity_type === "outgoing_call" ? "Outbound Call" : "Inbound Call", { date: c, time: r } = C(t.creation || ""), n = ((x = t._caller) == null ? void 0 : x.label) ?? t.caller ?? "Unknown", m = ((_ = t._receiver) == null ? void 0 : _.label) ?? null, {
     audioUrl: o,
     isLoading: d,
     error: h
-  } = Gt(t.recording_url ? t.name : void 0), [p, g] = H(!1), v = t._duration, y = typeof v == "number" ? Jt(v) : v, u = v === 0 || v === "0" || v === "0s" || v === "0m" || y === "0s" || y === "0m", j = Kt(t.status);
+  } = lt(t.recording_url ? t.name : void 0), [p, g] = Z(!1), v = t._duration, y = typeof v == "number" ? st(v) : v, u = v === 0 || v === "0" || v === "0s" || v === "0m" || y === "0s" || y === "0m", j = nt(t.status);
   return /* @__PURE__ */ e.jsxs("div", { className: "activity-item call-activity", children: [
     /* @__PURE__ */ e.jsxs("div", { className: "activity-header", children: [
-      /* @__PURE__ */ e.jsx(k, { content: "Call", align: "left", children: /* @__PURE__ */ e.jsx("div", { className: "activity-icon-wrapper", children: /* @__PURE__ */ e.jsx(Ht, { size: 20, color: ue }) }) }),
+      /* @__PURE__ */ e.jsx(S, { content: "Call", align: "left", children: /* @__PURE__ */ e.jsx("div", { className: "activity-icon-wrapper", children: /* @__PURE__ */ e.jsx(S0, { size: 20, color: pe }) }) }),
       /* @__PURE__ */ e.jsxs("div", { className: "activity-date-time", style: { display: "flex", alignItems: "center", gap: "6px" }, children: [
         /* @__PURE__ */ e.jsxs("span", { children: [
-          i,
+          c,
           " - ",
           r
         ] }),
-        /* @__PURE__ */ e.jsx(O, { activity: t })
+        /* @__PURE__ */ e.jsx($, { activity: t })
       ] })
     ] }),
     /* @__PURE__ */ e.jsx("div", { className: "activity-content", children: /* @__PURE__ */ e.jsxs("div", { className: "call-activity-card", children: [
       /* @__PURE__ */ e.jsxs("div", { className: "call-activity-header-row", children: [
         /* @__PURE__ */ e.jsx("div", { className: "call-activity-label", children: s }),
         t.status && /* @__PURE__ */ e.jsx(
-          S,
+          I,
           {
             label: t.status,
             bgColor: j.bgColor,
@@ -1440,14 +1473,14 @@ const ue = "#175353", we = ({ activity: t }) => {
       /* @__PURE__ */ e.jsxs("div", { className: "call-activity-details", children: [
         /* @__PURE__ */ e.jsxs("div", { className: "call-activity-details-row", children: [
           /* @__PURE__ */ e.jsxs("div", { className: "call-activity-person", children: [
-            /* @__PURE__ */ e.jsx("div", { className: "call-activity-avatar", children: /* @__PURE__ */ e.jsx(pe, { size: 16, color: ue }) }),
+            /* @__PURE__ */ e.jsx("div", { className: "call-activity-avatar", children: /* @__PURE__ */ e.jsx(xe, { size: 16, color: pe }) }),
             /* @__PURE__ */ e.jsx("span", { className: "call-activity-name", children: n })
           ] }),
           m != null && m !== "" && /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
             /* @__PURE__ */ e.jsx("span", { className: "call-activity-to-label", children: "To" }),
             /* @__PURE__ */ e.jsx("span", { className: "call-activity-arrow", children: "→" }),
             /* @__PURE__ */ e.jsxs("div", { className: "call-activity-to-contact", children: [
-              /* @__PURE__ */ e.jsx("div", { className: "call-activity-avatar", children: /* @__PURE__ */ e.jsx(pe, { size: 16, color: ue }) }),
+              /* @__PURE__ */ e.jsx("div", { className: "call-activity-avatar", children: /* @__PURE__ */ e.jsx(xe, { size: 16, color: pe }) }),
               /* @__PURE__ */ e.jsx("span", { className: "call-activity-to-name", children: m })
             ] })
           ] })
@@ -1460,7 +1493,7 @@ const ue = "#175353", we = ({ activity: t }) => {
           ] })
         ] }) : o ? /* @__PURE__ */ e.jsxs("div", { className: "call-activity-player-wrapper", children: [
           /* @__PURE__ */ e.jsx(
-            Ke,
+            a0,
             {
               src: o,
               showJumpControls: !1,
@@ -1484,18 +1517,18 @@ const ue = "#175353", we = ({ activity: t }) => {
       ] })
     ] }) })
   ] });
-}, Xt = ({ activity: t }) => {
-  const { date: l, time: s } = V(t.creation);
+}, rt = ({ activity: t }) => {
+  const { date: l, time: s } = C(t.creation);
   return /* @__PURE__ */ e.jsxs("div", { className: "activity-item lead-activity", children: [
     /* @__PURE__ */ e.jsxs("div", { className: "activity-header", children: [
-      /* @__PURE__ */ e.jsx(k, { content: "Lead Created", align: "left", children: /* @__PURE__ */ e.jsx("div", { className: "activity-icon-wrapper", children: /* @__PURE__ */ e.jsx(pe, { size: 20, color: "darkgreen" }) }) }),
+      /* @__PURE__ */ e.jsx(S, { content: "Lead Created", align: "left", children: /* @__PURE__ */ e.jsx("div", { className: "activity-icon-wrapper", children: /* @__PURE__ */ e.jsx(xe, { size: 20, color: "darkgreen" }) }) }),
       /* @__PURE__ */ e.jsxs("div", { className: "activity-date-time", style: { display: "flex", alignItems: "center", gap: "6px" }, children: [
         /* @__PURE__ */ e.jsxs("span", { children: [
           l,
           " - ",
           s
         ] }),
-        /* @__PURE__ */ e.jsx(O, { activity: t })
+        /* @__PURE__ */ e.jsx($, { activity: t })
       ] })
     ] }),
     /* @__PURE__ */ e.jsx("div", { className: "activity-content", children: /* @__PURE__ */ e.jsxs("div", { className: "lead-activity-card", children: [
@@ -1524,14 +1557,14 @@ const ue = "#175353", we = ({ activity: t }) => {
               /* @__PURE__ */ e.jsx("span", { className: "lead-activity-label", children: "Priority" }),
               /* @__PURE__ */ e.jsx("span", { className: "lead-activity-colon", children: ":" })
             ] }),
-            /* @__PURE__ */ e.jsx(S, { statusKey: t.priority, showIcon: !1, shape: "square" })
+            /* @__PURE__ */ e.jsx(I, { statusKey: t.priority, showIcon: !1, shape: "square" })
           ] }),
           /* @__PURE__ */ e.jsxs("div", { className: "lead-activity-meta-row", children: [
             /* @__PURE__ */ e.jsxs("div", { className: "lead-activity-label-cell", children: [
               /* @__PURE__ */ e.jsx("span", { className: "lead-activity-label", children: "Status" }),
               /* @__PURE__ */ e.jsx("span", { className: "lead-activity-colon", children: ":" })
             ] }),
-            /* @__PURE__ */ e.jsx(S, { statusKey: t.status, showIcon: !1, shape: "square" })
+            /* @__PURE__ */ e.jsx(I, { statusKey: t.status, showIcon: !1, shape: "square" })
           ] }),
           /* @__PURE__ */ e.jsxs("div", { className: "lead-activity-meta-row", children: [
             /* @__PURE__ */ e.jsxs("div", { className: "lead-activity-label-cell", children: [
@@ -1550,36 +1583,36 @@ const ue = "#175353", we = ({ activity: t }) => {
             "div",
             {
               className: "lead-activity-description rich-html-content",
-              dangerouslySetInnerHTML: { __html: q(t.description) }
+              dangerouslySetInnerHTML: { __html: G(t.description) }
             }
           )
         ] }) })
       ] })
     ] }) })
   ] });
-}, Qt = ({ activity: t }) => {
-  const l = V(t.creation), s = t.title || "Brief", i = t.status || "", r = t.assigned_to || "", n = t.customer_code || "";
+}, ct = ({ activity: t }) => {
+  const l = C(t.creation), s = t.title || "Brief", c = t.status || "", r = t.assigned_to || "", n = t.customer_code || "";
   return /* @__PURE__ */ e.jsxs("div", { className: "activity-item brief-activity", children: [
     /* @__PURE__ */ e.jsxs("div", { className: "activity-header", children: [
-      /* @__PURE__ */ e.jsx(k, { content: "Brief", align: "left", children: /* @__PURE__ */ e.jsx("div", { className: "activity-icon-wrapper", children: /* @__PURE__ */ e.jsx(It, { size: 20, color: "#7C3AED" }) }) }),
+      /* @__PURE__ */ e.jsx(S, { content: "Brief", align: "left", children: /* @__PURE__ */ e.jsx("div", { className: "activity-icon-wrapper", children: /* @__PURE__ */ e.jsx(q0, { size: 20, color: "#7C3AED" }) }) }),
       /* @__PURE__ */ e.jsxs("div", { className: "activity-date-time", style: { display: "flex", alignItems: "center", gap: "6px" }, children: [
         /* @__PURE__ */ e.jsxs("span", { children: [
           l.date,
           " - ",
           l.time
         ] }),
-        /* @__PURE__ */ e.jsx(O, { activity: t })
+        /* @__PURE__ */ e.jsx($, { activity: t })
       ] })
     ] }),
     /* @__PURE__ */ e.jsx("div", { className: "activity-content", children: /* @__PURE__ */ e.jsxs("div", { className: "brief-activity-card", children: [
       /* @__PURE__ */ e.jsx("div", { className: "brief-activity-card-header", children: /* @__PURE__ */ e.jsx("h4", { className: "brief-activity-title", children: /* @__PURE__ */ e.jsx("a", { href: t.href, target: "_blank", rel: "noopener noreferrer", children: s }) }) }),
       /* @__PURE__ */ e.jsx("div", { className: "brief-activity-card-content", children: /* @__PURE__ */ e.jsxs("div", { className: "brief-activity-meta", children: [
-        i && /* @__PURE__ */ e.jsxs("div", { className: "brief-activity-meta-row", children: [
+        c && /* @__PURE__ */ e.jsxs("div", { className: "brief-activity-meta-row", children: [
           /* @__PURE__ */ e.jsxs("div", { className: "brief-activity-label-cell", children: [
             /* @__PURE__ */ e.jsx("span", { className: "brief-activity-label", children: "Status" }),
             /* @__PURE__ */ e.jsx("span", { className: "brief-activity-colon", children: ":" })
           ] }),
-          /* @__PURE__ */ e.jsx(S, { statusKey: i, showIcon: !1, shape: "square" })
+          /* @__PURE__ */ e.jsx(I, { statusKey: c, showIcon: !1, shape: "square" })
         ] }),
         r && /* @__PURE__ */ e.jsxs("div", { className: "brief-activity-meta-row", children: [
           /* @__PURE__ */ e.jsxs("div", { className: "brief-activity-label-cell", children: [
@@ -1605,18 +1638,18 @@ const ue = "#175353", we = ({ activity: t }) => {
       ] }) })
     ] }) })
   ] });
-}, e0 = ({ activity: t }) => {
-  const { currentUserEmail: l, apiBaseUrl: s } = J(), { date: i, time: r } = V(t.creation || ""), n = l && t.from === l, m = t.text || t.content || "", o = t.message_type === "Image", d = t.file ? t.file.startsWith("http") ? t.file : `${s}${t.file}` : null, h = /* @__PURE__ */ e.jsx(k, { content: "Raven Chat", align: n ? "right" : "left", children: /* @__PURE__ */ e.jsx("div", { className: "activity-icon-wrapper", children: /* @__PURE__ */ e.jsx(Lt, { size: 20, color: n ? "#175353" : "#666" }) }) });
+}, it = ({ activity: t }) => {
+  const { currentUserEmail: l, apiBaseUrl: s } = K(), { date: c, time: r } = C(t.creation || ""), n = l && t.from === l, m = t.text || t.content || "", o = t.message_type === "Image", d = t.file ? t.file.startsWith("http") ? t.file : `${s}${t.file}` : null, h = /* @__PURE__ */ e.jsx(S, { content: "Raven Chat", align: n ? "right" : "left", children: /* @__PURE__ */ e.jsx("div", { className: "activity-icon-wrapper", children: /* @__PURE__ */ e.jsx(D0, { size: 20, color: n ? "#175353" : "#666" }) }) });
   return /* @__PURE__ */ e.jsxs("div", { className: `activity-item chat-activity mt-3 ${n ? "chat-outbound" : "chat-incoming"}`, children: [
     /* @__PURE__ */ e.jsxs("div", { className: `activity-header chat-activity-header ${n ? "chat-header-outbound" : "chat-header-incoming"}`, children: [
       !n && h,
       /* @__PURE__ */ e.jsxs("div", { className: "activity-date-time", style: { display: "flex", alignItems: "center", gap: "6px" }, children: [
         /* @__PURE__ */ e.jsxs("span", { children: [
-          i,
+          c,
           " - ",
           r
         ] }),
-        /* @__PURE__ */ e.jsx(O, { activity: t })
+        /* @__PURE__ */ e.jsx($, { activity: t })
       ] }),
       n && h
     ] }),
@@ -1635,7 +1668,7 @@ const ue = "#175353", we = ({ activity: t }) => {
           }
         }
       ) }) }) : null,
-      m && (!o || t.text) && /* @__PURE__ */ e.jsx("div", { className: "chat-message-text", dangerouslySetInnerHTML: { __html: q(m) } }),
+      m && (!o || t.text) && /* @__PURE__ */ e.jsx("div", { className: "chat-message-text", dangerouslySetInnerHTML: { __html: G(m) } }),
       t.file && !o && /* @__PURE__ */ e.jsx("div", { className: "chat-attachment", style: { marginTop: "4px" }, children: /* @__PURE__ */ e.jsx(
         "a",
         {
@@ -1648,8 +1681,87 @@ const ue = "#175353", we = ({ activity: t }) => {
       ) })
     ] }) })
   ] });
-}, ce = ({ activity: t }) => t.activity_type === "whatsapp" ? /* @__PURE__ */ e.jsx(qt, { activity: t }) : t.activity_type === "communication" ? /* @__PURE__ */ e.jsx(Bt, { activity: t }) : t.activity_type === "notes" ? /* @__PURE__ */ e.jsx(Ee, { activity: t }) : t.activity_type === "creation" ? /* @__PURE__ */ e.jsx(Ee, { activity: t }) : t.activity_type === "Schedule" ? /* @__PURE__ */ e.jsx(Ut, { activity: t }) : t.activity_type === "Task" ? /* @__PURE__ */ e.jsx(Yt, { activity: t }) : t.activity_type === "Reminder" ? /* @__PURE__ */ e.jsx(Wt, { activity: t }) : t.activity_type === "outgoing_call" ? /* @__PURE__ */ e.jsx(we, { activity: t }) : t.activity_type === "incoming_call" ? /* @__PURE__ */ e.jsx(we, { activity: t }) : t.activity_type === "lead" ? /* @__PURE__ */ e.jsx(Xt, { activity: t }) : t.activity_type === "brief" ? /* @__PURE__ */ e.jsx(Qt, { activity: t }) : t.activity_type === "raven" ? /* @__PURE__ */ e.jsx(e0, { activity: t }) : null, t0 = 0;
-function a0(t) {
+}, ot = "#0F766E", Me = 3;
+function ve(t, l) {
+  const s = (t ?? 0).toLocaleString(void 0, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  return l ? `${l} ${s}` : s;
+}
+function He(t) {
+  return (t ?? 0).toLocaleString(void 0, { maximumFractionDigits: 2 });
+}
+function dt(t) {
+  return [t.karat, t.colour, t.size].filter(Boolean).join(" · ");
+}
+const W = ({ label: t, children: l }) => /* @__PURE__ */ e.jsxs("div", { className: "quotation-activity-meta-row", children: [
+  /* @__PURE__ */ e.jsxs("div", { className: "quotation-activity-label-cell", children: [
+    /* @__PURE__ */ e.jsx("span", { className: "quotation-activity-label", children: t }),
+    /* @__PURE__ */ e.jsx("span", { className: "quotation-activity-colon", children: ":" })
+  ] }),
+  /* @__PURE__ */ e.jsx("span", { className: "quotation-activity-value", children: l })
+] }), mt = ({ activity: t }) => {
+  var o;
+  const [l, s] = Z(!1), c = C(t.creation), r = t.items ?? [], n = l ? r : r.slice(0, Me), m = r.length - Me;
+  return /* @__PURE__ */ e.jsxs("div", { className: "activity-item quotation-activity", children: [
+    /* @__PURE__ */ e.jsxs("div", { className: "activity-header", children: [
+      /* @__PURE__ */ e.jsx(S, { content: "Quotation", align: "left", children: /* @__PURE__ */ e.jsx("div", { className: "activity-icon-wrapper", children: /* @__PURE__ */ e.jsx(z0, { size: 20, color: ot }) }) }),
+      /* @__PURE__ */ e.jsxs("div", { className: "activity-date-time", style: { display: "flex", alignItems: "center", gap: "6px" }, children: [
+        /* @__PURE__ */ e.jsxs("span", { children: [
+          c.date,
+          " - ",
+          c.time
+        ] }),
+        /* @__PURE__ */ e.jsx($, { activity: t })
+      ] })
+    ] }),
+    /* @__PURE__ */ e.jsx("div", { className: "activity-content", children: /* @__PURE__ */ e.jsxs("div", { className: "quotation-activity-card", children: [
+      /* @__PURE__ */ e.jsxs("div", { className: "quotation-activity-card-header", children: [
+        /* @__PURE__ */ e.jsxs("h4", { className: "quotation-activity-title", children: [
+          "Quotation ",
+          t.quotation_no
+        ] }),
+        /* @__PURE__ */ e.jsx("span", { className: "quotation-activity-total", children: ve(t.total_amount, t.currency) })
+      ] }),
+      /* @__PURE__ */ e.jsxs("div", { className: "quotation-activity-card-content", children: [
+        /* @__PURE__ */ e.jsxs("div", { className: "quotation-activity-meta", children: [
+          /* @__PURE__ */ e.jsx(W, { label: "Quotation Date", children: C(t.quotation_date).date }),
+          t.customer_code && /* @__PURE__ */ e.jsx(W, { label: "Customer Code", children: t.customer_code }),
+          ((o = t.leads) == null ? void 0 : o.length) > 0 && /* @__PURE__ */ e.jsx(W, { label: "Lead", children: t.leads.join(", ") }),
+          /* @__PURE__ */ e.jsxs(W, { label: "Items", children: [
+            t.item_count,
+            " ",
+            t.item_count === 1 ? "design" : "designs",
+            " · Qty ",
+            He(t.total_qty)
+          ] }),
+          t.po_no && /* @__PURE__ */ e.jsx(W, { label: "PO No", children: t.po_no }),
+          t.sales_person && /* @__PURE__ */ e.jsx(W, { label: "Sales Person", children: t.sales_person }),
+          t.created_by && /* @__PURE__ */ e.jsx(W, { label: "Created By", children: t.created_by }),
+          t.remarks && /* @__PURE__ */ e.jsx(W, { label: "Remarks", children: t.remarks })
+        ] }),
+        r.length > 0 && /* @__PURE__ */ e.jsxs("div", { className: "quotation-activity-items", children: [
+          /* @__PURE__ */ e.jsxs("table", { className: "quotation-activity-items-table", children: [
+            /* @__PURE__ */ e.jsx("thead", { children: /* @__PURE__ */ e.jsxs("tr", { children: [
+              /* @__PURE__ */ e.jsx("th", { children: "Design" }),
+              /* @__PURE__ */ e.jsx("th", { children: "Details" }),
+              /* @__PURE__ */ e.jsx("th", { className: "quotation-activity-num", children: "Qty" }),
+              /* @__PURE__ */ e.jsx("th", { className: "quotation-activity-num", children: "Rate" }),
+              /* @__PURE__ */ e.jsx("th", { className: "quotation-activity-num", children: "Amount" })
+            ] }) }),
+            /* @__PURE__ */ e.jsx("tbody", { children: n.map((d) => /* @__PURE__ */ e.jsxs("tr", { children: [
+              /* @__PURE__ */ e.jsx("td", { className: "quotation-activity-design", children: d.design_code }),
+              /* @__PURE__ */ e.jsx("td", { children: dt(d) || "-" }),
+              /* @__PURE__ */ e.jsx("td", { className: "quotation-activity-num", children: He(d.qty) }),
+              /* @__PURE__ */ e.jsx("td", { className: "quotation-activity-num", children: ve(d.rate) }),
+              /* @__PURE__ */ e.jsx("td", { className: "quotation-activity-num", children: ve(d.amount) })
+            ] }, d.sr)) })
+          ] }),
+          m > 0 && /* @__PURE__ */ e.jsx("button", { type: "button", className: "quotation-activity-toggle", onClick: () => s((d) => !d), children: l ? "Show less" : `View all ${r.length} designs` })
+        ] })
+      ] })
+    ] }) })
+  ] });
+}, ie = ({ activity: t }) => t.activity_type === "whatsapp" ? /* @__PURE__ */ e.jsx(at, { activity: t }) : t.activity_type === "communication" ? /* @__PURE__ */ e.jsx(K0, { activity: t }) : t.activity_type === "notes" ? /* @__PURE__ */ e.jsx(_e, { activity: t }) : t.activity_type === "creation" ? /* @__PURE__ */ e.jsx(_e, { activity: t }) : t.activity_type === "Schedule" ? /* @__PURE__ */ e.jsx(X0, { activity: t }) : t.activity_type === "Task" ? /* @__PURE__ */ e.jsx(et, { activity: t }) : t.activity_type === "Reminder" ? /* @__PURE__ */ e.jsx(tt, { activity: t }) : t.activity_type === "outgoing_call" ? /* @__PURE__ */ e.jsx(Ze, { activity: t }) : t.activity_type === "incoming_call" ? /* @__PURE__ */ e.jsx(Ze, { activity: t }) : t.activity_type === "lead" ? /* @__PURE__ */ e.jsx(rt, { activity: t }) : t.activity_type === "brief" ? /* @__PURE__ */ e.jsx(ct, { activity: t }) : t.activity_type === "raven" ? /* @__PURE__ */ e.jsx(it, { activity: t }) : t.activity_type === "quotation" ? /* @__PURE__ */ e.jsx(mt, { activity: t }) : null, ht = 0;
+function ut(t) {
   const l = t.activity_type ?? "";
   return {
     whatsapp: "Chats",
@@ -1663,48 +1775,49 @@ function a0(t) {
     incoming_call: "Calls",
     lead: "Leads",
     brief: "Briefs",
-    raven: "Raven Chats"
+    raven: "Raven Chats",
+    quotation: "Quotations"
   }[l] ?? "Items";
 }
-const l0 = ({ activities: t }) => {
-  const l = t[0], s = I(() => t.slice(1), [t]), i = s.length > 0, { isExpanded: r, toggleExpanded: n, shouldShowExpanded: m, wrapperRef: o } = ie(
+const pt = ({ activities: t }) => {
+  const l = t[0], s = k(() => t.slice(1), [t]), c = s.length > 0, { isExpanded: r, toggleExpanded: n, shouldShowExpanded: m, wrapperRef: o } = oe(
     [t.length],
-    t0
+    ht
   );
-  return t.length === 0 ? null : t.length === 1 ? /* @__PURE__ */ e.jsx("div", { children: /* @__PURE__ */ e.jsx(ce, { activity: l }) }) : /* @__PURE__ */ e.jsxs("div", { className: "activity-date-group", children: [
-    /* @__PURE__ */ e.jsx(ce, { activity: l }),
+  return t.length === 0 ? null : t.length === 1 ? /* @__PURE__ */ e.jsx("div", { children: /* @__PURE__ */ e.jsx(ie, { activity: l }) }) : /* @__PURE__ */ e.jsxs("div", { className: "activity-date-group", children: [
+    /* @__PURE__ */ e.jsx(ie, { activity: l }),
     /* @__PURE__ */ e.jsx(
       "div",
       {
         ref: o,
         className: `activity-date-group-rest ${m ? "activity-date-group-rest--expanded" : ""}`,
         "aria-hidden": !r,
-        children: s.map((d, h) => /* @__PURE__ */ e.jsx(ce, { activity: d }, `${d.name ?? "activity"}-${h}`))
+        children: s.map((d, h) => /* @__PURE__ */ e.jsx(ie, { activity: d }, `${d.name ?? "activity"}-${h}`))
       }
     ),
-    /* @__PURE__ */ e.jsx("div", { className: "activity-date-group-view-more-wrapper", children: i && /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
+    /* @__PURE__ */ e.jsx("div", { className: "activity-date-group-view-more-wrapper", children: c && /* @__PURE__ */ e.jsxs(e.Fragment, { children: [
       /* @__PURE__ */ e.jsx("span", { className: "activity-date-group-view-more-line", "aria-hidden": "true" }),
       /* @__PURE__ */ e.jsx(
-        oe,
+        de,
         {
           isExpanded: r,
           onToggle: n,
-          label: `View ${s.length} ${a0(l)}`,
+          label: `View ${s.length} ${ut(l)}`,
           className: "activity-date-group-view-more-btn"
         }
       )
     ] }) })
   ] });
-}, _e = () => /* @__PURE__ */ e.jsx("div", { className: "atw-loader", children: /* @__PURE__ */ e.jsx("div", { className: "atw-loader-spinner" }) }), s0 = ({
+}, Le = () => /* @__PURE__ */ e.jsx("div", { className: "atw-loader", children: /* @__PURE__ */ e.jsx("div", { className: "atw-loader-spinner" }) }), vt = ({
   initialFilters: t,
   onApply: l,
   onClear: s,
-  valueOptions: i
+  valueOptions: c
 }) => {
-  const [r, n] = H(!1), m = ee(null), [o, d] = H(
+  const [r, n] = Z(!1), m = te(null), [o, d] = Z(
     () => t.filter((u) => u.field === "activity_type").map((u) => u.value)
-  ), h = i.activity_type || [];
-  te(() => {
+  ), h = c.activity_type || [];
+  ae(() => {
     const u = (j) => {
       m.current && !m.current.contains(j.target) && n(!1);
     };
@@ -1728,7 +1841,7 @@ const l0 = ({ activities: t }) => {
         type: "button",
         onClick: p,
         className: "atw-filter-trigger",
-        children: /* @__PURE__ */ e.jsx(Rt, { size: 22, color: "#175353" })
+        children: /* @__PURE__ */ e.jsx(P0, { size: 22, color: "#175353" })
       }
     ),
     r && /* @__PURE__ */ e.jsxs("div", { className: "atw-filter-panel", children: [
@@ -1750,7 +1863,7 @@ const l0 = ({ activities: t }) => {
     ] })
   ] });
 };
-function ve(t) {
+function fe(t) {
   if ("communication_date" in t && typeof t.communication_date == "string")
     return t.communication_date;
   if ("creation" in t && typeof t.creation == "string")
@@ -1763,10 +1876,10 @@ function ve(t) {
   }
   return (/* @__PURE__ */ new Date(0)).toISOString();
 }
-function Ze(t) {
-  return new Date(ve(t)).getTime() || 0;
+function Ce(t) {
+  return new Date(fe(t)).getTime() || 0;
 }
-const n0 = 20, r0 = (t, l) => {
+const xt = 20, ft = (t, l) => {
   if (!l || typeof l != "object") return null;
   const s = l;
   switch (t) {
@@ -1783,8 +1896,8 @@ const n0 = 20, r0 = (t, l) => {
     case "crm_lead":
       return { ...s, activity_type: "lead" };
     case "crm_call_log": {
-      const i = s.type === "Incoming";
-      return { ...s, activity_type: i ? "incoming_call" : "outgoing_call" };
+      const c = s.type === "Incoming";
+      return { ...s, activity_type: c ? "incoming_call" : "outgoing_call" };
     }
     case "raven_message":
       return { ...s, activity_type: "raven" };
@@ -1794,116 +1907,116 @@ const n0 = 20, r0 = (t, l) => {
       return null;
   }
 };
-function c0(t, l) {
-  const { fetchActivities: s, onSocketMessage: i } = J(), [r, n] = H([]), [m, o] = H([]), [d, h] = H(!1), [p, g] = H(null), [v, y] = H(!1), [u, j] = H(!1), [x, _] = H(!1), [U, Y] = H(!1), P = ee(null), $ = ee(0), E = Q(async (z, T) => {
+function gt(t, l) {
+  const { fetchActivities: s, onSocketMessage: c } = K(), [r, n] = Z([]), [m, o] = Z([]), [d, h] = Z(!1), [p, g] = Z(null), [v, y] = Z(!1), [u, j] = Z(!1), [x, _] = Z(!1), [z, U] = Z(!1), P = te(null), D = te(0), E = ee(async (q, T) => {
     if (t) {
       T ? h(!0) : y(!0);
       try {
-        const Z = {};
-        l && Object.entries(l).forEach(([F, N]) => {
-          Array.isArray(N) ? N.length > 0 && (Z[F] = N) : N && (Z[F] = [N]);
+        const M = {};
+        l && Object.entries(l).forEach(([F, b]) => {
+          Array.isArray(b) ? b.length > 0 && (M[F] = b) : b && (M[F] = [b]);
         });
         const A = await s({
           contactName: t,
-          limit_start: z,
-          limit_page_length: n0,
-          filters: Object.keys(Z).length > 0 ? Z : void 0
+          limit_start: q,
+          limit_page_length: xt,
+          filters: Object.keys(M).length > 0 ? M : void 0
         });
         n((F) => T ? [A] : [...F, A]);
         const R = A.message;
-        T && (_(!!R.includes_pd), Y(!!R.includes_dc));
-        const b = R.page + 1;
-        j(b * R.page_size < R.total_count), $.current = b, g(null);
-      } catch (Z) {
-        g(Z instanceof Error ? Z : new Error("Failed to fetch activities"));
+        T && (_(!!R.includes_pd), U(!!R.includes_dc));
+        const N = R.page + 1;
+        j(N * R.page_size < R.total_count), D.current = N, g(null);
+      } catch (M) {
+        g(M instanceof Error ? M : new Error("Failed to fetch activities"));
       } finally {
         h(!1), y(!1);
       }
     }
   }, [t, l, s]);
-  te(() => {
-    P.current !== t && (P.current = t, o([])), n([]), $.current = 0, E(0, !0);
+  ae(() => {
+    P.current !== t && (P.current = t, o([])), n([]), D.current = 0, E(0, !0);
   }, [t, l, E]);
-  const W = Q(() => {
-    !v && u && E($.current, !1);
-  }, [v, u, E]), G = Q(() => {
-    n([]), $.current = 0, E(0, !0);
+  const Y = ee(() => {
+    !v && u && E(D.current, !1);
+  }, [v, u, E]), J = ee(() => {
+    n([]), D.current = 0, E(0, !0);
   }, [E]);
-  return te(() => i ? i((T) => {
-    const Z = T.event;
-    if (["whatsapp_message", "communication", "fcrm_note", "crm_task", "crm_lead", "crm_call_log", "raven_message", "activity"].includes(Z)) {
-      const A = r0(Z, T.message);
+  return ae(() => c ? c((T) => {
+    const M = T.event;
+    if (["whatsapp_message", "communication", "fcrm_note", "crm_task", "crm_lead", "crm_call_log", "raven_message", "activity"].includes(M)) {
+      const A = ft(M, T.message);
       A && o((R) => {
-        const b = "name" in A ? A.name : ve(A), F = R.findIndex((N) => ("name" in N ? N.name : ve(N)) === b);
+        const N = "name" in A ? A.name : fe(A), F = R.findIndex((b) => ("name" in b ? b.name : fe(b)) === N);
         if (F >= 0) {
-          const N = [...R];
-          return N[F] = A, N;
+          const b = [...R];
+          return b[F] = A, b;
         }
         return [...R, A];
       });
     }
-  }) : void 0, [i]), {
-    activities: I(() => {
-      const z = r.flatMap((b) => b.message.activities);
+  }) : void 0, [c]), {
+    activities: k(() => {
+      const q = r.flatMap((N) => N.message.activities);
       let T = m;
       if (l) {
-        const b = l.activity_type && Array.isArray(l.activity_type) ? l.activity_type : [], F = l.sources && Array.isArray(l.sources) ? l.sources : [];
-        if (b.length > 0 || F.length > 0) {
-          const N = new Set(b), K = new Set(F);
-          T = m.filter((se) => {
-            const D = se, c = D.activity_type;
-            return K.has("pd") && D.is_pd || K.has("dc") && D.is_dc ? !0 : c ? !!(N.has(c) || N.has("call") && (c === "outgoing_call" || c === "incoming_call") || N.has("brief") && c === "brief" || N.has("raven") && c === "raven" || N.has("pd") && D.is_pd || N.has("dc") && D.is_dc) : !!(N.has("pd") && D.is_pd || N.has("dc") && D.is_dc);
+        const N = l.activity_type && Array.isArray(l.activity_type) ? l.activity_type : [], F = l.sources && Array.isArray(l.sources) ? l.sources : [];
+        if (N.length > 0 || F.length > 0) {
+          const b = new Set(N), Q = new Set(F);
+          T = m.filter((ne) => {
+            const O = ne, i = O.activity_type;
+            return Q.has("pd") && O.is_pd || Q.has("dc") && O.is_dc ? !0 : i ? !!(b.has(i) || b.has("call") && (i === "outgoing_call" || i === "incoming_call") || b.has("brief") && i === "brief" || b.has("raven") && i === "raven" || b.has("pd") && O.is_pd || b.has("dc") && O.is_dc) : !!(b.has("pd") && O.is_pd || b.has("dc") && O.is_dc);
           });
         }
       }
-      const Z = new Set(
-        T.map((b) => "name" in b && b.name != null ? String(b.name) : null).filter((b) => b != null)
-      ), A = Z.size > 0 ? z.filter((b) => !("name" in b && b.name != null && Z.has(String(b.name)))) : z;
-      return [...[...T, ...A]].sort((b, F) => Ze(F) - Ze(b));
+      const M = new Set(
+        T.map((N) => "name" in N && N.name != null ? String(N.name) : null).filter((N) => N != null)
+      ), A = M.size > 0 ? q.filter((N) => !("name" in N && N.name != null && M.has(String(N.name)))) : q;
+      return [...[...T, ...A]].sort((N, F) => Ce(F) - Ce(N));
     }, [r, m, l]),
     isLoading: d,
     error: p,
     isFetchingNextPage: v,
     hasNextPage: u,
-    fetchNextPage: W,
-    refetch: G,
+    fetchNextPage: Y,
+    refetch: J,
     includes_pd: x,
-    includes_dc: U
+    includes_dc: z
   };
 }
-function i0(t, l) {
-  const s = t, i = s.name ?? s.creation;
-  return i != null ? String(i) : `i-${l}`;
+function yt(t, l) {
+  const s = t, c = s.name ?? s.creation;
+  return c != null ? String(c) : `i-${l}`;
 }
-function Me(t) {
+function Ve(t) {
   return t.activity_type ?? "";
 }
-const o0 = /* @__PURE__ */ new Set(["whatsapp", "raven"]);
-function d0(t) {
+const jt = /* @__PURE__ */ new Set(["whatsapp", "raven"]);
+function At(t) {
   const l = [];
   let s = 0;
   for (; s < t.length; ) {
-    const i = t[s], r = be(i), n = Me(i), m = [i];
+    const c = t[s], r = Ee(c), n = Ve(c), m = [c];
     for (s += 1; s < t.length; ) {
       const d = t[s];
-      if (be(d) !== r || Me(d) !== n) break;
+      if (Ee(d) !== r || Ve(d) !== n) break;
       m.push(d), s += 1;
     }
-    const o = o0.has(n) ? [...m].reverse() : m;
+    const o = jt.has(n) ? [...m].reverse() : m;
     o.length === 1 ? l.push({ type: "single", activity: o[0], index: s - 1 }) : l.push({ type: "date-group", activities: o, firstIndex: s - o.length });
   }
   return l;
 }
-function m0(t) {
+function Nt(t) {
   const l = {};
-  for (const { field: s, value: i } of t) {
-    if (!i) continue;
+  for (const { field: s, value: c } of t) {
+    if (!c) continue;
     const r = l[s];
-    r ? Array.isArray(r) ? r.includes(i) || (l[s] = [...r, i]) : r !== i && (l[s] = [r, i]) : l[s] = i;
+    r ? Array.isArray(r) ? r.includes(c) || (l[s] = [...r, c]) : r !== c && (l[s] = [r, c]) : l[s] = c;
   }
   return l;
 }
-const We = {
+const Qe = {
   "WhatsApp Chat": ["whatsapp"],
   Emails: ["communication"],
   Notes: ["note"],
@@ -1912,25 +2025,26 @@ const We = {
   Calls: ["call"],
   Leads: ["lead"],
   Brief: ["brief"],
-  "Raven Message": ["raven"]
-}, h0 = We, u0 = Object.keys(We).map((t) => ({
+  "Raven Message": ["raven"],
+  Quotations: ["quotation"]
+}, bt = Qe, Et = Object.keys(Qe).map((t) => ({
   label: t,
   value: t
 }));
-function p0({
+function wt({
   initialParameters: t = {}
 } = {}) {
-  const [l, s] = H(t), i = Q((o) => {
-    const d = m0(o);
+  const [l, s] = Z(t), c = ee((o) => {
+    const d = Nt(o);
     s(Object.keys(d).length === 0 ? {} : d);
-  }, []), r = Q(() => {
+  }, []), r = ee(() => {
     s({});
-  }, []), n = I(() => {
+  }, []), n = k(() => {
     const o = l, d = {};
     if (o.activity_type) {
       const h = Array.isArray(o.activity_type) ? o.activity_type : [o.activity_type], p = [];
       h.forEach((g) => {
-        const v = h0[g];
+        const v = bt[g];
         v && p.push(...v);
       }), p.length > 0 && (d.activity_type = Array.from(new Set(p)));
     }
@@ -1939,7 +2053,7 @@ function p0({
       d.lead = h;
     }
     return d;
-  }, [l]), m = I(() => {
+  }, [l]), m = k(() => {
     const o = [];
     return Object.entries(l).forEach(([d, h]) => {
       Array.isArray(h) ? h.forEach((p) => {
@@ -1950,56 +2064,56 @@ function p0({
   return {
     filtersPayload: n,
     initialFilters: m,
-    handleApplyFilters: i,
+    handleApplyFilters: c,
     handleClearFilters: r
   };
 }
-function v0() {
-  const { contactName: t, searchParams: l, fetchLeads: s } = J();
+function _t() {
+  const { contactName: t, searchParams: l, fetchLeads: s } = K();
   l == null || l.activityId;
-  const i = I(() => ((l == null ? void 0 : l.comm_type) ?? null) === "communication" ? { activity_type: "Emails" } : {}, [l]), { filtersPayload: r, initialFilters: n, handleApplyFilters: m, handleClearFilters: o } = p0({
-    initialParameters: i
-  }), { activities: d, isLoading: h, error: p, fetchNextPage: g, hasNextPage: v, isFetchingNextPage: y, refetch: u, includes_pd: j, includes_dc: x } = c0(t, r), _ = d.filter((E) => E.activity_type !== "attachment_log"), U = I(() => d0(_), [_]), Y = ee(null);
-  te(() => {
-    const E = Y.current;
+  const c = k(() => ((l == null ? void 0 : l.comm_type) ?? null) === "communication" ? { activity_type: "Emails" } : {}, [l]), { filtersPayload: r, initialFilters: n, handleApplyFilters: m, handleClearFilters: o } = wt({
+    initialParameters: c
+  }), { activities: d, isLoading: h, error: p, fetchNextPage: g, hasNextPage: v, isFetchingNextPage: y, refetch: u, includes_pd: j, includes_dc: x } = gt(t, r), _ = d.filter((E) => E.activity_type !== "attachment_log"), z = k(() => At(_), [_]), U = te(null);
+  ae(() => {
+    const E = U.current;
     if (!E || !v || y) return;
-    const W = new IntersectionObserver(
-      (G) => {
+    const Y = new IntersectionObserver(
+      (J) => {
         var B;
-        (B = G[0]) != null && B.isIntersecting && g();
+        (B = J[0]) != null && B.isIntersecting && g();
       },
       { root: null, rootMargin: "100px", threshold: 0 }
     );
-    return W.observe(E), () => W.disconnect();
+    return Y.observe(E), () => Y.disconnect();
   }, [v, y, g, d]);
-  const P = (s == null ? void 0 : s()) ?? { leads: [] }, $ = I(
+  const P = (s == null ? void 0 : s()) ?? { leads: [] }, D = k(
     () => ({
-      activity_type: u0.map((E) => ({ label: E.label, value: E.label })),
+      activity_type: Et.map((E) => ({ label: E.label, value: E.label })),
       lead_id: P.leads.map((E) => ({ label: E.name, value: E.name }))
     }),
     [P.leads]
   );
   return {
-    activityNodes: U,
+    activityNodes: z,
     initialFilters: n,
     isLoading: h,
     error: p,
     isFetchingNextPage: y,
-    valueOptions: $,
+    valueOptions: D,
     refetch: u,
     handleApplyFilters: m,
     handleClearFilters: o,
-    getActivityElementId: i0,
-    loadMoreRef: Y,
+    getActivityElementId: yt,
+    loadMoreRef: U,
     includes_pd: j,
     includes_dc: x
   };
 }
-const x0 = () => {
-  const { title: t = "Activity" } = J(), {
+const Zt = () => {
+  const { title: t = "Activity" } = K(), {
     activityNodes: l,
     initialFilters: s,
-    isLoading: i,
+    isLoading: c,
     error: r,
     isFetchingNextPage: n,
     valueOptions: m,
@@ -2010,10 +2124,10 @@ const x0 = () => {
     loadMoreRef: g,
     includes_pd: v,
     includes_dc: y
-  } = v0();
-  return i ? /* @__PURE__ */ e.jsxs("div", { className: "activity-tab", children: [
+  } = _t();
+  return c ? /* @__PURE__ */ e.jsxs("div", { className: "activity-tab", children: [
     /* @__PURE__ */ e.jsx("div", { className: "atw-sticky-header", children: /* @__PURE__ */ e.jsx("h2", { className: "activity-tab-title", children: t }) }),
-    /* @__PURE__ */ e.jsx(_e, {})
+    /* @__PURE__ */ e.jsx(Le, {})
   ] }) : r ? /* @__PURE__ */ e.jsxs("div", { className: "activity-tab", children: [
     /* @__PURE__ */ e.jsx("h2", { className: "activity-tab-title", children: t }),
     /* @__PURE__ */ e.jsxs("div", { className: "atw-error-fallback", children: [
@@ -2056,7 +2170,7 @@ const x0 = () => {
           }
         ),
         /* @__PURE__ */ e.jsx(
-          s0,
+          vt,
           {
             initialFilters: s,
             onApply: d,
@@ -2071,19 +2185,19 @@ const x0 = () => {
       l.map((u) => {
         if (u.type === "single") {
           const x = p(u.activity, u.index);
-          return /* @__PURE__ */ e.jsx("div", { children: /* @__PURE__ */ e.jsx(ce, { activity: u.activity }) }, x);
+          return /* @__PURE__ */ e.jsx("div", { children: /* @__PURE__ */ e.jsx(ie, { activity: u.activity }) }, x);
         }
         const j = p(u.activities[0], u.firstIndex);
-        return /* @__PURE__ */ e.jsx(l0, { activities: u.activities }, j);
+        return /* @__PURE__ */ e.jsx(pt, { activities: u.activities }, j);
       }),
       /* @__PURE__ */ e.jsx("div", { ref: g, className: "activity-load-more-sentinel", "aria-hidden": "true" }),
-      n && /* @__PURE__ */ e.jsx("div", { className: "activity-load-more", style: { padding: "12px", textAlign: "center", color: "#666" }, children: /* @__PURE__ */ e.jsx(_e, {}) })
+      n && /* @__PURE__ */ e.jsx("div", { className: "activity-load-more", style: { padding: "12px", textAlign: "center", color: "#666" }, children: /* @__PURE__ */ e.jsx(Le, {}) })
     ] }) })
   ] });
-}, f0 = (t = "/", l) => {
+}, Mt = (t = "/", l) => {
   const s = {};
   l && (s.Authorization = `token ${l}`);
-  const i = async (n, m = {}) => {
+  const c = async (n, m = {}) => {
     const o = { ...s };
     if (m.headers) {
       const p = new Headers(m.headers);
@@ -2111,10 +2225,10 @@ const x0 = () => {
     return h.blob();
   };
   return {
-    get: (n) => i(n, { method: "GET" }),
+    get: (n) => c(n, { method: "GET" }),
     getBlob: (n) => r(n, { method: "GET" })
   };
-}, g0 = (t) => ({
+}, Ht = (t) => ({
   /**
    * Get activities for a contact (paginated).
    */
@@ -2134,10 +2248,10 @@ const x0 = () => {
   getCallRecording: async (l) => {
     var s;
     try {
-      const i = await t.get(
+      const c = await t.get(
         `/api/method/crm_integration.crm_exotel.api.call_log.get_call_recording?call_log_id=${encodeURIComponent(l)}`
       );
-      return ((s = i == null ? void 0 : i.message) == null ? void 0 : s.url) || null;
+      return ((s = c == null ? void 0 : c.message) == null ? void 0 : s.url) || null;
     } catch {
       return null;
     }
@@ -2150,11 +2264,11 @@ const x0 = () => {
     return t.getBlob(s);
   }
 });
-function y0({
+function Lt({
   baseURL: t = "/",
   token: l,
   contactName: s,
-  apiBaseUrl: i,
+  apiBaseUrl: c,
   type: r,
   title: n,
   onSocketMessage: m,
@@ -2165,11 +2279,11 @@ function y0({
   fetchLeads: g,
   currentUserEmail: v
 }) {
-  const y = I(() => f0(t, l), [t, l]), u = I(() => g0(y), [y]);
-  return I(
+  const y = k(() => Mt(t, l), [t, l]), u = k(() => Ht(y), [y]);
+  return k(
     () => ({
       contactName: s,
-      apiBaseUrl: i || t,
+      apiBaseUrl: c || t,
       type: r,
       title: n,
       onSocketMessage: m,
@@ -2186,7 +2300,7 @@ function y0({
     }),
     [
       s,
-      i,
+      c,
       t,
       r,
       n,
@@ -2201,7 +2315,7 @@ function y0({
     ]
   );
 }
-function j0(t) {
+function Ct(t) {
   if (!t) return "";
   try {
     const l = new Date(t);
@@ -2210,30 +2324,30 @@ function j0(t) {
     return "";
   }
 }
-function A0(t) {
+function Vt(t) {
   if (!t) return null;
   const l = /(https?:\/\/[^\s]+)/g;
-  return t.split(l).map((i, r) => i.match(l) ? /* @__PURE__ */ e.jsx("a", { href: i, target: "_blank", rel: "noopener noreferrer", className: "message-url", children: i }, r) : i);
+  return t.split(l).map((c, r) => c.match(l) ? /* @__PURE__ */ e.jsx("a", { href: c, target: "_blank", rel: "noopener noreferrer", className: "message-url", children: c }, r) : c);
 }
-function b0(t, l) {
+function Ft(t, l) {
   if (l !== 1) return null;
   switch (typeof t == "number" ? t : parseInt(t || "0", 10)) {
     case 1:
-      return /* @__PURE__ */ e.jsx(je, { size: 14, color: "#8696a0" });
+      return /* @__PURE__ */ e.jsx(Ne, { size: 14, color: "#8696a0" });
     case 2:
-      return /* @__PURE__ */ e.jsx(St, { size: 14, color: "#f44336" });
+      return /* @__PURE__ */ e.jsx(B0, { size: 14, color: "#f44336" });
     case 3:
-      return /* @__PURE__ */ e.jsx(Ae, { size: 14, color: "#8696a0" });
+      return /* @__PURE__ */ e.jsx(be, { size: 14, color: "#8696a0" });
     case 4:
-      return /* @__PURE__ */ e.jsx(Ae, { size: 14, color: "#53bdeb" });
+      return /* @__PURE__ */ e.jsx(be, { size: 14, color: "#53bdeb" });
     case 5:
-      return /* @__PURE__ */ e.jsx(je, { size: 14, color: "#8696a0", style: { opacity: 0.6 } });
+      return /* @__PURE__ */ e.jsx(Ne, { size: 14, color: "#8696a0", style: { opacity: 0.6 } });
     default:
       return null;
   }
 }
-const N0 = ({ activity: t, icon: l, showIcon: s = !1, apiBaseUrl: i = "" }) => {
-  const r = I(() => {
+const Tt = ({ activity: t, icon: l, showIcon: s = !1, apiBaseUrl: c = "" }) => {
+  const r = k(() => {
     if (!t) return null;
     const o = t.creation || (/* @__PURE__ */ new Date()).toISOString(), d = t.type === "Outgoing" || t.is_outbound === 1;
     return {
@@ -2253,18 +2367,18 @@ const N0 = ({ activity: t, icon: l, showIcon: s = !1, apiBaseUrl: i = "" }) => {
   return /* @__PURE__ */ e.jsx("div", { className: "whatsapp-message-list", children: /* @__PURE__ */ e.jsxs("div", { className: `message-bubble ${m ? "sent" : "received"}`, children: [
     s && l && /* @__PURE__ */ e.jsx("div", { className: "message-icon-wrapper", children: l }),
     /* @__PURE__ */ e.jsxs("div", { className: "message-content", children: [
-      A0(n.message) || n.message,
+      Vt(n.message) || n.message,
       n.attach && /* @__PURE__ */ e.jsx("div", { className: "message-attachment", children: n.content_type === "image" ? /* @__PURE__ */ e.jsx(
         "img",
         {
-          src: n.attach.startsWith("http") ? n.attach : `${i}/${n.attach}`,
+          src: n.attach.startsWith("http") ? n.attach : `${c}/${n.attach}`,
           alt: "attachment",
           style: { maxWidth: "200px", borderRadius: "4px", marginTop: "8px" }
         }
       ) : /* @__PURE__ */ e.jsx(
         "a",
         {
-          href: n.attach.startsWith("http") ? n.attach : `${i}/${n.attach}`,
+          href: n.attach.startsWith("http") ? n.attach : `${c}/${n.attach}`,
           target: "_blank",
           rel: "noreferrer",
           className: "message-attachment-link",
@@ -2272,76 +2386,77 @@ const N0 = ({ activity: t, icon: l, showIcon: s = !1, apiBaseUrl: i = "" }) => {
         }
       ) }),
       /* @__PURE__ */ e.jsxs("div", { className: "message-time", children: [
-        j0(n.creation),
-        m ? b0(n.status, 1) : null
+        Ct(n.creation),
+        m ? Ft(n.status, 1) : null
       ] })
     ] })
   ] }) });
-}, Z0 = (t) => {
-  const l = y0(t), s = t.renderChatMessageList || (({ activity: i, icon: r, showIcon: n }) => /* @__PURE__ */ e.jsx(
-    N0,
+}, kt = (t) => {
+  const l = Lt(t), s = t.renderChatMessageList || (({ activity: c, icon: r, showIcon: n }) => /* @__PURE__ */ e.jsx(
+    Tt,
     {
-      activity: i,
+      activity: c,
       icon: r,
       showIcon: n,
       apiBaseUrl: t.apiBaseUrl || t.baseURL
     }
   ));
-  return /* @__PURE__ */ e.jsx(Ot, { ...l, renderChatMessageList: s, currentUserEmail: t.currentUserEmail, children: /* @__PURE__ */ e.jsx(x0, {}) });
-}, M0 = ({ activity: t }) => {
-  const l = t.creation, s = l ? V(l) : { date: "Unknown", time: "" }, i = t.personName || "Unknown", r = t.notes || [];
+  return /* @__PURE__ */ e.jsx(G0, { ...l, renderChatMessageList: s, currentUserEmail: t.currentUserEmail, children: /* @__PURE__ */ e.jsx(Zt, {}) });
+}, $t = ({ activity: t }) => {
+  const l = t.creation, s = l ? C(l) : { date: "Unknown", time: "" }, c = t.personName || "Unknown", r = t.notes || [];
   return /* @__PURE__ */ e.jsxs("div", { className: "activity-item call-notes-activity", children: [
     /* @__PURE__ */ e.jsxs("div", { className: "activity-header", children: [
-      /* @__PURE__ */ e.jsx(k, { content: "Call Notes", align: "left", children: /* @__PURE__ */ e.jsx("div", { className: "activity-icon-wrapper", children: /* @__PURE__ */ e.jsx(ze, { size: 20, color: "#175353" }) }) }),
+      /* @__PURE__ */ e.jsx(S, { content: "Call Notes", align: "left", children: /* @__PURE__ */ e.jsx("div", { className: "activity-icon-wrapper", children: /* @__PURE__ */ e.jsx(Ge, { size: 20, color: "#175353" }) }) }),
       /* @__PURE__ */ e.jsxs("div", { className: "activity-date-time", children: [
         s.date,
         " - ",
         s.time,
         ", ",
-        i
+        c
       ] })
     ] }),
     /* @__PURE__ */ e.jsx("div", { className: "activity-content", children: /* @__PURE__ */ e.jsx("div", { className: "call-notes-activity-card", children: r.map((n, m) => /* @__PURE__ */ e.jsx("div", { className: "call-notes-item", children: n }, m)) }) })
   ] });
 };
 export {
-  u0 as ACTIVITY_TYPE_LABELS,
-  ce as Activity,
-  l0 as ActivityDateGroup,
-  s0 as ActivityFilter,
-  Ot as ActivityProvider,
-  x0 as ActivityTab,
-  Z0 as ActivityWidget,
-  we as CallActivity,
-  M0 as CallNotesActivity,
-  qt as ChatActivity,
-  Bt as EmailActivity,
-  he as EmailRecipientRow,
-  Xt as LeadActivity,
-  Ee as NotesActivity,
-  Wt as ReminderActivity,
-  Ut as ScheduleActivity,
-  Yt as TaskActivity,
-  g0 as activityApi,
-  d0 as buildActivityNodes,
-  f0 as createDefaultApiClient,
-  Jt as formatDuration,
-  j0 as formatTimeLocale,
-  ve as getActivityDate,
-  Pt as getActivityDateKey,
-  i0 as getActivityElementId,
-  Ze as getActivityTimestamp,
-  Kt as getBadgeColor,
-  be as getDateKeyFromActivity,
-  V as parseDateTime,
-  A0 as parseMessageWithLinks,
-  b0 as renderMessageStatusIcon,
-  q as sanitizeHtmlLight,
-  c0 as useActivities,
-  J as useActivityConfig,
-  v0 as useActivityTabLogic,
-  Gt as useCallRecording,
-  y0 as useDefaultActivityAdapter,
-  ie as useExpandableContent,
-  p0 as useFilterState
+  Et as ACTIVITY_TYPE_LABELS,
+  ie as Activity,
+  pt as ActivityDateGroup,
+  vt as ActivityFilter,
+  G0 as ActivityProvider,
+  Zt as ActivityTab,
+  kt as ActivityWidget,
+  Ze as CallActivity,
+  $t as CallNotesActivity,
+  at as ChatActivity,
+  K0 as EmailActivity,
+  ue as EmailRecipientRow,
+  rt as LeadActivity,
+  _e as NotesActivity,
+  mt as QuotationActivity,
+  tt as ReminderActivity,
+  X0 as ScheduleActivity,
+  et as TaskActivity,
+  Ht as activityApi,
+  At as buildActivityNodes,
+  Mt as createDefaultApiClient,
+  st as formatDuration,
+  Ct as formatTimeLocale,
+  fe as getActivityDate,
+  J0 as getActivityDateKey,
+  yt as getActivityElementId,
+  Ce as getActivityTimestamp,
+  nt as getBadgeColor,
+  Ee as getDateKeyFromActivity,
+  C as parseDateTime,
+  Vt as parseMessageWithLinks,
+  Ft as renderMessageStatusIcon,
+  G as sanitizeHtmlLight,
+  gt as useActivities,
+  K as useActivityConfig,
+  _t as useActivityTabLogic,
+  lt as useCallRecording,
+  Lt as useDefaultActivityAdapter,
+  oe as useExpandableContent,
+  wt as useFilterState
 };

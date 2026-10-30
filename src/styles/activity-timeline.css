@@ -1176,6 +1176,154 @@
   text-decoration: underline !important;
 }
 
+/* === Quotation Activity === */
+.activity-item.quotation-activity {
+  width: 490px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.quotation-activity-card {
+  background-color: #ffffff;
+  border: 1px solid #dfe9ed;
+  border-left-width: 3px;
+  border-left-color: #0F766E;
+  border-radius: 0 8px 8px 0;
+  padding: 10px 12px;
+  box-sizing: border-box;
+}
+
+.quotation-activity-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin: -10px -12px 0 -12px;
+  padding: 8px 12px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.quotation-activity-card-content {
+  padding: 12px 0 6px 0;
+}
+
+.quotation-activity-title {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 100%;
+  color: #0F766E;
+  margin: 0;
+}
+
+.quotation-activity-total {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  color: #2b2b2b;
+  white-space: nowrap;
+}
+
+.quotation-activity-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.quotation-activity-meta-row {
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+}
+
+.quotation-activity-label-cell {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-shrink: 0;
+  min-width: 100px;
+  gap: 4px;
+}
+
+.quotation-activity-colon {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #000000;
+}
+
+.quotation-activity-label {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  color: #575e60d6;
+}
+
+.quotation-activity-value {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 16px;
+  color: #2b2b2b;
+  word-break: break-word;
+}
+
+.quotation-activity-items {
+  margin-top: 12px;
+  border-top: 1px solid #e8e8e8;
+  padding-top: 8px;
+}
+
+.quotation-activity-items-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Manrope', sans-serif;
+  font-size: 12px;
+  color: #2b2b2b;
+}
+
+.quotation-activity-items-table th {
+  font-weight: 600;
+  color: #575e60d6;
+  text-align: left;
+  padding: 4px 6px 4px 0;
+  border-bottom: 1px solid #eef2f4;
+}
+
+.quotation-activity-items-table td {
+  padding: 5px 6px 5px 0;
+  border-bottom: 1px solid #f4f6f7;
+  vertical-align: top;
+}
+
+.quotation-activity-items-table .quotation-activity-num {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.quotation-activity-design {
+  font-weight: 700;
+  word-break: break-word;
+}
+
+.quotation-activity-toggle {
+  margin-top: 6px;
+  padding: 0;
+  border: none;
+  background: none;
+  font-family: 'Manrope', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #0F766E;
+  cursor: pointer;
+}
+
+.quotation-activity-toggle:hover {
+  text-decoration: underline;
+}
+
 /* === Package Common Styles === */
 
 /* Tooltip */

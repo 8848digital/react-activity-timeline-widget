@@ -38,6 +38,7 @@ const ACTIVITY_CONFIG: Record<string, string[]> = {
   Leads: ["lead"],
   Brief: ["brief"],
   "Raven Message": ["raven"],
+  Quotations: ["quotation"],
 };
 
 const REVERSE_ACTIVITY_TYPE_MAP = ACTIVITY_CONFIG;
